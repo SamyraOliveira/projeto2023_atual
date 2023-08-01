@@ -1,0 +1,76 @@
+C:\Users\CJ3005917\Downloads\projeto2023\projeto2023\obj\Debug\projeto2023.csproj.AssemblyReference.cache
+C:\Users\CJ3005917\Downloads\projeto2023\projeto2023\obj\Debug\projeto2023.csproj.SuggestedBindingRedirects.cache
+C:\Users\CJ3005917\Downloads\projeto2023\projeto2023\obj\Debug\projeto2023.menu.resources
+C:\Users\CJ3005917\Downloads\projeto2023\projeto2023\obj\Debug\projeto2023.Properties.Resources.resources
+C:\Users\CJ3005917\Downloads\projeto2023\projeto2023\obj\Debug\projeto2023.views.frms.frm_cadastros.resources
+C:\Users\CJ3005917\Downloads\projeto2023\projeto2023\obj\Debug\projeto2023.views.frms.login.resources
+C:\Users\CJ3005917\Downloads\projeto2023\projeto2023\obj\Debug\projeto2023.csproj.GenerateResource.cache
+C:\Users\CJ3005917\Downloads\projeto2023\projeto2023\obj\Debug\projeto2023.csproj.CoreCompileInputs.cache
+C:\Users\CJ3005917\Downloads\projeto2023\projeto2023\bin\Debug\projeto2023.exe.config
+C:\Users\CJ3005917\Downloads\projeto2023\projeto2023\bin\Debug\projeto2023.exe
+C:\Users\CJ3005917\Downloads\projeto2023\projeto2023\bin\Debug\projeto2023.pdb
+C:\Users\CJ3005917\Downloads\projeto2023\projeto2023\obj\Debug\projeto2023.exe
+C:\Users\CJ3005917\Downloads\projeto2023\projeto2023\obj\Debug\projeto2023.pdb
+C:\Users\CJ3005917\Downloads\projeto2023\projeto2023\obj\Debug\projeto2023.views.frms.frm_consultas.resources
+C:\Users\CJ3005917\Downloads\projeto2023\projeto2023\obj\Debug\projeto2023.views.frms.frm_movimentacoes.resources
+C:\Users\CJ3005917\Downloads\projeto2023\projeto2023\obj\Debug\projeto2023.views.frms.frm_relatorios.resources
+C:\Users\CJ3005917\Desktop\projeto2023_atual\bin\Debug\projeto2023.exe.config
+C:\Users\CJ3005917\Desktop\projeto2023_atual\bin\Debug\projeto2023.exe
+C:\Users\CJ3005917\Desktop\projeto2023_atual\bin\Debug\projeto2023.pdb
+C:\Users\CJ3005917\Desktop\projeto2023_atual\obj\Debug\projeto2023.csproj.AssemblyReference.cache
+C:\Users\CJ3005917\Desktop\projeto2023_atual\obj\Debug\projeto2023.csproj.SuggestedBindingRedirects.cache
+C:\Users\CJ3005917\Desktop\projeto2023_atual\obj\Debug\projeto2023.menu.resources
+C:\Users\CJ3005917\Desktop\projeto2023_atual\obj\Debug\projeto2023.Properties.Resources.resources
+C:\Users\CJ3005917\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.frms.frm_cadastros.resources
+C:\Users\CJ3005917\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.frms.frm_consultas.resources
+C:\Users\CJ3005917\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.frms.frm_movimentacoes.resources
+C:\Users\CJ3005917\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.frms.frm_relatorios.resources
+C:\Users\CJ3005917\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.frms.login.resources
+C:\Users\CJ3005917\Desktop\projeto2023_atual\obj\Debug\projeto2023.csproj.GenerateResource.cache
+C:\Users\CJ3005917\Desktop\projeto2023_atual\obj\Debug\projeto2023.csproj.CoreCompileInputs.cache
+C:\Users\CJ3005917\Desktop\projeto2023_atual\obj\Debug\projeto2023.exe
+C:\Users\CJ3005917\Desktop\projeto2023_atual\obj\Debug\projeto2023.pdb
+C:\Users\Samyra Oliveira\Desktop\projeto2023_atual\obj\Debug\projeto2023.csproj.AssemblyReference.cache
+C:\Users\Samyra Oliveira\Desktop\projeto2023_atual\obj\Debug\projeto2023.csproj.SuggestedBindingRedirects.cache
+C:\Users\Samyra Oliveira\Desktop\projeto2023_atual\obj\Debug\projeto2023.menu.resources
+C:\Users\Samyra Oliveira\Desktop\projeto2023_atual\obj\Debug\projeto2023.Properties.Resources.resources
+C:\Users\Samyra Oliveira\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.clientes.crud_clientes.resources
+C:\Users\Samyra Oliveira\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.colaboradores.crud_colaboradores.resources
+C:\Users\Samyra Oliveira\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.fornecedores.crud_fornecedores.resources
+C:\Users\Samyra Oliveira\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.frms.frm_cadastros.resources
+C:\Users\Samyra Oliveira\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.frms.frm_consultas.resources
+C:\Users\Samyra Oliveira\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.frms.frm_movimentacoes.resources
+C:\Users\Samyra Oliveira\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.frms.frm_relatorios.resources
+C:\Users\Samyra Oliveira\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.frms.login.resources
+C:\Users\Samyra Oliveira\Desktop\projeto2023_atual\obj\Debug\projeto2023.csproj.GenerateResource.cache
+C:\Users\Samyra Oliveira\Desktop\projeto2023_atual\obj\Debug\projeto2023.csproj.CoreCompileInputs.cache
+C:\Users\Samyra Oliveira\Desktop\projeto2023_atual\obj\Debug\projeto2023.exe
+C:\Users\Samyra Oliveira\Desktop\projeto2023_atual\obj\Debug\projeto2023.pdb
+C:\Users\Samyra Oliveira\Desktop\projeto2023_atual\bin\Debug\projeto2023.exe.config
+C:\Users\Samyra Oliveira\Desktop\projeto2023_atual\bin\Debug\projeto2023.exe
+C:\Users\Samyra Oliveira\Desktop\projeto2023_atual\bin\Debug\projeto2023.pdb
+C:\Users\Samyra Oliveira\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.materiais.crud_materiais.resources
+C:\Users\Samyra Oliveira\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.pedidos.crud_pedidos.resources
+C:\Users\Samyra Oliveira\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.producao.crud_producao.resources
+C:\Users\Família Linda\Desktop\projeto2023_atual\bin\Debug\projeto2023.exe.config
+C:\Users\Família Linda\Desktop\projeto2023_atual\bin\Debug\projeto2023.exe
+C:\Users\Família Linda\Desktop\projeto2023_atual\bin\Debug\projeto2023.pdb
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.csproj.AssemblyReference.cache
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.csproj.SuggestedBindingRedirects.cache
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.menu.resources
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.Properties.Resources.resources
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.clientes.crud_clientes.resources
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.colaboradores.crud_colaboradores.resources
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.fornecedores.crud_fornecedores.resources
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.frms.frm_cadastros.resources
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.frms.frm_consultas.resources
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.frms.frm_movimentacoes.resources
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.frms.frm_relatorios.resources
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.frms.login.resources
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.materiais.crud_materiais.resources
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.pedidos.crud_pedidos.resources
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.producao.crud_producao.resources
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.csproj.GenerateResource.cache
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.csproj.CoreCompileInputs.cache
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.exe
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.pdb
