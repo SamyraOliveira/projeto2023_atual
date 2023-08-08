@@ -25,7 +25,7 @@ namespace projeto2023.views.colaboradores
         private void btn_salvar_Click(object sender, EventArgs e)
         {
             string fun_CPF = txb_cpf.Text;
-            MessageBox.Show(fun_CPF, "AVISO DE ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+         //   MessageBox.Show(fun_CPF, "AVISO DE ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             string fun_cargo = cmb_cargo.Text;
             string fun_telefone = textBox3.Text;
             string fun_email = txb_email.Text;
@@ -143,12 +143,6 @@ namespace projeto2023.views.colaboradores
 
         private void crud_colaboradores_Load(object sender, EventArgs e)
         {
-
-
-        }
-
-        private void cmb_estado_MouseClick(object sender, MouseEventArgs e)
-        {
             string[] estados = {
                 "Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal",
                 "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul",
@@ -157,6 +151,13 @@ namespace projeto2023.views.colaboradores
                 "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins"
             };
             cmb_estado.Items.AddRange(estados);
+
+
+            string[] cargos = {
+                "Supervisor", "Atendente", "Operador"
+            };
+            cmb_cargo.Items.AddRange(cargos);
+
         }
     }
 }

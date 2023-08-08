@@ -120,8 +120,10 @@
             // 
             this.txb_pass.Location = new System.Drawing.Point(57, 188);
             this.txb_pass.Name = "txb_pass";
+            this.txb_pass.PasswordChar = '*';
             this.txb_pass.Size = new System.Drawing.Size(188, 25);
             this.txb_pass.TabIndex = 1;
+            this.txb_pass.UseSystemPasswordChar = true;
             // 
             // txb_user
             // 

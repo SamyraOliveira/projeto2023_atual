@@ -32,32 +32,36 @@
             this.btn_salvar = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_limpar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txb_nomefantasia = new System.Windows.Forms.TextBox();
+            this.txb_numero = new System.Windows.Forms.TextBox();
+            this.txb_razaosocial = new System.Windows.Forms.TextBox();
+            this.txb_email = new System.Windows.Forms.TextBox();
+            this.txb_inscricaoEstadual = new System.Windows.Forms.TextBox();
+            this.txb_contato = new System.Windows.Forms.TextBox();
+            this.txb_inscricaoMunicipal = new System.Windows.Forms.TextBox();
+            this.txb_endereco = new System.Windows.Forms.TextBox();
+            this.txb_representante = new System.Windows.Forms.TextBox();
+            this.txb_cidade = new System.Windows.Forms.TextBox();
+            this.lbl_nomefantasia = new System.Windows.Forms.Label();
+            this.lbl_numero = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.lbl_cidade = new System.Windows.Forms.Label();
+            this.lbl_CNPJ = new System.Windows.Forms.Label();
+            this.lbl_estado = new System.Windows.Forms.Label();
+            this.lbl_inscricaoEstadual = new System.Windows.Forms.Label();
+            this.lbl_contato = new System.Windows.Forms.Label();
+            this.lbl_inscricaoMunicipal = new System.Windows.Forms.Label();
+            this.lbl_cep = new System.Windows.Forms.Label();
+            this.lbl_representante = new System.Windows.Forms.Label();
+            this.lbl_email = new System.Windows.Forms.Label();
+            this.lbl_endereco = new System.Windows.Forms.Label();
             this.cmb_estado = new System.Windows.Forms.ComboBox();
+            this.lbl_razaosocial = new System.Windows.Forms.Panel();
+            this.txb_cep = new System.Windows.Forms.TextBox();
+            this.txb_cnpj = new System.Windows.Forms.TextBox();
+            this.lbl_contratacao = new System.Windows.Forms.Label();
+            this.mnth_contrato = new System.Windows.Forms.MonthCalendar();
+            this.lbl_razaosocial.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_excluir
@@ -65,7 +69,7 @@
             this.btn_excluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
             this.btn_excluir.Font = new System.Drawing.Font("Lucida Sans", 8.25F);
             this.btn_excluir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(111)))));
-            this.btn_excluir.Location = new System.Drawing.Point(536, 357);
+            this.btn_excluir.Location = new System.Drawing.Point(838, 451);
             this.btn_excluir.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btn_excluir.Name = "btn_excluir";
             this.btn_excluir.Size = new System.Drawing.Size(129, 77);
@@ -79,7 +83,7 @@
             this.btn_salvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
             this.btn_salvar.Font = new System.Drawing.Font("Lucida Sans", 8.25F);
             this.btn_salvar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(111)))));
-            this.btn_salvar.Location = new System.Drawing.Point(536, 250);
+            this.btn_salvar.Location = new System.Drawing.Point(838, 344);
             this.btn_salvar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btn_salvar.Name = "btn_salvar";
             this.btn_salvar.Size = new System.Drawing.Size(129, 77);
@@ -93,7 +97,7 @@
             this.btn_cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
             this.btn_cancelar.Font = new System.Drawing.Font("Lucida Sans", 8.25F);
             this.btn_cancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(111)))));
-            this.btn_cancelar.Location = new System.Drawing.Point(733, 357);
+            this.btn_cancelar.Location = new System.Drawing.Point(1035, 451);
             this.btn_cancelar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(122, 77);
@@ -107,7 +111,7 @@
             this.btn_limpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
             this.btn_limpar.Font = new System.Drawing.Font("Lucida Sans", 8.25F);
             this.btn_limpar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(111)))));
-            this.btn_limpar.Location = new System.Drawing.Point(733, 250);
+            this.btn_limpar.Location = new System.Drawing.Point(1035, 344);
             this.btn_limpar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btn_limpar.Name = "btn_limpar";
             this.btn_limpar.Size = new System.Drawing.Size(122, 72);
@@ -116,252 +120,276 @@
             this.btn_limpar.UseVisualStyleBackColor = false;
             this.btn_limpar.Click += new System.EventHandler(this.btn_limpar_Click);
             // 
-            // textBox1
+            // txb_nomefantasia
             // 
-            this.textBox1.Location = new System.Drawing.Point(47, 59);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
+            this.txb_nomefantasia.Location = new System.Drawing.Point(9, 46);
+            this.txb_nomefantasia.Name = "txb_nomefantasia";
+            this.txb_nomefantasia.Size = new System.Drawing.Size(228, 20);
+            this.txb_nomefantasia.TabIndex = 4;
             // 
-            // textBox2
+            // txb_numero
             // 
-            this.textBox2.Location = new System.Drawing.Point(141, 131);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
+            this.txb_numero.Location = new System.Drawing.Point(355, 111);
+            this.txb_numero.Name = "txb_numero";
+            this.txb_numero.Size = new System.Drawing.Size(50, 20);
+            this.txb_numero.TabIndex = 5;
             // 
-            // textBox3
+            // txb_razaosocial
             // 
-            this.textBox3.Location = new System.Drawing.Point(195, 57);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 6;
+            this.txb_razaosocial.Location = new System.Drawing.Point(252, 46);
+            this.txb_razaosocial.Name = "txb_razaosocial";
+            this.txb_razaosocial.Size = new System.Drawing.Size(228, 20);
+            this.txb_razaosocial.TabIndex = 6;
             // 
-            // textBox4
+            // txb_email
             // 
-            this.textBox4.Location = new System.Drawing.Point(733, 131);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 7;
+            this.txb_email.Location = new System.Drawing.Point(252, 185);
+            this.txb_email.Name = "txb_email";
+            this.txb_email.Size = new System.Drawing.Size(228, 20);
+            this.txb_email.TabIndex = 7;
             // 
-            // textBox5
+            // txb_inscricaoEstadual
             // 
-            this.textBox5.Location = new System.Drawing.Point(449, 59);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 8;
+            this.txb_inscricaoEstadual.Location = new System.Drawing.Point(669, 46);
+            this.txb_inscricaoEstadual.Name = "txb_inscricaoEstadual";
+            this.txb_inscricaoEstadual.Size = new System.Drawing.Size(100, 20);
+            this.txb_inscricaoEstadual.TabIndex = 8;
             // 
-            // textBox6
+            // txb_contato
             // 
-            this.textBox6.Location = new System.Drawing.Point(484, 131);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 9;
+            this.txb_contato.Location = new System.Drawing.Point(496, 185);
+            this.txb_contato.Name = "txb_contato";
+            this.txb_contato.Size = new System.Drawing.Size(100, 20);
+            this.txb_contato.TabIndex = 9;
             // 
-            // textBox7
+            // txb_inscricaoMunicipal
             // 
-            this.textBox7.Location = new System.Drawing.Point(565, 59);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 10;
+            this.txb_inscricaoMunicipal.Location = new System.Drawing.Point(9, 111);
+            this.txb_inscricaoMunicipal.Name = "txb_inscricaoMunicipal";
+            this.txb_inscricaoMunicipal.Size = new System.Drawing.Size(100, 20);
+            this.txb_inscricaoMunicipal.TabIndex = 10;
             // 
-            // textBox8
+            // txb_endereco
             // 
-            this.textBox8.Location = new System.Drawing.Point(20, 131);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 11;
+            this.txb_endereco.Location = new System.Drawing.Point(240, 111);
+            this.txb_endereco.Name = "txb_endereco";
+            this.txb_endereco.Size = new System.Drawing.Size(100, 20);
+            this.txb_endereco.TabIndex = 11;
             // 
-            // textBox9
+            // txb_representante
             // 
-            this.textBox9.Location = new System.Drawing.Point(606, 131);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 12;
+            this.txb_representante.Location = new System.Drawing.Point(9, 185);
+            this.txb_representante.Name = "txb_representante";
+            this.txb_representante.Size = new System.Drawing.Size(216, 20);
+            this.txb_representante.TabIndex = 12;
             // 
-            // textBox16
+            // txb_cidade
             // 
-            this.textBox16.Location = new System.Drawing.Point(247, 131);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(100, 20);
-            this.textBox16.TabIndex = 19;
+            this.txb_cidade.Location = new System.Drawing.Point(421, 111);
+            this.txb_cidade.Name = "txb_cidade";
+            this.txb_cidade.Size = new System.Drawing.Size(99, 20);
+            this.txb_cidade.TabIndex = 19;
             // 
-            // label1
+            // lbl_nomefantasia
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 14);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Nome Fantasia";
+            this.lbl_nomefantasia.AutoSize = true;
+            this.lbl_nomefantasia.Location = new System.Drawing.Point(7, 22);
+            this.lbl_nomefantasia.Name = "lbl_nomefantasia";
+            this.lbl_nomefantasia.Size = new System.Drawing.Size(83, 12);
+            this.lbl_nomefantasia.TabIndex = 20;
+            this.lbl_nomefantasia.Text = "Nome Fantasia";
             // 
-            // label2
+            // lbl_numero
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(138, 114);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 14);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Nº";
+            this.lbl_numero.AutoSize = true;
+            this.lbl_numero.Location = new System.Drawing.Point(353, 84);
+            this.lbl_numero.Name = "lbl_numero";
+            this.lbl_numero.Size = new System.Drawing.Size(18, 12);
+            this.lbl_numero.TabIndex = 21;
+            this.lbl_numero.Text = "Nº";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(192, 34);
+            this.label3.Location = new System.Drawing.Point(249, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 14);
+            this.label3.Size = new System.Drawing.Size(71, 12);
             this.label3.TabIndex = 22;
             this.label3.Text = "Razão Social";
             // 
-            // label4
+            // lbl_cidade
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(244, 114);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 14);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Cidade";
+            this.lbl_cidade.AutoSize = true;
+            this.lbl_cidade.Location = new System.Drawing.Point(419, 84);
+            this.lbl_cidade.Name = "lbl_cidade";
+            this.lbl_cidade.Size = new System.Drawing.Size(42, 12);
+            this.lbl_cidade.TabIndex = 23;
+            this.lbl_cidade.Text = "Cidade";
             // 
-            // label5
+            // lbl_CNPJ
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(334, 42);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 14);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "CNPJ";
+            this.lbl_CNPJ.AutoSize = true;
+            this.lbl_CNPJ.Location = new System.Drawing.Point(494, 23);
+            this.lbl_CNPJ.Name = "lbl_CNPJ";
+            this.lbl_CNPJ.Size = new System.Drawing.Size(30, 12);
+            this.lbl_CNPJ.TabIndex = 24;
+            this.lbl_CNPJ.Text = "CNPJ";
             // 
-            // label6
+            // lbl_estado
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(369, 116);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 14);
-            this.label6.TabIndex = 25;
-            this.label6.Text = "Estado";
+            this.lbl_estado.AutoSize = true;
+            this.lbl_estado.Location = new System.Drawing.Point(530, 84);
+            this.lbl_estado.Name = "lbl_estado";
+            this.lbl_estado.Size = new System.Drawing.Size(41, 12);
+            this.lbl_estado.TabIndex = 25;
+            this.lbl_estado.Text = "Estado";
             // 
-            // label7
+            // lbl_inscricaoEstadual
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(446, 36);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 14);
-            this.label7.TabIndex = 26;
-            this.label7.Text = "Inscrição Estadual";
+            this.lbl_inscricaoEstadual.AutoSize = true;
+            this.lbl_inscricaoEstadual.Location = new System.Drawing.Point(667, 22);
+            this.lbl_inscricaoEstadual.Name = "lbl_inscricaoEstadual";
+            this.lbl_inscricaoEstadual.Size = new System.Drawing.Size(20, 12);
+            this.lbl_inscricaoEstadual.TabIndex = 26;
+            this.lbl_inscricaoEstadual.Text = "I.E.";
             // 
-            // label8
+            // lbl_contato
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(516, 114);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 14);
-            this.label8.TabIndex = 27;
-            this.label8.Text = "Contato";
+            this.lbl_contato.AutoSize = true;
+            this.lbl_contato.Location = new System.Drawing.Point(494, 158);
+            this.lbl_contato.Name = "lbl_contato";
+            this.lbl_contato.Size = new System.Drawing.Size(48, 12);
+            this.lbl_contato.TabIndex = 27;
+            this.lbl_contato.Text = "Contato";
             // 
-            // label9
+            // lbl_inscricaoMunicipal
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(578, 36);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(112, 14);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "Inscrição Municipal";
+            this.lbl_inscricaoMunicipal.AutoSize = true;
+            this.lbl_inscricaoMunicipal.Location = new System.Drawing.Point(7, 84);
+            this.lbl_inscricaoMunicipal.Name = "lbl_inscricaoMunicipal";
+            this.lbl_inscricaoMunicipal.Size = new System.Drawing.Size(83, 12);
+            this.lbl_inscricaoMunicipal.TabIndex = 28;
+            this.lbl_inscricaoMunicipal.Text = "Inscrição Mun.";
             // 
-            // label10
+            // lbl_cep
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(703, 40);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(27, 14);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "CEP";
+            this.lbl_cep.AutoSize = true;
+            this.lbl_cep.Location = new System.Drawing.Point(121, 84);
+            this.lbl_cep.Name = "lbl_cep";
+            this.lbl_cep.Size = new System.Drawing.Size(25, 12);
+            this.lbl_cep.TabIndex = 29;
+            this.lbl_cep.Text = "CEP";
             // 
-            // label11
+            // lbl_representante
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(603, 114);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(87, 14);
-            this.label11.TabIndex = 30;
-            this.label11.Text = "Representante";
+            this.lbl_representante.AutoSize = true;
+            this.lbl_representante.Location = new System.Drawing.Point(7, 158);
+            this.lbl_representante.Name = "lbl_representante";
+            this.lbl_representante.Size = new System.Drawing.Size(82, 12);
+            this.lbl_representante.TabIndex = 30;
+            this.lbl_representante.Text = "Representante";
             // 
-            // label12
+            // lbl_email
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(730, 114);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(34, 14);
-            this.label12.TabIndex = 31;
-            this.label12.Text = "Email";
+            this.lbl_email.AutoSize = true;
+            this.lbl_email.Location = new System.Drawing.Point(249, 158);
+            this.lbl_email.Name = "lbl_email";
+            this.lbl_email.Size = new System.Drawing.Size(33, 12);
+            this.lbl_email.TabIndex = 31;
+            this.lbl_email.Text = "Email";
             // 
-            // label13
+            // lbl_endereco
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(61, 108);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(59, 14);
-            this.label13.TabIndex = 32;
-            this.label13.Text = "Endereço";
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(716, 57);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox1.TabIndex = 33;
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(331, 59);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox2.TabIndex = 34;
+            this.lbl_endereco.AutoSize = true;
+            this.lbl_endereco.Location = new System.Drawing.Point(238, 84);
+            this.lbl_endereco.Name = "lbl_endereco";
+            this.lbl_endereco.Size = new System.Drawing.Size(55, 12);
+            this.lbl_endereco.TabIndex = 32;
+            this.lbl_endereco.Text = "Endereço";
             // 
             // cmb_estado
             // 
             this.cmb_estado.FormattingEnabled = true;
-            this.cmb_estado.Location = new System.Drawing.Point(357, 131);
+            this.cmb_estado.Location = new System.Drawing.Point(532, 111);
             this.cmb_estado.Name = "cmb_estado";
-            this.cmb_estado.Size = new System.Drawing.Size(121, 22);
+            this.cmb_estado.Size = new System.Drawing.Size(121, 20);
             this.cmb_estado.TabIndex = 35;
-            this.cmb_estado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cmb_estado_MouseClick);
+            // 
+            // lbl_razaosocial
+            // 
+            this.lbl_razaosocial.Controls.Add(this.txb_cep);
+            this.lbl_razaosocial.Controls.Add(this.txb_cnpj);
+            this.lbl_razaosocial.Controls.Add(this.lbl_contratacao);
+            this.lbl_razaosocial.Controls.Add(this.mnth_contrato);
+            this.lbl_razaosocial.Controls.Add(this.lbl_nomefantasia);
+            this.lbl_razaosocial.Controls.Add(this.btn_limpar);
+            this.lbl_razaosocial.Controls.Add(this.lbl_contato);
+            this.lbl_razaosocial.Controls.Add(this.btn_cancelar);
+            this.lbl_razaosocial.Controls.Add(this.lbl_email);
+            this.lbl_razaosocial.Controls.Add(this.btn_salvar);
+            this.lbl_razaosocial.Controls.Add(this.btn_excluir);
+            this.lbl_razaosocial.Controls.Add(this.txb_contato);
+            this.lbl_razaosocial.Controls.Add(this.cmb_estado);
+            this.lbl_razaosocial.Controls.Add(this.lbl_representante);
+            this.lbl_razaosocial.Controls.Add(this.txb_nomefantasia);
+            this.lbl_razaosocial.Controls.Add(this.txb_email);
+            this.lbl_razaosocial.Controls.Add(this.lbl_endereco);
+            this.lbl_razaosocial.Controls.Add(this.txb_representante);
+            this.lbl_razaosocial.Controls.Add(this.lbl_estado);
+            this.lbl_razaosocial.Controls.Add(this.txb_razaosocial);
+            this.lbl_razaosocial.Controls.Add(this.lbl_cidade);
+            this.lbl_razaosocial.Controls.Add(this.label3);
+            this.lbl_razaosocial.Controls.Add(this.txb_cidade);
+            this.lbl_razaosocial.Controls.Add(this.lbl_numero);
+            this.lbl_razaosocial.Controls.Add(this.lbl_cep);
+            this.lbl_razaosocial.Controls.Add(this.lbl_CNPJ);
+            this.lbl_razaosocial.Controls.Add(this.lbl_inscricaoEstadual);
+            this.lbl_razaosocial.Controls.Add(this.lbl_inscricaoMunicipal);
+            this.lbl_razaosocial.Controls.Add(this.txb_inscricaoEstadual);
+            this.lbl_razaosocial.Controls.Add(this.txb_numero);
+            this.lbl_razaosocial.Controls.Add(this.txb_endereco);
+            this.lbl_razaosocial.Controls.Add(this.txb_inscricaoMunicipal);
+            this.lbl_razaosocial.Location = new System.Drawing.Point(12, 26);
+            this.lbl_razaosocial.Name = "lbl_razaosocial";
+            this.lbl_razaosocial.Size = new System.Drawing.Size(1176, 550);
+            this.lbl_razaosocial.TabIndex = 37;
+            // 
+            // txb_cep
+            // 
+            this.txb_cep.Location = new System.Drawing.Point(123, 111);
+            this.txb_cep.Name = "txb_cep";
+            this.txb_cep.Size = new System.Drawing.Size(100, 20);
+            this.txb_cep.TabIndex = 39;
+            // 
+            // txb_cnpj
+            // 
+            this.txb_cnpj.Location = new System.Drawing.Point(497, 46);
+            this.txb_cnpj.Name = "txb_cnpj";
+            this.txb_cnpj.Size = new System.Drawing.Size(100, 20);
+            this.txb_cnpj.TabIndex = 38;
+            // 
+            // lbl_contratacao
+            // 
+            this.lbl_contratacao.AutoSize = true;
+            this.lbl_contratacao.Location = new System.Drawing.Point(982, 23);
+            this.lbl_contratacao.Name = "lbl_contratacao";
+            this.lbl_contratacao.Size = new System.Drawing.Size(71, 12);
+            this.lbl_contratacao.TabIndex = 37;
+            this.lbl_contratacao.Text = "Contratação";
+            // 
+            // mnth_contrato
+            // 
+            this.mnth_contrato.Location = new System.Drawing.Point(911, 75);
+            this.mnth_contrato.Name = "mnth_contrato";
+            this.mnth_contrato.TabIndex = 36;
             // 
             // crud_fornecedores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
-            this.ClientSize = new System.Drawing.Size(933, 485);
-            this.Controls.Add(this.cmb_estado);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox16);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.btn_limpar);
-            this.Controls.Add(this.btn_cancelar);
-            this.Controls.Add(this.btn_salvar);
-            this.Controls.Add(this.btn_excluir);
+            this.ClientSize = new System.Drawing.Size(1200, 588);
+            this.Controls.Add(this.lbl_razaosocial);
             this.Font = new System.Drawing.Font("Lucida Sans", 8.25F);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(111)))));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -369,8 +397,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CADASTRO FORNECEDORES";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.crud_fornecedores_Load);
+            this.lbl_razaosocial.ResumeLayout(false);
+            this.lbl_razaosocial.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -380,31 +410,34 @@
         private System.Windows.Forms.Button btn_salvar;
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Button btn_limpar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txb_nomefantasia;
+        private System.Windows.Forms.TextBox txb_numero;
+        private System.Windows.Forms.TextBox txb_razaosocial;
+        private System.Windows.Forms.TextBox txb_email;
+        private System.Windows.Forms.TextBox txb_inscricaoEstadual;
+        private System.Windows.Forms.TextBox txb_contato;
+        private System.Windows.Forms.TextBox txb_inscricaoMunicipal;
+        private System.Windows.Forms.TextBox txb_endereco;
+        private System.Windows.Forms.TextBox txb_representante;
+        private System.Windows.Forms.TextBox txb_cidade;
+        private System.Windows.Forms.Label lbl_nomefantasia;
+        private System.Windows.Forms.Label lbl_numero;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.Label lbl_cidade;
+        private System.Windows.Forms.Label lbl_CNPJ;
+        private System.Windows.Forms.Label lbl_estado;
+        private System.Windows.Forms.Label lbl_inscricaoEstadual;
+        private System.Windows.Forms.Label lbl_contato;
+        private System.Windows.Forms.Label lbl_inscricaoMunicipal;
+        private System.Windows.Forms.Label lbl_cep;
+        private System.Windows.Forms.Label lbl_representante;
+        private System.Windows.Forms.Label lbl_email;
+        private System.Windows.Forms.Label lbl_endereco;
         private System.Windows.Forms.ComboBox cmb_estado;
+        private System.Windows.Forms.Panel lbl_razaosocial;
+        private System.Windows.Forms.Label lbl_contratacao;
+        private System.Windows.Forms.MonthCalendar mnth_contrato;
+        private System.Windows.Forms.TextBox txb_cnpj;
+        private System.Windows.Forms.TextBox txb_cep;
     }
 }

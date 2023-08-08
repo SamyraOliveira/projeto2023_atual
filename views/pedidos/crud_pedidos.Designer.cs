@@ -652,7 +652,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
-            this.ClientSize = new System.Drawing.Size(976, 543);
+            this.ClientSize = new System.Drawing.Size(1200, 588);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Lucida Sans", 8.25F);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(111)))));

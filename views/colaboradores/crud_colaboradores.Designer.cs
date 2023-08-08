@@ -117,7 +117,7 @@
             // 
             this.txb_cpf.Location = new System.Drawing.Point(25, 88);
             this.txb_cpf.Name = "txb_cpf";
-            this.txb_cpf.Size = new System.Drawing.Size(100, 20);
+            this.txb_cpf.Size = new System.Drawing.Size(121, 20);
             this.txb_cpf.TabIndex = 0;
             // 
             // lbl_dataNasc
@@ -125,7 +125,7 @@
             this.lbl_dataNasc.AutoSize = true;
             this.lbl_dataNasc.Location = new System.Drawing.Point(788, 57);
             this.lbl_dataNasc.Name = "lbl_dataNasc";
-            this.lbl_dataNasc.Size = new System.Drawing.Size(98, 14);
+            this.lbl_dataNasc.Size = new System.Drawing.Size(95, 12);
             this.lbl_dataNasc.TabIndex = 30;
             this.lbl_dataNasc.Text = "Data Nascimento";
             // 
@@ -180,7 +180,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(325, 209);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(41, 14);
+            this.label12.Size = new System.Drawing.Size(37, 12);
             this.label12.TabIndex = 24;
             this.label12.Text = "Senha";
             // 
@@ -189,7 +189,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(179, 209);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(48, 14);
+            this.label11.Size = new System.Drawing.Size(47, 12);
             this.label11.TabIndex = 23;
             this.label11.Text = "Usuário";
             // 
@@ -198,7 +198,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(23, 209);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 14);
+            this.label10.Size = new System.Drawing.Size(36, 12);
             this.label10.TabIndex = 22;
             this.label10.Text = "Nome";
             // 
@@ -207,7 +207,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(23, 134);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 14);
+            this.label9.Size = new System.Drawing.Size(41, 12);
             this.label9.TabIndex = 21;
             this.label9.Text = "Estado";
             // 
@@ -216,7 +216,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(179, 134);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 14);
+            this.label8.Size = new System.Drawing.Size(42, 12);
             this.label8.TabIndex = 20;
             this.label8.Text = "Cidade";
             // 
@@ -225,7 +225,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(325, 134);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 14);
+            this.label7.Size = new System.Drawing.Size(55, 12);
             this.label7.TabIndex = 19;
             this.label7.Text = "Endereço";
             // 
@@ -234,7 +234,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(453, 134);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 14);
+            this.label6.Size = new System.Drawing.Size(37, 12);
             this.label6.TabIndex = 18;
             this.label6.Text = "Bairro";
             // 
@@ -243,7 +243,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(582, 134);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 14);
+            this.label5.Size = new System.Drawing.Size(25, 12);
             this.label5.TabIndex = 17;
             this.label5.Text = "CEP";
             // 
@@ -252,7 +252,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(453, 57);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 14);
+            this.label4.Size = new System.Drawing.Size(33, 12);
             this.label4.TabIndex = 16;
             this.label4.Text = "Email";
             // 
@@ -261,7 +261,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(322, 57);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 14);
+            this.label3.Size = new System.Drawing.Size(51, 12);
             this.label3.TabIndex = 15;
             this.label3.Text = "Telefone";
             // 
@@ -270,7 +270,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(169, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 14);
+            this.label2.Size = new System.Drawing.Size(38, 12);
             this.label2.TabIndex = 14;
             this.label2.Text = "Cargo";
             // 
@@ -279,7 +279,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(23, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 14);
+            this.label1.Size = new System.Drawing.Size(25, 12);
             this.label1.TabIndex = 13;
             this.label1.Text = "CPF";
             // 
@@ -306,10 +306,13 @@
             // 
             // txb_senha
             // 
+            this.txb_senha.BackColor = System.Drawing.SystemColors.Window;
             this.txb_senha.Location = new System.Drawing.Point(324, 236);
             this.txb_senha.Name = "txb_senha";
+            this.txb_senha.PasswordChar = '*';
             this.txb_senha.Size = new System.Drawing.Size(100, 20);
             this.txb_senha.TabIndex = 11;
+            this.txb_senha.UseSystemPasswordChar = true;
             // 
             // txb_cidade
             // 
@@ -337,21 +340,20 @@
             this.cmb_estado.FormattingEnabled = true;
             this.cmb_estado.Location = new System.Drawing.Point(25, 159);
             this.cmb_estado.Name = "cmb_estado";
-            this.cmb_estado.Size = new System.Drawing.Size(121, 22);
+            this.cmb_estado.Size = new System.Drawing.Size(121, 20);
             this.cmb_estado.TabIndex = 4;
-            this.cmb_estado.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cmb_estado_MouseClick);
             // 
             // cmb_cargo
             // 
             this.cmb_cargo.FormattingEnabled = true;
             this.cmb_cargo.Location = new System.Drawing.Point(171, 88);
             this.cmb_cargo.Name = "cmb_cargo";
-            this.cmb_cargo.Size = new System.Drawing.Size(121, 22);
+            this.cmb_cargo.Size = new System.Drawing.Size(121, 20);
             this.cmb_cargo.TabIndex = 1;
             // 
             // crud_colaboradores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
             this.ClientSize = new System.Drawing.Size(1200, 588);
