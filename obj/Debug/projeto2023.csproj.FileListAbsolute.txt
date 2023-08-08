@@ -74,3 +74,9 @@ C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.csproj.G
 C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.csproj.CoreCompileInputs.cache
 C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.exe
 C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.pdb
+C:\Users\CJ3005917\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.clientes.crud_clientes.resources
+C:\Users\CJ3005917\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.colaboradores.crud_colaboradores.resources
+C:\Users\CJ3005917\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.fornecedores.crud_fornecedores.resources
+C:\Users\CJ3005917\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.materiais.crud_materiais.resources
+C:\Users\CJ3005917\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.pedidos.crud_pedidos.resources
+C:\Users\CJ3005917\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.producao.crud_producao.resources

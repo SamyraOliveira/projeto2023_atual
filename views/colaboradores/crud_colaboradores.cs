@@ -39,7 +39,7 @@ namespace projeto2023.views.colaboradores
             fun_dataNasc = mnth_dataNasc.SelectionStart;
             string fun_usuario = txb_usuario.Text;
             string fun_senha = txb_senha.Text;
-            bool fun_status = true;
+            int fun_status = 1;
 
             MessageBox.Show("FINALIZAR CADASTRO");
             try

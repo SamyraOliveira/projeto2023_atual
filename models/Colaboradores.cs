@@ -24,9 +24,9 @@ namespace projeto2023.models
         public DateTime colab_dataNasc;
         public string colab_usuario;
         public string colab_senha;
-        public bool colab_status;
+        public int colab_status;
 
-        public Colaboradores (string cpf, string cargo, string telefone, string email, string estado, string cidade, string endereco, string bairro, string cep, string nome, DateTime dataNasc, string usuario, string senha, bool status)
+        public Colaboradores (string cpf, string cargo, string telefone, string email, string estado, string cidade, string endereco, string bairro, string cep, string nome, DateTime dataNasc, string usuario, string senha, int status)
         {
             colab_CPF = cpf;
             colab_cargo = cargo;
@@ -44,7 +44,7 @@ namespace projeto2023.models
             colab_status = status;
         }
 
-        public Colaboradores(int codigo, string cpf, string cargo, string telefone, string email, string estado, string cidade, string endereco, string bairro, string cep, string nome, DateTime dataNasc, string usuario, string senha, bool status)
+        public Colaboradores(int codigo, string cpf, string cargo, string telefone, string email, string estado, string cidade, string endereco, string bairro, string cep, string nome, DateTime dataNasc, string usuario, string senha, int status)
         {
             colab_codigo = codigo;
             colab_CPF = cpf;
@@ -141,7 +141,7 @@ namespace projeto2023.models
 
 
 			fun_codigo = id_functionary;
-			fun_CPF = CPF_functionary;
+			fun_cpf = CPF_functionary;
 			fun_cargo = cargo_functionary;
 			fun_telefone = telefone_functionary;
 			fun_email = email_functionary;
@@ -185,11 +185,11 @@ namespace projeto2023.models
 				{
 					throw new Exception("Conteudo do campo 'CPF' invalido!");
 				}
-				fun_CPF = value;
+				mskt_cpf = value;
 			}
 			get
 			{
-				return fun_CPF;
+				return mskt_cpf;
 			}
 		}*/
 

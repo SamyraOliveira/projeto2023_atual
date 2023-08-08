@@ -122,7 +122,7 @@ namespace projeto2023.controllers
         public void InsertColaborador(Colaboradores Colaborador)
         {
             Cmd.Connection = Con.RetornarConexao();
-            Cmd.CommandText = @"INSERT INTO  Colaboradores VALUES (@CPF_Colaborador, @cargo_Colaborador, @telefone_Colaborador, @email_Colaborador, @estado_Colaborador, @cidade_Colaborador, @endereco_Colaborador, @bairro_Colaborador, @CEP_Colaborador, @nome_Colaborador, @dataNascimento_Colaborador, @user_Colaborador, @password_Colaborador, @status_Colaborador)";
+            Cmd.CommandText = @"INSERT INTO  Colaboradores VALUES (@CPF_Colaborador, @cargo_Colaborador, @telefone_Colaborador, @email_Colaborador, @estado_Colaborador, @cidade_Colaborador, @endereco_Colaborador, @bairro_Colaborador, @CEP_Colaborador, @nome_Colaborador, @dataNasc_Colaborador, @user_Colaborador, @password_Colaborador, @status_Colaborador)";
             Cmd.Parameters.AddWithValue("@CPF_Colaborador", Colaborador.colab_CEP);
             Cmd.Parameters.AddWithValue("@cargo_Colaborador", Colaborador.colab_cargo);
             Cmd.Parameters.AddWithValue("@telefone_Colaborador", Colaborador.colab_telefone);
@@ -133,7 +133,7 @@ namespace projeto2023.controllers
             Cmd.Parameters.AddWithValue("@bairro_Colaborador ", Colaborador.colab_bairro);
             Cmd.Parameters.AddWithValue("@CEP_Colaborador   ", Colaborador.colab_CEP);
             Cmd.Parameters.AddWithValue("@nome_Colaborador   ", Colaborador.colab_nome);
-            Cmd.Parameters.AddWithValue("@dataNascimento_Colaborador  ", Colaborador.colab_dataNasc);
+            Cmd.Parameters.AddWithValue("@dataNasc_Colaborador  ", Colaborador.colab_dataNasc);
             Cmd.Parameters.AddWithValue("@user_Colaborador", Colaborador.colab_usuario);
             Cmd.Parameters.AddWithValue("@password_Colaborador", Colaborador.colab_senha);
             Cmd.Parameters.AddWithValue("@status_Colaborador ", Colaborador.colab_status);
@@ -163,7 +163,7 @@ namespace projeto2023.controllers
 
                 while (rd.Read())
                 {
-                    Colaboradores Colaborador = new Colaboradores((int)rd["codigo_Colaborador"], (string)rd["CPF_Colaborador"], (string)rd["cargo_Colaborador"], (string)rd["telefone_Colaborador"], (string)rd["email_Colaborador"], (string)rd["estado_Colaborador"], (string)rd["cidade_Colaborador"], (string)rd["endereco_Colaborador"], (string)rd["bairro_Colaborador"], (string)rd["CEP_Colaborador"], (string)rd["nome_Colaborador"], (DateTime)rd["dataNasc_Colaborador"], (string)rd["user_Colaborador"], (string)rd["password_Colaborador"], (bool)rd["status_Colaborador"]);
+                    Colaboradores Colaborador = new Colaboradores((int)rd["codigo_Colaborador"], (string)rd["CPF_Colaborador"], (string)rd["cargo_Colaborador"], (string)rd["telefone_Colaborador"], (string)rd["email_Colaborador"], (string)rd["estado_Colaborador"], (string)rd["cidade_Colaborador"], (string)rd["endereco_Colaborador"], (string)rd["bairro_Colaborador"], (string)rd["CEP_Colaborador"], (string)rd["nome_Colaborador"], (DateTime)rd["dataNasc_Colaborador"], (string)rd["user_Colaborador"], (string)rd["password_Colaborador"], (int)rd["status_Colaborador"]);
                     listaColaboradores.Add(Colaborador);
                 }
                 rd.Close();
