@@ -10,49 +10,68 @@ namespace projeto2023.models
     public class Fornecedores
     {
         //propriedade
-        public int forn_codigo;
-        public string forn_nomeAbreviado;
-        public string forn_CNPJ;
-        public string forn_CEP;
-        public string forn_endereco;
-        public string forn_cidade;
-        public string forn_estado;
-        public string forn_telefone;
-        public string forn_representante;
-        public string forn_email;
-        public bool forn_status;
+        public int fornc_codigo;
+        public string fornc_nomeFantasia;
+        public string fornc_razaoSocial;
+        public string fornc_cnpj;
+        public string fornc_inscricaoEstadual;
+        public string fornc_inscricaoMunicipal;
+        public string fornc_cep;
+        public string fornc_endereco;
+        public string fornc_numero;
+        public string fornc_cidade;
+        public string fornc_estado;
+        public string fornc_representante;
+        public string fornc_email;
+        public string fornc_telefone;
+        public DateTime fornc_iniciocontrato;
+        public int fornc_status;
 
-        public Fornecedores(string nomeAbreviado, string cnpj, string cep, string endereco, string cidade, string estado, string telefone, string representante, string email, bool status)
+        public Fornecedores(string fornc_nomeFantasia1, string fornc_razaoSocial1, string fornc_cnpj1, string fornc_inscricaoEstadual1, string fornc_inscricaoMunicipal1, string fornc_cep1, string fornc_endereco1, string fornc_numero1, string fornc_cidade1, string fornc_estado1, string fornc_representante1, string fornc_email1, string fornc_telefone1, DateTime fornc_iniciocontrato1, int fornc_status1)
+
+
         {
-        
-        forn_nomeAbreviado = nomeAbreviado;
-        forn_CNPJ = cnpj;
-        forn_CEP = cep;
-        forn_endereco = endereco;
-        forn_cidade = cidade;
-        forn_estado = estado;
-        forn_telefone = telefone;
-        forn_representante = representante;
-        forn_email = email;
-        forn_status = status;
+
+            fornc_nomeFantasia = fornc_nomeFantasia1;
+            fornc_razaoSocial = fornc_razaoSocial1;
+            fornc_cnpj = fornc_cnpj1;
+            fornc_inscricaoEstadual = fornc_inscricaoEstadual1;
+            fornc_inscricaoMunicipal = fornc_inscricaoMunicipal1;
+            fornc_cep = fornc_cep1;
+            fornc_endereco = fornc_endereco1;
+            fornc_numero = fornc_numero1;
+            fornc_cidade = fornc_cidade1;
+            fornc_estado = fornc_estado1;
+            fornc_representante = fornc_representante1;
+            fornc_email = fornc_email1;
+            fornc_telefone = fornc_telefone1;
+            fornc_iniciocontrato = fornc_iniciocontrato1;
+            fornc_status = fornc_status1;
+
+
 
         }
 
       
 
-        public Fornecedores(int codigo, string nomeAbreviado, string cnpj, string cep, string endereco, string cidade, string estado, string telefone, string representante, string email, bool status)
+        public Fornecedores(int codigo, string fornc_nomeFantasia1, string fornc_razaoSocial1, string fornc_cnpj1, string fornc_inscricaoEstadual1, string fornc_inscricaoMunicipal1, string fornc_cep1, string fornc_endereco1, string fornc_numero1, string fornc_cidade1, string fornc_estado1, string fornc_representante1, string fornc_email1, string fornc_telefone1, DateTime fornc_iniciocontrato1, int fornc_status1)
         {
-            forn_codigo = codigo;
-            forn_nomeAbreviado = nomeAbreviado;
-            forn_CNPJ = cnpj;
-            forn_CEP = cep;
-            forn_endereco = endereco;
-            forn_cidade = cidade;
-            forn_estado = estado;
-            forn_telefone = telefone;
-            forn_representante = representante;
-            forn_email = email;
-            forn_status = status;
+            fornc_codigo = codigo;
+            fornc_nomeFantasia = fornc_nomeFantasia1;
+            fornc_razaoSocial = fornc_razaoSocial1;
+            fornc_cnpj = fornc_cnpj1;
+            fornc_inscricaoEstadual = fornc_inscricaoEstadual1;
+            fornc_inscricaoMunicipal = fornc_inscricaoMunicipal1;
+            fornc_cep = fornc_cep1;
+            fornc_endereco = fornc_endereco1;
+            fornc_numero = fornc_numero1;
+            fornc_cidade = fornc_cidade1;
+            fornc_estado = fornc_estado1;
+            fornc_representante = fornc_representante1;
+            fornc_email = fornc_email1;
+            fornc_telefone = fornc_telefone1;
+            fornc_iniciocontrato = fornc_iniciocontrato1;
+            fornc_status = fornc_status1;
 
         }
 
@@ -77,11 +96,11 @@ namespace projeto2023.models
                 {
                     throw new Exception("Conteudo do campo 'CNPJ' invalido!");
                 }
-                forn_CNPJ = value;
+                fornc_cnpj = value;
             }
             get
             {
-                return forn_CNPJ;
+                return fornc_cnpj;
             }
         }
 
@@ -93,11 +112,11 @@ namespace projeto2023.models
                     throw new Exception("Preenchimento do campo 'EMAIL' e obrigatorio!");
                 if (!value.Contains('@'))
                     throw new Exception("Conteudo do campo 'EMAIL' e invalido!");
-                forn_email = value;
+                fornc_email = value;
             }
             get
             {
-                return forn_email;
+                return fornc_email;
             }
         }
 

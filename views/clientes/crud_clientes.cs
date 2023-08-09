@@ -25,15 +25,15 @@ namespace projeto2023.views.clientes
         private void btn_salvar_Click(object sender, EventArgs e)
         {
             string cli_nome = txb_nome.Text;
-            string cli_CPF = mskd_cpf_cnpj.Text;
-            string cli_telefone = mskd_telefone.Text;
+            string cli_CPF = txb_cpf.Text;
+            string cli_telefone = txb_telefone.Text;
             string cli_email = txb_email.Text;
             DateTime cli_dataNasc = new DateTime(2007, 1, 21);
             cli_dataNasc = mntc_dataNasc.SelectionStart;
             string cli_estado = cmb_estado.Text;
             string cli_cidade = txb_cidade.Text;
             string cli_endereco = txb_endereco.Text;
-            string cli_CEP = mskd_cep.Text;
+            string cli_CEP = txb_cep.Text;
             bool cli_status = true;
 
 
@@ -60,9 +60,9 @@ namespace projeto2023.views.clientes
 
                 txb_nome.Focus();
                 if (erro.Message.ToUpper().Contains("CPF/CNPJ"))
-                    mskd_cpf_cnpj.Focus();
+                    txb_cpf.Focus();
                 if (erro.Message.ToUpper().Contains("TELEFONE"))
-                    mskd_telefone.Focus();
+                    txb_telefone.Focus();
                 if (erro.Message.ToUpper().Contains("EMAIL"))
                     txb_email.Focus();
                 if (erro.Message.ToUpper().Contains("DATA NASCIMENTO"))
@@ -74,16 +74,16 @@ namespace projeto2023.views.clientes
                 if (erro.Message.ToUpper().Contains("ENDEREÇO"))
                     txb_endereco.Focus();
                 if (erro.Message.ToUpper().Contains("CEP"))
-                    mskd_cep.Focus();
+                    txb_cep.Focus();
 
 
                 return;
 
             }
             //listaClientes();
-            //this.clientesTableAdapter1.Fill(this.estampariadbDataSet12Clientes.Clientes);
 
-            //btn_limpar(null, null);
+
+            btn_limpar_Click(null, null);
         }
 
         private void btn_excluir_Click(object sender, EventArgs e)
@@ -110,13 +110,13 @@ namespace projeto2023.views.clientes
         private void btn_limpar_Click(object sender, EventArgs e)
         {
             txb_nome.Clear();
-            mskd_cpf_cnpj.Clear();
-            mskd_telefone.Clear();
+            txb_cpf.Clear();
+            txb_telefone.Clear();
             txb_email.Clear();
             cmb_estado.SelectedIndex = -1;
             txb_cidade.Clear();
             txb_endereco.Clear();
-            mskd_cep.Clear();
+            txb_cep.Clear();
             btn_excluir.Visible = false;
             codigo_Cliente = -1;
             //listaClientes();

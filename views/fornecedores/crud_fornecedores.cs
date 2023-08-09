@@ -14,6 +14,7 @@ namespace projeto2023.views.fornecedores
 {
     public partial class crud_fornecedores : Form
     {
+        public int codigo_Fornecedor = -1;
         public crud_fornecedores()
         {
             InitializeComponent();
@@ -49,12 +50,12 @@ namespace projeto2023.views.fornecedores
 
                 if (codigo_Fornecedor == -1)
                 {
-                    Fornecedores fornecedor = new Fornecedores(fornc_nomeAbreviado, fornc_CNPJ, fornc_CEP, fornc_endereco, fornc_cidade, fornc_estado, fornc_telefone, fornc_nomeRepresentante, fornc_email, fornc_status);
+                    Fornecedores fornecedor = new Fornecedores(fornc_nomeFantasia, fornc_razaoSocial, fornc_cnpj, fornc_inscricaoEstadual, fornc_inscricaoMunicipal, fornc_cep, fornc_endereco, fornc_numero, fornc_cidade, fornc_estado, fornc_representante, fornc_email, fornc_telefone, fornc_iniciocontrato, fornc_status);
                     fornecedorDAO.InsertFornecedor(fornecedor);
                 }
                 else
                 {
-                    Fornecedores fornecedor = new Fornecedores(codigo_Fornecedor, fornc_nomeAbreviado, fornc_CNPJ, fornc_CEP, fornc_endereco, fornc_cidade, fornc_estado, fornc_telefone, fornc_nomeRepresentante, fornc_email, fornc_status);
+                    Fornecedores fornecedor = new Fornecedores(codigo_Fornecedor, fornc_nomeFantasia, fornc_razaoSocial, fornc_cnpj, fornc_inscricaoEstadual, fornc_inscricaoMunicipal, fornc_cep, fornc_endereco, fornc_numero, fornc_cidade, fornc_estado, fornc_representante, fornc_email, fornc_telefone, fornc_iniciocontrato, fornc_status);
                     fornecedorDAO.UpdateFornecedor(fornecedor);
                 }
             }
@@ -62,37 +63,87 @@ namespace projeto2023.views.fornecedores
             {
                 MessageBox.Show(erro.Message, "AVISO DE ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                txbnomeAbreviado_Fornecedor.Focus();
-                if (erro.Message.ToUpper().Contains("NOME REPRESENTANTE"))
-                    txbCNPJ_Fornecedor.Focus();
-                if (erro.Message.ToUpper().Contains("CNPJ"))
-                    txbCEP_Fornecedor.Focus();
-                if (erro.Message.ToUpper().Contains("TELEFONE"))
-                    txbendereco_Fornecedor.Focus();
-                if (erro.Message.ToUpper().Contains("EMAIL"))
-                    txbcidade_Fornecedor.Focus();
-                if (erro.Message.ToUpper().Contains("NOME REPRESENTANTE"))
-                    cmbEstado.Focus();
-                if (erro.Message.ToUpper().Contains("CNPJ"))
-                    txbtelefone_Fornecedor.Focus();
-                if (erro.Message.ToUpper().Contains("TELEFONE"))
-                    txbrepresentante_Fornecedor.Focus();
-                if (erro.Message.ToUpper().Contains("EMAIL"))
-                    txbemail_Fornecedor.Focus();
+                    txb_nomefantasia.Focus();
+                if (erro.Message.ToUpper().Contains(" "))
+                
+                    txb_razaosocial.Focus();
+                if (erro.Message.ToUpper().Contains(""))
+                
+                    txb_cnpj.Focus();
+                if (erro.Message.ToUpper().Contains(""))
+                
+                    txb_inscricaoEstadual.Focus();
+                if (erro.Message.ToUpper().Contains(""))
+                
+                    txb_inscricaoMunicipal.Focus();
+                if (erro.Message.ToUpper().Contains(" "))
+                
+                    txb_cep.Focus();
+                if (erro.Message.ToUpper().Contains(""))
+               
+                    txb_endereco.Focus();
+                if (erro.Message.ToUpper().Contains(""))
+                
+                    txb_numero.Focus();
+                if (erro.Message.ToUpper().Contains(""))
+                
+                    txb_cidade.Focus();
+                if (erro.Message.ToUpper().Contains(""))
+                
+                    cmb_estado.Focus();
+                if (erro.Message.ToUpper().Contains(" "))
+                
+                    txb_representante.Focus();
+                if (erro.Message.ToUpper().Contains(""))
+                
+                    txb_email.Focus();
+                if (erro.Message.ToUpper().Contains(""))
+                
+                    txb_contato.Focus();
+                if (erro.Message.ToUpper().Contains(""))
+                    mnth_contrato.Focus();
+
                 return;
             }
-            listaFornecedores();
-            //btn_LimparCamposFornecedor_Click(null, null);
+            //listaFornecedores();
+            btn_limpar_Click(null, null);
         }
 
         private void btn_limpar_Click(object sender, EventArgs e)
         {
-
+            txb_nomefantasia.Clear();
+            txb_razaosocial.Clear();
+            txb_cnpj.Clear();
+            txb_inscricaoEstadual.Clear();
+            txb_inscricaoMunicipal.Clear();
+            txb_cep.Clear();
+            txb_endereco.Clear();
+            txb_numero.Clear();
+            txb_cidade.Clear();
+            cmb_estado.SelectedIndex = -1;
+            txb_representante.Clear();
+            txb_email.Clear();
+            txb_contato.Clear();
+            btn_excluir.Visible = false;
+            codigo_Fornecedor = -1;
+           // listaFornecedores();
         }
 
         private void btn_excluir_Click(object sender, EventArgs e)
         {
+            AddBanco fornecedoresDAO = new AddBanco();
 
+            try
+            {
+                fornecedoresDAO.DeleteFornecedor(codigo_Fornecedor);
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message, "AVISO DE ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            Update();
+
+             btn_limpar_Click(null, null);
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)

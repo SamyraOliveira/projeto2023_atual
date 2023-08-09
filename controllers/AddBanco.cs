@@ -252,18 +252,25 @@ namespace projeto2023.controllers
         public void InsertFornecedor(Fornecedores fornecedor)
         {
             Cmd.Connection = Con.RetornarConexao();
-            Cmd.CommandText = @"INSERT INTO  Fornecedores VALUES (@nomeAbreviado_Fornecedor, @CNPJ_Fornecedor, @CEP_Fornecedor, @endereco_Fornecedor, @cidade_Fornecedor, @estado_Fornecedor, @telefone_Fornecedor, @representante_Fornecedor, @email_Fornecedor, @status_Fornecedor)";
+            Cmd.CommandText = @"INSERT INTO  Fornecedores VALUES (@nomefantasia_Fornecedor, @razaosocial_Fornecedor, @cnpj_Fornecedor, @inscricaoEstadual_Fornecedor, @inscricaoMunicipal_Fornecedor, @cep_Fornecedor, @endereco_Fornecedor, @numero_Fornecedor, @cidade_Fornecedor, @estado_Fornecedor, @representante_Fornecedor, @email_Fornecedor, @telefone_Fornecedor, @iniciocontrato_Fornecedor, @status_Fornecedor)";
 
-            Cmd.Parameters.AddWithValue("@nomeAbreviado_Fornecedor", fornecedor.forn_nomeAbreviado);
-            Cmd.Parameters.AddWithValue("@CNPJ_Fornecedor", fornecedor.forn_CNPJ);
-            Cmd.Parameters.AddWithValue("@CEP_Fornecedor", fornecedor.forn_CEP);
-            Cmd.Parameters.AddWithValue("@endereco_Fornecedor", fornecedor.forn_endereco);
-            Cmd.Parameters.AddWithValue("@cidade_Fornecedor", fornecedor.forn_cidade);
-            Cmd.Parameters.AddWithValue("@estado_Fornecedor", fornecedor.forn_estado);
-            Cmd.Parameters.AddWithValue("@telefone_Fornecedor", fornecedor.forn_telefone);
-            Cmd.Parameters.AddWithValue("@representante_Fornecedor", fornecedor.forn_representante);
-            Cmd.Parameters.AddWithValue("@email_Fornecedor", fornecedor.forn_email);
-            Cmd.Parameters.AddWithValue("@status_Fornecedor", fornecedor.forn_status);
+
+            Cmd.Parameters.AddWithValue("@nomefantasia_Fornecedor", fornecedor.fornc_nomeFantasia);
+            Cmd.Parameters.AddWithValue("@razaosocial_Fornecedor", fornecedor.fornc_razaoSocial);
+            Cmd.Parameters.AddWithValue("@cnpj_Fornecedor", fornecedor.fornc_cnpj);
+            Cmd.Parameters.AddWithValue("@inscricaoEstadual_Fornecedor", fornecedor.fornc_inscricaoEstadual);
+            Cmd.Parameters.AddWithValue("@inscricaoMunicipal_Fornecedor", fornecedor.fornc_inscricaoMunicipal);
+            Cmd.Parameters.AddWithValue("@cep_Fornecedor", fornecedor.fornc_cep);
+            Cmd.Parameters.AddWithValue("@endereco_Fornecedor", fornecedor.fornc_endereco);
+            Cmd.Parameters.AddWithValue("@numero_Fornecedor", fornecedor.fornc_numero);
+            Cmd.Parameters.AddWithValue("@cidade_Fornecedor", fornecedor.fornc_cidade);
+            Cmd.Parameters.AddWithValue("@estado_Fornecedor", fornecedor.fornc_estado);
+            Cmd.Parameters.AddWithValue("@representante_Fornecedor", fornecedor.fornc_representante);
+            Cmd.Parameters.AddWithValue("@email_Fornecedor", fornecedor.fornc_email);
+            Cmd.Parameters.AddWithValue("@telefone_Fornecedor", fornecedor.fornc_telefone);
+            Cmd.Parameters.AddWithValue("@iniciocontrato_Fornecedor", fornecedor.fornc_iniciocontrato);
+            Cmd.Parameters.AddWithValue("@status_Fornecedor", fornecedor.fornc_status); 
+
 
             try
             {
@@ -292,7 +299,7 @@ namespace projeto2023.controllers
 
                 while (rd.Read())
                 {
-                    Fornecedores fornecedor = new Fornecedores((int)rd["codigo_Fornecedor"], (string)rd["nomeAbreviado_Fornecedor"], (string)rd["CNPJ_Fornecedor"], (string)rd["CEP_Fornecedor"], (string)rd["endereco_Fornecedor"], (string)rd["cidade_Fornecedor"], (string)rd["estado_fornecedor"], (string)rd["telefone_Fornecedor"], (string)rd["representante_Fornecedor"], (string)rd["email_Fornecedor"], (bool)rd["status_Fornecedor"]);
+                    Fornecedores fornecedor = new Fornecedores((int)rd["codigo_Fornecedor"], (string)rd["nomefantasia_Fornecedor"], (string)rd["razaosocial_Fornecedor"], (string)rd["cnpj_Fornecedor"], (string)rd["inscricaoEstadual_Fornecedor"], (string)rd["inscricaoMunicipal_Fornecedor"], (string)rd["cep_Fornecedor"], (string)rd["endereco_Fornecedor"], (string)rd["numero_Fornecedor"], (string)rd["cidade_Fornecedor"], (string)rd["estado_Fornecedor"], (string)rd["representante_Fornecedor"], (string)rd["email_Fornecedor"], (string)rd["telefone_Fornecedor"], (DateTime)rd["iniciocontrato_Fornecedor"], (int)rd["status_Fornecedor"]);
                     listaFornecedores.Add(fornecedor);
                 }
 
@@ -320,18 +327,23 @@ namespace projeto2023.controllers
         public void UpdateFornecedor(Fornecedores fornToBeUpdated)
         {
             Cmd.Connection = Con.RetornarConexao();
-            Cmd.CommandText = @"UPDATE Fornecedores SET nomeAbreviado_Fornecedor = @fornc_nomeAbreviado, CNPJ_Fornecedor = @fornc_CNPJ, CEP_Fornecedor = @fornc_CEP, cidade_Fornecedor = @fornc_cidade, estado_Fornecedor = @fornc_estado, telefone_Fornecedor = @fornc_telefone, representante_Fornecedor = @fornc_nomeRepresentante, email_Fornecedor = @fornc_email, status_Fornecedor = @fornc_status WHERE codigo_Fornecedor = @fornc_codigo ";
-            Cmd.Parameters.AddWithValue("@fornc_codigo", fornToBeUpdated.forn_codigo);
-            Cmd.Parameters.AddWithValue("@fornc_nomeAbreviado", fornToBeUpdated.forn_nomeAbreviado);
-            Cmd.Parameters.AddWithValue("@fornc_CNPJ", fornToBeUpdated.forn_CNPJ);
-            Cmd.Parameters.AddWithValue("@fornc_CEP", fornToBeUpdated.forn_CEP);
-            Cmd.Parameters.AddWithValue("@fornc_endereco", fornToBeUpdated.forn_endereco);
-            Cmd.Parameters.AddWithValue("@fornc_cidade", fornToBeUpdated.forn_cidade);
-            Cmd.Parameters.AddWithValue("@fornc_estado", fornToBeUpdated.forn_estado);
-            Cmd.Parameters.AddWithValue("@fornc_telefone", fornToBeUpdated.forn_telefone);
-            Cmd.Parameters.AddWithValue("@fornc_nomeRepresentante", fornToBeUpdated.forn_representante);
-            Cmd.Parameters.AddWithValue("@fornc_email", fornToBeUpdated.forn_email);
-            Cmd.Parameters.AddWithValue("@fornc_status", fornToBeUpdated.forn_status);
+            Cmd.CommandText = @"UPDATE Fornecedores SET nomefantasia_Fornecedor = @fornc_nomeFantasia, razaosocial_Fornecedor = @fornc_razaoSocial , cnpj_Fornecedor = @fornc_cnpj, inscricaoEstadual_Fornecedor = @fornc_inscricaoEstadual, inscricaoMunicipal_Fornecedor = @fornc_inscricaoMunicipal, cep_Fornecedor = @fornc_cep, endereco_Fornecedor = @fornc_endereco, numero_Fornecedor = @fornc_numero, cidade_Fornecedor = @fornc_cidade, estado_Fornecedor = @fornc_estado, representante_Fornecedor = @fornc_representante, email_Fornecedor = @fornc_email, telefone_Fornecedor = @fornc_telefone, iniciocontrato_Fornecedor = @fornc_iniciocontrato, status_Fornecedor = @fornc_status WHERE codigo_Fornecedor = @fornc_codigo ";
+            Cmd.Parameters.AddWithValue("@fornc_codigo", fornToBeUpdated.fornc_codigo);
+            Cmd.Parameters.AddWithValue("@fornc_nomeFantasia", fornToBeUpdated.fornc_nomeFantasia);
+            Cmd.Parameters.AddWithValue("@fornc_razaoSocial", fornToBeUpdated.fornc_razaoSocial);
+            Cmd.Parameters.AddWithValue("@fornc_cnpj", fornToBeUpdated.fornc_cnpj);
+            Cmd.Parameters.AddWithValue("@fornc_inscricaoEstadual", fornToBeUpdated.fornc_inscricaoEstadual);
+            Cmd.Parameters.AddWithValue("@fornc_inscricaoMunicipal", fornToBeUpdated.fornc_inscricaoMunicipal);
+            Cmd.Parameters.AddWithValue("@fornc_cep", fornToBeUpdated.fornc_cep);
+            Cmd.Parameters.AddWithValue("@fornc_endereco", fornToBeUpdated.fornc_endereco);
+            Cmd.Parameters.AddWithValue("@fornc_numero", fornToBeUpdated.fornc_numero);
+            Cmd.Parameters.AddWithValue("@fornc_cidade", fornToBeUpdated.fornc_cidade);
+            Cmd.Parameters.AddWithValue("@fornc_estado", fornToBeUpdated.fornc_estado);
+            Cmd.Parameters.AddWithValue("@fornc_representante", fornToBeUpdated.fornc_representante);
+            Cmd.Parameters.AddWithValue("@fornc_email", fornToBeUpdated.fornc_email);
+            Cmd.Parameters.AddWithValue("@fornc_telefone", fornToBeUpdated.fornc_telefone);
+            Cmd.Parameters.AddWithValue("@fornc_iniciocontrato", fornToBeUpdated.fornc_iniciocontrato);
+            Cmd.Parameters.AddWithValue("@fornc_status", fornToBeUpdated.fornc_status);
 
 
             try

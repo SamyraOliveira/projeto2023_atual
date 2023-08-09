@@ -35,9 +35,6 @@
             this.btn_salvar = new System.Windows.Forms.Button();
             this.mntc_dataNasc = new System.Windows.Forms.MonthCalendar();
             this.cmb_estado = new System.Windows.Forms.ComboBox();
-            this.mskd_cep = new System.Windows.Forms.MaskedTextBox();
-            this.mskd_cpf_cnpj = new System.Windows.Forms.MaskedTextBox();
-            this.mskd_telefone = new System.Windows.Forms.MaskedTextBox();
             this.txb_cidade = new System.Windows.Forms.TextBox();
             this.txb_email = new System.Windows.Forms.TextBox();
             this.txb_nome = new System.Windows.Forms.TextBox();
@@ -51,20 +48,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txb_cpf = new System.Windows.Forms.TextBox();
+            this.txb_telefone = new System.Windows.Forms.TextBox();
+            this.txb_cep = new System.Windows.Forms.TextBox();
             this.pnl_crud_clientes.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_crud_clientes
             // 
+            this.pnl_crud_clientes.Controls.Add(this.txb_cep);
+            this.pnl_crud_clientes.Controls.Add(this.txb_telefone);
+            this.pnl_crud_clientes.Controls.Add(this.txb_cpf);
             this.pnl_crud_clientes.Controls.Add(this.btn_cancelar);
             this.pnl_crud_clientes.Controls.Add(this.btn_limpar);
             this.pnl_crud_clientes.Controls.Add(this.btn_excluir);
             this.pnl_crud_clientes.Controls.Add(this.btn_salvar);
             this.pnl_crud_clientes.Controls.Add(this.mntc_dataNasc);
             this.pnl_crud_clientes.Controls.Add(this.cmb_estado);
-            this.pnl_crud_clientes.Controls.Add(this.mskd_cep);
-            this.pnl_crud_clientes.Controls.Add(this.mskd_cpf_cnpj);
-            this.pnl_crud_clientes.Controls.Add(this.mskd_telefone);
             this.pnl_crud_clientes.Controls.Add(this.txb_cidade);
             this.pnl_crud_clientes.Controls.Add(this.txb_email);
             this.pnl_crud_clientes.Controls.Add(this.txb_nome);
@@ -136,30 +136,6 @@
             this.cmb_estado.Name = "cmb_estado";
             this.cmb_estado.Size = new System.Drawing.Size(121, 25);
             this.cmb_estado.TabIndex = 4;
-            // 
-            // mskd_cep
-            // 
-            this.mskd_cep.Location = new System.Drawing.Point(315, 188);
-            this.mskd_cep.Mask = "_____-___";
-            this.mskd_cep.Name = "mskd_cep";
-            this.mskd_cep.Size = new System.Drawing.Size(83, 25);
-            this.mskd_cep.TabIndex = 7;
-            // 
-            // mskd_cpf_cnpj
-            // 
-            this.mskd_cpf_cnpj.Location = new System.Drawing.Point(315, 71);
-            this.mskd_cpf_cnpj.Mask = "___,___,___/__";
-            this.mskd_cpf_cnpj.Name = "mskd_cpf_cnpj";
-            this.mskd_cpf_cnpj.Size = new System.Drawing.Size(116, 25);
-            this.mskd_cpf_cnpj.TabIndex = 1;
-            // 
-            // mskd_telefone
-            // 
-            this.mskd_telefone.Location = new System.Drawing.Point(489, 78);
-            this.mskd_telefone.Mask = "(__) _____-____";
-            this.mskd_telefone.Name = "mskd_telefone";
-            this.mskd_telefone.Size = new System.Drawing.Size(122, 25);
-            this.mskd_telefone.TabIndex = 1;
             // 
             // txb_cidade
             // 
@@ -272,6 +248,33 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome";
             // 
+            // txb_cpf
+            // 
+            this.txb_cpf.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txb_cpf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(111)))));
+            this.txb_cpf.Location = new System.Drawing.Point(315, 71);
+            this.txb_cpf.Name = "txb_cpf";
+            this.txb_cpf.Size = new System.Drawing.Size(121, 25);
+            this.txb_cpf.TabIndex = 13;
+            // 
+            // txb_telefone
+            // 
+            this.txb_telefone.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txb_telefone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(111)))));
+            this.txb_telefone.Location = new System.Drawing.Point(489, 71);
+            this.txb_telefone.Name = "txb_telefone";
+            this.txb_telefone.Size = new System.Drawing.Size(121, 25);
+            this.txb_telefone.TabIndex = 14;
+            // 
+            // txb_cep
+            // 
+            this.txb_cep.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txb_cep.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(111)))));
+            this.txb_cep.Location = new System.Drawing.Point(315, 197);
+            this.txb_cep.Name = "txb_cep";
+            this.txb_cep.Size = new System.Drawing.Size(121, 25);
+            this.txb_cep.TabIndex = 15;
+            // 
             // crud_clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
@@ -302,9 +305,6 @@
         private System.Windows.Forms.Button btn_salvar;
         private System.Windows.Forms.MonthCalendar mntc_dataNasc;
         private System.Windows.Forms.ComboBox cmb_estado;
-        private System.Windows.Forms.MaskedTextBox mskd_cep;
-        private System.Windows.Forms.MaskedTextBox mskd_cpf_cnpj;
-        private System.Windows.Forms.MaskedTextBox mskd_telefone;
         private System.Windows.Forms.TextBox txb_cidade;
         private System.Windows.Forms.TextBox txb_email;
         private System.Windows.Forms.TextBox txb_nome;
@@ -318,5 +318,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txb_cpf;
+        private System.Windows.Forms.TextBox txb_telefone;
+        private System.Windows.Forms.TextBox txb_cep;
     }
 }

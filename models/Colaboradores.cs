@@ -91,11 +91,11 @@ namespace projeto2023.models
                 {
                     throw new Exception("Conteudo do campo 'CPF' invalido!");
                 }
-                colab_CEP = value;
+                colab_CPF = value;
             }
             get
             {
-                return colab_CEP;
+                return colab_CPF;
             }
         }
 
