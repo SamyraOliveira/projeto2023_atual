@@ -10,8 +10,8 @@ namespace projeto2023.controllers
 {
     public class Connection
     {
-        private readonly SqlConnection con;
-        private readonly string DataBase = "Estampariadb";
+        public readonly SqlConnection con;
+        public readonly string DataBase = "Estampariadb";
 
         public Connection()
         {

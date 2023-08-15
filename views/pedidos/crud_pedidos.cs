@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -79,5 +80,92 @@ namespace projeto2023.views.pedidos
             this.pedidosTableAdapter.Fill(this.estampariadbDataSet10.Pedidos);
             btnClear_Pedidos_Click(null, null);
         }
+
+        private void crud_pedidos_Load(object sender, EventArgs e)
+        {
+            CarregarClientes();
+        }
+
+        #region CARREGAR DADOS CLIENTE E COLABORADOR
+        private void CarregarClientes()
+        {
+    
+            string connectionString = "Estampariadb";
+            string query = "SELECT codigo_Cliente, nome_Cliente FROM Clientes";
+
+
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+
+
+
+                SqlDataReader reader = command.ExecuteReader();
+
+
+
+                while (reader.Read())
+                {
+                    int clienteID = (int)reader["ID"];
+                    string nomeCliente = (string)reader["Nome"];
+                    cmb_idCliente.Items.Add(new Clientes_dados(clienteID, nomeCliente));
+                }
+
+                reader.Close();
+            }
+        }
+
+
+        private void CarregarColaboradores()
+        {
+            string connectionString = "Estampariadb";
+            string query = "SELECT codigo_Colaborador, nome_Colaborador FROM Colaboradores";
+
+
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+
+
+
+                SqlDataReader reader = command.ExecuteReader();
+
+
+
+                while (reader.Read())
+                {
+                    int clienteID = (int)reader["ID"];
+                    string nomeCliente = (string)reader["Nome"];
+                    cmb_idCliente.Items.Add(new Clientes_dados(clienteID, nomeCliente));
+                }
+
+
+
+                reader.Close();
+            }
+        }
+
+
+
+        private void cmb_idColaborador_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_idColaborador.SelectedItem is Colaboradores_dados selectedColaboradores)
+            {
+                txb_nomeColaborador.Text = selectedColaboradores.Nome_colab;
+            }
+        }
+
+        private void cmb_idCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_idCliente.SelectedItem is Clientes_dados selectedClientes)
+            {
+                txb_nomeCliente.Text = selectedClientes.Nome_cli;
+            }
+        }
+        #endregion
     }
 }

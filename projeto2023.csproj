@@ -57,7 +57,9 @@
       <DependentUpon>menu.cs</DependentUpon>
     </Compile>
     <Compile Include="models\Clientes.cs" />
+    <Compile Include="models\Clientes_dados.cs" />
     <Compile Include="models\Colaboradores.cs" />
+    <Compile Include="models\Colaboradores_dados.cs" />
     <Compile Include="models\Estoque.cs" />
     <Compile Include="models\Fornecedores.cs" />
     <Compile Include="models\Materiais.cs" />

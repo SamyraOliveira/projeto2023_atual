@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,63 +13,81 @@ namespace projeto2023.models
         public int ped_codigo;
         public int cli_codigo;
         public int colab_codigo;
-        public int mat_codigo;
-        public string ped_tipoGola;
-        public string ped_corCamiseta;
-        public int ped_tamanhoP;
-        public int ped_tamanhoM;
-        public int ped_tamanhoG;
-        public int ped_quanTotal;
-        public byte[] ped_estampaCamiseta;
-        public string ped_nomeMaterial;
-        public DateTime pedDataInicial;
-        public decimal ped_valorUnit;
+        public string ped_cor;
+        public string ped_tecido;
+        public string ped_formato;
+        public string ped_gola;
+        public string ped_tecnica;
+        public byte ped_estampa;
+        public int ped_tamP;
+        public int ped_tamM;
+        public int ped_tamG;
+        public int ped_disponibilizadoCli;
+        public int ped_totalCamisetas;
+        public DateTime ped_Datainicial;
+        public DateTime ped_DataEntrega;
+        public decimal ped_valorUnitario;
         public decimal ped_valorTotal;
         public decimal ped_valorEntrada;
-        public string ped_nome;
-        public bool ped_status;
+        public decimal ped_valorAberto;
+        public string ped_formaPagamentoEntrada;
+        public string ped_formaPagamentoFinal;
+        public int ped_status;
 
 
-        public Pedidos(int codigoCliente, int codigoColaborador, int codigoMaterial, string gola, string corCamiseta, int tamP, int tamM, int tamG, int quantidadeTam, byte [] estampa, string material, DateTime dataPedido, decimal valorUnitario, decimal valorTotal, decimal valorEntrada, string nome, bool status)
+
+        public Pedidos(int codigoCliente, int codigoColaborador, string cor, string tecido, string formato, string gola, string tecnica, byte estampa, int tamP, int tamM, int tamG, int disponibilizadoCliente, int totalCamisetas, DateTime dataInicial, DateTime dataEntrega, decimal valor_unitario, decimal valor_total, decimal valor_entrada, decimal valor_aberto, string formaPagamentoEntrada, string formaPagamentoFinal, int status)
         {
-            
-            cli_codigo = codigoCliente;
-            colab_codigo = codigoColaborador;
-            mat_codigo = codigoMaterial;
-            ped_tipoGola = gola;
-            ped_corCamiseta = corCamiseta;
-            ped_tamanhoP = tamP;
-            ped_tamanhoM = tamM;
-            ped_tamanhoG = tamG;
-            ped_quanTotal = quantidadeTam;
-            ped_estampaCamiseta = estampa;
-            ped_nomeMaterial = material;
-            pedDataInicial = dataPedido;
-            ped_valorUnit = valorUnitario;
-            ped_valorTotal = valorTotal;
-            ped_valorEntrada = valorEntrada;
-            ped_nome = nome;
-            ped_status = status;
+
+
+          cli_codigo = codigoCliente;
+          colab_codigo = codigoColaborador;
+
+          ped_cor= cor;
+          ped_tecido = tecido;
+          ped_formato = formato;
+          ped_gola = gola;
+          ped_tecnica = tecnica;
+          ped_estampa = estampa;
+          ped_tamP = tamP;
+          ped_tamM = tamM;
+          ped_tamG = tamG;
+          ped_disponibilizadoCli = disponibilizadoCliente;
+          ped_totalCamisetas = totalCamisetas;
+          ped_Datainicial= dataInicial;
+          ped_DataEntrega = dataEntrega;
+          ped_valorUnitario = valor_unitario;
+          ped_valorTotal = valor_total;
+          ped_valorEntrada = valor_entrada ;
+          ped_valorAberto = valor_aberto;
+          ped_formaPagamentoEntrada = formaPagamentoEntrada;
+          ped_formaPagamentoFinal = formaPagamentoFinal;
+          ped_status = status;
     }
-        public Pedidos(int codigo, int codigoCliente, int codigoColaborador, int codigoMaterial, string gola, string corCamiseta, int tamP, int tamM, int tamG, int quantidadeTam, byte[] estampa, string material, DateTime dataPedido, decimal valorUnitario, decimal valorTotal, decimal valorEntrada, string nome, bool status)
+        public Pedidos(int codigo, int codigoCliente, int codigoColaborador, string cor, string tecido, string formato, string gola, string tecnica, byte estampa, int tamP, int tamM, int tamG, int disponibilizadoCliente, int totalCamisetas, DateTime dataInicial, DateTime dataEntrega, decimal valor_unitario, decimal valor_total, decimal valor_entrada, decimal valor_aberto, string formaPagamentoEntrada, string formaPagamentoFinal, int status)
         {
             ped_codigo = codigo;
             cli_codigo = codigoCliente;
             colab_codigo = codigoColaborador;
-            mat_codigo = codigoMaterial;
-            ped_tipoGola = gola;
-            ped_corCamiseta = corCamiseta;
-            ped_tamanhoP = tamP;
-            ped_tamanhoM = tamM;
-            ped_tamanhoG = tamG;
-            ped_quanTotal = quantidadeTam;
-            ped_estampaCamiseta = estampa;
-            ped_nomeMaterial = material;
-            pedDataInicial = dataPedido;
-            ped_valorUnit = valorUnitario;
-            ped_valorTotal = valorTotal;
-            ped_valorEntrada = valorEntrada;
-            ped_nome = nome;
+            ped_cor = cor;
+            ped_tecido = tecido;
+            ped_formato = formato;
+            ped_gola = gola;
+            ped_tecnica = tecnica;
+            ped_estampa = estampa;
+            ped_tamP = tamP;
+            ped_tamM = tamM;
+            ped_tamG = tamG;
+            ped_disponibilizadoCli = disponibilizadoCliente;
+            ped_totalCamisetas = totalCamisetas;
+            ped_Datainicial = dataInicial;
+            ped_DataEntrega = dataEntrega;
+            ped_valorUnitario = valor_unitario;
+            ped_valorTotal = valor_total;
+            ped_valorEntrada = valor_entrada;
+            ped_valorAberto = valor_aberto;
+            ped_formaPagamentoEntrada = formaPagamentoEntrada;
+            ped_formaPagamentoFinal = formaPagamentoFinal;
             ped_status = status;
         }
 
