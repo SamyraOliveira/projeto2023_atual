@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_excluir = new System.Windows.Forms.Button();
+            this.btn_limpar = new System.Windows.Forms.Button();
             this.btn_orcamento = new System.Windows.Forms.Button();
             this.btnregistrar_pedido = new System.Windows.Forms.Button();
             this.pnl_valores = new System.Windows.Forms.Panel();
@@ -90,7 +91,7 @@
             this.txb_nomeCliente = new System.Windows.Forms.TextBox();
             this.lbl_nomeColaborador = new System.Windows.Forms.Label();
             this.lbl_idColaborador = new System.Windows.Forms.Label();
-            this.btn_limpar = new System.Windows.Forms.Button();
+            this.OFD_estamparia = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             this.pnl_valores.SuspendLayout();
             this.pnl_formapagamento.SuspendLayout();
@@ -124,6 +125,7 @@
             this.btn_cancelar.TabIndex = 25;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_excluir
             // 
@@ -133,6 +135,17 @@
             this.btn_excluir.TabIndex = 24;
             this.btn_excluir.Text = "Excluir";
             this.btn_excluir.UseVisualStyleBackColor = true;
+            this.btn_excluir.Click += new System.EventHandler(this.btn_excluir_Click);
+            // 
+            // btn_limpar
+            // 
+            this.btn_limpar.Location = new System.Drawing.Point(800, 302);
+            this.btn_limpar.Name = "btn_limpar";
+            this.btn_limpar.Size = new System.Drawing.Size(126, 58);
+            this.btn_limpar.TabIndex = 23;
+            this.btn_limpar.Text = "Limpar";
+            this.btn_limpar.UseVisualStyleBackColor = true;
+            this.btn_limpar.Click += new System.EventHandler(this.btn_limpar_Click);
             // 
             // btn_orcamento
             // 
@@ -181,7 +194,7 @@
             this.lbl_valorAberto.AutoSize = true;
             this.lbl_valorAberto.Location = new System.Drawing.Point(8, 165);
             this.lbl_valorAberto.Name = "lbl_valorAberto";
-            this.lbl_valorAberto.Size = new System.Drawing.Size(92, 12);
+            this.lbl_valorAberto.Size = new System.Drawing.Size(92, 14);
             this.lbl_valorAberto.TabIndex = 15;
             this.lbl_valorAberto.Text = "Valor em Aberto";
             // 
@@ -211,7 +224,7 @@
             this.lbl_valorEntrada.AutoSize = true;
             this.lbl_valorEntrada.Location = new System.Drawing.Point(9, 120);
             this.lbl_valorEntrada.Name = "lbl_valorEntrada";
-            this.lbl_valorEntrada.Size = new System.Drawing.Size(77, 12);
+            this.lbl_valorEntrada.Size = new System.Drawing.Size(77, 14);
             this.lbl_valorEntrada.TabIndex = 12;
             this.lbl_valorEntrada.Text = "Valor Entrada";
             // 
@@ -220,7 +233,7 @@
             this.lbl_valorTotal.AutoSize = true;
             this.lbl_valorTotal.Location = new System.Drawing.Point(9, 78);
             this.lbl_valorTotal.Name = "lbl_valorTotal";
-            this.lbl_valorTotal.Size = new System.Drawing.Size(63, 12);
+            this.lbl_valorTotal.Size = new System.Drawing.Size(64, 14);
             this.lbl_valorTotal.TabIndex = 11;
             this.lbl_valorTotal.Text = "Valor Total";
             // 
@@ -229,7 +242,7 @@
             this.lbl_valorUnit.AutoSize = true;
             this.lbl_valorUnit.Location = new System.Drawing.Point(9, 37);
             this.lbl_valorUnit.Name = "lbl_valorUnit";
-            this.lbl_valorUnit.Size = new System.Drawing.Size(79, 12);
+            this.lbl_valorUnit.Size = new System.Drawing.Size(79, 14);
             this.lbl_valorUnit.TabIndex = 10;
             this.lbl_valorUnit.Text = "Valor Unitário";
             // 
@@ -238,7 +251,7 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(44, 15);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(41, 12);
+            this.label13.Size = new System.Drawing.Size(44, 14);
             this.label13.TabIndex = 9;
             this.label13.Text = "Pedido";
             // 
@@ -269,7 +282,7 @@
             this.lbl_final.AutoSize = true;
             this.lbl_final.Location = new System.Drawing.Point(85, 150);
             this.lbl_final.Name = "lbl_final";
-            this.lbl_final.Size = new System.Drawing.Size(30, 12);
+            this.lbl_final.Size = new System.Drawing.Size(32, 14);
             this.lbl_final.TabIndex = 20;
             this.lbl_final.Text = "Final";
             // 
@@ -278,7 +291,7 @@
             this.cmb_formapagamentoFinal.FormattingEnabled = true;
             this.cmb_formapagamentoFinal.Location = new System.Drawing.Point(18, 106);
             this.cmb_formapagamentoFinal.Name = "cmb_formapagamentoFinal";
-            this.cmb_formapagamentoFinal.Size = new System.Drawing.Size(121, 20);
+            this.cmb_formapagamentoFinal.Size = new System.Drawing.Size(121, 22);
             this.cmb_formapagamentoFinal.TabIndex = 19;
             // 
             // lbl_formapagamentoFinal
@@ -286,7 +299,7 @@
             this.lbl_formapagamentoFinal.AutoSize = true;
             this.lbl_formapagamentoFinal.Location = new System.Drawing.Point(16, 73);
             this.lbl_formapagamentoFinal.Name = "lbl_formapagamentoFinal";
-            this.lbl_formapagamentoFinal.Size = new System.Drawing.Size(123, 24);
+            this.lbl_formapagamentoFinal.Size = new System.Drawing.Size(124, 28);
             this.lbl_formapagamentoFinal.TabIndex = 18;
             this.lbl_formapagamentoFinal.Text = "Formas de Pagamento\r\n               Final";
             // 
@@ -295,7 +308,7 @@
             this.cmb_formapagamentoEntrada.FormattingEnabled = true;
             this.cmb_formapagamentoEntrada.Location = new System.Drawing.Point(18, 42);
             this.cmb_formapagamentoEntrada.Name = "cmb_formapagamentoEntrada";
-            this.cmb_formapagamentoEntrada.Size = new System.Drawing.Size(121, 20);
+            this.cmb_formapagamentoEntrada.Size = new System.Drawing.Size(121, 22);
             this.cmb_formapagamentoEntrada.TabIndex = 17;
             // 
             // txb_entrada
@@ -310,7 +323,7 @@
             this.lbl_entrada.AutoSize = true;
             this.lbl_entrada.Location = new System.Drawing.Point(16, 150);
             this.lbl_entrada.Name = "lbl_entrada";
-            this.lbl_entrada.Size = new System.Drawing.Size(46, 12);
+            this.lbl_entrada.Size = new System.Drawing.Size(47, 14);
             this.lbl_entrada.TabIndex = 15;
             this.lbl_entrada.Text = "Entrada";
             // 
@@ -319,7 +332,7 @@
             this.lbl_formapagamentoEntrada.AutoSize = true;
             this.lbl_formapagamentoEntrada.Location = new System.Drawing.Point(16, 15);
             this.lbl_formapagamentoEntrada.Name = "lbl_formapagamentoEntrada";
-            this.lbl_formapagamentoEntrada.Size = new System.Drawing.Size(123, 24);
+            this.lbl_formapagamentoEntrada.Size = new System.Drawing.Size(124, 28);
             this.lbl_formapagamentoEntrada.TabIndex = 0;
             this.lbl_formapagamentoEntrada.Text = "Formas de Pagamento\r\n             Entrada";
             // 
@@ -353,7 +366,7 @@
             this.lbl_dataentrega.Location = new System.Drawing.Point(439, 236);
             this.lbl_dataentrega.Name = "lbl_dataentrega";
             this.lbl_dataentrega.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl_dataentrega.Size = new System.Drawing.Size(73, 12);
+            this.lbl_dataentrega.Size = new System.Drawing.Size(75, 14);
             this.lbl_dataentrega.TabIndex = 23;
             this.lbl_dataentrega.Text = "Data Entrega";
             // 
@@ -363,7 +376,7 @@
             this.lbl_datainicial.Location = new System.Drawing.Point(449, 19);
             this.lbl_datainicial.Name = "lbl_datainicial";
             this.lbl_datainicial.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl_datainicial.Size = new System.Drawing.Size(63, 12);
+            this.lbl_datainicial.Size = new System.Drawing.Size(66, 14);
             this.lbl_datainicial.TabIndex = 22;
             this.lbl_datainicial.Text = "Data Inicial";
             // 
@@ -384,7 +397,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(99, 19);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(107, 12);
+            this.label11.Size = new System.Drawing.Size(112, 14);
             this.label11.TabIndex = 19;
             this.label11.Text = "Detalhes do Pedido";
             // 
@@ -397,6 +410,7 @@
             this.pctb_estampa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctb_estampa.TabIndex = 18;
             this.pctb_estampa.TabStop = false;
+            this.pctb_estampa.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pctb_estampa_MouseClick);
             // 
             // cmb_tecnica
             // 
@@ -404,7 +418,7 @@
             this.cmb_tecnica.FormattingEnabled = true;
             this.cmb_tecnica.Location = new System.Drawing.Point(162, 74);
             this.cmb_tecnica.Name = "cmb_tecnica";
-            this.cmb_tecnica.Size = new System.Drawing.Size(121, 20);
+            this.cmb_tecnica.Size = new System.Drawing.Size(121, 22);
             this.cmb_tecnica.TabIndex = 15;
             // 
             // grpb_quantidades
@@ -431,7 +445,7 @@
             this.lbl_tamG.AutoSize = true;
             this.lbl_tamG.Location = new System.Drawing.Point(21, 127);
             this.lbl_tamG.Name = "lbl_tamG";
-            this.lbl_tamG.Size = new System.Drawing.Size(13, 12);
+            this.lbl_tamG.Size = new System.Drawing.Size(15, 14);
             this.lbl_tamG.TabIndex = 18;
             this.lbl_tamG.Text = "G";
             // 
@@ -440,7 +454,7 @@
             this.lbl_tamM.AutoSize = true;
             this.lbl_tamM.Location = new System.Drawing.Point(20, 89);
             this.lbl_tamM.Name = "lbl_tamM";
-            this.lbl_tamM.Size = new System.Drawing.Size(14, 12);
+            this.lbl_tamM.Size = new System.Drawing.Size(16, 14);
             this.lbl_tamM.TabIndex = 17;
             this.lbl_tamM.Text = "M";
             // 
@@ -449,7 +463,7 @@
             this.lbl_tamP.AutoSize = true;
             this.lbl_tamP.Location = new System.Drawing.Point(23, 55);
             this.lbl_tamP.Name = "lbl_tamP";
-            this.lbl_tamP.Size = new System.Drawing.Size(11, 12);
+            this.lbl_tamP.Size = new System.Drawing.Size(13, 14);
             this.lbl_tamP.TabIndex = 16;
             this.lbl_tamP.Text = "P";
             // 
@@ -458,7 +472,7 @@
             this.lbl_totalCamisetas.AutoSize = true;
             this.lbl_totalCamisetas.Location = new System.Drawing.Point(97, 188);
             this.lbl_totalCamisetas.Name = "lbl_totalCamisetas";
-            this.lbl_totalCamisetas.Size = new System.Drawing.Size(35, 12);
+            this.lbl_totalCamisetas.Size = new System.Drawing.Size(37, 14);
             this.lbl_totalCamisetas.TabIndex = 15;
             this.lbl_totalCamisetas.Text = "Total:";
             // 
@@ -481,7 +495,7 @@
             this.check_disponibilizadocliente.AutoSize = true;
             this.check_disponibilizadocliente.Location = new System.Drawing.Point(25, 145);
             this.check_disponibilizadocliente.Name = "check_disponibilizadocliente";
-            this.check_disponibilizadocliente.Size = new System.Drawing.Size(175, 16);
+            this.check_disponibilizadocliente.Size = new System.Drawing.Size(181, 18);
             this.check_disponibilizadocliente.TabIndex = 12;
             this.check_disponibilizadocliente.Text = "disponibilizado pelo cliente?";
             this.check_disponibilizadocliente.UseVisualStyleBackColor = true;
@@ -512,7 +526,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(97, 23);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 12);
+            this.label5.Size = new System.Drawing.Size(70, 14);
             this.label5.TabIndex = 6;
             this.label5.Text = "Quantidade";
             // 
@@ -522,7 +536,7 @@
             this.cmb_formato.FormattingEnabled = true;
             this.cmb_formato.Location = new System.Drawing.Point(26, 186);
             this.cmb_formato.Name = "cmb_formato";
-            this.cmb_formato.Size = new System.Drawing.Size(121, 20);
+            this.cmb_formato.Size = new System.Drawing.Size(121, 22);
             this.cmb_formato.TabIndex = 17;
             // 
             // label7
@@ -530,7 +544,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(23, 108);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 12);
+            this.label7.Size = new System.Drawing.Size(103, 14);
             this.label7.TabIndex = 10;
             this.label7.Text = "Tecido Camisetas";
             // 
@@ -539,7 +553,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(23, 166);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(102, 12);
+            this.label10.Size = new System.Drawing.Size(102, 14);
             this.label10.TabIndex = 16;
             this.label10.Text = "Formato Camiseta";
             // 
@@ -549,7 +563,7 @@
             this.cmb_tecido.FormattingEnabled = true;
             this.cmb_tecido.Location = new System.Drawing.Point(26, 128);
             this.cmb_tecido.Name = "cmb_tecido";
-            this.cmb_tecido.Size = new System.Drawing.Size(121, 20);
+            this.cmb_tecido.Size = new System.Drawing.Size(121, 22);
             this.cmb_tecido.TabIndex = 11;
             // 
             // cmb_cores
@@ -558,7 +572,7 @@
             this.cmb_cores.FormattingEnabled = true;
             this.cmb_cores.Location = new System.Drawing.Point(26, 74);
             this.cmb_cores.Name = "cmb_cores";
-            this.cmb_cores.Size = new System.Drawing.Size(121, 20);
+            this.cmb_cores.Size = new System.Drawing.Size(121, 22);
             this.cmb_cores.TabIndex = 13;
             // 
             // label8
@@ -566,7 +580,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(23, 54);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(95, 12);
+            this.label8.Size = new System.Drawing.Size(97, 14);
             this.label8.TabIndex = 12;
             this.label8.Text = "Cores Camisetas";
             // 
@@ -575,7 +589,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(159, 54);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 12);
+            this.label9.Size = new System.Drawing.Size(57, 14);
             this.label9.TabIndex = 14;
             this.label9.Text = "Técnicas";
             // 
@@ -585,7 +599,7 @@
             this.cmb_gola.FormattingEnabled = true;
             this.cmb_gola.Location = new System.Drawing.Point(26, 236);
             this.cmb_gola.Name = "cmb_gola";
-            this.cmb_gola.Size = new System.Drawing.Size(121, 20);
+            this.cmb_gola.Size = new System.Drawing.Size(121, 22);
             this.cmb_gola.TabIndex = 9;
             // 
             // label6
@@ -593,7 +607,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(23, 216);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 12);
+            this.label6.Size = new System.Drawing.Size(58, 14);
             this.label6.TabIndex = 8;
             this.label6.Text = "Tipo Gola";
             // 
@@ -614,10 +628,11 @@
             // 
             // cmb_idCliente
             // 
+            this.cmb_idCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_idCliente.FormattingEnabled = true;
             this.cmb_idCliente.Location = new System.Drawing.Point(415, 28);
             this.cmb_idCliente.Name = "cmb_idCliente";
-            this.cmb_idCliente.Size = new System.Drawing.Size(70, 20);
+            this.cmb_idCliente.Size = new System.Drawing.Size(70, 22);
             this.cmb_idCliente.TabIndex = 7;
             this.cmb_idCliente.SelectedIndexChanged += new System.EventHandler(this.cmb_idCliente_SelectedIndexChanged);
             // 
@@ -628,7 +643,7 @@
             this.cmb_idColaborador.Location = new System.Drawing.Point(11, 26);
             this.cmb_idColaborador.MaxDropDownItems = 5;
             this.cmb_idColaborador.Name = "cmb_idColaborador";
-            this.cmb_idColaborador.Size = new System.Drawing.Size(70, 20);
+            this.cmb_idColaborador.Size = new System.Drawing.Size(70, 22);
             this.cmb_idColaborador.TabIndex = 6;
             this.cmb_idColaborador.SelectedIndexChanged += new System.EventHandler(this.cmb_idColaborador_SelectedIndexChanged);
             // 
@@ -637,7 +652,7 @@
             this.lbl_nomeCliente.AutoSize = true;
             this.lbl_nomeCliente.Location = new System.Drawing.Point(500, 11);
             this.lbl_nomeCliente.Name = "lbl_nomeCliente";
-            this.lbl_nomeCliente.Size = new System.Drawing.Size(42, 12);
+            this.lbl_nomeCliente.Size = new System.Drawing.Size(46, 14);
             this.lbl_nomeCliente.TabIndex = 3;
             this.lbl_nomeCliente.Text = "Cliente";
             // 
@@ -646,7 +661,7 @@
             this.lbl_idCliente.AutoSize = true;
             this.lbl_idCliente.Location = new System.Drawing.Point(409, 11);
             this.lbl_idCliente.Name = "lbl_idCliente";
-            this.lbl_idCliente.Size = new System.Drawing.Size(76, 12);
+            this.lbl_idCliente.Size = new System.Drawing.Size(79, 14);
             this.lbl_idCliente.TabIndex = 2;
             this.lbl_idCliente.Text = "Identificador ";
             // 
@@ -654,6 +669,7 @@
             // 
             this.txb_nomeColaborador.Location = new System.Drawing.Point(101, 28);
             this.txb_nomeColaborador.Name = "txb_nomeColaborador";
+            this.txb_nomeColaborador.ReadOnly = true;
             this.txb_nomeColaborador.Size = new System.Drawing.Size(289, 20);
             this.txb_nomeColaborador.TabIndex = 3;
             // 
@@ -661,6 +677,7 @@
             // 
             this.txb_nomeCliente.Location = new System.Drawing.Point(503, 28);
             this.txb_nomeCliente.Name = "txb_nomeCliente";
+            this.txb_nomeCliente.ReadOnly = true;
             this.txb_nomeCliente.Size = new System.Drawing.Size(289, 20);
             this.txb_nomeCliente.TabIndex = 5;
             // 
@@ -669,7 +686,7 @@
             this.lbl_nomeColaborador.AutoSize = true;
             this.lbl_nomeColaborador.Location = new System.Drawing.Point(98, 11);
             this.lbl_nomeColaborador.Name = "lbl_nomeColaborador";
-            this.lbl_nomeColaborador.Size = new System.Drawing.Size(36, 12);
+            this.lbl_nomeColaborador.Size = new System.Drawing.Size(38, 14);
             this.lbl_nomeColaborador.TabIndex = 1;
             this.lbl_nomeColaborador.Text = "Nome";
             // 
@@ -678,22 +695,17 @@
             this.lbl_idColaborador.AutoSize = true;
             this.lbl_idColaborador.Location = new System.Drawing.Point(9, 11);
             this.lbl_idColaborador.Name = "lbl_idColaborador";
-            this.lbl_idColaborador.Size = new System.Drawing.Size(73, 12);
+            this.lbl_idColaborador.Size = new System.Drawing.Size(73, 14);
             this.lbl_idColaborador.TabIndex = 0;
             this.lbl_idColaborador.Text = "Colaborador";
             // 
-            // btn_limpar
+            // OFD_estamparia
             // 
-            this.btn_limpar.Location = new System.Drawing.Point(800, 302);
-            this.btn_limpar.Name = "btn_limpar";
-            this.btn_limpar.Size = new System.Drawing.Size(126, 58);
-            this.btn_limpar.TabIndex = 23;
-            this.btn_limpar.Text = "Limpar";
-            this.btn_limpar.UseVisualStyleBackColor = true;
+            this.OFD_estamparia.FileName = "OFD_estamparia";
             // 
             // crud_pedidos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
             this.ClientSize = new System.Drawing.Size(1200, 588);
@@ -787,5 +799,6 @@
         private System.Windows.Forms.ComboBox cmb_idCliente;
         private System.Windows.Forms.ComboBox cmb_idColaborador;
         private System.Windows.Forms.Button btn_limpar;
+        private System.Windows.Forms.OpenFileDialog OFD_estamparia;
     }
 }

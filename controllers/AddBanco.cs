@@ -636,26 +636,32 @@ namespace projeto2023.controllers
         public void InsertPedidos(Pedidos pedido)
         {
             Cmd.Connection = Con.RetornarConexao();
-            Cmd.CommandText = @"INSERT INTO  Pedidos VALUES (@codigo_Cliente, @codigo_Colaborador , @codigo_Material, @tipoGola_Pedido, @corCamiseta_Pedido, @tamP_quant_Pedido, @tamM_quant_Pedido, @tamG_quant_Pedido, @totalCamisetas_Pedido, @estampa_Pedido, @nome_Material, @data_Pedido, @valorUnit_Pedido,@valorTotal_Pedido, @valorEntrada_Pedido, @nome_Cliente, @status_Pedido )";
+            Cmd.CommandText = @"INSERT INTO  Pedidos VALUES (@codigo_Colaborador, @codigo_Cliente, @corCamiseta_Pedido, @tecidoCamiseta_Pedido, @formatoCamiseta_Pedido, @tipoGola_Pedido, @tecnicas_Pedido, @estampa_Pedido, @tamP_quant_Pedido, @tamM_quant_Pedido, @tamG_quant_Pedido, @disponibilizadoCliente, @quantdisponibilizadoCliente, @totalCamisetas_Pedido, @data_inicial, @data_entrega, @valorUnit_Pedido, @valorTotal_Pedido, @valorEntrada_Pedido, @valorAberto_Pedido, @formaPagamentoEntrada_Pedido, @formaPagamentoFinal_Pedido, @status_Pedido )";
 
 
-            Cmd.Parameters.AddWithValue("@codigo_Cliente ", pedido.cli_codigo);
             Cmd.Parameters.AddWithValue("@codigo_Colaborador", pedido.colab_codigo);
-            Cmd.Parameters.AddWithValue("@codigo_Material  ", pedido.mat_codigo);
-            Cmd.Parameters.AddWithValue("@tipoGola_Pedido  ", pedido.ped_tipoGola);
-            Cmd.Parameters.AddWithValue("@corCamiseta_Pedido ", pedido.ped_corCamiseta);
-            Cmd.Parameters.AddWithValue("@tamP_quant_Pedido ", pedido.ped_tamanhoP);
-            Cmd.Parameters.AddWithValue("@tamM_quant_Pedido ", pedido.ped_tamanhoM);
-            Cmd.Parameters.AddWithValue("@tamG_quant_Pedido  ", pedido.ped_tamanhoG);
-            Cmd.Parameters.AddWithValue("@totalCamisetas_Pedido  ", pedido.ped_quanTotal);
-            Cmd.Parameters.AddWithValue("@estampa_Pedido ", pedido.ped_estampaCamiseta);
-            Cmd.Parameters.AddWithValue("@nome_Material    ", pedido.ped_nomeMaterial);
-            Cmd.Parameters.AddWithValue("@data_Pedido  ", pedido.pedDataInicial);
-            Cmd.Parameters.AddWithValue("@valorUnit_Pedido  ", pedido.ped_valorUnit);
+            Cmd.Parameters.AddWithValue("@codigo_Cliente ", pedido.cli_codigo);
+            Cmd.Parameters.AddWithValue("@corCamiseta_Pedido  ", pedido.ped_cor);
+            Cmd.Parameters.AddWithValue("@tecidoCamiseta_Pedido  ", pedido.ped_tecido);
+            Cmd.Parameters.AddWithValue("@formatoCamiseta_Pedido ", pedido.ped_formato);
+            Cmd.Parameters.AddWithValue("@tipoGola_Pedido ", pedido.ped_gola);
+            Cmd.Parameters.AddWithValue("@tecnicas_Pedido ", pedido.ped_tecnica);
+            Cmd.Parameters.AddWithValue("@estampa_Pedido  ", pedido.ped_estampa);
+            Cmd.Parameters.AddWithValue("@tamP_quant_Pedido  ", pedido.ped_tamP);
+            Cmd.Parameters.AddWithValue("@tamM_quant_Pedido ", pedido.ped_tamM);
+            Cmd.Parameters.AddWithValue("@tamG_quant_Pedido    ", pedido.ped_tamG);
+            Cmd.Parameters.AddWithValue("@quantdisponibilizadoCliente  ", pedido.ped_disponibilizadoCli);
+            Cmd.Parameters.AddWithValue("@totalCamisetas_Pedido  ", pedido.ped_totalCamisetas);
+            Cmd.Parameters.AddWithValue("@data_inicial  ", pedido.ped_Datainicial);
+            Cmd.Parameters.AddWithValue("@data_entrega ", pedido.ped_DataEntrega);
+            Cmd.Parameters.AddWithValue("@valorUnit_Pedido ", pedido.ped_valorUnitario);
             Cmd.Parameters.AddWithValue("@valorTotal_Pedido  ", pedido.ped_valorTotal);
-            Cmd.Parameters.AddWithValue("@valorEntrada_Pedido ", pedido.ped_valorEntrada);
-            Cmd.Parameters.AddWithValue("@nome_Cliente ", pedido.ped_nome);
+            Cmd.Parameters.AddWithValue("@valorEntrada_Pedido  ", pedido.ped_valorEntrada);
+            Cmd.Parameters.AddWithValue("@valorAberto_Pedido  ", pedido.ped_valorAberto);
+            Cmd.Parameters.AddWithValue("@formaPagamentoEntrada_Pedido ", pedido.ped_formaPagamentoEntrada);
+            Cmd.Parameters.AddWithValue("@formaPagamentoFinal_Pedido ", pedido.ped_formaPagamentoFinal);
             Cmd.Parameters.AddWithValue("@status_Pedido  ", pedido.ped_status);
+
 
             try
             {
@@ -744,6 +750,34 @@ namespace projeto2023.controllers
             Cmd.Parameters.AddWithValue("@ped_valorEntrada ", pedToBeUpdated.ped_valorEntrada);
             Cmd.Parameters.AddWithValue("@nome_Cliente ", pedToBeUpdated.ped_nome);
             Cmd.Parameters.AddWithValue("@ped_status  ", pedToBeUpdated.ped_status);
+
+
+
+
+
+            Cmd.Parameters.AddWithValue("@codigo_Colaborador", pedido.colab_codigo);
+            Cmd.Parameters.AddWithValue("@codigo_Cliente ", pedido.cli_codigo);
+            Cmd.Parameters.AddWithValue("@corCamiseta_Pedido  ", pedido.ped_cor);
+            Cmd.Parameters.AddWithValue("@tecidoCamiseta_Pedido  ", pedido.ped_tecido);
+            Cmd.Parameters.AddWithValue("@formatoCamiseta_Pedido ", pedido.ped_formato);
+            Cmd.Parameters.AddWithValue("@tipoGola_Pedido ", pedido.ped_gola);
+            Cmd.Parameters.AddWithValue("@tecnicas_Pedido ", pedido.ped_tecnica);
+            Cmd.Parameters.AddWithValue("@estampa_Pedido  ", pedido.ped_estampa);
+            Cmd.Parameters.AddWithValue("@tamP_quant_Pedido  ", pedido.ped_tamP);
+            Cmd.Parameters.AddWithValue("@tamM_quant_Pedido ", pedido.ped_tamM);
+            Cmd.Parameters.AddWithValue("@tamG_quant_Pedido    ", pedido.ped_tamG);
+            Cmd.Parameters.AddWithValue("@quantdisponibilizadoCliente  ", pedido.ped_disponibilizadoCli);
+            Cmd.Parameters.AddWithValue("@totalCamisetas_Pedido  ", pedido.ped_totalCamisetas);
+            Cmd.Parameters.AddWithValue("@data_inicial  ", pedido.ped_Datainicial);
+            Cmd.Parameters.AddWithValue("@data_entrega ", pedido.ped_DataEntrega);
+            Cmd.Parameters.AddWithValue("@valorUnit_Pedido ", pedido.ped_valorUnitario);
+            Cmd.Parameters.AddWithValue("@valorTotal_Pedido  ", pedido.ped_valorTotal);
+            Cmd.Parameters.AddWithValue("@valorEntrada_Pedido  ", pedido.ped_valorEntrada);
+            Cmd.Parameters.AddWithValue("@valorAberto_Pedido  ", pedido.ped_valorAberto);
+            Cmd.Parameters.AddWithValue("@formaPagamentoEntrada_Pedido ", pedido.ped_formaPagamentoEntrada);
+            Cmd.Parameters.AddWithValue("@formaPagamentoFinal_Pedido ", pedido.ped_formaPagamentoFinal);
+            Cmd.Parameters.AddWithValue("@status_Pedido  ", pedido.ped_status);
+
 
             try
             {
