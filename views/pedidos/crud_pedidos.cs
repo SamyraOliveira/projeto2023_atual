@@ -14,6 +14,8 @@ using System.Windows.Forms;
 using System.Net.WebSockets;
 
 
+
+
 namespace projeto2023.views.pedidos
 {
 
@@ -25,6 +27,11 @@ namespace projeto2023.views.pedidos
         string ped_estampa;
         int P = 0, M = 0, G = 0, totalC = 0;
         decimal unitario, totalPedido = 0, entrada = 0;
+
+        List<Colaboradores_dados> colaboradores = new List<Colaboradores_dados>();
+        List<Clientes_dados> clientes = new List<Clientes_dados>();
+
+
 
         public crud_pedidos()
         {
@@ -42,18 +49,25 @@ namespace projeto2023.views.pedidos
             string ped_formato = cmb_formato.Text;
             string ped_gola = cmb_gola.Text;
             string ped_tecnica = cmb_tecnica.Text;
-
             //armazenar a imagem
             FileStream estampa = new FileStream(ped_estampa, FileMode.Open, FileAccess.Read);
             BinaryReader reader = new BinaryReader(estampa);
             byte[] estampa_pedido = reader.ReadBytes((int)estampa.Length);
             estampa.Close();
             reader.Close();
-
             int ped_tamanhoP = Convert.ToInt32(txb_tamP.Text);
             int ped_tamanhoM = Convert.ToInt32(txb_tamM.Text);
             int ped_tamanhoG = Convert.ToInt32(txb_tamG.Text);
-            int ped_disponibilizadocliente = Convert.ToInt32(txb_disponibilizadocliente.Text);
+            int ped_disponibilizadocliente;
+            if (check_disponibilizadocliente.Checked)
+            {
+                ped_disponibilizadocliente = 1;
+            }
+            else
+            {
+                ped_disponibilizadocliente = 0;
+            }
+            int ped_quantdisponibilizadocliente = Convert.ToInt32(txb_disponibilizadocliente.Text);
             int ped_totalCamisetas = Convert.ToInt32(txb_totalCamisetas.Text);
             DateTime peddatainicio = new DateTime(2007, 1, 21);
             peddatainicio = mnth_datainicial.SelectionStart;
@@ -65,25 +79,38 @@ namespace projeto2023.views.pedidos
             decimal ped_totalAberto = Convert.ToDecimal(txb_valorAberto.Text);
             string ped_pagamentoEntrada = cmb_formapagamentoEntrada.Text;
             string ped_pagamentoFinal = cmb_formapagamentoFinal.Text;
-            int ped_status = 1;
+            string ped_status = " ";
 
             MessageBox.Show("FINALIZAR PEDIDO");
 
             try
             {
                 //ligacao no banco de dados
-                AddBanco pedidoDAO = new AddBanco();
+                AddBanco_pedidos pedidoDAO = new AddBanco_pedidos();
 
                 if (codigo_Pedido == -1)
                 {
-                    Pedidos pedido = new Pedidos(cod_colab, nome_colab, cod_cli, nome_cli, ped_cor, ped_tecido, ped_formato, ped_gola, ped_tecnica, estampa_pedido, ped_tamanhoP, ped_tamanhoM, ped_tamanhoG, ped_disponibilizadocliente, ped_totalCamisetas, peddatainicio, peddataentrega, ped_valorUnit, ped_totalValor, ped_totalEntrada, ped_totalAberto, ped_pagamentoEntrada, ped_pagamentoFinal, ped_status);
-                    pedidoDAO.InsertPedidos(pedido);
+                    //data de entrega tem que ser verificada antes de efetuar o pedido
+                    if (mnth_dataentrega == null)
+                    {
+                        MessageBox.Show("PARA FINALIZAR, INSIRA UMA DATA DE ENTREGA");
+                    }
+
+                    else
+                    {
+                        Pedidos pedido = new Pedidos(cod_colab, nome_colab, cod_cli, nome_cli, ped_cor, ped_tecido, ped_formato, ped_gola, ped_tecnica, estampa_pedido, ped_tamanhoP, ped_tamanhoM, ped_tamanhoG, ped_disponibilizadocliente, ped_totalCamisetas, peddatainicio, peddataentrega, ped_valorUnit, ped_totalValor, ped_totalEntrada, ped_totalAberto, ped_pagamentoEntrada, ped_pagamentoFinal, ped_status);
+                        pedidoDAO.InsertPedidos(pedido);
+                    }
+                    
                 }
+
                 else
                 {
                     Pedidos pedido = new Pedidos(codigo_Pedido, cod_colab, nome_colab, cod_cli, nome_cli, ped_cor, ped_tecido, ped_formato, ped_gola, ped_tecnica, estampa_pedido, ped_tamanhoP, ped_tamanhoM, ped_tamanhoG, ped_disponibilizadocliente, ped_totalCamisetas, peddatainicio, peddataentrega, ped_valorUnit, ped_totalValor, ped_totalEntrada, ped_totalAberto, ped_pagamentoEntrada, ped_pagamentoFinal, ped_status);
                     pedidoDAO.UpdatePedidos(pedido);
                 }
+
+                
             }
             catch (Exception erro)
             {
@@ -97,7 +124,43 @@ namespace projeto2023.views.pedidos
 
         private void crud_pedidos_Load(object sender, EventArgs e)
         {
+            CarregarColaboradores();
+
             CarregarClientes();
+
+            string[] coresCamisetas = {
+            "Branco", "Preto", "Cinza", "Azul", "Vermelho", "Rosa", "Roxo", "Laranja"
+            };
+            cmb_cores.Items.AddRange(coresCamisetas);
+
+
+            string[] tecnicasEstamparia = {
+            "Sublimação", "Transfer", "Bordado"
+            };
+            cmb_tecnica.Items.AddRange(tecnicasEstamparia);
+
+            string[] tiposTecido = {
+            "Algodão", "Poliéster", "Algodão-Poliéster"
+            };
+            cmb_tecido.Items.AddRange(tiposTecido);
+
+            string[] formatosCamisetas = {
+            "Regular", "Slim Fit", "Oversized", "Crop Top", "Regata", "Manga Longa", "Manga 3/4"
+            };
+            cmb_formato.Items.AddRange(formatosCamisetas);
+
+            string[] tiposGolaCamisetas = {
+            "Gola Redonda", "Gola V", "Gola Polo", "Gola Henley", "Gola Careca", "Gola Canoa"
+            };
+            cmb_gola.Items.AddRange(tiposGolaCamisetas);
+
+            string[] formasPagamento = {
+            "Dinheiro", "Cartão de Crédito", "Cartão de Débito", "Pix", "Transferência Bancária", "Boleto Bancário"
+            };
+            cmb_formapagamentoEntrada.Items.AddRange(formasPagamento);
+            cmb_formapagamentoFinal.Items.AddRange(formasPagamento);
+
+
         }
 
         private void pctb_estampa_MouseClick(object sender, MouseEventArgs e)
@@ -121,7 +184,7 @@ namespace projeto2023.views.pedidos
 
         private void btn_excluir_Click(object sender, EventArgs e)
         {
-            AddBanco pedidosDAO = new AddBanco();
+            AddBanco_pedidos pedidosDAO = new AddBanco_pedidos();
 
             try
             {
@@ -143,87 +206,111 @@ namespace projeto2023.views.pedidos
             this.Close();
         }
 
+        private void txb_nomeColaborador_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         #region CARREGAR DADOS CLIENTE E COLABORADOR
+
+         private void CarregarColaboradores()
+         {
+
+            string query = "SELECT codigo_Colaborador, nome_Colaborador FROM Colaboradores WHERE cargo_Colaborador = 'Atendente'";
+
+             using (Connection connection = new Connection())
+             {
+                 SqlCommand command = new SqlCommand(query, connection.RetornarConexao());
+                 SqlDataReader reader = command.ExecuteReader();
+
+                 List<string> nomesColaboradores = new List<string>();
+
+                 while (reader.Read())
+                 {
+                     int colabID = (int)reader["codigo_Colaborador"];
+                     string nomeColab = (string)reader["nome_Colaborador"];
+                     nomesColaboradores.Add($"{colabID}"/*- {nomeColab}"*/);
+                }
+
+                 cmb_idColaborador.DataSource = nomesColaboradores;
+
+                 reader.Close();
+             }
+         }
+
+
         private void CarregarClientes()
         {
-    
-            string connectionString = "Estampariadb";
             string query = "SELECT codigo_Cliente, nome_Cliente FROM Clientes";
 
-
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (Connection connection = new Connection())
             {
-                SqlCommand command = new SqlCommand(query, connection);
-                connection.Open();
-
-
-
+                SqlCommand command = new SqlCommand(query, connection.RetornarConexao());
                 SqlDataReader reader = command.ExecuteReader();
 
-
+                List<string> nomesClientes = new List<string>();
 
                 while (reader.Read())
                 {
-                    int clienteID = (int)reader["ID"];
-                    string nomeCliente = (string)reader["Nome"];
-                    cmb_idCliente.Items.Add(new Clientes_dados(clienteID, nomeCliente));
+                    int clienteID = (int)reader["codigo_Cliente"];
+                   
+                    nomesClientes.Add($"{clienteID}"/*- {nomesClientes}"*/);
                 }
+
+                cmb_idCliente.DataSource = nomesClientes;
 
                 reader.Close();
             }
         }
 
-
-        private void CarregarColaboradores()
-        {
-            string connectionString = "Estampariadb";
-            string query = "SELECT codigo_Colaborador, nome_Colaborador FROM Colaboradores";
-
-
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                SqlCommand command = new SqlCommand(query, connection);
-                connection.Open();
-
-
-
-                SqlDataReader reader = command.ExecuteReader();
-
-
-
-                while (reader.Read())
-                {
-                    int clienteID = (int)reader["ID"];
-                    string nomeCliente = (string)reader["Nome"];
-                    cmb_idCliente.Items.Add(new Clientes_dados(clienteID, nomeCliente));
-                }
-
-
-
-                reader.Close();
-            }
-        }
-
-
+        #endregion
 
         private void cmb_idColaborador_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmb_idColaborador.SelectedItem is Colaboradores_dados selectedColaboradores)
+
+            if (cmb_idColaborador.SelectedItem is int selectedColaboradorID)
             {
-                txb_nomeColaborador.Text = selectedColaboradores.Nome_colab;
+                Colaboradores_dados selectedColaborador = null;
+                foreach (Colaboradores_dados colab in colaboradores)
+                {
+                    if (colab.id_Colab == selectedColaboradorID)
+                    {
+                        selectedColaborador = colab;
+                        break;
+                    }
+                }
+
+                if (selectedColaborador != null)
+                {
+                    txb_nomeColaborador.Text = selectedColaborador.nome_Colab;
+                }
             }
         }
 
         private void cmb_idCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmb_idCliente.SelectedItem is Clientes_dados selectedClientes)
-            {
-                txb_nomeCliente.Text = selectedClientes.Nome_cli;
-            }
+
+
+             if (cmb_idCliente.SelectedItem is int selectedClienteID)
+             {
+                 Clientes_dados selectedCliente = null;
+                 foreach (Clientes_dados cli in clientes)
+                 {
+                     if (cli.id_Cli == selectedClienteID)
+                     {
+                         selectedCliente = cli;
+                         break;
+                     }
+                 }
+
+                 if (selectedCliente != null)
+                 {
+                     txb_nomeCliente.Text = selectedCliente.nome_Cli;
+                 }
+             }
+
         }
-        #endregion
+
 
         private void btn_limpar_Click(object sender, EventArgs e)
         {

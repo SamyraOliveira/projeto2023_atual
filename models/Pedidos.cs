@@ -25,6 +25,7 @@ namespace projeto2023.models
         public int ped_tamM;
         public int ped_tamG;
         public int ped_disponibilizadoCli;
+        public int ped_quantDisponibilizado;
         public int ped_totalCamisetas;
         public DateTime ped_Datainicial;
         public DateTime ped_DataEntrega;
@@ -34,11 +35,11 @@ namespace projeto2023.models
         public decimal ped_valorAberto;
         public string ped_formaPagamentoEntrada;
         public string ped_formaPagamentoFinal;
-        public int ped_status;
+        public string ped_status;
 
 
 
-        public Pedidos(int codigoColaborador, string colaborador, int codigoCliente, string cliente, string cor, string tecido, string formato, string gola, string tecnica, byte [] estampa, int tamP, int tamM, int tamG, int disponibilizadoCliente, int totalCamisetas, DateTime dataInicial, DateTime dataEntrega, decimal valor_unitario, decimal valor_total, decimal valor_entrada, decimal valor_aberto, string formaPagamentoEntrada, string formaPagamentoFinal, int status)
+        public Pedidos(int codigoColaborador, string colaborador, int codigoCliente, string cliente, string cor, string tecido, string formato, string gola, string tecnica, byte [] estampa, int tamP, int tamM, int tamG, int disponibilizadoCliente, int totalCamisetas, DateTime dataInicial, DateTime dataEntrega, decimal valor_unitario, decimal valor_total, decimal valor_entrada, decimal valor_aberto, string formaPagamentoEntrada, string formaPagamentoFinal, string status)
         {
 
 
@@ -65,7 +66,7 @@ namespace projeto2023.models
           ped_formaPagamentoFinal = formaPagamentoFinal;
           ped_status = status;
     }
-        public Pedidos(int codigo, int codigoColaborador, string colaborador, int codigoCliente, string cliente, string cor, string tecido, string formato, string gola, string tecnica, byte [] estampa, int tamP, int tamM, int tamG, int disponibilizadoCliente, int totalCamisetas, DateTime dataInicial, DateTime dataEntrega, decimal valor_unitario, decimal valor_total, decimal valor_entrada, decimal valor_aberto, string formaPagamentoEntrada, string formaPagamentoFinal, int status)
+        public Pedidos(int codigo, int codigoColaborador, string colaborador, int codigoCliente, string cliente, string cor, string tecido, string formato, string gola, string tecnica, byte [] estampa, int tamP, int tamM, int tamG, int disponibilizadoCliente, int totalCamisetas, DateTime dataInicial, DateTime dataEntrega, decimal valor_unitario, decimal valor_total, decimal valor_entrada, decimal valor_aberto, string formaPagamentoEntrada, string formaPagamentoFinal, string status)
         {
             ped_codigo = codigo;
             colab_codigo = codigoColaborador;

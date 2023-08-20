@@ -17,8 +17,8 @@ namespace projeto2023
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new login());
-            Application.Run(new frm_cadastros());
+            Application.Run(new login());
+            //Application.Run(new frm_cadastros());
         }
     }
 }

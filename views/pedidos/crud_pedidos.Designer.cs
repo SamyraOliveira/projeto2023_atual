@@ -1,4 +1,6 @@
-﻿namespace projeto2023.views.pedidos
+﻿using System.Data;
+
+namespace projeto2023.views.pedidos
 {
     partial class crud_pedidos
     {
@@ -288,6 +290,7 @@
             // 
             // cmb_formapagamentoFinal
             // 
+            this.cmb_formapagamentoFinal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_formapagamentoFinal.FormattingEnabled = true;
             this.cmb_formapagamentoFinal.Location = new System.Drawing.Point(18, 106);
             this.cmb_formapagamentoFinal.Name = "cmb_formapagamentoFinal";
@@ -305,6 +308,7 @@
             // 
             // cmb_formapagamentoEntrada
             // 
+            this.cmb_formapagamentoEntrada.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_formapagamentoEntrada.FormattingEnabled = true;
             this.cmb_formapagamentoEntrada.Location = new System.Drawing.Point(18, 42);
             this.cmb_formapagamentoEntrada.Name = "cmb_formapagamentoEntrada";
@@ -672,6 +676,7 @@
             this.txb_nomeColaborador.ReadOnly = true;
             this.txb_nomeColaborador.Size = new System.Drawing.Size(289, 20);
             this.txb_nomeColaborador.TabIndex = 3;
+            this.txb_nomeColaborador.TextChanged += new System.EventHandler(this.txb_nomeColaborador_TextChanged);
             // 
             // txb_nomeCliente
             // 

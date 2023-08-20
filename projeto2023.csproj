@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="controllers\AddBanco.cs" />
+    <Compile Include="controllers\AddBanco_pedidos.cs" />
     <Compile Include="controllers\Connection.cs" />
     <Compile Include="controllers\Security.cs" />
     <Compile Include="controllers\Validation.cs" />

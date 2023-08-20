@@ -10,22 +10,22 @@ namespace projeto2023.models
     public class Colaboradores_dados
     {
 
-        public int ID_colab { get; set; }
-        public string Nome_colab { get; set; }
+        public int id_Colab { get; set; }
+        public string nome_Colab { get; set; }
 
 
 
         public Colaboradores_dados(int id_colab, string nome_colab)
         {
-            ID_colab = id_colab;
-            Nome_colab = nome_colab;
+            id_Colab = id_colab;
+            nome_Colab = nome_colab;
         }
 
-
+       // public string Nome => nome_Colab;
 
         public override string ToString()
         {
-            return Nome_colab;
+            return nome_Colab;
         }
 
 

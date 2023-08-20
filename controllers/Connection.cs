@@ -6,9 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace projeto2023.controllers
 {
-    public class Connection
+    public class Connection : IDisposable
     {
         public readonly SqlConnection con;
         public readonly string DataBase = "Estampariadb";
@@ -25,12 +26,19 @@ namespace projeto2023.controllers
         {
             if (con.State == ConnectionState.Open)
                 con.Close();
+                con.Close();
         }
 
         //retornar conexao aberta
         public SqlConnection RetornarConexao()
         {
             return con;
+        }
+
+        public void Dispose() 
+        {
+            FecharConexao();
+            con.Dispose();
         }
     }
 }

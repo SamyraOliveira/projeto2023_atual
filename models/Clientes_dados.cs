@@ -8,22 +8,21 @@ namespace projeto2023.models
 {
     public class Clientes_dados
     {
-        public int ID_cli { get; set; }
-        public string Nome_cli { get; set; }
+    
 
-
+        public int id_Cli { get; set; }
+        public string nome_Cli { get; set; }
 
         public Clientes_dados(int id_cli, string nome_cli)
         {
-            ID_cli = id_cli;
-            Nome_cli = nome_cli;
+            id_Cli = id_cli;
+            nome_Cli = nome_cli;
         }
-
 
 
         public override string ToString()
         {
-            return Nome_cli;
+           return nome_Cli;
         }
 
 
