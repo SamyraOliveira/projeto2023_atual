@@ -84,26 +84,10 @@ namespace projeto2023.controllers
                 while (rd.Read())
                 {
 
-                   /* Pedidos pedido = new Pedidos(
-                        (int)rd["codigo_Pedido"],
-                        (int)rd["codigo_Cliente"],
-                        (int)rd["codigo_Colaborador"],
-                        (int)rd["codigo_Material"],
-                        (string)rd["tipoGola_Pedido"],
-                        (string)rd["corCamiseta_Pedido"],
-                        (int)rd["tamP_quant_Pedido"],
-                        (int)rd["tamM_quant_Pedido"],
-                        (int)rd["tamG_quant_Pedido"],
-                        (int)rd["totalCamisetas_Pedido"],
-                        (byte[])rd["estampa_Pedido"],
-                        (string)rd["nome_Material"],
-                        (DateTime)rd["data_Pedido"],
-                        (decimal)rd["valorUnit_Pedido"],
-                        (decimal)rd["valorTotal_Pedido"],
-                        (decimal)rd["valorEntrada_Pedido"],
-                        (string)rd["nome_Cliente"],
-                        (bool)rd["status_Pedido"]);*/
-                   // listaPedidos.Add(pedido);
+                    Pedidos pedido = new Pedidos((int)rd["codigo_Pedido"],(int)rd["codigo_Colaborador"],(int)rd["codigo_Cliente"],(string)rd["corCamiseta_Pedido"],(string)rd["tecidoCamiseta_Pedido"],(string)rd["formatoCamiseta_Pedido"],(string)rd["tipoGola_Pedido"],(string)rd["tecnicas_Pedido"],(byte[])rd["estampa_Pedido"],(int)rd["tamP_quant_Pedido"],(int)rd["tamM_quant_Pedido"],(int)rd["tamG_quant_Pedido"],(int)rd["disponibilizadoCliente"],(int)rd["quantdisponibilizadoCliente"],(int)rd["totalCamisetas_Pedido"],(DateTime)rd["data_inicial"],(DateTime)rd["data_entrega"],(decimal)rd["valorUnit_Pedido"], (decimal)rd["valorTotal_Pedido"],(decimal)rd["valorEntrada_Pedido"],(decimal)rd["valorAberto_Pedido"],(string)rd["formaPagamentoEntrada_Pedido"],(string)rd["formaPagamentoFinal_Pedido"],(string)rd["status_Pedido"]);
+
+
+                    listaPedidos.Add(pedido);
                 }
                 rd.Close();
             }

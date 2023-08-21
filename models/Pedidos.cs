@@ -39,7 +39,7 @@ namespace projeto2023.models
 
 
 
-        public Pedidos(int codigoColaborador, string colaborador, int codigoCliente, string cliente, string cor, string tecido, string formato, string gola, string tecnica, byte [] estampa, int tamP, int tamM, int tamG, int disponibilizadoCliente, int totalCamisetas, DateTime dataInicial, DateTime dataEntrega, decimal valor_unitario, decimal valor_total, decimal valor_entrada, decimal valor_aberto, string formaPagamentoEntrada, string formaPagamentoFinal, string status)
+        public Pedidos(int codigoColaborador, int codigoCliente, string cor, string tecido, string formato, string gola, string tecnica, byte [] estampa, int tamP, int tamM, int tamG, int disponibilizadoCliente,int quantdisponibilizado, int totalCamisetas, DateTime dataInicial, DateTime dataEntrega, decimal valor_unitario, decimal valor_total, decimal valor_entrada, decimal valor_aberto, string formaPagamentoEntrada, string formaPagamentoFinal, string status)
         {
 
 
@@ -55,6 +55,7 @@ namespace projeto2023.models
           ped_tamM = tamM;
           ped_tamG = tamG;
           ped_disponibilizadoCli = disponibilizadoCliente;
+          ped_quantDisponibilizado = quantdisponibilizado;
           ped_totalCamisetas = totalCamisetas;
           ped_Datainicial= dataInicial;
           ped_DataEntrega = dataEntrega;
@@ -66,7 +67,7 @@ namespace projeto2023.models
           ped_formaPagamentoFinal = formaPagamentoFinal;
           ped_status = status;
     }
-        public Pedidos(int codigo, int codigoColaborador, string colaborador, int codigoCliente, string cliente, string cor, string tecido, string formato, string gola, string tecnica, byte [] estampa, int tamP, int tamM, int tamG, int disponibilizadoCliente, int totalCamisetas, DateTime dataInicial, DateTime dataEntrega, decimal valor_unitario, decimal valor_total, decimal valor_entrada, decimal valor_aberto, string formaPagamentoEntrada, string formaPagamentoFinal, string status)
+        public Pedidos(int codigo, int codigoColaborador, int codigoCliente, string cor, string tecido, string formato, string gola, string tecnica, byte [] estampa, int tamP, int tamM, int tamG, int disponibilizadoCliente, int quantdisponibilizado, int totalCamisetas, DateTime dataInicial, DateTime dataEntrega, decimal valor_unitario, decimal valor_total, decimal valor_entrada, decimal valor_aberto, string formaPagamentoEntrada, string formaPagamentoFinal, string status)
         {
             ped_codigo = codigo;
             colab_codigo = codigoColaborador;
@@ -81,6 +82,7 @@ namespace projeto2023.models
             ped_tamM = tamM;
             ped_tamG = tamG;
             ped_disponibilizadoCli = disponibilizadoCliente;
+            ped_quantDisponibilizado = quantdisponibilizado;
             ped_totalCamisetas = totalCamisetas;
             ped_Datainicial = dataInicial;
             ped_DataEntrega = dataEntrega;
