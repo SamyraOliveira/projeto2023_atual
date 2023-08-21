@@ -223,13 +223,16 @@ namespace projeto2023.views.pedidos
                  SqlCommand command = new SqlCommand(query, connection.RetornarConexao());
                  SqlDataReader reader = command.ExecuteReader();
 
-                 List<string> nomesColaboradores = new List<string>();
+                 List<Clientes_dados> nomesColaboradores = new List<Clientes_dados>();
 
                  while (reader.Read())
                  {
                      int colabID = (int)reader["codigo_Colaborador"];
                      string nomeColab = (string)reader["nome_Colaborador"];
-                     nomesColaboradores.Add($"{colabID}"/*- {nomeColab}"*/);
+                    //alterações feitas com victor
+                    var Clientedados = new Clientes_dados(colabID, nomeColab);
+                  
+                     nomesColaboradores.Add(Clientedados);
                 }
 
                  cmb_idColaborador.DataSource = nomesColaboradores;
