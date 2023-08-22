@@ -74,7 +74,7 @@
             // 
             this.pctb_consultas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pctb_consultas.Image = global::projeto2023.Properties.Resources.logo;
-            this.pctb_consultas.Location = new System.Drawing.Point(1001, 246);
+            this.pctb_consultas.Location = new System.Drawing.Point(1029, 239);
             this.pctb_consultas.Name = "pctb_consultas";
             this.pctb_consultas.Size = new System.Drawing.Size(292, 309);
             this.pctb_consultas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -88,9 +88,9 @@
             this.pnl_consultas.Controls.Add(this.ltv_fornecedores);
             this.pnl_consultas.Controls.Add(this.ltv_pedidos);
             this.pnl_consultas.Controls.Add(this.ltv_colaboradores);
-            this.pnl_consultas.Location = new System.Drawing.Point(30, 71);
+            this.pnl_consultas.Location = new System.Drawing.Point(12, 71);
             this.pnl_consultas.Name = "pnl_consultas";
-            this.pnl_consultas.Size = new System.Drawing.Size(955, 609);
+            this.pnl_consultas.Size = new System.Drawing.Size(1011, 609);
             this.pnl_consultas.TabIndex = 4;
             // 
             // ltv_clientes
@@ -116,7 +116,7 @@
             // ltv_fornecedores
             // 
             this.ltv_fornecedores.HideSelection = false;
-            this.ltv_fornecedores.Location = new System.Drawing.Point(666, 256);
+            this.ltv_fornecedores.Location = new System.Drawing.Point(18, 393);
             this.ltv_fornecedores.Name = "ltv_fornecedores";
             this.ltv_fornecedores.Size = new System.Drawing.Size(286, 172);
             this.ltv_fornecedores.TabIndex = 2;
@@ -152,9 +152,9 @@
             this.formaPagamentoFinal_Pedido,
             this.status_Pedido});
             this.ltv_pedidos.HideSelection = false;
-            this.ltv_pedidos.Location = new System.Drawing.Point(3, 62);
+            this.ltv_pedidos.Location = new System.Drawing.Point(3, 14);
             this.ltv_pedidos.Name = "ltv_pedidos";
-            this.ltv_pedidos.Size = new System.Drawing.Size(949, 172);
+            this.ltv_pedidos.Size = new System.Drawing.Size(1005, 172);
             this.ltv_pedidos.TabIndex = 1;
             this.ltv_pedidos.UseCompatibleStateImageBehavior = false;
             this.ltv_pedidos.View = System.Windows.Forms.View.Details;
@@ -284,9 +284,9 @@
             // ltv_colaboradores
             // 
             this.ltv_colaboradores.HideSelection = false;
-            this.ltv_colaboradores.Location = new System.Drawing.Point(3, 434);
+            this.ltv_colaboradores.Location = new System.Drawing.Point(3, 192);
             this.ltv_colaboradores.Name = "ltv_colaboradores";
-            this.ltv_colaboradores.Size = new System.Drawing.Size(286, 172);
+            this.ltv_colaboradores.Size = new System.Drawing.Size(1005, 172);
             this.ltv_colaboradores.TabIndex = 0;
             this.ltv_colaboradores.UseCompatibleStateImageBehavior = false;
             this.ltv_colaboradores.Visible = false;

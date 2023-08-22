@@ -23,6 +23,8 @@ namespace projeto2023.views.frms
 
         private void frm_consultas_Load(object sender, EventArgs e)
         {
+            
+
             //COLABORADOR
             try 
             { 
@@ -96,6 +98,43 @@ namespace projeto2023.views.frms
                   }
               }
         }
+
+
+        #region list views
+
+
+        private void ltv_pedidos_MouseClick(object sender, MouseEventArgs e)
+        {
+            int indice = ltv_pedidos.FocusedItem.Index;
+            codigo_Pedido.Text = ltv_pedidos.Items[indice].SubItems[0].Text;
+            codigo_Colaborador.Text = ltv_pedidos.Items[indice].SubItems[1].Text;
+            codigo_Cliente.Text = ltv_pedidos.Items[indice].SubItems[2].Text;
+            corCamiseta_Pedido.Text = ltv_pedidos.Items[indice].SubItems[3].Text;
+            tecidoCamiseta_Pedido.Text = ltv_pedidos.Items[indice].SubItems[4].Text;
+            formatoCamiseta_Pedido.Text = ltv_pedidos.Items[indice].SubItems[5].Text;
+            tipoGola_Pedido.Text = ltv_pedidos.Items[indice].SubItems[6].Text;
+            tecnicas_Pedido.Text = ltv_pedidos.Items[indice].SubItems[7].Text;
+            estampa_Pedido.Text = ltv_pedidos.Items[indice].SubItems[8].Text;
+            tamP_quant_Pedido.Text = ltv_pedidos.Items[indice].SubItems[9].Text;
+            tamM_quant_Pedido.Text = ltv_pedidos.Items[indice].SubItems[10].Text;
+            tamG_quant_Pedido.Text = ltv_pedidos.Items[indice].SubItems[11].Text;
+            disponibilizadoCliente.Text = ltv_pedidos.Items[indice].SubItems[12].Text;
+            quantdisponibilizadoCliente.Text = ltv_pedidos.Items[indice].SubItems[13].Text;
+            totalCamisetas_Pedido.Text = ltv_pedidos.Items[indice].SubItems[14].Text;
+            data_inicial.Text = ltv_pedidos.Items[indice].SubItems[15].Text;
+            data_entrega.Text = ltv_pedidos.Items[indice].SubItems[16].Text;
+            valorUnit_Pedido.Text = ltv_pedidos.Items[indice].SubItems[17].Text;
+            valorTotal_Pedido.Text = ltv_pedidos.Items[indice].SubItems[18].Text;
+            valorEntrada_Pedido.Text = ltv_pedidos.Items[indice].SubItems[19].Text;
+            valorAberto_Pedido.Text = ltv_pedidos.Items[indice].SubItems[20].Text;
+            formaPagamentoEntrada_Pedido.Text = ltv_pedidos.Items[indice].SubItems[21].Text;
+            formaPagamentoFinal_Pedido.Text = ltv_pedidos.Items[indice].SubItems[22].Text;
+            status_Pedido.Text = ltv_pedidos.Items[indice].SubItems[23].Text;
+        }
+
+        #endregion
+
+
         #region click panel
         private void colaboradores_Click(object sender, EventArgs e)
         {
@@ -144,49 +183,5 @@ namespace projeto2023.views.frms
 
 
         #endregion
-
-        #region list views
-        private void ltv_colaboradores_MouseClick(object sender, MouseEventArgs e)
-        {
-           
-        }
-
-        private void ltv_pedidos_MouseClick(object sender, MouseEventArgs e)
-        {
-            int indice = ltv_pedidos.FocusedItem.Index;
-            codigo_Pedido.Text = ltv_pedidos.Items[indice].SubItems[0].Text;
-            codigo_Colaborador.Text = ltv_pedidos.Items[indice].SubItems[1].Text;
-            codigo_Cliente.Text = ltv_pedidos.Items[indice].SubItems[2].Text;
-            corCamiseta_Pedido.Text = ltv_pedidos.Items[indice].SubItems[3].Text;
-            tecidoCamiseta_Pedido.Text = ltv_pedidos.Items[indice].SubItems[4].Text;
-            formatoCamiseta_Pedido.Text = ltv_pedidos.Items[indice].SubItems[5].Text;
-            tipoGola_Pedido.Text = ltv_pedidos.Items[indice].SubItems[6].Text;
-            tecnicas_Pedido.Text = ltv_pedidos.Items[indice].SubItems[7].Text;
-            estampa_Pedido.Text = ltv_pedidos.Items[indice].SubItems[8].Text;
-            tamP_quant_Pedido.Text = ltv_pedidos.Items[indice].SubItems[9].Text;
-            tamM_quant_Pedido.Text = ltv_pedidos.Items[indice].SubItems[10].Text;
-            tamG_quant_Pedido.Text = ltv_pedidos.Items[indice].SubItems[11].Text;
-            disponibilizadoCliente.Text = ltv_pedidos.Items[indice].SubItems[12].Text;
-            quantdisponibilizadoCliente.Text = ltv_pedidos.Items[indice].SubItems[13].Text;
-            totalCamisetas_Pedido.Text = ltv_pedidos.Items[indice].SubItems[14].Text;
-            data_inicial.Text = ltv_pedidos.Items[indice].SubItems[15].Text;
-            data_entrega.Text = ltv_pedidos.Items[indice].SubItems[16].Text;
-            valorUnit_Pedido.Text = ltv_pedidos.Items[indice].SubItems[17].Text;
-            valorTotal_Pedido.Text = ltv_pedidos.Items[indice].SubItems[18].Text;
-            valorEntrada_Pedido.Text = ltv_pedidos.Items[indice].SubItems[19].Text;
-            valorAberto_Pedido.Text = ltv_pedidos.Items[indice].SubItems[20].Text;
-            formaPagamentoEntrada_Pedido.Text = ltv_pedidos.Items[indice].SubItems[21].Text;
-            formaPagamentoFinal_Pedido.Text = ltv_pedidos.Items[indice].SubItems[22].Text;
-            status_Pedido.Text = ltv_pedidos.Items[indice].SubItems[23].Text;
-        }
-
-        #endregion
-
-        #region listar dados
-
-
-        #endregion
-
-
     }
 }

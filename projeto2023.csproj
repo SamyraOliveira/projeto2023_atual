@@ -51,6 +51,11 @@
     <Compile Include="controllers\Connection.cs" />
     <Compile Include="controllers\Security.cs" />
     <Compile Include="controllers\Validation.cs" />
+    <Compile Include="EstampariadbDataSet-PEDIDOS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EstampariadbDataSet-PEDIDOS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +185,17 @@
     <EmbeddedResource Include="views\producao\crud_producao.resx">
       <DependentUpon>crud_producao.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="EstampariadbDataSet-PEDIDOS.xsc">
+      <DependentUpon>EstampariadbDataSet-PEDIDOS.xsd</DependentUpon>
+    </None>
+    <None Include="EstampariadbDataSet-PEDIDOS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EstampariadbDataSet-PEDIDOS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EstampariadbDataSet-PEDIDOS.xss">
+      <DependentUpon>EstampariadbDataSet-PEDIDOS.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

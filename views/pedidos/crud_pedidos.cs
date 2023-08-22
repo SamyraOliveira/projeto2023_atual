@@ -24,8 +24,8 @@ namespace projeto2023.views.pedidos
 
 
         public int codigo_Pedido = -1;
-        string ped_estampa;
-        int P = 0, M = 0, G = 0, totalC = 0;
+        string ped_estampa, ped_cor, ped_tecido, ped_tecnica, ped_formato, ped_gola, ped_quantDisponibilizado;
+        int P = 0, M = 0, G = 0, disponibilizado = 0, quantDisponibilizado = 0, totalC = 0;
         decimal unitario, totalPedido = 0, entrada = 0;
 
         List<Colaboradores_dados> colaboradores = new List<Colaboradores_dados>();
@@ -38,8 +38,97 @@ namespace projeto2023.views.pedidos
             InitializeComponent();
         }
 
+        
+
+        private void crud_pedidos_Load(object sender, EventArgs e)
+        {
+            CarregarColaboradores();
+
+            CarregarClientes();
+
+            #region COMBOBOXS
+            string[] coresCamisetas = {
+            "Branco", "Preto", "Cinza", "Azul", "Vermelho", "Rosa", "Roxo", "Laranja"
+            };
+            cmb_cores.Items.AddRange(coresCamisetas);
+
+
+            string[] tecnicasEstamparia = {
+            "Sublimação", "Transfer", "Bordado"
+            };
+            cmb_tecnica.Items.AddRange(tecnicasEstamparia);
+
+            string[] tiposTecido = {
+            "Algodão", "Poliéster", "Algodão-Poliéster"
+            };
+            cmb_tecido.Items.AddRange(tiposTecido);
+
+            string[] formatosCamisetas = {
+            "Regular", "Slim Fit", "Oversized", "Crop Top", "Regata", "Manga Longa", "Manga 3/4"
+            };
+            cmb_formato.Items.AddRange(formatosCamisetas);
+
+            string[] tiposGolaCamisetas = {
+            "Gola Redonda", "Gola V", "Gola Polo", "Gola Henley", "Gola Careca", "Gola Canoa"
+            };
+            cmb_gola.Items.AddRange(tiposGolaCamisetas);
+
+            string[] formasPagamento = {
+            "Dinheiro", "Cartão de Crédito", "Cartão de Débito", "Pix", "Transferência Bancária", "Boleto Bancário"
+            };
+            cmb_formapagamentoEntrada.Items.AddRange(formasPagamento);
+            cmb_formapagamentoFinal.Items.AddRange(formasPagamento);
+            #endregion
+
+        }
+
+        private void ltv_showPedidos_MouseClick(object sender, MouseEventArgs e)
+        {
+            int indice = ltv_showPedidos.FocusedItem.Index;
+            codigo_Pedido = int.Parse(ltv_showPedidos.Items[indice].SubItems[0].Text);
+            cmb_idColaborador = (ltv_showPedidos.Items[indice].SubItems[0].Text);
+            cmb_idCliente = (ltv_showPedidos.Items[indice].SubItems[0].Text);
+
+
+
+            cmbTipoGola.Text = ltv_showPedidos.Items[indice].SubItems[1].Text;
+            cmbCorCamiseta.Text = ltv_showPedidos.Items[indice].SubItems[2].Text;
+            mskTamP.Text = ltv_showPedidos.Items[indice].SubItems[3].Text;
+            mskTamM.Text = ltv_showPedidos.Items[indice].SubItems[4].Text;
+            mskTamG.Text = ltv_showPedidos.Items[indice].SubItems[5].Text;
+            txbTotalCamisetas.Text = ltv_showPedidos.Items[indice].SubItems[6].Text;
+            pctInserirEstampa.Text = ltv_showPedidos.Items[indice].SubItems[7].Text;
+            mskUnit.Text = ltv_showPedidos.Items[indice].SubItems[8].Text;
+            txbTotal.Text = ltv_showPedidos.Items[indice].SubItems[9].Text;
+            txbEntrada.Text = ltv_showPedidos.Items[indice].SubItems[10].Text;
+
+            btn_excluir.Visible = true; 
+        }
+
+        private void pctb_estampa_MouseClick(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                if (OFD_estamparia.ShowDialog() == DialogResult.OK)
+                {
+                    ped_estampa = OFD_estamparia.FileName;
+                    if (pctb_estampa.Image != null)
+                        pctb_estampa.Image.Dispose();
+                    pctb_estampa.Image = Image.FromFile(ped_estampa);
+                }
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message, "AVISO DE ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        #region CRUD
+
         private void btnregistrar_pedido_Click(object sender, EventArgs e)
         {
+            
             int cod_colab = cmb_idColaborador.SelectedIndex;
             string nome_colab = txb_nomeColaborador.Text;
             int cod_cli = cmb_idCliente.SelectedIndex;
@@ -81,6 +170,9 @@ namespace projeto2023.views.pedidos
             string ped_pagamentoFinal = cmb_formapagamentoFinal.Text;
             string ped_status = " ";
 
+            
+
+
             MessageBox.Show("FINALIZAR PEDIDO");
 
             try
@@ -101,7 +193,7 @@ namespace projeto2023.views.pedidos
                         Pedidos pedido = new Pedidos(cod_colab, cod_cli, ped_cor, ped_tecido, ped_formato, ped_gola, ped_tecnica, estampa_pedido, ped_tamanhoP, ped_tamanhoM, ped_tamanhoG, ped_disponibilizadocliente, ped_quantdisponibilizadocliente, ped_totalCamisetas, peddatainicio, peddataentrega, ped_valorUnit, ped_totalValor, ped_totalEntrada, ped_totalAberto, ped_pagamentoEntrada, ped_pagamentoFinal, ped_status);
                         pedidoDAO.InsertPedidos(pedido);
                     }
-                    
+
                 }
 
                 else
@@ -110,7 +202,7 @@ namespace projeto2023.views.pedidos
                     pedidoDAO.UpdatePedidos(pedido);
                 }
 
-                
+
             }
             catch (Exception erro)
             {
@@ -118,69 +210,13 @@ namespace projeto2023.views.pedidos
             }
             //listaPedidos();
             // TODO: esta linha de código carrega dados na tabela 'estampariadbDataSet10.Pedidos'. Você pode movê-la ou removê-la conforme necessário.
-           // this.pedidosTableAdapter.Fill(this.estampariadbDataSet10.Pedidos);
+            // this.pedidosTableAdapter.Fill(this.estampariadbDataSet10.Pedidos);
             btn_limpar_Click(null, null);
         }
 
-        private void crud_pedidos_Load(object sender, EventArgs e)
-        {
-            CarregarColaboradores();
+        
 
-            CarregarClientes();
-
-            string[] coresCamisetas = {
-            "Branco", "Preto", "Cinza", "Azul", "Vermelho", "Rosa", "Roxo", "Laranja"
-            };
-            cmb_cores.Items.AddRange(coresCamisetas);
-
-
-            string[] tecnicasEstamparia = {
-            "Sublimação", "Transfer", "Bordado"
-            };
-            cmb_tecnica.Items.AddRange(tecnicasEstamparia);
-
-            string[] tiposTecido = {
-            "Algodão", "Poliéster", "Algodão-Poliéster"
-            };
-            cmb_tecido.Items.AddRange(tiposTecido);
-
-            string[] formatosCamisetas = {
-            "Regular", "Slim Fit", "Oversized", "Crop Top", "Regata", "Manga Longa", "Manga 3/4"
-            };
-            cmb_formato.Items.AddRange(formatosCamisetas);
-
-            string[] tiposGolaCamisetas = {
-            "Gola Redonda", "Gola V", "Gola Polo", "Gola Henley", "Gola Careca", "Gola Canoa"
-            };
-            cmb_gola.Items.AddRange(tiposGolaCamisetas);
-
-            string[] formasPagamento = {
-            "Dinheiro", "Cartão de Crédito", "Cartão de Débito", "Pix", "Transferência Bancária", "Boleto Bancário"
-            };
-            cmb_formapagamentoEntrada.Items.AddRange(formasPagamento);
-            cmb_formapagamentoFinal.Items.AddRange(formasPagamento);
-
-
-        }
-
-        private void pctb_estampa_MouseClick(object sender, MouseEventArgs e)
-        {
-            try
-            {
-                if (OFD_estamparia.ShowDialog() == DialogResult.OK)
-                {
-                    ped_estampa = OFD_estamparia.FileName;
-                    if (pctb_estampa.Image != null)
-                        pctb_estampa.Image.Dispose();
-                    pctb_estampa.Image = Image.FromFile(ped_estampa);
-                }
-            }
-            catch (Exception erro)
-            {
-                MessageBox.Show(erro.Message, "AVISO DE ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-        }
+        
 
         private void btn_excluir_Click(object sender, EventArgs e)
         {
@@ -201,15 +237,43 @@ namespace projeto2023.views.pedidos
             btn_limpar_Click(null, null);
         }
 
+
+
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void txb_nomeColaborador_TextChanged(object sender, EventArgs e)
+        
+
+        private void btn_limpar_Click(object sender, EventArgs e)
         {
+            cmb_idColaborador.SelectedIndex = -1;
+            txb_nomeColaborador.Clear();
+            cmb_idCliente.SelectedIndex = -1;
+            txb_nomeCliente.Clear();
+            cmb_cores.SelectedIndex = -1;
+            cmb_tecido.SelectedIndex = -1;
+            cmb_formato.SelectedIndex = -1;
+            cmb_gola.SelectedIndex = -1;
+            cmb_tecnica.SelectedIndex = -1;
+            txb_tamP.Clear();
+            txb_tamM.Clear();
+            txb_tamG.Clear();
+            txb_disponibilizadocliente.Clear();
+            txb_totalCamisetas.Clear();
+            txb_valorUnit.Clear();
+            txb_valorTotal.Clear();
+            txb_valorEntrada.Clear();
+            txb_valorAberto.Clear();
+            cmb_formapagamentoEntrada.SelectedIndex = -1;
+            cmb_formapagamentoFinal.SelectedIndex = -1;
+
 
         }
+
+        #endregion
+
 
         #region CARREGAR DADOS CLIENTE E COLABORADOR
 
@@ -314,31 +378,219 @@ namespace projeto2023.views.pedidos
 
         }
 
-
-        private void btn_limpar_Click(object sender, EventArgs e)
+        #region calculos e exceções
+        private void txb_tamP_TextChanged(object sender, EventArgs e)
         {
-            cmb_idColaborador.SelectedIndex = -1;
-            txb_nomeColaborador.Clear();
-            cmb_idCliente.SelectedIndex = -1;
-            txb_nomeCliente.Clear();
-            cmb_cores.SelectedIndex = -1;
-            cmb_tecido.SelectedIndex = -1;
-            cmb_formato.SelectedIndex = -1;
-            cmb_gola.SelectedIndex = -1;
-            cmb_tecnica.SelectedIndex = -1;
-            txb_tamP.Clear();
-            txb_tamM.Clear();
-            txb_tamG.Clear();
-            txb_disponibilizadocliente.Clear();
-            txb_totalCamisetas.Clear();
-            txb_valorUnit.Clear();
-            txb_valorTotal.Clear();
-            txb_valorEntrada.Clear();
-            txb_valorAberto.Clear();
-            cmb_formapagamentoEntrada.SelectedIndex = -1;
-            cmb_formapagamentoFinal.SelectedIndex = -1;
+            try
+            {
+                P = int.Parse(txb_tamP.Text);
+                totalC = P + M + G + quantDisponibilizado;
+                txb_totalCamisetas.Text = totalC.ToString();
 
+                // Chamando a função para calcular o valor total do pedido
+                decimal valorTotalPedido = CalcularValorTotalPedido(cmb_cores.Text, cmb_tecido.Text, cmb_tecnica.Text, cmb_formato.Text, cmb_gola.Text, totalC);
 
+                // Atualizando os valores das variáveis
+                unitario = valorTotalPedido / totalC;
+                totalPedido = valorTotalPedido;
+                entrada = valorTotalPedido / 2;
+
+                txb_valorUnit.Text = unitario.ToString();
+                txb_valorTotal.Text = totalPedido.ToString();
+                txb_valorEntrada.Text = entrada.ToString();
+            }
+            catch (System.FormatException)
+            {
+                totalC = P + M + G + quantDisponibilizado;
+                txb_totalCamisetas.Text = totalC.ToString();
+
+                // Chamando a função para calcular o valor total do pedido
+                decimal valorTotalPedido = CalcularValorTotalPedido(cmb_cores.Text, cmb_tecido.Text, cmb_tecnica.Text, cmb_formato.Text, cmb_gola.Text, totalC);
+
+                // Atualizando os valores das variáveis
+                unitario = valorTotalPedido / totalC;
+                totalPedido = valorTotalPedido;
+                entrada = valorTotalPedido / 2;
+
+                txb_valorUnit.Text = unitario.ToString();
+                txb_valorTotal.Text = totalPedido.ToString();
+                txb_valorEntrada.Text = entrada.ToString();
+            }
         }
+
+        private void txb_tamM_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                M = int.Parse(txb_tamP.Text);
+                totalC = P + M + G + quantDisponibilizado;
+                txb_totalCamisetas.Text = totalC.ToString();
+
+                // Chamando a função para calcular o valor total do pedido
+                decimal valorTotalPedido = CalcularValorTotalPedido(cmb_cores.Text, cmb_tecido.Text, cmb_tecnica.Text, cmb_formato.Text, cmb_gola.Text, totalC);
+
+                // Atualizando os valores das variáveis
+                unitario = valorTotalPedido / totalC;
+                totalPedido = valorTotalPedido;
+                entrada = valorTotalPedido / 2;
+
+                txb_valorUnit.Text = unitario.ToString();
+                txb_valorTotal.Text = totalPedido.ToString();
+                txb_valorEntrada.Text = entrada.ToString();
+            }
+            catch (System.FormatException)
+            {
+                totalC = P + M + G + quantDisponibilizado;
+                txb_totalCamisetas.Text = totalC.ToString();
+
+                // Chamando a função para calcular o valor total do pedido
+                decimal valorTotalPedido = CalcularValorTotalPedido(cmb_cores.Text, cmb_tecido.Text, cmb_tecnica.Text, cmb_formato.Text, cmb_gola.Text, totalC);
+
+                // Atualizando os valores das variáveis
+                unitario = valorTotalPedido / totalC;
+                totalPedido = valorTotalPedido;
+                entrada = valorTotalPedido / 2;
+
+                txb_valorUnit.Text = unitario.ToString();
+                txb_valorTotal.Text = totalPedido.ToString();
+                txb_valorEntrada.Text = entrada.ToString();
+            }
+        }
+
+        private void txb_tamG_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                G = int.Parse(txb_tamP.Text);
+                totalC = P + M + G + quantDisponibilizado;
+                txb_totalCamisetas.Text = totalC.ToString();
+
+                // Chamando a função para calcular o valor total do pedido
+                decimal valorTotalPedido = CalcularValorTotalPedido(cmb_cores.Text, cmb_tecido.Text, cmb_tecnica.Text, cmb_formato.Text, cmb_gola.Text, totalC);
+
+                // Atualizando os valores das variáveis
+                unitario = valorTotalPedido / totalC;
+                totalPedido = valorTotalPedido;
+                entrada = valorTotalPedido / 2;
+
+                txb_valorUnit.Text = unitario.ToString();
+                txb_valorTotal.Text = totalPedido.ToString();
+                txb_valorEntrada.Text = entrada.ToString();
+            }
+            catch (System.FormatException)
+            {
+                totalC = P + M + G + quantDisponibilizado;
+                txb_totalCamisetas.Text = totalC.ToString();
+
+                // Chamando a função para calcular o valor total do pedido
+                decimal valorTotalPedido = CalcularValorTotalPedido(cmb_cores.Text, cmb_tecido.Text, cmb_tecnica.Text, cmb_formato.Text, cmb_gola.Text, totalC);
+
+                // Atualizando os valores das variáveis
+                unitario = valorTotalPedido / totalC;
+                totalPedido = valorTotalPedido;
+                entrada = valorTotalPedido / 2;
+
+                txb_valorUnit.Text = unitario.ToString();
+                txb_valorTotal.Text = totalPedido.ToString();
+                txb_valorEntrada.Text = entrada.ToString();
+            }
+        }
+
+
+        private decimal CalcularValorTotalPedido(string corCamiseta, string tipoTecido, string tecnica, string formatoCamiseta, string tipoGola, int quantidadeCamisetas)
+        {
+            decimal valorBaseCor = 0.00m;
+            decimal valorBaseTecido = 0.00m;
+            decimal valorBaseTecnica = 0.00m;
+            decimal valorFormatoCamiseta = 0.00m;
+            decimal valorTipoGola = 0.00m;
+
+            // Definir valores base de acordo com a cor da camiseta
+            if (corCamiseta == "Branco" || corCamiseta == "Preto" || corCamiseta == "Cinza")
+            {
+                valorBaseCor = 18.00m;
+            }
+            else if (corCamiseta == "Azul" || corCamiseta == "Vermelho" || corCamiseta == "Rosa" || corCamiseta == "Laranja")
+            {
+                valorBaseCor = 19.00m;
+            }
+
+            // Definir valores base de acordo com o tipo de tecido
+            if (tipoTecido == "Poliéster")
+            {
+                valorBaseTecido = 0.80m;
+            }
+            else if (tipoTecido == "Algodão-Poliéster")
+            {
+                valorBaseTecido = 1.60m;
+            }
+            else if (tipoTecido == "Algodão")
+            {
+                valorBaseTecido = 2.40m;
+            }
+
+            // Definir valores base de acordo com a técnica
+            if (tecnica == "Sublimação")
+            {
+                valorBaseTecnica = 3.50m;
+            }
+            else if (tecnica == "Silk")
+            {
+                valorBaseTecnica = 2.50m;
+            }
+            else if (tecnica == "Transfer")
+            {
+                valorBaseTecnica = 3.00m;
+            }
+            else if (tecnica == "Bordado")
+            {
+                valorBaseTecnica = 4.00m;
+            }
+
+            // Definir valores base de acordo com o formato da camiseta
+            if (formatoCamiseta == "Babylook")
+            {
+                valorFormatoCamiseta = 1.00m;
+            }
+            else if (formatoCamiseta == "Normal")
+            {
+                valorFormatoCamiseta = 0.50m;
+            }
+            else if (formatoCamiseta == "Sem Manga")
+            {
+                valorFormatoCamiseta = 0.75m;
+            }
+            // ... (outras opções de formato)
+
+            // Definir valores base de acordo com o tipo de gola
+            if (tipoGola == "Gola Redonda")
+            {
+                valorTipoGola = 0.25m;
+            }
+            else if (tipoGola == "Gola V")
+            {
+                valorTipoGola = 0.30m;
+            }
+            // ... (outras opções de gola)
+
+            // Calcular valor total base
+            decimal valorTotalBase = valorBaseCor + valorBaseTecido + valorBaseTecnica + valorFormatoCamiseta + valorTipoGola;
+
+            // Aplicar desconto de acordo com a quantidade de camisetas
+            decimal valorTotal = valorTotalBase * quantidadeCamisetas;
+
+            if (quantidadeCamisetas >= 10 && quantidadeCamisetas <= 19)
+            {
+                valorTotal -= (2.00m * quantidadeCamisetas);
+            }
+            else if (quantidadeCamisetas >= 20)
+            {
+                valorTotal -= (2.50m * quantidadeCamisetas);
+            }
+
+            return valorTotal;
+        }
+        #endregion
+
     }
 }

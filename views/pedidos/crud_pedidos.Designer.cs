@@ -94,6 +94,30 @@ namespace projeto2023.views.pedidos
             this.lbl_nomeColaborador = new System.Windows.Forms.Label();
             this.lbl_idColaborador = new System.Windows.Forms.Label();
             this.OFD_estamparia = new System.Windows.Forms.OpenFileDialog();
+            this.ltv_showPedidos = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.pnl_valores.SuspendLayout();
             this.pnl_formapagamento.SuspendLayout();
@@ -510,6 +534,7 @@ namespace projeto2023.views.pedidos
             this.txb_tamG.Name = "txb_tamG";
             this.txb_tamG.Size = new System.Drawing.Size(30, 20);
             this.txb_tamG.TabIndex = 11;
+            this.txb_tamG.TextChanged += new System.EventHandler(this.txb_tamG_TextChanged);
             // 
             // txb_tamM
             // 
@@ -517,6 +542,7 @@ namespace projeto2023.views.pedidos
             this.txb_tamM.Name = "txb_tamM";
             this.txb_tamM.Size = new System.Drawing.Size(30, 20);
             this.txb_tamM.TabIndex = 10;
+            this.txb_tamM.TextChanged += new System.EventHandler(this.txb_tamM_TextChanged);
             // 
             // txb_tamP
             // 
@@ -524,6 +550,7 @@ namespace projeto2023.views.pedidos
             this.txb_tamP.Name = "txb_tamP";
             this.txb_tamP.Size = new System.Drawing.Size(30, 20);
             this.txb_tamP.TabIndex = 8;
+            this.txb_tamP.TextChanged += new System.EventHandler(this.txb_tamP_TextChanged);
             // 
             // label5
             // 
@@ -676,7 +703,6 @@ namespace projeto2023.views.pedidos
             this.txb_nomeColaborador.ReadOnly = true;
             this.txb_nomeColaborador.Size = new System.Drawing.Size(289, 20);
             this.txb_nomeColaborador.TabIndex = 3;
-            this.txb_nomeColaborador.TextChanged += new System.EventHandler(this.txb_nomeColaborador_TextChanged);
             // 
             // txb_nomeCliente
             // 
@@ -708,12 +734,48 @@ namespace projeto2023.views.pedidos
             // 
             this.OFD_estamparia.FileName = "OFD_estamparia";
             // 
+            // ltv_showPedidos
+            // 
+            this.ltv_showPedidos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10,
+            this.columnHeader11,
+            this.columnHeader12,
+            this.columnHeader13,
+            this.columnHeader14,
+            this.columnHeader15,
+            this.columnHeader16,
+            this.columnHeader17,
+            this.columnHeader18,
+            this.columnHeader19,
+            this.columnHeader20,
+            this.columnHeader21,
+            this.columnHeader22,
+            this.columnHeader23});
+            this.ltv_showPedidos.HideSelection = false;
+            this.ltv_showPedidos.Location = new System.Drawing.Point(1039, 115);
+            this.ltv_showPedidos.Name = "ltv_showPedidos";
+            this.ltv_showPedidos.Size = new System.Drawing.Size(335, 263);
+            this.ltv_showPedidos.TabIndex = 1;
+            this.ltv_showPedidos.UseCompatibleStateImageBehavior = false;
+            this.ltv_showPedidos.View = System.Windows.Forms.View.Details;
+            this.ltv_showPedidos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ltv_showPedidos_MouseClick);
+            // 
             // crud_pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
-            this.ClientSize = new System.Drawing.Size(1200, 588);
+            this.ClientSize = new System.Drawing.Size(1438, 588);
+            this.Controls.Add(this.ltv_showPedidos);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Lucida Sans", 8.25F);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(111)))));
@@ -805,5 +867,29 @@ namespace projeto2023.views.pedidos
         private System.Windows.Forms.ComboBox cmb_idColaborador;
         private System.Windows.Forms.Button btn_limpar;
         private System.Windows.Forms.OpenFileDialog OFD_estamparia;
+        private System.Windows.Forms.ListView ltv_showPedidos;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.ColumnHeader columnHeader17;
+        private System.Windows.Forms.ColumnHeader columnHeader18;
+        private System.Windows.Forms.ColumnHeader columnHeader19;
+        private System.Windows.Forms.ColumnHeader columnHeader20;
+        private System.Windows.Forms.ColumnHeader columnHeader21;
+        private System.Windows.Forms.ColumnHeader columnHeader22;
+        private System.Windows.Forms.ColumnHeader columnHeader23;
     }
 }
