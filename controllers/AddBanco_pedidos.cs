@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using System.Globalization;
 
 namespace projeto2023.controllers
-{
+{ 
      class AddBanco_pedidos
     {
 
@@ -143,28 +143,6 @@ namespace projeto2023.controllers
 
 
 
-            /* Cmd.Parameters.AddWithValue("@codigo_Colaborador", pedido.colab_codigo);
-             Cmd.Parameters.AddWithValue("@codigo_Cliente ", pedido.cli_codigo);
-             Cmd.Parameters.AddWithValue("@corCamiseta_Pedido  ", pedido.ped_cor);
-             Cmd.Parameters.AddWithValue("@tecidoCamiseta_Pedido  ", pedido.ped_tecido);
-             Cmd.Parameters.AddWithValue("@formatoCamiseta_Pedido ", pedido.ped_formato);
-             Cmd.Parameters.AddWithValue("@tipoGola_Pedido ", pedido.ped_gola);
-             Cmd.Parameters.AddWithValue("@tecnicas_Pedido ", pedido.ped_tecnica);
-             Cmd.Parameters.AddWithValue("@estampa_Pedido  ", pedido.ped_estampa);
-             Cmd.Parameters.AddWithValue("@tamP_quant_Pedido  ", pedido.ped_tamP);
-             Cmd.Parameters.AddWithValue("@tamM_quant_Pedido ", pedido.ped_tamM);
-             Cmd.Parameters.AddWithValue("@tamG_quant_Pedido    ", pedido.ped_tamG);
-             Cmd.Parameters.AddWithValue("@quantdisponibilizadoCliente  ", pedido.ped_disponibilizadoCli);
-             Cmd.Parameters.AddWithValue("@totalCamisetas_Pedido  ", pedido.ped_totalCamisetas);
-             Cmd.Parameters.AddWithValue("@data_inicial  ", pedido.ped_Datainicial);
-             Cmd.Parameters.AddWithValue("@data_entrega ", pedido.ped_DataEntrega);
-             Cmd.Parameters.AddWithValue("@valorUnit_Pedido ", pedido.ped_valorUnitario);
-             Cmd.Parameters.AddWithValue("@valorTotal_Pedido  ", pedido.ped_valorTotal);
-             Cmd.Parameters.AddWithValue("@valorEntrada_Pedido  ", pedido.ped_valorEntrada);
-             Cmd.Parameters.AddWithValue("@valorAberto_Pedido  ", pedido.ped_valorAberto);
-             Cmd.Parameters.AddWithValue("@formaPagamentoEntrada_Pedido ", pedido.ped_formaPagamentoEntrada);
-             Cmd.Parameters.AddWithValue("@formaPagamentoFinal_Pedido ", pedido.ped_formaPagamentoFinal);
-             Cmd.Parameters.AddWithValue("@status_Pedido  ", pedido.ped_status);*/
 
 
             try

@@ -84,13 +84,10 @@ namespace projeto2023.views.pedidos
 
         private void ltv_showPedidos_MouseClick(object sender, MouseEventArgs e)
         {
-            int indice = ltv_showPedidos.FocusedItem.Index;
+           /*nt indice = ltv_showPedidos.FocusedItem.Index;
             codigo_Pedido = int.Parse(ltv_showPedidos.Items[indice].SubItems[0].Text);
             cmb_idColaborador = (ltv_showPedidos.Items[indice].SubItems[0].Text);
             cmb_idCliente = (ltv_showPedidos.Items[indice].SubItems[0].Text);
-
-
-
             cmbTipoGola.Text = ltv_showPedidos.Items[indice].SubItems[1].Text;
             cmbCorCamiseta.Text = ltv_showPedidos.Items[indice].SubItems[2].Text;
             mskTamP.Text = ltv_showPedidos.Items[indice].SubItems[3].Text;
@@ -102,7 +99,7 @@ namespace projeto2023.views.pedidos
             txbTotal.Text = ltv_showPedidos.Items[indice].SubItems[9].Text;
             txbEntrada.Text = ltv_showPedidos.Items[indice].SubItems[10].Text;
 
-            btn_excluir.Visible = true; 
+            btn_excluir.Visible = true; */
         }
 
         private void pctb_estampa_MouseClick(object sender, MouseEventArgs e)
@@ -178,7 +175,7 @@ namespace projeto2023.views.pedidos
             try
             {
                 //ligacao no banco de dados
-                AddBanco_pedidos pedidoDAO = new AddBanco_pedidos();
+                AddBanco pedidoDAO = new AddBanco();
 
                 if (codigo_Pedido == -1)
                 {
@@ -220,7 +217,7 @@ namespace projeto2023.views.pedidos
 
         private void btn_excluir_Click(object sender, EventArgs e)
         {
-            AddBanco_pedidos pedidosDAO = new AddBanco_pedidos();
+            AddBanco pedidosDAO = new AddBanco();
 
             try
             {

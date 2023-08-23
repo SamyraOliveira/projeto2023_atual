@@ -80,3 +80,9 @@ C:\Users\CJ3005917\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.fornece
 C:\Users\CJ3005917\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.materiais.crud_materiais.resources
 C:\Users\CJ3005917\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.pedidos.crud_pedidos.resources
 C:\Users\CJ3005917\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.producao.crud_producao.resources
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.colaboradores.consulta_colaboradores.resources
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.clientes.consulta_clientes.resources
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.fornecedores.consulta_fornecedores.resources
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.materiais.consulta_materiais.resources
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.pedidos.consulta_pedidos.resources
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.producao.consulta_produção.resources

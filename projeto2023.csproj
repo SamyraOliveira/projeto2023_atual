@@ -33,6 +33,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.337.80\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.337.80\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.337.80\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.337.80\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.337.80\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -51,10 +69,25 @@
     <Compile Include="controllers\Connection.cs" />
     <Compile Include="controllers\Security.cs" />
     <Compile Include="controllers\Validation.cs" />
-    <Compile Include="EstampariadbDataSet-PEDIDOS.Designer.cs">
+    <Compile Include="EstampariadbDataSet_PEDIDOS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EstampariadbDataSet-PEDIDOS.xsd</DependentUpon>
+      <DependentUpon>EstampariadbDataSet_PEDIDOS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EstampariadbDataSet1_CLIENTES.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EstampariadbDataSet1_CLIENTES.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EstampariadbDataSet1_COLABORADORES.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EstampariadbDataSet1_COLABORADORES.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EstampariadbDataSet1_FORNECEDORES.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EstampariadbDataSet1_FORNECEDORES.xsd</DependentUpon>
     </Compile>
     <Compile Include="menu.cs">
       <SubType>Form</SubType>
@@ -73,17 +106,36 @@
     <Compile Include="models\Producao.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="views\clientes\consulta_clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\clientes\consulta_clientes.Designer.cs">
+      <DependentUpon>consulta_clientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\clientes\crud_clientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="views\clientes\crud_clientes.Designer.cs">
       <DependentUpon>crud_clientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\colaboradores\consulta_colaboradores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\colaboradores\consulta_colaboradores.Designer.cs">
+      <DependentUpon>consulta_colaboradores.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\colaboradores\crud_colaboradores.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="views\colaboradores\crud_colaboradores.Designer.cs">
       <DependentUpon>crud_colaboradores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\fornecedores\consulta_fornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\fornecedores\consulta_fornecedores.Designer.cs">
+      <DependentUpon>consulta_fornecedores.cs</DependentUpon>
     </Compile>
     <Compile Include="views\fornecedores\crud_fornecedores.cs">
       <SubType>Form</SubType>
@@ -121,17 +173,41 @@
     <Compile Include="views\frms\login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\materiais\consulta_materiais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\materiais\consulta_materiais.Designer.cs">
+      <DependentUpon>consulta_materiais.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\materiais\crud_materiais.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="views\materiais\crud_materiais.Designer.cs">
       <DependentUpon>crud_materiais.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\pedidos\consulta_pedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\pedidos\consulta_pedidos.Designer.cs">
+      <DependentUpon>consulta_pedidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\pedidos\crud_pedidos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="views\pedidos\crud_pedidos.Designer.cs">
       <DependentUpon>crud_pedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\pedidos\relatorio_pedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\pedidos\relatorio_pedidos.Designer.cs">
+      <DependentUpon>relatorio_pedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\producao\consulta_produção.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\producao\consulta_produção.Designer.cs">
+      <DependentUpon>consulta_produção.cs</DependentUpon>
     </Compile>
     <Compile Include="views\producao\crud_producao.cs">
       <SubType>Form</SubType>
@@ -152,11 +228,25 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="relatorios\relatorio_clientes.rdlc" />
+    <EmbeddedResource Include="relatorios\relatorio_colaboradores.rdlc" />
+    <EmbeddedResource Include="relatorios\relatorio_fornecedores.rdlc" />
+    <EmbeddedResource Include="relatorios\relatorio_materiais.rdlc" />
+    <EmbeddedResource Include="relatorios\relatorio_pedidos.rdlc" />
+    <EmbeddedResource Include="views\clientes\consulta_clientes.resx">
+      <DependentUpon>consulta_clientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\clientes\crud_clientes.resx">
       <DependentUpon>crud_clientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\colaboradores\consulta_colaboradores.resx">
+      <DependentUpon>consulta_colaboradores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\colaboradores\crud_colaboradores.resx">
       <DependentUpon>crud_colaboradores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\fornecedores\consulta_fornecedores.resx">
+      <DependentUpon>consulta_fornecedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\fornecedores\crud_fornecedores.resx">
       <DependentUpon>crud_fornecedores.cs</DependentUpon>
@@ -176,26 +266,72 @@
     <EmbeddedResource Include="views\frms\login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\materiais\consulta_materiais.resx">
+      <DependentUpon>consulta_materiais.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\materiais\crud_materiais.resx">
       <DependentUpon>crud_materiais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\pedidos\consulta_pedidos.resx">
+      <DependentUpon>consulta_pedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\pedidos\crud_pedidos.resx">
       <DependentUpon>crud_pedidos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\pedidos\relatorio_pedidos.resx">
+      <DependentUpon>relatorio_pedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\producao\consulta_produção.resx">
+      <DependentUpon>consulta_produção.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\producao\crud_producao.resx">
       <DependentUpon>crud_producao.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="EstampariadbDataSet-PEDIDOS.xsc">
-      <DependentUpon>EstampariadbDataSet-PEDIDOS.xsd</DependentUpon>
+    <None Include="EstampariadbDataSet_PEDIDOS.xsc">
+      <DependentUpon>EstampariadbDataSet_PEDIDOS.xsd</DependentUpon>
     </None>
-    <None Include="EstampariadbDataSet-PEDIDOS.xsd">
+    <None Include="EstampariadbDataSet_PEDIDOS.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>EstampariadbDataSet-PEDIDOS.Designer.cs</LastGenOutput>
+      <LastGenOutput>EstampariadbDataSet_PEDIDOS.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="EstampariadbDataSet-PEDIDOS.xss">
-      <DependentUpon>EstampariadbDataSet-PEDIDOS.xsd</DependentUpon>
+    <None Include="EstampariadbDataSet_PEDIDOS.xss">
+      <DependentUpon>EstampariadbDataSet_PEDIDOS.xsd</DependentUpon>
     </None>
+    <None Include="EstampariadbDataSet1_CLIENTES.xsc">
+      <DependentUpon>EstampariadbDataSet1_CLIENTES.xsd</DependentUpon>
+    </None>
+    <None Include="EstampariadbDataSet1_CLIENTES.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EstampariadbDataSet1_CLIENTES.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EstampariadbDataSet1_CLIENTES.xss">
+      <DependentUpon>EstampariadbDataSet1_CLIENTES.xsd</DependentUpon>
+    </None>
+    <None Include="EstampariadbDataSet1_COLABORADORES.xsc">
+      <DependentUpon>EstampariadbDataSet1_COLABORADORES.xsd</DependentUpon>
+    </None>
+    <None Include="EstampariadbDataSet1_COLABORADORES.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EstampariadbDataSet1_COLABORADORES.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EstampariadbDataSet1_COLABORADORES.xss">
+      <DependentUpon>EstampariadbDataSet1_COLABORADORES.xsd</DependentUpon>
+    </None>
+    <None Include="EstampariadbDataSet1_FORNECEDORES.xsc">
+      <DependentUpon>EstampariadbDataSet1_FORNECEDORES.xsd</DependentUpon>
+    </None>
+    <None Include="EstampariadbDataSet1_FORNECEDORES.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EstampariadbDataSet1_FORNECEDORES.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EstampariadbDataSet1_FORNECEDORES.xss">
+      <DependentUpon>EstampariadbDataSet1_FORNECEDORES.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -211,7 +347,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="views\estoque\" />
-    <Folder Include="views\relatorios\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="img\menu_fundo.png" />
@@ -230,6 +365,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="img\menu_btnFornecedor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
