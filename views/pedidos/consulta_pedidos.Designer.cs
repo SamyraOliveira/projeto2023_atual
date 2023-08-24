@@ -59,6 +59,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_imprimir = new System.Windows.Forms.Button();
             this.pedidosTableAdapter = new projeto2023.EstampariadbDataSetTableAdapters.PedidosTableAdapter();
+            this.btn_fechar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtv_pedidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedidosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estampariadbDataSet)).BeginInit();
@@ -67,6 +68,8 @@
             // 
             // dtv_pedidos
             // 
+            this.dtv_pedidos.AllowUserToAddRows = false;
+            this.dtv_pedidos.AllowUserToDeleteRows = false;
             this.dtv_pedidos.AutoGenerateColumns = false;
             this.dtv_pedidos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
             this.dtv_pedidos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -98,11 +101,12 @@
             this.formaPagamentoFinalPedidoDataGridViewTextBoxColumn,
             this.statusPedidoDataGridViewTextBoxColumn});
             this.dtv_pedidos.DataSource = this.pedidosBindingSource;
+            this.dtv_pedidos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtv_pedidos.GridColor = System.Drawing.Color.DarkGray;
-            this.dtv_pedidos.Location = new System.Drawing.Point(0, 4);
+            this.dtv_pedidos.Location = new System.Drawing.Point(0, 0);
             this.dtv_pedidos.Name = "dtv_pedidos";
             this.dtv_pedidos.ReadOnly = true;
-            this.dtv_pedidos.Size = new System.Drawing.Size(1368, 401);
+            this.dtv_pedidos.Size = new System.Drawing.Size(1368, 525);
             this.dtv_pedidos.TabIndex = 8;
             // 
             // codigoPedidoDataGridViewTextBoxColumn
@@ -285,6 +289,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btn_fechar);
             this.panel1.Controls.Add(this.btn_imprimir);
             this.panel1.Controls.Add(this.dtv_pedidos);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -295,7 +300,7 @@
             // 
             // btn_imprimir
             // 
-            this.btn_imprimir.Location = new System.Drawing.Point(1154, 438);
+            this.btn_imprimir.Location = new System.Drawing.Point(973, 437);
             this.btn_imprimir.Name = "btn_imprimir";
             this.btn_imprimir.Size = new System.Drawing.Size(185, 63);
             this.btn_imprimir.TabIndex = 9;
@@ -307,6 +312,16 @@
             // 
             this.pedidosTableAdapter.ClearBeforeFill = true;
             // 
+            // btn_fechar
+            // 
+            this.btn_fechar.Location = new System.Drawing.Point(1171, 437);
+            this.btn_fechar.Name = "btn_fechar";
+            this.btn_fechar.Size = new System.Drawing.Size(185, 63);
+            this.btn_fechar.TabIndex = 10;
+            this.btn_fechar.Text = "FECHAR";
+            this.btn_fechar.UseVisualStyleBackColor = true;
+            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
+            // 
             // consulta_pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,6 +329,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
             this.ClientSize = new System.Drawing.Size(1368, 525);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "consulta_pedidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "consulta_pedidos";
@@ -358,5 +374,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn formaPagamentoFinalPedidoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusPedidoDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btn_imprimir;
+        private System.Windows.Forms.Button btn_fechar;
     }
 }
