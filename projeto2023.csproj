@@ -131,6 +131,12 @@
     <Compile Include="views\colaboradores\crud_colaboradores.Designer.cs">
       <DependentUpon>crud_colaboradores.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\colaboradores\relatorio_colaboradores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\colaboradores\relatorio_colaboradores.Designer.cs">
+      <DependentUpon>relatorio_colaboradores.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\fornecedores\consulta_fornecedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,10 +234,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="relatorios\relatorio_clientes.rdlc" />
     <EmbeddedResource Include="relatorios\relatorio_colaboradores.rdlc" />
-    <EmbeddedResource Include="relatorios\relatorio_fornecedores.rdlc" />
-    <EmbeddedResource Include="relatorios\relatorio_materiais.rdlc" />
     <EmbeddedResource Include="relatorios\relatorio_pedidos.rdlc" />
     <EmbeddedResource Include="views\clientes\consulta_clientes.resx">
       <DependentUpon>consulta_clientes.cs</DependentUpon>
@@ -244,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\colaboradores\crud_colaboradores.resx">
       <DependentUpon>crud_colaboradores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\colaboradores\relatorio_colaboradores.resx">
+      <DependentUpon>relatorio_colaboradores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\fornecedores\consulta_fornecedores.resx">
       <DependentUpon>consulta_fornecedores.cs</DependentUpon>

@@ -30,10 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dtv_colaboradores = new System.Windows.Forms.DataGridView();
-            this.estampariadbDataSet1_COLABORADORES = new projeto2023.EstampariadbDataSet1_COLABORADORES();
-            this.estampariadbDataSet1COLABORADORESBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.colaboradoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.colaboradoresTableAdapter = new projeto2023.EstampariadbDataSet1_COLABORADORESTableAdapters.ColaboradoresTableAdapter();
             this.codigoColaboradorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cPFColaboradorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cargoColaboradorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,11 +45,17 @@
             this.userColaboradorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordColaboradorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusColaboradorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colaboradoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.estampariadbDataSet1COLABORADORESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.estampariadbDataSet1_COLABORADORES = new projeto2023.EstampariadbDataSet1_COLABORADORES();
+            this.colaboradoresTableAdapter = new projeto2023.EstampariadbDataSet1_COLABORADORESTableAdapters.ColaboradoresTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_imprimir = new System.Windows.Forms.Button();
+            this.btn_fechar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtv_colaboradores)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estampariadbDataSet1_COLABORADORES)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estampariadbDataSet1COLABORADORESBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.colaboradoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estampariadbDataSet1COLABORADORESBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estampariadbDataSet1_COLABORADORES)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,25 +90,6 @@
             this.dtv_colaboradores.Size = new System.Drawing.Size(1338, 401);
             this.dtv_colaboradores.TabIndex = 8;
             // 
-            // estampariadbDataSet1_COLABORADORES
-            // 
-            this.estampariadbDataSet1_COLABORADORES.DataSetName = "EstampariadbDataSet1_COLABORADORES";
-            this.estampariadbDataSet1_COLABORADORES.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // estampariadbDataSet1COLABORADORESBindingSource
-            // 
-            this.estampariadbDataSet1COLABORADORESBindingSource.DataSource = this.estampariadbDataSet1_COLABORADORES;
-            this.estampariadbDataSet1COLABORADORESBindingSource.Position = 0;
-            // 
-            // colaboradoresBindingSource
-            // 
-            this.colaboradoresBindingSource.DataMember = "Colaboradores";
-            this.colaboradoresBindingSource.DataSource = this.estampariadbDataSet1COLABORADORESBindingSource;
-            // 
-            // colaboradoresTableAdapter
-            // 
-            this.colaboradoresTableAdapter.ClearBeforeFill = true;
-            // 
             // codigoColaboradorDataGridViewTextBoxColumn
             // 
             this.codigoColaboradorDataGridViewTextBoxColumn.DataPropertyName = "codigo_Colaborador";
@@ -119,84 +102,117 @@
             this.cPFColaboradorDataGridViewTextBoxColumn.DataPropertyName = "CPF_Colaborador";
             this.cPFColaboradorDataGridViewTextBoxColumn.HeaderText = "CPF_Colaborador";
             this.cPFColaboradorDataGridViewTextBoxColumn.Name = "cPFColaboradorDataGridViewTextBoxColumn";
+            this.cPFColaboradorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cargoColaboradorDataGridViewTextBoxColumn
             // 
             this.cargoColaboradorDataGridViewTextBoxColumn.DataPropertyName = "cargo_Colaborador";
             this.cargoColaboradorDataGridViewTextBoxColumn.HeaderText = "cargo_Colaborador";
             this.cargoColaboradorDataGridViewTextBoxColumn.Name = "cargoColaboradorDataGridViewTextBoxColumn";
+            this.cargoColaboradorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // telefoneColaboradorDataGridViewTextBoxColumn
             // 
             this.telefoneColaboradorDataGridViewTextBoxColumn.DataPropertyName = "telefone_Colaborador";
             this.telefoneColaboradorDataGridViewTextBoxColumn.HeaderText = "telefone_Colaborador";
             this.telefoneColaboradorDataGridViewTextBoxColumn.Name = "telefoneColaboradorDataGridViewTextBoxColumn";
+            this.telefoneColaboradorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // emailColaboradorDataGridViewTextBoxColumn
             // 
             this.emailColaboradorDataGridViewTextBoxColumn.DataPropertyName = "email_Colaborador";
             this.emailColaboradorDataGridViewTextBoxColumn.HeaderText = "email_Colaborador";
             this.emailColaboradorDataGridViewTextBoxColumn.Name = "emailColaboradorDataGridViewTextBoxColumn";
+            this.emailColaboradorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // estadoColaboradorDataGridViewTextBoxColumn
             // 
             this.estadoColaboradorDataGridViewTextBoxColumn.DataPropertyName = "estado_Colaborador";
             this.estadoColaboradorDataGridViewTextBoxColumn.HeaderText = "estado_Colaborador";
             this.estadoColaboradorDataGridViewTextBoxColumn.Name = "estadoColaboradorDataGridViewTextBoxColumn";
+            this.estadoColaboradorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cidadeColaboradorDataGridViewTextBoxColumn
             // 
             this.cidadeColaboradorDataGridViewTextBoxColumn.DataPropertyName = "cidade_Colaborador";
             this.cidadeColaboradorDataGridViewTextBoxColumn.HeaderText = "cidade_Colaborador";
             this.cidadeColaboradorDataGridViewTextBoxColumn.Name = "cidadeColaboradorDataGridViewTextBoxColumn";
+            this.cidadeColaboradorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // enderecoColaboradorDataGridViewTextBoxColumn
             // 
             this.enderecoColaboradorDataGridViewTextBoxColumn.DataPropertyName = "endereco_Colaborador";
             this.enderecoColaboradorDataGridViewTextBoxColumn.HeaderText = "endereco_Colaborador";
             this.enderecoColaboradorDataGridViewTextBoxColumn.Name = "enderecoColaboradorDataGridViewTextBoxColumn";
+            this.enderecoColaboradorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // bairroColaboradorDataGridViewTextBoxColumn
             // 
             this.bairroColaboradorDataGridViewTextBoxColumn.DataPropertyName = "bairro_Colaborador";
             this.bairroColaboradorDataGridViewTextBoxColumn.HeaderText = "bairro_Colaborador";
             this.bairroColaboradorDataGridViewTextBoxColumn.Name = "bairroColaboradorDataGridViewTextBoxColumn";
+            this.bairroColaboradorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cEPColaboradorDataGridViewTextBoxColumn
             // 
             this.cEPColaboradorDataGridViewTextBoxColumn.DataPropertyName = "CEP_Colaborador";
             this.cEPColaboradorDataGridViewTextBoxColumn.HeaderText = "CEP_Colaborador";
             this.cEPColaboradorDataGridViewTextBoxColumn.Name = "cEPColaboradorDataGridViewTextBoxColumn";
+            this.cEPColaboradorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nomeColaboradorDataGridViewTextBoxColumn
             // 
             this.nomeColaboradorDataGridViewTextBoxColumn.DataPropertyName = "nome_Colaborador";
             this.nomeColaboradorDataGridViewTextBoxColumn.HeaderText = "nome_Colaborador";
             this.nomeColaboradorDataGridViewTextBoxColumn.Name = "nomeColaboradorDataGridViewTextBoxColumn";
+            this.nomeColaboradorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dataNascColaboradorDataGridViewTextBoxColumn
             // 
             this.dataNascColaboradorDataGridViewTextBoxColumn.DataPropertyName = "dataNasc_Colaborador";
             this.dataNascColaboradorDataGridViewTextBoxColumn.HeaderText = "dataNasc_Colaborador";
             this.dataNascColaboradorDataGridViewTextBoxColumn.Name = "dataNascColaboradorDataGridViewTextBoxColumn";
+            this.dataNascColaboradorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // userColaboradorDataGridViewTextBoxColumn
             // 
             this.userColaboradorDataGridViewTextBoxColumn.DataPropertyName = "user_Colaborador";
             this.userColaboradorDataGridViewTextBoxColumn.HeaderText = "user_Colaborador";
             this.userColaboradorDataGridViewTextBoxColumn.Name = "userColaboradorDataGridViewTextBoxColumn";
+            this.userColaboradorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // passwordColaboradorDataGridViewTextBoxColumn
             // 
             this.passwordColaboradorDataGridViewTextBoxColumn.DataPropertyName = "password_Colaborador";
             this.passwordColaboradorDataGridViewTextBoxColumn.HeaderText = "password_Colaborador";
             this.passwordColaboradorDataGridViewTextBoxColumn.Name = "passwordColaboradorDataGridViewTextBoxColumn";
+            this.passwordColaboradorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // statusColaboradorDataGridViewTextBoxColumn
             // 
             this.statusColaboradorDataGridViewTextBoxColumn.DataPropertyName = "status_Colaborador";
             this.statusColaboradorDataGridViewTextBoxColumn.HeaderText = "status_Colaborador";
             this.statusColaboradorDataGridViewTextBoxColumn.Name = "statusColaboradorDataGridViewTextBoxColumn";
+            this.statusColaboradorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // colaboradoresBindingSource
+            // 
+            this.colaboradoresBindingSource.DataMember = "Colaboradores";
+            this.colaboradoresBindingSource.DataSource = this.estampariadbDataSet1COLABORADORESBindingSource;
+            // 
+            // estampariadbDataSet1COLABORADORESBindingSource
+            // 
+            this.estampariadbDataSet1COLABORADORESBindingSource.DataSource = this.estampariadbDataSet1_COLABORADORES;
+            this.estampariadbDataSet1COLABORADORESBindingSource.Position = 0;
+            // 
+            // estampariadbDataSet1_COLABORADORES
+            // 
+            this.estampariadbDataSet1_COLABORADORES.DataSetName = "EstampariadbDataSet1_COLABORADORES";
+            this.estampariadbDataSet1_COLABORADORES.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // colaboradoresTableAdapter
+            // 
+            this.colaboradoresTableAdapter.ClearBeforeFill = true;
             // 
             // panel1
             // 
@@ -206,21 +222,43 @@
             this.panel1.Size = new System.Drawing.Size(1344, 426);
             this.panel1.TabIndex = 9;
             // 
+            // btn_imprimir
+            // 
+            this.btn_imprimir.Location = new System.Drawing.Point(943, 450);
+            this.btn_imprimir.Name = "btn_imprimir";
+            this.btn_imprimir.Size = new System.Drawing.Size(185, 63);
+            this.btn_imprimir.TabIndex = 10;
+            this.btn_imprimir.Text = "IMPRIMIR";
+            this.btn_imprimir.UseVisualStyleBackColor = true;
+            this.btn_imprimir.Click += new System.EventHandler(this.btn_imprimir_Click);
+            // 
+            // btn_fechar
+            // 
+            this.btn_fechar.Location = new System.Drawing.Point(1165, 450);
+            this.btn_fechar.Name = "btn_fechar";
+            this.btn_fechar.Size = new System.Drawing.Size(185, 63);
+            this.btn_fechar.TabIndex = 11;
+            this.btn_fechar.Text = "FECHAR";
+            this.btn_fechar.UseVisualStyleBackColor = true;
+            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
+            // 
             // consulta_colaboradores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
             this.ClientSize = new System.Drawing.Size(1368, 525);
+            this.Controls.Add(this.btn_fechar);
+            this.Controls.Add(this.btn_imprimir);
             this.Controls.Add(this.panel1);
             this.Name = "consulta_colaboradores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "consulta_colaboradores";
             this.Load += new System.EventHandler(this.consulta_colaboradores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtv_colaboradores)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estampariadbDataSet1_COLABORADORES)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estampariadbDataSet1COLABORADORESBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.colaboradoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estampariadbDataSet1COLABORADORESBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estampariadbDataSet1_COLABORADORES)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -249,5 +287,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordColaboradorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusColaboradorDataGridViewTextBoxColumn;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btn_imprimir;
+        private System.Windows.Forms.Button btn_fechar;
     }
 }
