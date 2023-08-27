@@ -21,10 +21,10 @@ namespace projeto2023.models
         public string cli_cidade;
         public string cli_endereco;
         public string cli_CEP;
-        public bool cli_status;
+        public int cli_status;
 
 
-        public Clientes(string nome, string cpfcnpj, string telefone, string email, DateTime dataNasc, string estado, string cidade, string endereco, string cep, bool status )
+        public Clientes(string nome, string cpfcnpj, string telefone, string email, DateTime dataNasc, string estado, string cidade, string endereco, string cep, int status )
         {
             cli_nome = nome;
             cli_CPFCNPJ = cpfcnpj;
@@ -38,7 +38,7 @@ namespace projeto2023.models
             cli_status = status;
         }
 
-        public Clientes(int codigo,string nome, string cpfcnpj, string telefone, string email, DateTime dataNasc, string estado, string cidade, string endereco, string cep, bool status)
+        public Clientes(int codigo,string nome, string cpfcnpj, string telefone, string email, DateTime dataNasc, string estado, string cidade, string endereco, string cep, int status)
         {
             cli_codigo = codigo;
             cli_nome = nome;

@@ -37,21 +37,21 @@ namespace projeto2023.views.colaboradores
         private DataTable GerarDadosRelatorio()
         {
             var dt = new DataTable();
-            dt.Columns.Add("colab_codigo", typeof(int));
-            dt.Columns.Add("colab_CPF");
-            dt.Columns.Add("colab_cargo");
-            dt.Columns.Add("colab_telefone");
-            dt.Columns.Add("colab_email");
-            dt.Columns.Add("colab_estado");
-            dt.Columns.Add("colab_cidade");
-            dt.Columns.Add("colab_endereco");
-            dt.Columns.Add("colab_bairro");
-            dt.Columns.Add("colab_CEP");
-            dt.Columns.Add("colab_nome");
-            dt.Columns.Add("colab_dataNasc", typeof(DateTime));
-            dt.Columns.Add("colab_usuario");
-            dt.Columns.Add("colab_senha");
-            dt.Columns.Add("colab_status");
+            dt.Columns.Add("codigo_Colaborador", typeof(int));
+            dt.Columns.Add("CPF_Colaborador");
+            dt.Columns.Add("cargo_Colaborador");
+            dt.Columns.Add("telefone_Colaborador");
+            dt.Columns.Add("email_Colaborador");
+            dt.Columns.Add("estado_Colaborador");
+            dt.Columns.Add("cidade_Colaborador");
+            dt.Columns.Add("endereco_Colaborador");
+            dt.Columns.Add("bairro_Colaborador");
+            dt.Columns.Add("CEP_Colaborador");
+            dt.Columns.Add("nome_Colaborador");
+            dt.Columns.Add("dataNasc_Colaborador", typeof(DateTime));
+            dt.Columns.Add("user_Colaborador");
+            dt.Columns.Add("password_Colaborador");
+            dt.Columns.Add("status_Colaborador");
 
 
 

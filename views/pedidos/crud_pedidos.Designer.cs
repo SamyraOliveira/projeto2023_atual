@@ -47,13 +47,11 @@ namespace projeto2023.views.pedidos
             this.lbl_valorUnit = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.pnl_formapagamento = new System.Windows.Forms.Panel();
-            this.txb_final = new System.Windows.Forms.TextBox();
-            this.lbl_final = new System.Windows.Forms.Label();
+            this.lbl_status = new System.Windows.Forms.Label();
+            this.cmb_status = new System.Windows.Forms.ComboBox();
             this.cmb_formapagamentoFinal = new System.Windows.Forms.ComboBox();
             this.lbl_formapagamentoFinal = new System.Windows.Forms.Label();
             this.cmb_formapagamentoEntrada = new System.Windows.Forms.ComboBox();
-            this.txb_entrada = new System.Windows.Forms.TextBox();
-            this.lbl_entrada = new System.Windows.Forms.Label();
             this.lbl_formapagamentoEntrada = new System.Windows.Forms.Label();
             this.pnl_detalhespedido = new System.Windows.Forms.Panel();
             this.lbl_dataentrega = new System.Windows.Forms.Label();
@@ -88,10 +86,8 @@ namespace projeto2023.views.pedidos
             this.cmb_idCliente = new System.Windows.Forms.ComboBox();
             this.cmb_idColaborador = new System.Windows.Forms.ComboBox();
             this.lbl_nomeCliente = new System.Windows.Forms.Label();
-            this.lbl_idCliente = new System.Windows.Forms.Label();
             this.txb_nomeColaborador = new System.Windows.Forms.TextBox();
             this.txb_nomeCliente = new System.Windows.Forms.TextBox();
-            this.lbl_nomeColaborador = new System.Windows.Forms.Label();
             this.lbl_idColaborador = new System.Windows.Forms.Label();
             this.OFD_estamparia = new System.Windows.Forms.OpenFileDialog();
             this.ltv_showPedidos = new System.Windows.Forms.ListView();
@@ -283,34 +279,34 @@ namespace projeto2023.views.pedidos
             // 
             // pnl_formapagamento
             // 
-            this.pnl_formapagamento.Controls.Add(this.txb_final);
-            this.pnl_formapagamento.Controls.Add(this.lbl_final);
+            this.pnl_formapagamento.Controls.Add(this.lbl_status);
+            this.pnl_formapagamento.Controls.Add(this.cmb_status);
             this.pnl_formapagamento.Controls.Add(this.cmb_formapagamentoFinal);
             this.pnl_formapagamento.Controls.Add(this.lbl_formapagamentoFinal);
             this.pnl_formapagamento.Controls.Add(this.cmb_formapagamentoEntrada);
-            this.pnl_formapagamento.Controls.Add(this.txb_entrada);
-            this.pnl_formapagamento.Controls.Add(this.lbl_entrada);
             this.pnl_formapagamento.Controls.Add(this.lbl_formapagamentoEntrada);
             this.pnl_formapagamento.Location = new System.Drawing.Point(768, 71);
             this.pnl_formapagamento.Name = "pnl_formapagamento";
             this.pnl_formapagamento.Size = new System.Drawing.Size(167, 204);
             this.pnl_formapagamento.TabIndex = 20;
             // 
-            // txb_final
+            // lbl_status
             // 
-            this.txb_final.Location = new System.Drawing.Point(88, 169);
-            this.txb_final.Name = "txb_final";
-            this.txb_final.Size = new System.Drawing.Size(51, 20);
-            this.txb_final.TabIndex = 21;
+            this.lbl_status.AutoSize = true;
+            this.lbl_status.Location = new System.Drawing.Point(16, 131);
+            this.lbl_status.Name = "lbl_status";
+            this.lbl_status.Size = new System.Drawing.Size(124, 28);
+            this.lbl_status.TabIndex = 21;
+            this.lbl_status.Text = "Formas de Pagamento\r\n               Final";
             // 
-            // lbl_final
+            // cmb_status
             // 
-            this.lbl_final.AutoSize = true;
-            this.lbl_final.Location = new System.Drawing.Point(85, 150);
-            this.lbl_final.Name = "lbl_final";
-            this.lbl_final.Size = new System.Drawing.Size(32, 14);
-            this.lbl_final.TabIndex = 20;
-            this.lbl_final.Text = "Final";
+            this.cmb_status.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_status.FormattingEnabled = true;
+            this.cmb_status.Location = new System.Drawing.Point(19, 159);
+            this.cmb_status.Name = "cmb_status";
+            this.cmb_status.Size = new System.Drawing.Size(121, 22);
+            this.cmb_status.TabIndex = 20;
             // 
             // cmb_formapagamentoFinal
             // 
@@ -338,22 +334,6 @@ namespace projeto2023.views.pedidos
             this.cmb_formapagamentoEntrada.Name = "cmb_formapagamentoEntrada";
             this.cmb_formapagamentoEntrada.Size = new System.Drawing.Size(121, 22);
             this.cmb_formapagamentoEntrada.TabIndex = 17;
-            // 
-            // txb_entrada
-            // 
-            this.txb_entrada.Location = new System.Drawing.Point(19, 169);
-            this.txb_entrada.Name = "txb_entrada";
-            this.txb_entrada.Size = new System.Drawing.Size(51, 20);
-            this.txb_entrada.TabIndex = 16;
-            // 
-            // lbl_entrada
-            // 
-            this.lbl_entrada.AutoSize = true;
-            this.lbl_entrada.Location = new System.Drawing.Point(16, 150);
-            this.lbl_entrada.Name = "lbl_entrada";
-            this.lbl_entrada.Size = new System.Drawing.Size(47, 14);
-            this.lbl_entrada.TabIndex = 15;
-            this.lbl_entrada.Text = "Entrada";
             // 
             // lbl_formapagamentoEntrada
             // 
@@ -517,6 +497,7 @@ namespace projeto2023.views.pedidos
             this.txb_disponibilizadocliente.Name = "txb_disponibilizadocliente";
             this.txb_disponibilizadocliente.Size = new System.Drawing.Size(30, 20);
             this.txb_disponibilizadocliente.TabIndex = 13;
+            this.txb_disponibilizadocliente.TextChanged += new System.EventHandler(this.txb_disponibilizadocliente_TextChanged);
             // 
             // check_disponibilizadocliente
             // 
@@ -647,10 +628,8 @@ namespace projeto2023.views.pedidos
             this.pnl_dadoscolabcli.Controls.Add(this.cmb_idCliente);
             this.pnl_dadoscolabcli.Controls.Add(this.cmb_idColaborador);
             this.pnl_dadoscolabcli.Controls.Add(this.lbl_nomeCliente);
-            this.pnl_dadoscolabcli.Controls.Add(this.lbl_idCliente);
             this.pnl_dadoscolabcli.Controls.Add(this.txb_nomeColaborador);
             this.pnl_dadoscolabcli.Controls.Add(this.txb_nomeCliente);
-            this.pnl_dadoscolabcli.Controls.Add(this.lbl_nomeColaborador);
             this.pnl_dadoscolabcli.Controls.Add(this.lbl_idColaborador);
             this.pnl_dadoscolabcli.Location = new System.Drawing.Point(11, 9);
             this.pnl_dadoscolabcli.Name = "pnl_dadoscolabcli";
@@ -663,7 +642,7 @@ namespace projeto2023.views.pedidos
             this.cmb_idCliente.FormattingEnabled = true;
             this.cmb_idCliente.Location = new System.Drawing.Point(415, 28);
             this.cmb_idCliente.Name = "cmb_idCliente";
-            this.cmb_idCliente.Size = new System.Drawing.Size(70, 22);
+            this.cmb_idCliente.Size = new System.Drawing.Size(281, 22);
             this.cmb_idCliente.TabIndex = 7;
             this.cmb_idCliente.SelectedIndexChanged += new System.EventHandler(this.cmb_idCliente_SelectedIndexChanged);
             // 
@@ -674,27 +653,18 @@ namespace projeto2023.views.pedidos
             this.cmb_idColaborador.Location = new System.Drawing.Point(11, 26);
             this.cmb_idColaborador.MaxDropDownItems = 5;
             this.cmb_idColaborador.Name = "cmb_idColaborador";
-            this.cmb_idColaborador.Size = new System.Drawing.Size(70, 22);
+            this.cmb_idColaborador.Size = new System.Drawing.Size(283, 22);
             this.cmb_idColaborador.TabIndex = 6;
             this.cmb_idColaborador.SelectedIndexChanged += new System.EventHandler(this.cmb_idColaborador_SelectedIndexChanged);
             // 
             // lbl_nomeCliente
             // 
             this.lbl_nomeCliente.AutoSize = true;
-            this.lbl_nomeCliente.Location = new System.Drawing.Point(500, 11);
+            this.lbl_nomeCliente.Location = new System.Drawing.Point(412, 11);
             this.lbl_nomeCliente.Name = "lbl_nomeCliente";
             this.lbl_nomeCliente.Size = new System.Drawing.Size(46, 14);
             this.lbl_nomeCliente.TabIndex = 3;
             this.lbl_nomeCliente.Text = "Cliente";
-            // 
-            // lbl_idCliente
-            // 
-            this.lbl_idCliente.AutoSize = true;
-            this.lbl_idCliente.Location = new System.Drawing.Point(409, 11);
-            this.lbl_idCliente.Name = "lbl_idCliente";
-            this.lbl_idCliente.Size = new System.Drawing.Size(79, 14);
-            this.lbl_idCliente.TabIndex = 2;
-            this.lbl_idCliente.Text = "Identificador ";
             // 
             // txb_nomeColaborador
             // 
@@ -703,6 +673,7 @@ namespace projeto2023.views.pedidos
             this.txb_nomeColaborador.ReadOnly = true;
             this.txb_nomeColaborador.Size = new System.Drawing.Size(289, 20);
             this.txb_nomeColaborador.TabIndex = 3;
+            this.txb_nomeColaborador.Visible = false;
             // 
             // txb_nomeCliente
             // 
@@ -711,15 +682,7 @@ namespace projeto2023.views.pedidos
             this.txb_nomeCliente.ReadOnly = true;
             this.txb_nomeCliente.Size = new System.Drawing.Size(289, 20);
             this.txb_nomeCliente.TabIndex = 5;
-            // 
-            // lbl_nomeColaborador
-            // 
-            this.lbl_nomeColaborador.AutoSize = true;
-            this.lbl_nomeColaborador.Location = new System.Drawing.Point(98, 11);
-            this.lbl_nomeColaborador.Name = "lbl_nomeColaborador";
-            this.lbl_nomeColaborador.Size = new System.Drawing.Size(38, 14);
-            this.lbl_nomeColaborador.TabIndex = 1;
-            this.lbl_nomeColaborador.Text = "Nome";
+            this.txb_nomeCliente.Visible = false;
             // 
             // lbl_idColaborador
             // 
@@ -825,10 +788,8 @@ namespace projeto2023.views.pedidos
         private System.Windows.Forms.TextBox txb_nomeCliente;
         private System.Windows.Forms.Panel pnl_dadoscolabcli;
         private System.Windows.Forms.TextBox txb_nomeColaborador;
-        private System.Windows.Forms.Label lbl_nomeColaborador;
         private System.Windows.Forms.Label lbl_idColaborador;
         private System.Windows.Forms.Label lbl_nomeCliente;
-        private System.Windows.Forms.Label lbl_idCliente;
         private System.Windows.Forms.PictureBox pctb_estampa;
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Button btn_excluir;
@@ -855,13 +816,9 @@ namespace projeto2023.views.pedidos
         private System.Windows.Forms.TextBox txb_valorAberto;
         private System.Windows.Forms.Label lbl_valorAberto;
         private System.Windows.Forms.Panel pnl_formapagamento;
-        private System.Windows.Forms.TextBox txb_final;
-        private System.Windows.Forms.Label lbl_final;
         private System.Windows.Forms.ComboBox cmb_formapagamentoFinal;
         private System.Windows.Forms.Label lbl_formapagamentoFinal;
         private System.Windows.Forms.ComboBox cmb_formapagamentoEntrada;
-        private System.Windows.Forms.TextBox txb_entrada;
-        private System.Windows.Forms.Label lbl_entrada;
         private System.Windows.Forms.Label lbl_formapagamentoEntrada;
         private System.Windows.Forms.ComboBox cmb_idCliente;
         private System.Windows.Forms.ComboBox cmb_idColaborador;
@@ -891,5 +848,7 @@ namespace projeto2023.views.pedidos
         private System.Windows.Forms.ColumnHeader columnHeader21;
         private System.Windows.Forms.ColumnHeader columnHeader22;
         private System.Windows.Forms.ColumnHeader columnHeader23;
+        private System.Windows.Forms.Label lbl_status;
+        private System.Windows.Forms.ComboBox cmb_status;
     }
 }

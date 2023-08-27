@@ -45,6 +45,8 @@
             this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.estampariadbDataSet1_CLIENTES = new projeto2023.EstampariadbDataSet1_CLIENTES();
             this.clientesTableAdapter = new projeto2023.EstampariadbDataSet1_CLIENTESTableAdapters.ClientesTableAdapter();
+            this.btn_imprimir = new System.Windows.Forms.Button();
+            this.btn_fechar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtv_clientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
@@ -177,12 +179,34 @@
             // 
             this.clientesTableAdapter.ClearBeforeFill = true;
             // 
+            // btn_imprimir
+            // 
+            this.btn_imprimir.Location = new System.Drawing.Point(1043, 473);
+            this.btn_imprimir.Name = "btn_imprimir";
+            this.btn_imprimir.Size = new System.Drawing.Size(75, 23);
+            this.btn_imprimir.TabIndex = 11;
+            this.btn_imprimir.Text = "IMPRIMIR";
+            this.btn_imprimir.UseVisualStyleBackColor = true;
+            this.btn_imprimir.Click += new System.EventHandler(this.btn_imprimir_Click);
+            // 
+            // btn_fechar
+            // 
+            this.btn_fechar.Location = new System.Drawing.Point(1205, 473);
+            this.btn_fechar.Name = "btn_fechar";
+            this.btn_fechar.Size = new System.Drawing.Size(75, 23);
+            this.btn_fechar.TabIndex = 12;
+            this.btn_fechar.Text = "FECHAR";
+            this.btn_fechar.UseVisualStyleBackColor = true;
+            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
+            // 
             // consulta_clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
             this.ClientSize = new System.Drawing.Size(1368, 525);
+            this.Controls.Add(this.btn_fechar);
+            this.Controls.Add(this.btn_imprimir);
             this.Controls.Add(this.panel1);
             this.Name = "consulta_clientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -214,5 +238,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn enderecoClienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cEPClienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusClienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btn_imprimir;
+        private System.Windows.Forms.Button btn_fechar;
     }
 }

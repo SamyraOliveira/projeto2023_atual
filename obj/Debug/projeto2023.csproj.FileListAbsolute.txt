@@ -149,3 +149,5 @@ C:\Users\Família Linda\Desktop\projeto2023_atual\bin\Debug\zh-HANT\Microsoft.Re
 C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.pedidos.relatorio_pedidos.resources
 C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.csproj.CopyComplete
 C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.colaboradores.relatorio_colaboradores.resources
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.clientes.relatorio_clientes.resources
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.fornecedores.relatorio_fornecedores.resources

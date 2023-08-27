@@ -119,6 +119,12 @@
     <Compile Include="views\clientes\crud_clientes.Designer.cs">
       <DependentUpon>crud_clientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\clientes\relatorio_clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\clientes\relatorio_clientes.Designer.cs">
+      <DependentUpon>relatorio_clientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\colaboradores\consulta_colaboradores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,12 @@
     </Compile>
     <Compile Include="views\fornecedores\crud_fornecedores.Designer.cs">
       <DependentUpon>crud_fornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\fornecedores\relatorio_fornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\fornecedores\relatorio_fornecedores.Designer.cs">
+      <DependentUpon>relatorio_fornecedores.cs</DependentUpon>
     </Compile>
     <Compile Include="views\frms\frm_cadastros.cs">
       <SubType>Form</SubType>
@@ -234,13 +246,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="relatorios\relatorio_clientes.rdlc" />
     <EmbeddedResource Include="relatorios\relatorio_colaboradores.rdlc" />
     <EmbeddedResource Include="relatorios\relatorio_pedidos.rdlc" />
+    <EmbeddedResource Include="relatorios\relatorio_fornecedores.rdlc" />
     <EmbeddedResource Include="views\clientes\consulta_clientes.resx">
       <DependentUpon>consulta_clientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\clientes\crud_clientes.resx">
       <DependentUpon>crud_clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\clientes\relatorio_clientes.resx">
+      <DependentUpon>relatorio_clientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\colaboradores\consulta_colaboradores.resx">
       <DependentUpon>consulta_colaboradores.cs</DependentUpon>
@@ -256,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\fornecedores\crud_fornecedores.resx">
       <DependentUpon>crud_fornecedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\fornecedores\relatorio_fornecedores.resx">
+      <DependentUpon>relatorio_fornecedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\frms\frm_cadastros.resx">
       <DependentUpon>frm_cadastros.cs</DependentUpon>

@@ -26,7 +26,7 @@ namespace projeto2023.views.pedidos
         public int codigo_Pedido = -1;
         string ped_estampa, ped_cor, ped_tecido, ped_tecnica, ped_formato, ped_gola, ped_quantDisponibilizado;
         int P = 0, M = 0, G = 0, disponibilizado = 0, quantDisponibilizado = 0, totalC = 0;
-        decimal unitario, totalPedido = 0, entrada = 0;
+        decimal unitario, totalPedido = 0, entrada = 0, aberto = 0;
 
         List<Colaboradores_dados> colaboradores = new List<Colaboradores_dados>();
         List<Clientes_dados> clientes = new List<Clientes_dados>();
@@ -78,6 +78,12 @@ namespace projeto2023.views.pedidos
             };
             cmb_formapagamentoEntrada.Items.AddRange(formasPagamento);
             cmb_formapagamentoFinal.Items.AddRange(formasPagamento);
+
+            string[] statusPedido = {
+            "Em Aberto", "Orçamento", "Em Andamento", "Concluido", "Entregue", "Cancelado"
+            };
+            cmb_status.Items.AddRange(statusPedido);
+            
             #endregion
 
         }
@@ -127,9 +133,9 @@ namespace projeto2023.views.pedidos
         {
             
             int cod_colab = cmb_idColaborador.SelectedIndex;
-            string nome_colab = txb_nomeColaborador.Text;
+            //string nome_colab = txb_nomeColaborador.Text;
             int cod_cli = cmb_idCliente.SelectedIndex;
-            string nome_cli = txb_nomeCliente.Text;
+            //string nome_cli = txb_nomeCliente.Text;
             string ped_cor = cmb_cores.Text;
             string ped_tecido = cmb_tecido.Text;
             string ped_formato = cmb_formato.Text;
@@ -165,7 +171,7 @@ namespace projeto2023.views.pedidos
             decimal ped_totalAberto = Convert.ToDecimal(txb_valorAberto.Text);
             string ped_pagamentoEntrada = cmb_formapagamentoEntrada.Text;
             string ped_pagamentoFinal = cmb_formapagamentoFinal.Text;
-            string ped_status = " ";
+            string ped_status = cmb_status.Text;
 
             
 
@@ -229,8 +235,7 @@ namespace projeto2023.views.pedidos
             }
             Update();
             //listaPedidos();
-            // TODO: esta linha de código carrega dados na tabela 'estampariadbDataSet10.Pedidos'. Você pode movê-la ou removê-la conforme necessário.
-            //this.pedidosTableAdapter.Fill(this.estampariadbDataSet10.Pedidos);
+
             btn_limpar_Click(null, null);
         }
 
@@ -265,8 +270,7 @@ namespace projeto2023.views.pedidos
             txb_valorAberto.Clear();
             cmb_formapagamentoEntrada.SelectedIndex = -1;
             cmb_formapagamentoFinal.SelectedIndex = -1;
-
-
+            cmb_status.SelectedIndex = -1;
         }
 
         #endregion
@@ -284,16 +288,16 @@ namespace projeto2023.views.pedidos
                  SqlCommand command = new SqlCommand(query, connection.RetornarConexao());
                  SqlDataReader reader = command.ExecuteReader();
 
-                 List<Clientes_dados> nomesColaboradores = new List<Clientes_dados>();
+                 List<Colaboradores_dados> nomesColaboradores = new List<Colaboradores_dados>();
 
                  while (reader.Read())
                  {
                      int colabID = (int)reader["codigo_Colaborador"];
                      string nomeColab = (string)reader["nome_Colaborador"];
                     //alterações feitas com victor
-                    var Clientedados = new Clientes_dados(colabID, nomeColab);
+                    var Colaboradoresdados = new Colaboradores_dados(colabID, nomeColab);
                   
-                     nomesColaboradores.Add(Clientedados);
+                     nomesColaboradores.Add(Colaboradoresdados);
                 }
 
                  cmb_idColaborador.DataSource = nomesColaboradores;
@@ -307,24 +311,48 @@ namespace projeto2023.views.pedidos
         {
             string query = "SELECT codigo_Cliente, nome_Cliente FROM Clientes";
 
+            /*using (Connection connection = new Connection())
+            {
+                SqlCommand command = new SqlCommand(query, connection.RetornarConexao());
+                SqlDataReader reader = command.ExecuteReader();
+
+                List<Clientes_dados> nomesClientes = new List<Clientes_dados>();
+
+                while (reader.Read())
+                {
+                    int clienteID = (int)reader["codigo_Cliente"];
+                    string nomeCliente = (string)reader["nome_Cliente"];
+                   
+                    nomesClientes.Add($"{clienteID}- {nomeCliente}");
+                }
+
+                cmb_idCliente.DataSource = nomesClientes;
+
+                reader.Close();
+            }*/
+
             using (Connection connection = new Connection())
             {
                 SqlCommand command = new SqlCommand(query, connection.RetornarConexao());
                 SqlDataReader reader = command.ExecuteReader();
 
-                List<string> nomesClientes = new List<string>();
+                List<Clientes_dados> nomesClientes = new List<Clientes_dados>();
 
                 while (reader.Read())
                 {
-                    int clienteID = (int)reader["codigo_Cliente"];
-                   
-                    nomesClientes.Add($"{clienteID}"/*- {nomesClientes}"*/);
+                    int cliID = (int)reader["codigo_Cliente"];
+                    string nomeCli = (string)reader["nome_Cliente"];
+                    //alterações feitas com victor
+                    var Clientedados = new Clientes_dados(cliID, nomeCli);
+
+                    nomesClientes.Add(Clientedados);
                 }
 
                 cmb_idCliente.DataSource = nomesClientes;
 
                 reader.Close();
             }
+           
         }
 
         #endregion
@@ -391,10 +419,12 @@ namespace projeto2023.views.pedidos
                 unitario = valorTotalPedido / totalC;
                 totalPedido = valorTotalPedido;
                 entrada = valorTotalPedido / 2;
+                aberto = valorTotalPedido - entrada;
 
                 txb_valorUnit.Text = unitario.ToString();
                 txb_valorTotal.Text = totalPedido.ToString();
                 txb_valorEntrada.Text = entrada.ToString();
+                txb_valorAberto.Text = aberto.ToString();
             }
             catch (System.FormatException)
             {
@@ -408,10 +438,12 @@ namespace projeto2023.views.pedidos
                 unitario = valorTotalPedido / totalC;
                 totalPedido = valorTotalPedido;
                 entrada = valorTotalPedido / 2;
+                aberto = valorTotalPedido - entrada;
 
                 txb_valorUnit.Text = unitario.ToString();
                 txb_valorTotal.Text = totalPedido.ToString();
                 txb_valorEntrada.Text = entrada.ToString();
+                txb_valorAberto.Text = aberto.ToString();
             }
         }
 
@@ -419,7 +451,7 @@ namespace projeto2023.views.pedidos
         {
             try
             {
-                M = int.Parse(txb_tamP.Text);
+                M = int.Parse(txb_tamM.Text);
                 totalC = P + M + G + quantDisponibilizado;
                 txb_totalCamisetas.Text = totalC.ToString();
 
@@ -430,10 +462,12 @@ namespace projeto2023.views.pedidos
                 unitario = valorTotalPedido / totalC;
                 totalPedido = valorTotalPedido;
                 entrada = valorTotalPedido / 2;
+                aberto = valorTotalPedido - entrada;
 
                 txb_valorUnit.Text = unitario.ToString();
                 txb_valorTotal.Text = totalPedido.ToString();
                 txb_valorEntrada.Text = entrada.ToString();
+                txb_valorAberto.Text = aberto.ToString();
             }
             catch (System.FormatException)
             {
@@ -447,10 +481,12 @@ namespace projeto2023.views.pedidos
                 unitario = valorTotalPedido / totalC;
                 totalPedido = valorTotalPedido;
                 entrada = valorTotalPedido / 2;
+                aberto = valorTotalPedido - entrada;
 
                 txb_valorUnit.Text = unitario.ToString();
                 txb_valorTotal.Text = totalPedido.ToString();
                 txb_valorEntrada.Text = entrada.ToString();
+                txb_valorAberto.Text = aberto.ToString();
             }
         }
 
@@ -458,7 +494,7 @@ namespace projeto2023.views.pedidos
         {
             try
             {
-                G = int.Parse(txb_tamP.Text);
+                G = int.Parse(txb_tamG.Text);
                 totalC = P + M + G + quantDisponibilizado;
                 txb_totalCamisetas.Text = totalC.ToString();
 
@@ -469,10 +505,12 @@ namespace projeto2023.views.pedidos
                 unitario = valorTotalPedido / totalC;
                 totalPedido = valorTotalPedido;
                 entrada = valorTotalPedido / 2;
+                aberto = valorTotalPedido - entrada;
 
                 txb_valorUnit.Text = unitario.ToString();
                 txb_valorTotal.Text = totalPedido.ToString();
                 txb_valorEntrada.Text = entrada.ToString();
+                txb_valorAberto.Text = aberto.ToString();
             }
             catch (System.FormatException)
             {
@@ -486,13 +524,58 @@ namespace projeto2023.views.pedidos
                 unitario = valorTotalPedido / totalC;
                 totalPedido = valorTotalPedido;
                 entrada = valorTotalPedido / 2;
+                aberto = valorTotalPedido - entrada;
 
                 txb_valorUnit.Text = unitario.ToString();
                 txb_valorTotal.Text = totalPedido.ToString();
                 txb_valorEntrada.Text = entrada.ToString();
+                txb_valorAberto.Text = aberto.ToString();
             }
         }
 
+
+        private void txb_disponibilizadocliente_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                quantDisponibilizado = int.Parse(txb_disponibilizadocliente.Text);
+                totalC = P + M + G + quantDisponibilizado;
+                txb_totalCamisetas.Text = totalC.ToString();
+
+                // Chamando a função para calcular o valor total do pedido
+                decimal valorTotalPedido = CalcularValorTotalPedido(cmb_cores.Text, cmb_tecido.Text, cmb_tecnica.Text, cmb_formato.Text, cmb_gola.Text, totalC);
+
+                // Atualizando os valores das variáveis
+                unitario = valorTotalPedido / totalC;
+                totalPedido = valorTotalPedido;
+                entrada = valorTotalPedido / 2;
+                aberto = valorTotalPedido - entrada;
+
+                txb_valorUnit.Text = unitario.ToString();
+                txb_valorTotal.Text = totalPedido.ToString();
+                txb_valorEntrada.Text = entrada.ToString();
+                txb_valorAberto.Text = aberto.ToString();
+            }
+            catch (System.FormatException)
+            {
+                totalC = P + M + G + quantDisponibilizado;
+                txb_totalCamisetas.Text = totalC.ToString();
+
+                // Chamando a função para calcular o valor total do pedido
+                decimal valorTotalPedido = CalcularValorTotalPedido(cmb_cores.Text, cmb_tecido.Text, cmb_tecnica.Text, cmb_formato.Text, cmb_gola.Text, totalC);
+
+                // Atualizando os valores das variáveis
+                unitario = valorTotalPedido / totalC;
+                totalPedido = valorTotalPedido;
+                entrada = valorTotalPedido / 2;
+                aberto = valorTotalPedido - entrada;
+
+                txb_valorUnit.Text = unitario.ToString();
+                txb_valorTotal.Text = totalPedido.ToString();
+                txb_valorEntrada.Text = entrada.ToString();
+                txb_valorAberto.Text = aberto.ToString();
+            }
+        }
 
         private decimal CalcularValorTotalPedido(string corCamiseta, string tipoTecido, string tecnica, string formatoCamiseta, string tipoGola, int quantidadeCamisetas)
         {

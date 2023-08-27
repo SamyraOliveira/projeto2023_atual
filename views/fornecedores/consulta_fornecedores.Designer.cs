@@ -50,6 +50,8 @@
             this.fornecedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.estampariadbDataSet1_FORNECEDORES = new projeto2023.EstampariadbDataSet1_FORNECEDORES();
             this.fornecedoresTableAdapter = new projeto2023.EstampariadbDataSet1_FORNECEDORESTableAdapters.FornecedoresTableAdapter();
+            this.btn_imprimir = new System.Windows.Forms.Button();
+            this.btn_fechar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtv_fornecedores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fornecedoresBindingSource)).BeginInit();
@@ -59,7 +61,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.dtv_fornecedores);
-            this.panel1.Location = new System.Drawing.Point(12, 49);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1344, 426);
             this.panel1.TabIndex = 10;
@@ -222,12 +224,34 @@
             // 
             this.fornecedoresTableAdapter.ClearBeforeFill = true;
             // 
+            // btn_imprimir
+            // 
+            this.btn_imprimir.Location = new System.Drawing.Point(1049, 490);
+            this.btn_imprimir.Name = "btn_imprimir";
+            this.btn_imprimir.Size = new System.Drawing.Size(75, 23);
+            this.btn_imprimir.TabIndex = 11;
+            this.btn_imprimir.Text = "IMPRIMIR";
+            this.btn_imprimir.UseVisualStyleBackColor = true;
+            this.btn_imprimir.Click += new System.EventHandler(this.btn_imprimir_Click);
+            // 
+            // btn_fechar
+            // 
+            this.btn_fechar.Location = new System.Drawing.Point(1223, 490);
+            this.btn_fechar.Name = "btn_fechar";
+            this.btn_fechar.Size = new System.Drawing.Size(75, 23);
+            this.btn_fechar.TabIndex = 12;
+            this.btn_fechar.Text = "FECHAR";
+            this.btn_fechar.UseVisualStyleBackColor = true;
+            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
+            // 
             // consulta_fornecedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
             this.ClientSize = new System.Drawing.Size(1368, 525);
+            this.Controls.Add(this.btn_fechar);
+            this.Controls.Add(this.btn_imprimir);
             this.Controls.Add(this.panel1);
             this.Name = "consulta_fornecedores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -264,5 +288,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn telefoneFornecedorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iniciocontratoFornecedorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusFornecedorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btn_imprimir;
+        private System.Windows.Forms.Button btn_fechar;
     }
 }
