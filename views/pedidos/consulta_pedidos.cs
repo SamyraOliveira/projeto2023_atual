@@ -37,19 +37,7 @@ namespace projeto2023.views.pedidos
             {
                 var dt = new DataTable();
                 dt.Columns.Add("codigo_Pedido", typeof(int));
-                dt.Columns.Add("codigo_Colaborador", typeof(int));
                 dt.Columns.Add("codigo_Cliente", typeof(int));
-                dt.Columns.Add("corCamiseta_Pedido");
-                dt.Columns.Add("tecidoCamiseta_Pedido");
-                dt.Columns.Add("formatoCamiseta_Pedido");
-                dt.Columns.Add("tipoGola_Pedido");
-                dt.Columns.Add("tecnicas_Pedido");
-               // dt.Columns.Add("ped_estampa", typeof(byte[]));
-                dt.Columns.Add("tamP_quant_Pedido", typeof(int));
-                dt.Columns.Add("tamM_quant_Pedido", typeof(int));
-                dt.Columns.Add("tamG_quant_Pedido", typeof(int));
-                dt.Columns.Add("diponibilizadoCliente", typeof(int));
-                dt.Columns.Add("quantdisponibilizadoCliente", typeof(int));
                 dt.Columns.Add("totalCamisetas_Pedido", typeof(int));
                 dt.Columns.Add("data_inicial", typeof(DateTime));
                 dt.Columns.Add("data_entrega", typeof(DateTime));
@@ -57,8 +45,6 @@ namespace projeto2023.views.pedidos
                 dt.Columns.Add("valorTotal_Pedido", typeof(decimal));
                 dt.Columns.Add("valorEntrada_Pedido", typeof(decimal));
                 dt.Columns.Add("valorAberto_Pedido", typeof(decimal));
-                dt.Columns.Add("formaPagamentoEntrada_Pedido");
-                dt.Columns.Add("formaPagamentoFinal_Pedido");
                 dt.Columns.Add("status_Pedido");
 
 
@@ -67,27 +53,13 @@ namespace projeto2023.views.pedidos
                     dt.Rows.Add(Convert.ToInt32(item.Cells[0].Value),
                                 Convert.ToInt32(item.Cells[1].Value),
                                 Convert.ToInt32(item.Cells[2].Value),
-                                                item.Cells[3].Value,
-                                                item.Cells[4].Value,
-                                                item.Cells[5].Value,
-                                                item.Cells[6].Value,
-                                                item.Cells[7].Value,
-                                // Convert.ToByte(item.Cells[8].Value),
-                                Convert.ToInt32(item.Cells[8].Value),
-                                Convert.ToInt32(item.Cells[9].Value),
-                                Convert.ToInt32(item.Cells[10].Value),
-                                Convert.ToInt32(item.Cells[11].Value),
-                                Convert.ToInt32(item.Cells[12].Value),
-                                Convert.ToInt32(item.Cells[13].Value),
-                             Convert.ToDateTime(item.Cells[14].Value),
-                             Convert.ToDateTime(item.Cells[15].Value),
-                              Convert.ToDecimal(item.Cells[16].Value),
-                              Convert.ToDecimal(item.Cells[17].Value),
-                              Convert.ToDecimal(item.Cells[18].Value),
-                              Convert.ToDecimal(item.Cells[19].Value),
-                                                item.Cells[20].Value,
-                                                item.Cells[21].Value,
-                                                item.Cells[22].Value);
+                             Convert.ToDateTime(item.Cells[3].Value),
+                             Convert.ToDateTime(item.Cells[4].Value),
+                              Convert.ToDecimal(item.Cells[5].Value),
+                              Convert.ToDecimal(item.Cells[6].Value),
+                              Convert.ToDecimal(item.Cells[7].Value),
+                              Convert.ToDecimal(item.Cells[8].Value),
+                                                item.Cells[9].Value);
                 }
                 return dt;
             }

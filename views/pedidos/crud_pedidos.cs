@@ -538,18 +538,29 @@ namespace projeto2023.views.pedidos
         {
             try
             {
-                quantDisponibilizado = int.Parse(txb_disponibilizadocliente.Text);
+                int novoQuantDisponibilizado = int.Parse(txb_disponibilizadocliente.Text);
+
+                // Calcula a diferença entre o novo valor e o valor anterior
+                int diferenca = novoQuantDisponibilizado - quantDisponibilizado;
+
+                // Atualiza a variável quantDisponibilizado
+                quantDisponibilizado = novoQuantDisponibilizado;
+
                 totalC = P + M + G + quantDisponibilizado;
                 txb_totalCamisetas.Text = totalC.ToString();
 
+                // Restante do código de atualização dos valores
                 // Chamando a função para calcular o valor total do pedido
                 decimal valorTotalPedido = CalcularValorTotalPedido(cmb_cores.Text, cmb_tecido.Text, cmb_tecnica.Text, cmb_formato.Text, cmb_gola.Text, totalC);
 
+                // Calcula o valor a ser subtraído do valor total do pedido
+                decimal valorSubtrair = (unitario / 2) * diferenca;
+
                 // Atualizando os valores das variáveis
                 unitario = valorTotalPedido / totalC;
-                totalPedido = valorTotalPedido;
-                entrada = valorTotalPedido / 2;
-                aberto = valorTotalPedido - entrada;
+                totalPedido = valorTotalPedido - valorSubtrair; // Subtrai o valor da subtração
+                entrada = totalPedido / 2;
+                aberto = totalPedido - entrada;
 
                 txb_valorUnit.Text = unitario.ToString();
                 txb_valorTotal.Text = totalPedido.ToString();
