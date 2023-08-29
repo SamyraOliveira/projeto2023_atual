@@ -66,10 +66,10 @@
             // 
             // btn_excluir
             // 
-            this.btn_excluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
+            this.btn_excluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(212)))), ((int)(((byte)(204)))));
             this.btn_excluir.Font = new System.Drawing.Font("Lucida Sans", 8.25F);
             this.btn_excluir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(111)))));
-            this.btn_excluir.Location = new System.Drawing.Point(838, 451);
+            this.btn_excluir.Location = new System.Drawing.Point(871, 451);
             this.btn_excluir.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btn_excluir.Name = "btn_excluir";
             this.btn_excluir.Size = new System.Drawing.Size(129, 77);
@@ -80,10 +80,10 @@
             // 
             // btn_salvar
             // 
-            this.btn_salvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
+            this.btn_salvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.btn_salvar.Font = new System.Drawing.Font("Lucida Sans", 8.25F);
             this.btn_salvar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(111)))));
-            this.btn_salvar.Location = new System.Drawing.Point(838, 344);
+            this.btn_salvar.Location = new System.Drawing.Point(871, 344);
             this.btn_salvar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btn_salvar.Name = "btn_salvar";
             this.btn_salvar.Size = new System.Drawing.Size(129, 77);
@@ -94,7 +94,7 @@
             // 
             // btn_cancelar
             // 
-            this.btn_cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
+            this.btn_cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(212)))), ((int)(((byte)(204)))));
             this.btn_cancelar.Font = new System.Drawing.Font("Lucida Sans", 8.25F);
             this.btn_cancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(111)))));
             this.btn_cancelar.Location = new System.Drawing.Point(1035, 451);
@@ -108,7 +108,7 @@
             // 
             // btn_limpar
             // 
-            this.btn_limpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
+            this.btn_limpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
             this.btn_limpar.Font = new System.Drawing.Font("Lucida Sans", 8.25F);
             this.btn_limpar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(111)))));
             this.btn_limpar.Location = new System.Drawing.Point(1035, 344);
@@ -195,7 +195,7 @@
             this.lbl_nomefantasia.AutoSize = true;
             this.lbl_nomefantasia.Location = new System.Drawing.Point(7, 22);
             this.lbl_nomefantasia.Name = "lbl_nomefantasia";
-            this.lbl_nomefantasia.Size = new System.Drawing.Size(83, 12);
+            this.lbl_nomefantasia.Size = new System.Drawing.Size(85, 14);
             this.lbl_nomefantasia.TabIndex = 20;
             this.lbl_nomefantasia.Text = "Nome Fantasia";
             // 
@@ -204,7 +204,7 @@
             this.lbl_numero.AutoSize = true;
             this.lbl_numero.Location = new System.Drawing.Point(353, 84);
             this.lbl_numero.Name = "lbl_numero";
-            this.lbl_numero.Size = new System.Drawing.Size(18, 12);
+            this.lbl_numero.Size = new System.Drawing.Size(20, 14);
             this.lbl_numero.TabIndex = 21;
             this.lbl_numero.Text = "Nº";
             // 
@@ -213,7 +213,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(249, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 12);
+            this.label3.Size = new System.Drawing.Size(76, 14);
             this.label3.TabIndex = 22;
             this.label3.Text = "Razão Social";
             // 
@@ -222,7 +222,7 @@
             this.lbl_cidade.AutoSize = true;
             this.lbl_cidade.Location = new System.Drawing.Point(419, 84);
             this.lbl_cidade.Name = "lbl_cidade";
-            this.lbl_cidade.Size = new System.Drawing.Size(42, 12);
+            this.lbl_cidade.Size = new System.Drawing.Size(45, 14);
             this.lbl_cidade.TabIndex = 23;
             this.lbl_cidade.Text = "Cidade";
             // 
@@ -231,7 +231,7 @@
             this.lbl_CNPJ.AutoSize = true;
             this.lbl_CNPJ.Location = new System.Drawing.Point(494, 23);
             this.lbl_CNPJ.Name = "lbl_CNPJ";
-            this.lbl_CNPJ.Size = new System.Drawing.Size(30, 12);
+            this.lbl_CNPJ.Size = new System.Drawing.Size(32, 14);
             this.lbl_CNPJ.TabIndex = 24;
             this.lbl_CNPJ.Text = "CNPJ";
             // 
@@ -240,7 +240,7 @@
             this.lbl_estado.AutoSize = true;
             this.lbl_estado.Location = new System.Drawing.Point(530, 84);
             this.lbl_estado.Name = "lbl_estado";
-            this.lbl_estado.Size = new System.Drawing.Size(41, 12);
+            this.lbl_estado.Size = new System.Drawing.Size(43, 14);
             this.lbl_estado.TabIndex = 25;
             this.lbl_estado.Text = "Estado";
             // 
@@ -249,7 +249,7 @@
             this.lbl_inscricaoEstadual.AutoSize = true;
             this.lbl_inscricaoEstadual.Location = new System.Drawing.Point(667, 22);
             this.lbl_inscricaoEstadual.Name = "lbl_inscricaoEstadual";
-            this.lbl_inscricaoEstadual.Size = new System.Drawing.Size(20, 12);
+            this.lbl_inscricaoEstadual.Size = new System.Drawing.Size(22, 14);
             this.lbl_inscricaoEstadual.TabIndex = 26;
             this.lbl_inscricaoEstadual.Text = "I.E.";
             // 
@@ -258,7 +258,7 @@
             this.lbl_contato.AutoSize = true;
             this.lbl_contato.Location = new System.Drawing.Point(494, 158);
             this.lbl_contato.Name = "lbl_contato";
-            this.lbl_contato.Size = new System.Drawing.Size(48, 12);
+            this.lbl_contato.Size = new System.Drawing.Size(50, 14);
             this.lbl_contato.TabIndex = 27;
             this.lbl_contato.Text = "Contato";
             // 
@@ -267,7 +267,7 @@
             this.lbl_inscricaoMunicipal.AutoSize = true;
             this.lbl_inscricaoMunicipal.Location = new System.Drawing.Point(7, 84);
             this.lbl_inscricaoMunicipal.Name = "lbl_inscricaoMunicipal";
-            this.lbl_inscricaoMunicipal.Size = new System.Drawing.Size(83, 12);
+            this.lbl_inscricaoMunicipal.Size = new System.Drawing.Size(86, 14);
             this.lbl_inscricaoMunicipal.TabIndex = 28;
             this.lbl_inscricaoMunicipal.Text = "Inscrição Mun.";
             // 
@@ -276,7 +276,7 @@
             this.lbl_cep.AutoSize = true;
             this.lbl_cep.Location = new System.Drawing.Point(121, 84);
             this.lbl_cep.Name = "lbl_cep";
-            this.lbl_cep.Size = new System.Drawing.Size(25, 12);
+            this.lbl_cep.Size = new System.Drawing.Size(27, 14);
             this.lbl_cep.TabIndex = 29;
             this.lbl_cep.Text = "CEP";
             // 
@@ -285,7 +285,7 @@
             this.lbl_representante.AutoSize = true;
             this.lbl_representante.Location = new System.Drawing.Point(7, 158);
             this.lbl_representante.Name = "lbl_representante";
-            this.lbl_representante.Size = new System.Drawing.Size(82, 12);
+            this.lbl_representante.Size = new System.Drawing.Size(87, 14);
             this.lbl_representante.TabIndex = 30;
             this.lbl_representante.Text = "Representante";
             // 
@@ -294,7 +294,7 @@
             this.lbl_email.AutoSize = true;
             this.lbl_email.Location = new System.Drawing.Point(249, 158);
             this.lbl_email.Name = "lbl_email";
-            this.lbl_email.Size = new System.Drawing.Size(33, 12);
+            this.lbl_email.Size = new System.Drawing.Size(34, 14);
             this.lbl_email.TabIndex = 31;
             this.lbl_email.Text = "Email";
             // 
@@ -303,7 +303,7 @@
             this.lbl_endereco.AutoSize = true;
             this.lbl_endereco.Location = new System.Drawing.Point(238, 84);
             this.lbl_endereco.Name = "lbl_endereco";
-            this.lbl_endereco.Size = new System.Drawing.Size(55, 12);
+            this.lbl_endereco.Size = new System.Drawing.Size(59, 14);
             this.lbl_endereco.TabIndex = 32;
             this.lbl_endereco.Text = "Endereço";
             // 
@@ -312,7 +312,7 @@
             this.cmb_estado.FormattingEnabled = true;
             this.cmb_estado.Location = new System.Drawing.Point(532, 111);
             this.cmb_estado.Name = "cmb_estado";
-            this.cmb_estado.Size = new System.Drawing.Size(121, 20);
+            this.cmb_estado.Size = new System.Drawing.Size(121, 22);
             this.cmb_estado.TabIndex = 35;
             // 
             // lbl_razaosocial
@@ -373,7 +373,7 @@
             this.lbl_contratacao.AutoSize = true;
             this.lbl_contratacao.Location = new System.Drawing.Point(982, 23);
             this.lbl_contratacao.Name = "lbl_contratacao";
-            this.lbl_contratacao.Size = new System.Drawing.Size(71, 12);
+            this.lbl_contratacao.Size = new System.Drawing.Size(73, 14);
             this.lbl_contratacao.TabIndex = 37;
             this.lbl_contratacao.Text = "Contratação";
             // 
@@ -385,7 +385,7 @@
             // 
             // crud_fornecedores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
             this.ClientSize = new System.Drawing.Size(1200, 588);
