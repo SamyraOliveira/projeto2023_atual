@@ -49,17 +49,19 @@
             this.txb_quantEntrada = new System.Windows.Forms.TextBox();
             this.mnth_dataEntrada = new System.Windows.Forms.MonthCalendar();
             this.pln_crud = new System.Windows.Forms.Panel();
-            this.btn_salvar = new System.Windows.Forms.Button();
-            this.btn_limpar = new System.Windows.Forms.Button();
-            this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_excluir = new System.Windows.Forms.Button();
+            this.lbl_ultAtualizacao = new System.Windows.Forms.Button();
+            this.btn_limpar = new System.Windows.Forms.Button();
+            this.btn_salvar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.mnth_ultimaAtualizacao = new System.Windows.Forms.MonthCalendar();
             this.pln_crud.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_idFornecedor
             // 
             this.lbl_idFornecedor.AutoSize = true;
-            this.lbl_idFornecedor.Location = new System.Drawing.Point(51, 38);
+            this.lbl_idFornecedor.Location = new System.Drawing.Point(27, 25);
             this.lbl_idFornecedor.Name = "lbl_idFornecedor";
             this.lbl_idFornecedor.Size = new System.Drawing.Size(70, 14);
             this.lbl_idFornecedor.TabIndex = 0;
@@ -68,7 +70,7 @@
             // lbl_nomeMaterial
             // 
             this.lbl_nomeMaterial.AutoSize = true;
-            this.lbl_nomeMaterial.Location = new System.Drawing.Point(265, 38);
+            this.lbl_nomeMaterial.Location = new System.Drawing.Point(334, 25);
             this.lbl_nomeMaterial.Name = "lbl_nomeMaterial";
             this.lbl_nomeMaterial.Size = new System.Drawing.Size(83, 14);
             this.lbl_nomeMaterial.TabIndex = 1;
@@ -77,7 +79,7 @@
             // lbl_unidadeMedida
             // 
             this.lbl_unidadeMedida.AutoSize = true;
-            this.lbl_unidadeMedida.Location = new System.Drawing.Point(611, 38);
+            this.lbl_unidadeMedida.Location = new System.Drawing.Point(27, 94);
             this.lbl_unidadeMedida.Name = "lbl_unidadeMedida";
             this.lbl_unidadeMedida.Size = new System.Drawing.Size(111, 14);
             this.lbl_unidadeMedida.TabIndex = 2;
@@ -86,7 +88,7 @@
             // lbl_dataEntrada
             // 
             this.lbl_dataEntrada.AutoSize = true;
-            this.lbl_dataEntrada.Location = new System.Drawing.Point(255, 147);
+            this.lbl_dataEntrada.Location = new System.Drawing.Point(96, 184);
             this.lbl_dataEntrada.Name = "lbl_dataEntrada";
             this.lbl_dataEntrada.Size = new System.Drawing.Size(91, 14);
             this.lbl_dataEntrada.TabIndex = 3;
@@ -95,7 +97,7 @@
             // lbl_quantEntrada
             // 
             this.lbl_quantEntrada.AutoSize = true;
-            this.lbl_quantEntrada.Location = new System.Drawing.Point(437, 246);
+            this.lbl_quantEntrada.Location = new System.Drawing.Point(690, 184);
             this.lbl_quantEntrada.Name = "lbl_quantEntrada";
             this.lbl_quantEntrada.Size = new System.Drawing.Size(105, 14);
             this.lbl_quantEntrada.TabIndex = 4;
@@ -104,7 +106,7 @@
             // lbl_descricao
             // 
             this.lbl_descricao.AutoSize = true;
-            this.lbl_descricao.Location = new System.Drawing.Point(450, 38);
+            this.lbl_descricao.Location = new System.Drawing.Point(690, 21);
             this.lbl_descricao.Name = "lbl_descricao";
             this.lbl_descricao.Size = new System.Drawing.Size(62, 14);
             this.lbl_descricao.TabIndex = 6;
@@ -113,7 +115,7 @@
             // lbl_precoUnit
             // 
             this.lbl_precoUnit.AutoSize = true;
-            this.lbl_precoUnit.Location = new System.Drawing.Point(51, 147);
+            this.lbl_precoUnit.Location = new System.Drawing.Point(203, 94);
             this.lbl_precoUnit.Name = "lbl_precoUnit";
             this.lbl_precoUnit.Size = new System.Drawing.Size(83, 14);
             this.lbl_precoUnit.TabIndex = 7;
@@ -122,7 +124,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(622, 147);
+            this.label9.Location = new System.Drawing.Point(475, 94);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(143, 14);
             this.label9.TabIndex = 8;
@@ -131,7 +133,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(450, 147);
+            this.label10.Location = new System.Drawing.Point(334, 94);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(76, 14);
             this.label10.TabIndex = 9;
@@ -140,7 +142,7 @@
             // lbl_status
             // 
             this.lbl_status.AutoSize = true;
-            this.lbl_status.Location = new System.Drawing.Point(622, 246);
+            this.lbl_status.Location = new System.Drawing.Point(872, 184);
             this.lbl_status.Name = "lbl_status";
             this.lbl_status.Size = new System.Drawing.Size(41, 14);
             this.lbl_status.TabIndex = 10;
@@ -149,15 +151,15 @@
             // cmb_idFornecedor
             // 
             this.cmb_idFornecedor.FormattingEnabled = true;
-            this.cmb_idFornecedor.Location = new System.Drawing.Point(57, 67);
+            this.cmb_idFornecedor.Location = new System.Drawing.Point(30, 52);
             this.cmb_idFornecedor.Name = "cmb_idFornecedor";
-            this.cmb_idFornecedor.Size = new System.Drawing.Size(121, 22);
+            this.cmb_idFornecedor.Size = new System.Drawing.Size(259, 22);
             this.cmb_idFornecedor.TabIndex = 11;
             // 
             // cmb_unidadeMedida
             // 
             this.cmb_unidadeMedida.FormattingEnabled = true;
-            this.cmb_unidadeMedida.Location = new System.Drawing.Point(629, 66);
+            this.cmb_unidadeMedida.Location = new System.Drawing.Point(30, 122);
             this.cmb_unidadeMedida.Name = "cmb_unidadeMedida";
             this.cmb_unidadeMedida.Size = new System.Drawing.Size(121, 22);
             this.cmb_unidadeMedida.TabIndex = 12;
@@ -165,64 +167,67 @@
             // cmb_localArmazenamento
             // 
             this.cmb_localArmazenamento.FormattingEnabled = true;
-            this.cmb_localArmazenamento.Location = new System.Drawing.Point(635, 184);
+            this.cmb_localArmazenamento.Location = new System.Drawing.Point(478, 120);
             this.cmb_localArmazenamento.Name = "cmb_localArmazenamento";
-            this.cmb_localArmazenamento.Size = new System.Drawing.Size(121, 22);
+            this.cmb_localArmazenamento.Size = new System.Drawing.Size(166, 22);
             this.cmb_localArmazenamento.TabIndex = 13;
             // 
             // cmb_status
             // 
             this.cmb_status.FormattingEnabled = true;
-            this.cmb_status.Location = new System.Drawing.Point(629, 286);
+            this.cmb_status.Location = new System.Drawing.Point(834, 219);
             this.cmb_status.Name = "cmb_status";
-            this.cmb_status.Size = new System.Drawing.Size(121, 22);
+            this.cmb_status.Size = new System.Drawing.Size(134, 22);
             this.cmb_status.TabIndex = 14;
             // 
             // txb_precoUnit
             // 
-            this.txb_precoUnit.Location = new System.Drawing.Point(54, 184);
+            this.txb_precoUnit.Location = new System.Drawing.Point(189, 122);
             this.txb_precoUnit.Name = "txb_precoUnit";
             this.txb_precoUnit.Size = new System.Drawing.Size(100, 20);
             this.txb_precoUnit.TabIndex = 15;
             // 
             // txb_nomeMaterial
             // 
-            this.txb_nomeMaterial.Location = new System.Drawing.Point(268, 67);
+            this.txb_nomeMaterial.Location = new System.Drawing.Point(337, 52);
             this.txb_nomeMaterial.Name = "txb_nomeMaterial";
-            this.txb_nomeMaterial.Size = new System.Drawing.Size(100, 20);
+            this.txb_nomeMaterial.Size = new System.Drawing.Size(307, 20);
             this.txb_nomeMaterial.TabIndex = 16;
             // 
             // txb_descricao
             // 
-            this.txb_descricao.Location = new System.Drawing.Point(453, 69);
+            this.txb_descricao.Location = new System.Drawing.Point(693, 52);
+            this.txb_descricao.Multiline = true;
             this.txb_descricao.Name = "txb_descricao";
-            this.txb_descricao.Size = new System.Drawing.Size(100, 20);
+            this.txb_descricao.Size = new System.Drawing.Size(275, 92);
             this.txb_descricao.TabIndex = 17;
             // 
             // txb_numeroLote
             // 
-            this.txb_numeroLote.Location = new System.Drawing.Point(453, 186);
+            this.txb_numeroLote.Location = new System.Drawing.Point(337, 122);
             this.txb_numeroLote.Name = "txb_numeroLote";
             this.txb_numeroLote.Size = new System.Drawing.Size(100, 20);
             this.txb_numeroLote.TabIndex = 18;
             // 
             // txb_quantEntrada
             // 
-            this.txb_quantEntrada.Location = new System.Drawing.Point(442, 287);
+            this.txb_quantEntrada.Location = new System.Drawing.Point(693, 219);
             this.txb_quantEntrada.Name = "txb_quantEntrada";
             this.txb_quantEntrada.Size = new System.Drawing.Size(100, 20);
             this.txb_quantEntrada.TabIndex = 19;
             // 
             // mnth_dataEntrada
             // 
-            this.mnth_dataEntrada.Location = new System.Drawing.Point(186, 184);
+            this.mnth_dataEntrada.Location = new System.Drawing.Point(30, 219);
             this.mnth_dataEntrada.Name = "mnth_dataEntrada";
             this.mnth_dataEntrada.TabIndex = 20;
             // 
             // pln_crud
             // 
+            this.pln_crud.Controls.Add(this.mnth_ultimaAtualizacao);
+            this.pln_crud.Controls.Add(this.label1);
             this.pln_crud.Controls.Add(this.btn_excluir);
-            this.pln_crud.Controls.Add(this.btn_cancelar);
+            this.pln_crud.Controls.Add(this.lbl_ultAtualizacao);
             this.pln_crud.Controls.Add(this.btn_limpar);
             this.pln_crud.Controls.Add(this.btn_salvar);
             this.pln_crud.Controls.Add(this.mnth_dataEntrada);
@@ -250,16 +255,27 @@
             this.pln_crud.Size = new System.Drawing.Size(1166, 564);
             this.pln_crud.TabIndex = 21;
             // 
-            // btn_salvar
+            // btn_excluir
             // 
-            this.btn_salvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
-            this.btn_salvar.Location = new System.Drawing.Point(767, 359);
-            this.btn_salvar.Name = "btn_salvar";
-            this.btn_salvar.Size = new System.Drawing.Size(129, 77);
-            this.btn_salvar.TabIndex = 21;
-            this.btn_salvar.Text = "SALVAR";
-            this.btn_salvar.UseVisualStyleBackColor = false;
-            this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
+            this.btn_excluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(212)))), ((int)(((byte)(204)))));
+            this.btn_excluir.Location = new System.Drawing.Point(767, 471);
+            this.btn_excluir.Name = "btn_excluir";
+            this.btn_excluir.Size = new System.Drawing.Size(129, 77);
+            this.btn_excluir.TabIndex = 24;
+            this.btn_excluir.Text = "EXCLUIR";
+            this.btn_excluir.UseVisualStyleBackColor = false;
+            this.btn_excluir.Click += new System.EventHandler(this.btn_excluir_Click);
+            // 
+            // lbl_ultAtualizacao
+            // 
+            this.lbl_ultAtualizacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(212)))), ((int)(((byte)(204)))));
+            this.lbl_ultAtualizacao.Location = new System.Drawing.Point(941, 471);
+            this.lbl_ultAtualizacao.Name = "lbl_ultAtualizacao";
+            this.lbl_ultAtualizacao.Size = new System.Drawing.Size(129, 77);
+            this.lbl_ultAtualizacao.TabIndex = 23;
+            this.lbl_ultAtualizacao.Text = "CANCELAR";
+            this.lbl_ultAtualizacao.UseVisualStyleBackColor = false;
+            this.lbl_ultAtualizacao.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_limpar
             // 
@@ -272,27 +288,33 @@
             this.btn_limpar.UseVisualStyleBackColor = false;
             this.btn_limpar.Click += new System.EventHandler(this.btn_limpar_Click);
             // 
-            // btn_cancelar
+            // btn_salvar
             // 
-            this.btn_cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(212)))), ((int)(((byte)(204)))));
-            this.btn_cancelar.Location = new System.Drawing.Point(941, 471);
-            this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(129, 77);
-            this.btn_cancelar.TabIndex = 23;
-            this.btn_cancelar.Text = "CANCELAR";
-            this.btn_cancelar.UseVisualStyleBackColor = false;
-            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
+            this.btn_salvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(204)))), ((int)(((byte)(212)))));
+            this.btn_salvar.Location = new System.Drawing.Point(767, 359);
+            this.btn_salvar.Name = "btn_salvar";
+            this.btn_salvar.Size = new System.Drawing.Size(129, 77);
+            this.btn_salvar.TabIndex = 21;
+            this.btn_salvar.Text = "SALVAR";
+            this.btn_salvar.UseVisualStyleBackColor = false;
+            this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
             // 
-            // btn_excluir
+            // label1
             // 
-            this.btn_excluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(212)))), ((int)(((byte)(204)))));
-            this.btn_excluir.Location = new System.Drawing.Point(767, 471);
-            this.btn_excluir.Name = "btn_excluir";
-            this.btn_excluir.Size = new System.Drawing.Size(129, 77);
-            this.btn_excluir.TabIndex = 24;
-            this.btn_excluir.Text = "EXCLUIR";
-            this.btn_excluir.UseVisualStyleBackColor = false;
-            this.btn_excluir.Click += new System.EventHandler(this.btn_excluir_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(269, 450);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 14);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "---ultima atualizacao";
+            this.label1.Visible = false;
+            // 
+            // mnth_ultimaAtualizacao
+            // 
+            this.mnth_ultimaAtualizacao.Location = new System.Drawing.Point(30, 386);
+            this.mnth_ultimaAtualizacao.Name = "mnth_ultimaAtualizacao";
+            this.mnth_ultimaAtualizacao.TabIndex = 27;
+            this.mnth_ultimaAtualizacao.Visible = false;
             // 
             // crud_materiais
             // 
@@ -339,8 +361,10 @@
         private System.Windows.Forms.MonthCalendar mnth_dataEntrada;
         private System.Windows.Forms.Panel pln_crud;
         private System.Windows.Forms.Button btn_excluir;
-        private System.Windows.Forms.Button btn_cancelar;
+        private System.Windows.Forms.Button lbl_ultAtualizacao;
         private System.Windows.Forms.Button btn_limpar;
         private System.Windows.Forms.Button btn_salvar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MonthCalendar mnth_ultimaAtualizacao;
     }
 }

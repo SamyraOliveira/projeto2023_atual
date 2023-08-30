@@ -34,7 +34,7 @@ namespace projeto2023.views.clientes
             string cli_cidade = txb_cidade.Text;
             string cli_endereco = txb_endereco.Text;
             string cli_CEP = txb_cep.Text;
-            int cli_status = 1; ;
+            int cli_status = 1;
 
 
             MessageBox.Show("FINALIZAR CADASTRO");

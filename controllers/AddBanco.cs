@@ -388,19 +388,29 @@ namespace projeto2023.controllers
 
         #region MATERIAIS
 
+
         //INSERIR DADOS DO MATERIAL
 
         public void InsertMateriais(Materiais Material)
         {
             Cmd.Connection = Con.RetornarConexao();
-            Cmd.CommandText = @"INSERT INTO Materiais VALUES (@codigo_Fornecedor,@nome_Material,@quantidade_Material,@preco_Material,@valor_Total,@status_Material)";
-            string preco = Material.preco.ToString("N", CultureInfo.CreateSpecificCulture("pt-BR"));
-            Cmd.Parameters.AddWithValue("@codigo_Fornecedor", Material.forn_codigo);
+            Cmd.CommandText = @"INSERT INTO Materiais VALUES (@codigo_Fornecedor, @nome_Material, @descricao, @unidadeMedida, @precoUnitario, @dataEntrada, @numeroLote, @localArmazenamento, @quantidade_Material, @UltimaAtualizacao, @status_material)";
+
+            string mat_precoUnit = Material.mat_precoUnit.ToString("N", CultureInfo.CreateSpecificCulture("pt-BR"));
+            Cmd.Parameters.AddWithValue("@codigo_Fornecedor", Material.fornc_codigo);
             Cmd.Parameters.AddWithValue("@nome_Material", Material.mat_nome);
+            Cmd.Parameters.AddWithValue("@descricao", Material.mat_descricao);
+            Cmd.Parameters.AddWithValue("@unidadeMedida", Material.mat_unidadeMedida);
+            Cmd.Parameters.AddWithValue("@precoUnitario", float.Parse(mat_precoUnit) * Material.mat_quantidade);
+            Cmd.Parameters.AddWithValue("@dataEntrada", Material.mat_dataEntrada);
+           // Cmd.Parameters.AddWithValue("@fornecedor", Material.mat_fornecedor);
+            Cmd.Parameters.AddWithValue("@numeroLote", Material.mat_numLote);
+            Cmd.Parameters.AddWithValue("@localArmazenamento", Material.mat_localArmazenamento);
             Cmd.Parameters.AddWithValue("@quantidade_Material", Material.mat_quantidade);
-            Cmd.Parameters.AddWithValue("@preco_Material", float.Parse(preco));
-            Cmd.Parameters.AddWithValue("@valor_Total", float.Parse(preco) * Material.mat_quantidade);
+            Cmd.Parameters.AddWithValue("@UltimaAtualizacao", Material.mat_ultimaAtualizacao);
+           
             Cmd.Parameters.AddWithValue("@status_Material", Material.mat_status);
+            // Cmd.Parameters.AddWithValue("@valor_Total", float.Parse(preco) * Material.mat_quantidade);
 
             try
             {
@@ -429,7 +439,8 @@ namespace projeto2023.controllers
                 while (rd.Read())
                 {
 
-                    Materiais Material = new Materiais((int)rd["codigo_Material"], (int)rd["codigo_Fornecedor"], (string)rd["nome_Material"], (int)rd["quantidade_Material"], (decimal)rd["preco_Material"], (bool)rd["status_Material"]);
+                    Materiais Material = new Materiais((int)rd["codigo_Material"], (int)rd["codigo_Fornecedor"], (string)rd["nome_Material"], (string)rd["descricao"], (string)rd["unidadeMedida"], (decimal)rd["precoUnitario"], (DateTime)rd["dataEntrada"], (string)rd["numeroLote"], (string)rd["localArmazenamento"], (int)rd["quantidade_Material"], (DateTime)rd["UltimaAtualizacao"], (string)rd["status_Material"]);
+
                     listaMateriais.Add(Material);
                 }
                 rd.Close();
@@ -453,13 +464,20 @@ namespace projeto2023.controllers
         public void UpdateMateriais(Materiais matToBeUpdated)
         {
             Cmd.Connection = Con.RetornarConexao();
-            Cmd.CommandText = @"UPDATE Materiais SET codigo_Fornecedor = @fornc_codigo, nome_Material = @nomeMaterial, quantidade_Material = @mat_quantidade, preco_Material = @preco, status_Material = @statusMaterial WHERE codigo_Material = @mate_codigo ";
-            Cmd.Parameters.AddWithValue("@mate_codigo", matToBeUpdated.mat_codigo);
-            Cmd.Parameters.AddWithValue("@fornc_codigo", matToBeUpdated.forn_codigo);
-            Cmd.Parameters.AddWithValue("@nomeMaterial", matToBeUpdated.mat_nome);
+            Cmd.CommandText = @"UPDATE Materiais SET codigo_Fornecedor = @fornc_codigo, nome_Material = @mat_nome, descricao = @mat_descricao, unidadeMedida = @mat_unidadeMedida, precoUnitario= @mat_precoUnit, dataEntrada= @mat_dataEntrada, numeroLote= @mat_numLote, localArmazenamento= @mat_localArmazenamento, quantidade_Material= @mat_quantidade, UltimaAtualizacao= @mat_ultimaAtualizacao, status_Material = @mat_status, WHERE codigo_Material = @mat_codigo";
+            Cmd.Parameters.AddWithValue("@mat_codigo", matToBeUpdated.mat_codigo);
+            Cmd.Parameters.AddWithValue("@fornc_codigo", matToBeUpdated.fornc_codigo);
+            Cmd.Parameters.AddWithValue("@mat_nome", matToBeUpdated.mat_nome);
+            Cmd.Parameters.AddWithValue("@mat_descricao", matToBeUpdated.mat_descricao);
+            Cmd.Parameters.AddWithValue("@mat_unidadeMedida", matToBeUpdated.mat_unidadeMedida);
+            Cmd.Parameters.AddWithValue("@mat_precoUnit", matToBeUpdated.mat_precoUnit);
+            Cmd.Parameters.AddWithValue("@mat_dataEntrada", matToBeUpdated.mat_dataEntrada);
+            //Cmd.Parameters.AddWithValue("@mat_fornecedor", matToBeUpdated.mat_fornecedor);
+            Cmd.Parameters.AddWithValue("@mat_numLote", matToBeUpdated.mat_numLote);
+            Cmd.Parameters.AddWithValue("@mat_localArmazenamento", matToBeUpdated.mat_localArmazenamento);
             Cmd.Parameters.AddWithValue("@mat_quantidade", matToBeUpdated.mat_quantidade);
-            Cmd.Parameters.AddWithValue("@preco", matToBeUpdated.preco);
-            Cmd.Parameters.AddWithValue("@statusMaterial", matToBeUpdated.mat_status);
+            Cmd.Parameters.AddWithValue("@mat_ultimaAtualizacao", matToBeUpdated.mat_ultimaAtualizacao);
+            Cmd.Parameters.AddWithValue("@mat_status", matToBeUpdated.mat_status);
 
             try
             {
@@ -481,8 +499,8 @@ namespace projeto2023.controllers
         public void DeleteMaterial(int MaterialCod)
         {
             Cmd.Connection = Con.RetornarConexao();
-            Cmd.CommandText = @"UPDATE Materiais SET  status_Material = 0 WHERE codigo_Material  = @mate_codigo ";
-            Cmd.Parameters.AddWithValue("@mate_codigo", MaterialCod);
+            Cmd.CommandText = @"UPDATE Materiais SET  status_Material = 0 WHERE codigo_Material  = @mat_codigo";
+            Cmd.Parameters.AddWithValue("@mat_codigo", MaterialCod);
             try
             {
                 Cmd.ExecuteNonQuery();

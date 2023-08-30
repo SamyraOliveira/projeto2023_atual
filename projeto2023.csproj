@@ -100,6 +100,7 @@
     <Compile Include="models\Colaboradores.cs" />
     <Compile Include="models\Colaboradores_dados.cs" />
     <Compile Include="models\Estoque.cs" />
+    <Compile Include="models\Fornecedores _dados.cs" />
     <Compile Include="models\Fornecedores.cs" />
     <Compile Include="models\Materiais.cs" />
     <Compile Include="models\Pedidos.cs" />
