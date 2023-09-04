@@ -401,14 +401,13 @@ namespace projeto2023.controllers
             Cmd.Parameters.AddWithValue("@nome_Material", Material.mat_nome);
             Cmd.Parameters.AddWithValue("@descricao", Material.mat_descricao);
             Cmd.Parameters.AddWithValue("@unidadeMedida", Material.mat_unidadeMedida);
-            Cmd.Parameters.AddWithValue("@precoUnitario", float.Parse(mat_precoUnit) * Material.mat_quantidade);
+            Cmd.Parameters.AddWithValue("@precoUnitario", decimal.Parse(mat_precoUnit) * Material.mat_quantidade);
             Cmd.Parameters.AddWithValue("@dataEntrada", Material.mat_dataEntrada);
            // Cmd.Parameters.AddWithValue("@fornecedor", Material.mat_fornecedor);
             Cmd.Parameters.AddWithValue("@numeroLote", Material.mat_numLote);
             Cmd.Parameters.AddWithValue("@localArmazenamento", Material.mat_localArmazenamento);
             Cmd.Parameters.AddWithValue("@quantidade_Material", Material.mat_quantidade);
             Cmd.Parameters.AddWithValue("@UltimaAtualizacao", Material.mat_ultimaAtualizacao);
-           
             Cmd.Parameters.AddWithValue("@status_Material", Material.mat_status);
             // Cmd.Parameters.AddWithValue("@valor_Total", float.Parse(preco) * Material.mat_quantidade);
 

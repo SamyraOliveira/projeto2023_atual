@@ -69,6 +69,11 @@
     <Compile Include="controllers\Connection.cs" />
     <Compile Include="controllers\Security.cs" />
     <Compile Include="controllers\Validation.cs" />
+    <Compile Include="EstampariadbDataSet1_MATERIAIS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EstampariadbDataSet1_MATERIAIS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EstampariadbDataSet_PEDIDOS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -204,6 +209,12 @@
     <Compile Include="views\materiais\crud_materiais.Designer.cs">
       <DependentUpon>crud_materiais.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\materiais\relatorio_materiais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\materiais\relatorio_materiais.Designer.cs">
+      <DependentUpon>relatorio_materiais.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\pedidos\consulta_pedidos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +260,7 @@
     </Compile>
     <EmbeddedResource Include="relatorios\relatorio_clientes.rdlc" />
     <EmbeddedResource Include="relatorios\relatorio_colaboradores.rdlc" />
+    <EmbeddedResource Include="relatorios\relatorio_materiais.rdlc" />
     <EmbeddedResource Include="relatorios\relatorio_pedidos.rdlc" />
     <EmbeddedResource Include="relatorios\relatorio_fornecedores.rdlc" />
     <EmbeddedResource Include="views\clientes\consulta_clientes.resx">
@@ -299,6 +311,9 @@
     <EmbeddedResource Include="views\materiais\crud_materiais.resx">
       <DependentUpon>crud_materiais.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\materiais\relatorio_materiais.resx">
+      <DependentUpon>relatorio_materiais.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\pedidos\consulta_pedidos.resx">
       <DependentUpon>consulta_pedidos.cs</DependentUpon>
     </EmbeddedResource>
@@ -314,6 +329,17 @@
     <EmbeddedResource Include="views\producao\crud_producao.resx">
       <DependentUpon>crud_producao.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="EstampariadbDataSet1_MATERIAIS.xsc">
+      <DependentUpon>EstampariadbDataSet1_MATERIAIS.xsd</DependentUpon>
+    </None>
+    <None Include="EstampariadbDataSet1_MATERIAIS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EstampariadbDataSet1_MATERIAIS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EstampariadbDataSet1_MATERIAIS.xss">
+      <DependentUpon>EstampariadbDataSet1_MATERIAIS.xsd</DependentUpon>
+    </None>
     <None Include="EstampariadbDataSet_PEDIDOS.xsc">
       <DependentUpon>EstampariadbDataSet_PEDIDOS.xsd</DependentUpon>
     </None>

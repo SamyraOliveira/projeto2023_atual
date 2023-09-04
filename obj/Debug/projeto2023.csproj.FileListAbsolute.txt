@@ -151,3 +151,4 @@ C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.csproj.C
 C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.colaboradores.relatorio_colaboradores.resources
 C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.clientes.relatorio_clientes.resources
 C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.fornecedores.relatorio_fornecedores.resources
+C:\Users\Família Linda\Desktop\projeto2023_atual\obj\Debug\projeto2023.views.materiais.relatorio_materiais.resources

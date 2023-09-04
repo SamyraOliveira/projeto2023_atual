@@ -30,12 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dtv_pedidos = new System.Windows.Forms.DataGridView();
-            this.pedidosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.estampariadbDataSet = new projeto2023.EstampariadbDataSet();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_fechar = new System.Windows.Forms.Button();
-            this.btn_imprimir = new System.Windows.Forms.Button();
-            this.pedidosTableAdapter = new projeto2023.EstampariadbDataSetTableAdapters.PedidosTableAdapter();
             this.codigoPedidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigoColaboradorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigoClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,6 +53,12 @@
             this.formaPagamentoEntradaPedidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.formaPagamentoFinalPedidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusPedidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pedidosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.estampariadbDataSet = new projeto2023.EstampariadbDataSet();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_fechar = new System.Windows.Forms.Button();
+            this.btn_imprimir = new System.Windows.Forms.Button();
+            this.pedidosTableAdapter = new projeto2023.EstampariadbDataSetTableAdapters.PedidosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dtv_pedidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedidosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estampariadbDataSet)).BeginInit();
@@ -106,51 +106,6 @@
             this.dtv_pedidos.ReadOnly = true;
             this.dtv_pedidos.Size = new System.Drawing.Size(1368, 525);
             this.dtv_pedidos.TabIndex = 8;
-            // 
-            // pedidosBindingSource
-            // 
-            this.pedidosBindingSource.DataMember = "Pedidos";
-            this.pedidosBindingSource.DataSource = this.estampariadbDataSet;
-            // 
-            // estampariadbDataSet
-            // 
-            this.estampariadbDataSet.DataSetName = "EstampariadbDataSet";
-            this.estampariadbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btn_fechar);
-            this.panel1.Controls.Add(this.btn_imprimir);
-            this.panel1.Controls.Add(this.dtv_pedidos);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1368, 525);
-            this.panel1.TabIndex = 11;
-            // 
-            // btn_fechar
-            // 
-            this.btn_fechar.Location = new System.Drawing.Point(1171, 437);
-            this.btn_fechar.Name = "btn_fechar";
-            this.btn_fechar.Size = new System.Drawing.Size(185, 63);
-            this.btn_fechar.TabIndex = 10;
-            this.btn_fechar.Text = "FECHAR";
-            this.btn_fechar.UseVisualStyleBackColor = true;
-            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
-            // 
-            // btn_imprimir
-            // 
-            this.btn_imprimir.Location = new System.Drawing.Point(973, 437);
-            this.btn_imprimir.Name = "btn_imprimir";
-            this.btn_imprimir.Size = new System.Drawing.Size(185, 63);
-            this.btn_imprimir.TabIndex = 9;
-            this.btn_imprimir.Text = "IMPRIMIR";
-            this.btn_imprimir.UseVisualStyleBackColor = true;
-            this.btn_imprimir.Click += new System.EventHandler(this.btn_imprimir_Click);
-            // 
-            // pedidosTableAdapter
-            // 
-            this.pedidosTableAdapter.ClearBeforeFill = true;
             // 
             // codigoPedidoDataGridViewTextBoxColumn
             // 
@@ -312,6 +267,51 @@
             this.statusPedidoDataGridViewTextBoxColumn.HeaderText = "status_Pedido";
             this.statusPedidoDataGridViewTextBoxColumn.Name = "statusPedidoDataGridViewTextBoxColumn";
             this.statusPedidoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pedidosBindingSource
+            // 
+            this.pedidosBindingSource.DataMember = "Pedidos";
+            this.pedidosBindingSource.DataSource = this.estampariadbDataSet;
+            // 
+            // estampariadbDataSet
+            // 
+            this.estampariadbDataSet.DataSetName = "EstampariadbDataSet";
+            this.estampariadbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btn_fechar);
+            this.panel1.Controls.Add(this.btn_imprimir);
+            this.panel1.Controls.Add(this.dtv_pedidos);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1368, 525);
+            this.panel1.TabIndex = 11;
+            // 
+            // btn_fechar
+            // 
+            this.btn_fechar.Location = new System.Drawing.Point(1171, 437);
+            this.btn_fechar.Name = "btn_fechar";
+            this.btn_fechar.Size = new System.Drawing.Size(185, 63);
+            this.btn_fechar.TabIndex = 10;
+            this.btn_fechar.Text = "FECHAR";
+            this.btn_fechar.UseVisualStyleBackColor = true;
+            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
+            // 
+            // btn_imprimir
+            // 
+            this.btn_imprimir.Location = new System.Drawing.Point(973, 437);
+            this.btn_imprimir.Name = "btn_imprimir";
+            this.btn_imprimir.Size = new System.Drawing.Size(185, 63);
+            this.btn_imprimir.TabIndex = 9;
+            this.btn_imprimir.Text = "IMPRIMIR";
+            this.btn_imprimir.UseVisualStyleBackColor = true;
+            this.btn_imprimir.Click += new System.EventHandler(this.btn_imprimir_Click);
+            // 
+            // pedidosTableAdapter
+            // 
+            this.pedidosTableAdapter.ClearBeforeFill = true;
             // 
             // consulta_pedidos
             // 

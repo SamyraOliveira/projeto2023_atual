@@ -58,11 +58,13 @@ namespace projeto2023.views.frms
 
         private void materiais_Click(object sender, EventArgs e)
         {
-           // ltv_pedidos.Visible = false;
-           /* ltv_fornecedores.Visible = false;
-            ltv_materiais.Visible = true;
-            ltv_clientes.Visible = false;
-            ltv_colaboradores.Visible = false;*/
+            // ltv_pedidos.Visible = false;
+            /* ltv_fornecedores.Visible = false;
+             ltv_materiais.Visible = true;
+             ltv_clientes.Visible = false;
+             ltv_colaboradores.Visible = false;*/
+            consulta_materiais frm = new consulta_materiais();
+            frm.ShowDialog();
         }
 
         private void clientes_Click(object sender, EventArgs e)
