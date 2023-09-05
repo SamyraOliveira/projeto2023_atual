@@ -293,11 +293,11 @@ namespace projeto2023.views.pedidos
             // lbl_status
             // 
             this.lbl_status.AutoSize = true;
-            this.lbl_status.Location = new System.Drawing.Point(16, 131);
+            this.lbl_status.Location = new System.Drawing.Point(65, 132);
             this.lbl_status.Name = "lbl_status";
-            this.lbl_status.Size = new System.Drawing.Size(124, 28);
+            this.lbl_status.Size = new System.Drawing.Size(41, 14);
             this.lbl_status.TabIndex = 21;
-            this.lbl_status.Text = "Formas de Pagamento\r\n               Final";
+            this.lbl_status.Text = "Status";
             // 
             // cmb_status
             // 
@@ -730,6 +730,7 @@ namespace projeto2023.views.pedidos
             this.ltv_showPedidos.TabIndex = 1;
             this.ltv_showPedidos.UseCompatibleStateImageBehavior = false;
             this.ltv_showPedidos.View = System.Windows.Forms.View.Details;
+            this.ltv_showPedidos.Visible = false;
             this.ltv_showPedidos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ltv_showPedidos_MouseClick);
             // 
             // crud_pedidos
