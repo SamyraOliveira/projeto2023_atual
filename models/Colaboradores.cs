@@ -1,4 +1,5 @@
-﻿using projeto2023.controllers;
+﻿using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
+using projeto2023.controllers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,7 @@ namespace projeto2023.models
         public string colab_usuario;
         public string colab_senha;
         public int colab_status;
+        internal string nome;
 
         public Colaboradores (string cpf, string cargo, string telefone, string email, string estado, string cidade, string endereco, string bairro, string cep, string nome, DateTime dataNasc, string usuario, string senha, int status)
         {
@@ -68,6 +70,11 @@ namespace projeto2023.models
 			colab_usuario = user;
 			colab_senha = pass;
 		}
+
+        public Colaboradores(int colaboradorId)
+        {
+            ColaboradorId = colaboradorId;
+        }
 
         public string CPF
         {
@@ -115,11 +122,18 @@ namespace projeto2023.models
             }
         }
 
+        public int Id { get; internal set; }
+        public int V1 { get; }
+        public object Codigo { get; }
+        public string V2 { get; }
+        public object Nome { get; }
+        public int ColaboradorId { get; }
+
 
         #region ANTIGOS
 
-     
-         
+
+
         /*public Funcionarios(string CPF_functionary, string cargo_functionary, string telefone_functionary, string email_functionary, bool status_functionary, string cidade_functionary, string logradouro_functionary, string usuario_functionary, string senha_functionary, DateTime dataNascimento_functionary, string nome_functionary)
 		{
 			CPFFuncionario = CPF_functionary;

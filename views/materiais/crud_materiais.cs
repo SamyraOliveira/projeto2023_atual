@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.WebSockets;
+using Connection = projeto2023.controllers.Connection;
 
 namespace projeto2023.views.materiais
 {
@@ -180,6 +181,10 @@ namespace projeto2023.views.materiais
 
                 reader.Close();
             }
+        }
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -122,7 +122,7 @@ namespace projeto2023.controllers
         public void InsertColaborador(Colaboradores Colaborador)
         {
             Cmd.Connection = Con.RetornarConexao();
-            Cmd.CommandText = @"INSERT INTO  Colaboradores VALUES (@CPF_Colaborador, @cargo_Colaborador, @telefone_Colaborador, @email_Colaborador, @estado_Colaborador, @cidade_Colaborador, @endereco_Colaborador, @bairro_Colaborador, @CEP_Colaborador, @nome_Colaborador, @dataNasc_Colaborador, @user_Colaborador, @password_Colaborador, @status_Colaborador)";
+            Cmd.CommandText = @"INSERT INTO  Colaboradores (CPF_Colaborador, cargo_Colaborador, telefone_Colaborador, email_Colaborador, estado_Colaborador, cidade_Colaborador, endereco_Colaborador, bairro_Colaborador, CEP_Colaborador, nome_Colaborador, dataNasc_Colaborador, user_Colaborador, password_Colaborador, status_Colaborador) VALUES (@CPF_Colaborador, @cargo_Colaborador, @telefone_Colaborador, @email_Colaborador, @estado_Colaborador, @cidade_Colaborador, @endereco_Colaborador, @bairro_Colaborador, @CEP_Colaborador, @nome_Colaborador, @dataNasc_Colaborador, @user_Colaborador, @password_Colaborador, @status_Colaborador)";
             Cmd.Parameters.AddWithValue("@CPF_Colaborador", Colaborador.colab_CPF);
             Cmd.Parameters.AddWithValue("@cargo_Colaborador", Colaborador.colab_cargo);
             Cmd.Parameters.AddWithValue("@telefone_Colaborador", Colaborador.colab_telefone);

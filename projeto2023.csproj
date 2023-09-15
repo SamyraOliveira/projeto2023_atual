@@ -69,6 +69,11 @@
     <Compile Include="controllers\Connection.cs" />
     <Compile Include="controllers\Security.cs" />
     <Compile Include="controllers\Validation.cs" />
+    <Compile Include="EstampariadbDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EstampariadbDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EstampariadbDataSet1_MATERIAIS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -109,9 +114,15 @@
     <Compile Include="models\Fornecedores.cs" />
     <Compile Include="models\Materiais.cs" />
     <Compile Include="models\Pedidos.cs" />
+    <Compile Include="models\ListarUsuarios.cs" />
     <Compile Include="models\Producao.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="views\clientes\consulta_clientes.cs">
       <SubType>Form</SubType>
@@ -166,6 +177,12 @@
     </Compile>
     <Compile Include="views\fornecedores\relatorio_fornecedores.Designer.cs">
       <DependentUpon>relatorio_fornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\frms\Frm_logout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\frms\Frm_logout.Designer.cs">
+      <DependentUpon>Frm_logout.cs</DependentUpon>
     </Compile>
     <Compile Include="views\frms\frm_cadastros.cs">
       <SubType>Form</SubType>
@@ -250,14 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="relatorios\relatorio_clientes.rdlc" />
     <EmbeddedResource Include="relatorios\relatorio_colaboradores.rdlc" />
     <EmbeddedResource Include="relatorios\relatorio_materiais.rdlc" />
@@ -296,6 +308,9 @@
     <EmbeddedResource Include="views\frms\frm_consultas.resx">
       <DependentUpon>frm_consultas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\frms\Frm_logout.resx">
+      <DependentUpon>Frm_logout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\frms\frm_movimentacoes.resx">
       <DependentUpon>frm_movimentacoes.cs</DependentUpon>
     </EmbeddedResource>
@@ -329,6 +344,17 @@
     <EmbeddedResource Include="views\producao\crud_producao.resx">
       <DependentUpon>crud_producao.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="EstampariadbDataSet1.xsc">
+      <DependentUpon>EstampariadbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="EstampariadbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EstampariadbDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EstampariadbDataSet1.xss">
+      <DependentUpon>EstampariadbDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="EstampariadbDataSet1_MATERIAIS.xsc">
       <DependentUpon>EstampariadbDataSet1_MATERIAIS.xsd</DependentUpon>
     </None>
@@ -385,6 +411,7 @@
       <DependentUpon>EstampariadbDataSet1_FORNECEDORES.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\projeto2023.views.colaboradores.consulta_colaboradores.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -420,6 +447,9 @@
     <None Include="img\menu_btnFornecedor.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="img\Seta retorno.png" />
+    <None Include="img\retorno.png" />
+    <None Include="img\return.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -433,6 +463,9 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

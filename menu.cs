@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using projeto2023.views;
 using projeto2023.views.frms;
+using projeto2023.views.producao;
 
 namespace projeto2023
 {
@@ -41,6 +42,23 @@ namespace projeto2023
         {
             frm_relatorios frm = new frm_relatorios();
             frm.ShowDialog();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Frm_logout frm = new Frm_logout();
+            frm.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            crud_producao frm = new crud_producao();
+            frm.ShowDialog();
+        }
+
+        private void menu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

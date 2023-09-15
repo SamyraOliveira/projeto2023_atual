@@ -1855,11 +1855,23 @@ namespace projeto2023.EstampariadbDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT codigo_Pedido, codigo_Colaborador, codigo_Cliente, corCamiseta_Pedido, tecidoCamiseta_Pedido, formatoCamiseta_Pedido, tipoGola_Pedido, tecnicas_Pedido, estampa_Pedido, tamP_quant_Pedido, tamM_quant_Pedido, tamG_quant_Pedido, diponibilizadoCliente, quantdisponibilizadoCliente, totalCamisetas_Pedido, data_inicial, data_entrega, valorUnit_Pedido, valorTotal_Pedido, valorEntrada_Pedido, valorAberto_Pedido, formaPagamentoEntrada_Pedido, formaPagamentoFinal_Pedido, status_Pedido FROM dbo.Pedidos";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT codigo_Pedido, codigo_Colaborador, codigo_Cliente, corCamiseta_Pedido, tecidoCamiseta_Pedido, formatoCamiseta_Pedido, tipoGola_Pedido, tecnicas_Pedido, estampa_Pedido, tamP_quant_Pedido, tamM_quant_Pedido, tamG_quant_Pedido, diponibilizadoCliente, quantdisponibilizadoCliente, totalCamisetas_Pedido, data_inicial, data_entrega, valorUnit_Pedido, valorTotal_Pedido, valorEntrada_Pedido, valorAberto_Pedido, formaPagamentoEntrada_Pedido, formaPagamentoFinal_Pedido, status_Pedido FROM dbo.Pedidos";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"SELECT codigo_Pedido, codigo_Colaborador, codigo_Cliente, corCamiseta_Pedido, tecidoCamiseta_Pedido, formatoCamiseta_Pedido, tipoGola_Pedido, tecnicas_Pedido, estampa_Pedido, tamP_quant_Pedido, tamM_quant_Pedido, tamG_quant_Pedido, diponibilizadoCliente, quantdisponibilizadoCliente, totalCamisetas_Pedido, data_inicial, data_entrega, valorUnit_Pedido, valorTotal_Pedido, valorEntrada_Pedido, valorAberto_Pedido, formaPagamentoEntrada_Pedido, formaPagamentoFinal_Pedido, status_Pedido FROM dbo.Pedidos";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = @"SELECT codigo_Pedido, codigo_Colaborador, codigo_Cliente, corCamiseta_Pedido, tecidoCamiseta_Pedido, formatoCamiseta_Pedido, tipoGola_Pedido, tecnicas_Pedido, estampa_Pedido, tamP_quant_Pedido, tamM_quant_Pedido, tamG_quant_Pedido, diponibilizadoCliente, quantdisponibilizadoCliente, totalCamisetas_Pedido, data_inicial, data_entrega, valorUnit_Pedido, valorTotal_Pedido, valorEntrada_Pedido, valorAberto_Pedido, formaPagamentoEntrada_Pedido, formaPagamentoFinal_Pedido, status_Pedido FROM dbo.Pedidos";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1884,6 +1896,45 @@ namespace projeto2023.EstampariadbDataSetTableAdapters {
             EstampariadbDataSet.PedidosDataTable dataTable = new EstampariadbDataSet.PedidosDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(EstampariadbDataSet.PedidosDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy1(EstampariadbDataSet.PedidosDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy2(EstampariadbDataSet.PedidosDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

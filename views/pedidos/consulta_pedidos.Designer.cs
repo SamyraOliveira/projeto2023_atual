@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(consulta_pedidos));
             this.dtv_pedidos = new System.Windows.Forms.DataGridView();
             this.codigoPedidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigoColaboradorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -102,171 +103,219 @@
             this.dtv_pedidos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtv_pedidos.GridColor = System.Drawing.Color.DarkGray;
             this.dtv_pedidos.Location = new System.Drawing.Point(0, 0);
+            this.dtv_pedidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtv_pedidos.Name = "dtv_pedidos";
             this.dtv_pedidos.ReadOnly = true;
-            this.dtv_pedidos.Size = new System.Drawing.Size(1368, 525);
+            this.dtv_pedidos.RowHeadersWidth = 51;
+            this.dtv_pedidos.Size = new System.Drawing.Size(1824, 646);
             this.dtv_pedidos.TabIndex = 8;
             // 
             // codigoPedidoDataGridViewTextBoxColumn
             // 
             this.codigoPedidoDataGridViewTextBoxColumn.DataPropertyName = "codigo_Pedido";
             this.codigoPedidoDataGridViewTextBoxColumn.HeaderText = "codigo_Pedido";
+            this.codigoPedidoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.codigoPedidoDataGridViewTextBoxColumn.Name = "codigoPedidoDataGridViewTextBoxColumn";
             this.codigoPedidoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codigoPedidoDataGridViewTextBoxColumn.Width = 125;
             // 
             // codigoColaboradorDataGridViewTextBoxColumn
             // 
             this.codigoColaboradorDataGridViewTextBoxColumn.DataPropertyName = "codigo_Colaborador";
             this.codigoColaboradorDataGridViewTextBoxColumn.HeaderText = "codigo_Colaborador";
+            this.codigoColaboradorDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.codigoColaboradorDataGridViewTextBoxColumn.Name = "codigoColaboradorDataGridViewTextBoxColumn";
             this.codigoColaboradorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codigoColaboradorDataGridViewTextBoxColumn.Width = 125;
             // 
             // codigoClienteDataGridViewTextBoxColumn
             // 
             this.codigoClienteDataGridViewTextBoxColumn.DataPropertyName = "codigo_Cliente";
             this.codigoClienteDataGridViewTextBoxColumn.HeaderText = "codigo_Cliente";
+            this.codigoClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.codigoClienteDataGridViewTextBoxColumn.Name = "codigoClienteDataGridViewTextBoxColumn";
             this.codigoClienteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codigoClienteDataGridViewTextBoxColumn.Width = 125;
             // 
             // corCamisetaPedidoDataGridViewTextBoxColumn
             // 
             this.corCamisetaPedidoDataGridViewTextBoxColumn.DataPropertyName = "corCamiseta_Pedido";
             this.corCamisetaPedidoDataGridViewTextBoxColumn.HeaderText = "corCamiseta_Pedido";
+            this.corCamisetaPedidoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.corCamisetaPedidoDataGridViewTextBoxColumn.Name = "corCamisetaPedidoDataGridViewTextBoxColumn";
             this.corCamisetaPedidoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.corCamisetaPedidoDataGridViewTextBoxColumn.Width = 125;
             // 
             // tecidoCamisetaPedidoDataGridViewTextBoxColumn
             // 
             this.tecidoCamisetaPedidoDataGridViewTextBoxColumn.DataPropertyName = "tecidoCamiseta_Pedido";
             this.tecidoCamisetaPedidoDataGridViewTextBoxColumn.HeaderText = "tecidoCamiseta_Pedido";
+            this.tecidoCamisetaPedidoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tecidoCamisetaPedidoDataGridViewTextBoxColumn.Name = "tecidoCamisetaPedidoDataGridViewTextBoxColumn";
             this.tecidoCamisetaPedidoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tecidoCamisetaPedidoDataGridViewTextBoxColumn.Width = 125;
             // 
             // formatoCamisetaPedidoDataGridViewTextBoxColumn
             // 
             this.formatoCamisetaPedidoDataGridViewTextBoxColumn.DataPropertyName = "formatoCamiseta_Pedido";
             this.formatoCamisetaPedidoDataGridViewTextBoxColumn.HeaderText = "formatoCamiseta_Pedido";
+            this.formatoCamisetaPedidoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.formatoCamisetaPedidoDataGridViewTextBoxColumn.Name = "formatoCamisetaPedidoDataGridViewTextBoxColumn";
             this.formatoCamisetaPedidoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.formatoCamisetaPedidoDataGridViewTextBoxColumn.Width = 125;
             // 
             // tipoGolaPedidoDataGridViewTextBoxColumn
             // 
             this.tipoGolaPedidoDataGridViewTextBoxColumn.DataPropertyName = "tipoGola_Pedido";
             this.tipoGolaPedidoDataGridViewTextBoxColumn.HeaderText = "tipoGola_Pedido";
+            this.tipoGolaPedidoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tipoGolaPedidoDataGridViewTextBoxColumn.Name = "tipoGolaPedidoDataGridViewTextBoxColumn";
             this.tipoGolaPedidoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tipoGolaPedidoDataGridViewTextBoxColumn.Width = 125;
             // 
             // tecnicasPedidoDataGridViewTextBoxColumn
             // 
             this.tecnicasPedidoDataGridViewTextBoxColumn.DataPropertyName = "tecnicas_Pedido";
             this.tecnicasPedidoDataGridViewTextBoxColumn.HeaderText = "tecnicas_Pedido";
+            this.tecnicasPedidoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tecnicasPedidoDataGridViewTextBoxColumn.Name = "tecnicasPedidoDataGridViewTextBoxColumn";
             this.tecnicasPedidoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tecnicasPedidoDataGridViewTextBoxColumn.Width = 125;
             // 
             // tamPquantPedidoDataGridViewTextBoxColumn
             // 
             this.tamPquantPedidoDataGridViewTextBoxColumn.DataPropertyName = "tamP_quant_Pedido";
             this.tamPquantPedidoDataGridViewTextBoxColumn.HeaderText = "tamP_quant_Pedido";
+            this.tamPquantPedidoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tamPquantPedidoDataGridViewTextBoxColumn.Name = "tamPquantPedidoDataGridViewTextBoxColumn";
             this.tamPquantPedidoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tamPquantPedidoDataGridViewTextBoxColumn.Width = 125;
             // 
             // tamMquantPedidoDataGridViewTextBoxColumn
             // 
             this.tamMquantPedidoDataGridViewTextBoxColumn.DataPropertyName = "tamM_quant_Pedido";
             this.tamMquantPedidoDataGridViewTextBoxColumn.HeaderText = "tamM_quant_Pedido";
+            this.tamMquantPedidoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tamMquantPedidoDataGridViewTextBoxColumn.Name = "tamMquantPedidoDataGridViewTextBoxColumn";
             this.tamMquantPedidoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tamMquantPedidoDataGridViewTextBoxColumn.Width = 125;
             // 
             // tamGquantPedidoDataGridViewTextBoxColumn
             // 
             this.tamGquantPedidoDataGridViewTextBoxColumn.DataPropertyName = "tamG_quant_Pedido";
             this.tamGquantPedidoDataGridViewTextBoxColumn.HeaderText = "tamG_quant_Pedido";
+            this.tamGquantPedidoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tamGquantPedidoDataGridViewTextBoxColumn.Name = "tamGquantPedidoDataGridViewTextBoxColumn";
             this.tamGquantPedidoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tamGquantPedidoDataGridViewTextBoxColumn.Width = 125;
             // 
             // diponibilizadoClienteDataGridViewTextBoxColumn
             // 
             this.diponibilizadoClienteDataGridViewTextBoxColumn.DataPropertyName = "diponibilizadoCliente";
             this.diponibilizadoClienteDataGridViewTextBoxColumn.HeaderText = "diponibilizadoCliente";
+            this.diponibilizadoClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.diponibilizadoClienteDataGridViewTextBoxColumn.Name = "diponibilizadoClienteDataGridViewTextBoxColumn";
             this.diponibilizadoClienteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.diponibilizadoClienteDataGridViewTextBoxColumn.Width = 125;
             // 
             // quantdisponibilizadoClienteDataGridViewTextBoxColumn
             // 
             this.quantdisponibilizadoClienteDataGridViewTextBoxColumn.DataPropertyName = "quantdisponibilizadoCliente";
             this.quantdisponibilizadoClienteDataGridViewTextBoxColumn.HeaderText = "quantdisponibilizadoCliente";
+            this.quantdisponibilizadoClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.quantdisponibilizadoClienteDataGridViewTextBoxColumn.Name = "quantdisponibilizadoClienteDataGridViewTextBoxColumn";
             this.quantdisponibilizadoClienteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.quantdisponibilizadoClienteDataGridViewTextBoxColumn.Width = 125;
             // 
             // totalCamisetasPedidoDataGridViewTextBoxColumn
             // 
             this.totalCamisetasPedidoDataGridViewTextBoxColumn.DataPropertyName = "totalCamisetas_Pedido";
             this.totalCamisetasPedidoDataGridViewTextBoxColumn.HeaderText = "totalCamisetas_Pedido";
+            this.totalCamisetasPedidoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.totalCamisetasPedidoDataGridViewTextBoxColumn.Name = "totalCamisetasPedidoDataGridViewTextBoxColumn";
             this.totalCamisetasPedidoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.totalCamisetasPedidoDataGridViewTextBoxColumn.Width = 125;
             // 
             // datainicialDataGridViewTextBoxColumn
             // 
             this.datainicialDataGridViewTextBoxColumn.DataPropertyName = "data_inicial";
             this.datainicialDataGridViewTextBoxColumn.HeaderText = "data_inicial";
+            this.datainicialDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.datainicialDataGridViewTextBoxColumn.Name = "datainicialDataGridViewTextBoxColumn";
             this.datainicialDataGridViewTextBoxColumn.ReadOnly = true;
+            this.datainicialDataGridViewTextBoxColumn.Width = 125;
             // 
             // dataentregaDataGridViewTextBoxColumn
             // 
             this.dataentregaDataGridViewTextBoxColumn.DataPropertyName = "data_entrega";
             this.dataentregaDataGridViewTextBoxColumn.HeaderText = "data_entrega";
+            this.dataentregaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dataentregaDataGridViewTextBoxColumn.Name = "dataentregaDataGridViewTextBoxColumn";
             this.dataentregaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataentregaDataGridViewTextBoxColumn.Width = 125;
             // 
             // valorUnitPedidoDataGridViewTextBoxColumn
             // 
             this.valorUnitPedidoDataGridViewTextBoxColumn.DataPropertyName = "valorUnit_Pedido";
             this.valorUnitPedidoDataGridViewTextBoxColumn.HeaderText = "valorUnit_Pedido";
+            this.valorUnitPedidoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.valorUnitPedidoDataGridViewTextBoxColumn.Name = "valorUnitPedidoDataGridViewTextBoxColumn";
             this.valorUnitPedidoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.valorUnitPedidoDataGridViewTextBoxColumn.Width = 125;
             // 
             // valorTotalPedidoDataGridViewTextBoxColumn
             // 
             this.valorTotalPedidoDataGridViewTextBoxColumn.DataPropertyName = "valorTotal_Pedido";
             this.valorTotalPedidoDataGridViewTextBoxColumn.HeaderText = "valorTotal_Pedido";
+            this.valorTotalPedidoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.valorTotalPedidoDataGridViewTextBoxColumn.Name = "valorTotalPedidoDataGridViewTextBoxColumn";
             this.valorTotalPedidoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.valorTotalPedidoDataGridViewTextBoxColumn.Width = 125;
             // 
             // valorEntradaPedidoDataGridViewTextBoxColumn
             // 
             this.valorEntradaPedidoDataGridViewTextBoxColumn.DataPropertyName = "valorEntrada_Pedido";
             this.valorEntradaPedidoDataGridViewTextBoxColumn.HeaderText = "valorEntrada_Pedido";
+            this.valorEntradaPedidoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.valorEntradaPedidoDataGridViewTextBoxColumn.Name = "valorEntradaPedidoDataGridViewTextBoxColumn";
             this.valorEntradaPedidoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.valorEntradaPedidoDataGridViewTextBoxColumn.Width = 125;
             // 
             // valorAbertoPedidoDataGridViewTextBoxColumn
             // 
             this.valorAbertoPedidoDataGridViewTextBoxColumn.DataPropertyName = "valorAberto_Pedido";
             this.valorAbertoPedidoDataGridViewTextBoxColumn.HeaderText = "valorAberto_Pedido";
+            this.valorAbertoPedidoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.valorAbertoPedidoDataGridViewTextBoxColumn.Name = "valorAbertoPedidoDataGridViewTextBoxColumn";
             this.valorAbertoPedidoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.valorAbertoPedidoDataGridViewTextBoxColumn.Width = 125;
             // 
             // formaPagamentoEntradaPedidoDataGridViewTextBoxColumn
             // 
             this.formaPagamentoEntradaPedidoDataGridViewTextBoxColumn.DataPropertyName = "formaPagamentoEntrada_Pedido";
             this.formaPagamentoEntradaPedidoDataGridViewTextBoxColumn.HeaderText = "formaPagamentoEntrada_Pedido";
+            this.formaPagamentoEntradaPedidoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.formaPagamentoEntradaPedidoDataGridViewTextBoxColumn.Name = "formaPagamentoEntradaPedidoDataGridViewTextBoxColumn";
             this.formaPagamentoEntradaPedidoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.formaPagamentoEntradaPedidoDataGridViewTextBoxColumn.Width = 125;
             // 
             // formaPagamentoFinalPedidoDataGridViewTextBoxColumn
             // 
             this.formaPagamentoFinalPedidoDataGridViewTextBoxColumn.DataPropertyName = "formaPagamentoFinal_Pedido";
             this.formaPagamentoFinalPedidoDataGridViewTextBoxColumn.HeaderText = "formaPagamentoFinal_Pedido";
+            this.formaPagamentoFinalPedidoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.formaPagamentoFinalPedidoDataGridViewTextBoxColumn.Name = "formaPagamentoFinalPedidoDataGridViewTextBoxColumn";
             this.formaPagamentoFinalPedidoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.formaPagamentoFinalPedidoDataGridViewTextBoxColumn.Width = 125;
             // 
             // statusPedidoDataGridViewTextBoxColumn
             // 
             this.statusPedidoDataGridViewTextBoxColumn.DataPropertyName = "status_Pedido";
             this.statusPedidoDataGridViewTextBoxColumn.HeaderText = "status_Pedido";
+            this.statusPedidoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.statusPedidoDataGridViewTextBoxColumn.Name = "statusPedidoDataGridViewTextBoxColumn";
             this.statusPedidoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.statusPedidoDataGridViewTextBoxColumn.Width = 125;
             // 
             // pedidosBindingSource
             // 
@@ -285,15 +334,17 @@
             this.panel1.Controls.Add(this.dtv_pedidos);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1368, 525);
+            this.panel1.Size = new System.Drawing.Size(1824, 646);
             this.panel1.TabIndex = 11;
             // 
             // btn_fechar
             // 
-            this.btn_fechar.Location = new System.Drawing.Point(1171, 437);
+            this.btn_fechar.Location = new System.Drawing.Point(1561, 538);
+            this.btn_fechar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_fechar.Name = "btn_fechar";
-            this.btn_fechar.Size = new System.Drawing.Size(185, 63);
+            this.btn_fechar.Size = new System.Drawing.Size(247, 78);
             this.btn_fechar.TabIndex = 10;
             this.btn_fechar.Text = "FECHAR";
             this.btn_fechar.UseVisualStyleBackColor = true;
@@ -301,9 +352,10 @@
             // 
             // btn_imprimir
             // 
-            this.btn_imprimir.Location = new System.Drawing.Point(973, 437);
+            this.btn_imprimir.Location = new System.Drawing.Point(1297, 538);
+            this.btn_imprimir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_imprimir.Name = "btn_imprimir";
-            this.btn_imprimir.Size = new System.Drawing.Size(185, 63);
+            this.btn_imprimir.Size = new System.Drawing.Size(247, 78);
             this.btn_imprimir.TabIndex = 9;
             this.btn_imprimir.Text = "IMPRIMIR";
             this.btn_imprimir.UseVisualStyleBackColor = true;
@@ -315,15 +367,17 @@
             // 
             // consulta_pedidos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
-            this.ClientSize = new System.Drawing.Size(1368, 525);
+            this.ClientSize = new System.Drawing.Size(1824, 646);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "consulta_pedidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "consulta_pedidos";
+            this.Text = "Consulta Pedidos";
             this.Load += new System.EventHandler(this.consulta_pedidos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtv_pedidos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedidosBindingSource)).EndInit();

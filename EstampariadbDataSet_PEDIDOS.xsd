@@ -188,85 +188,102 @@ SELECT codigo_Pedido, codigo_Colaborador, codigo_Cliente, corCamiseta_Pedido, te
               <Mapping SourceColumn="formaPagamentoFinal_Pedido" DataSetColumn="formaPagamentoFinal_Pedido" />
               <Mapping SourceColumn="status_Pedido" DataSetColumn="status_Pedido" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="EstampariadbConnectionString_001 (Settings)" DbObjectName="Estampariadb.dbo.Pedidos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT codigo_Pedido, codigo_Colaborador, codigo_Cliente, corCamiseta_Pedido, tecidoCamiseta_Pedido, formatoCamiseta_Pedido, tipoGola_Pedido, tecnicas_Pedido, estampa_Pedido, tamP_quant_Pedido, tamM_quant_Pedido, tamG_quant_Pedido, diponibilizadoCliente, quantdisponibilizadoCliente, totalCamisetas_Pedido, data_inicial, data_entrega, valorUnit_Pedido, valorTotal_Pedido, valorEntrada_Pedido, valorAberto_Pedido, formaPagamentoEntrada_Pedido, formaPagamentoFinal_Pedido, status_Pedido FROM dbo.Pedidos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="EstampariadbConnectionString_001 (Settings)" DbObjectName="Estampariadb.dbo.Pedidos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT codigo_Pedido, codigo_Colaborador, codigo_Cliente, corCamiseta_Pedido, tecidoCamiseta_Pedido, formatoCamiseta_Pedido, tipoGola_Pedido, tecnicas_Pedido, estampa_Pedido, tamP_quant_Pedido, tamM_quant_Pedido, tamG_quant_Pedido, diponibilizadoCliente, quantdisponibilizadoCliente, totalCamisetas_Pedido, data_inicial, data_entrega, valorUnit_Pedido, valorTotal_Pedido, valorEntrada_Pedido, valorAberto_Pedido, formaPagamentoEntrada_Pedido, formaPagamentoFinal_Pedido, status_Pedido FROM dbo.Pedidos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="EstampariadbDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="EstampariadbDataSet" msprop:Generator_DataSetName="EstampariadbDataSet">
+  <xs:element name="EstampariadbDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="EstampariadbDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="EstampariadbDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Pedidos" msprop:Generator_RowEvHandlerName="PedidosRowChangeEventHandler" msprop:Generator_RowDeletedName="PedidosRowDeleted" msprop:Generator_RowDeletingName="PedidosRowDeleting" msprop:Generator_RowEvArgName="PedidosRowChangeEvent" msprop:Generator_TablePropName="Pedidos" msprop:Generator_RowChangedName="PedidosRowChanged" msprop:Generator_RowChangingName="PedidosRowChanging" msprop:Generator_TableClassName="PedidosDataTable" msprop:Generator_RowClassName="PedidosRow" msprop:Generator_TableVarName="tablePedidos" msprop:Generator_UserTableName="Pedidos">
+        <xs:element name="Pedidos" msprop:Generator_RowEvHandlerName="PedidosRowChangeEventHandler" msprop:Generator_RowDeletedName="PedidosRowDeleted" msprop:Generator_RowDeletingName="PedidosRowDeleting" msprop:Generator_RowEvArgName="PedidosRowChangeEvent" msprop:Generator_TablePropName="Pedidos" msprop:Generator_RowChangedName="PedidosRowChanged" msprop:Generator_UserTableName="Pedidos" msprop:Generator_RowChangingName="PedidosRowChanging" msprop:Generator_RowClassName="PedidosRow" msprop:Generator_TableClassName="PedidosDataTable" msprop:Generator_TableVarName="tablePedidos">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="codigo_Pedido" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="codigo_Pedido" msprop:Generator_ColumnPropNameInTable="codigo_PedidoColumn" msprop:Generator_ColumnVarNameInTable="columncodigo_Pedido" msprop:Generator_UserColumnName="codigo_Pedido" type="xs:int" />
-              <xs:element name="codigo_Colaborador" msprop:Generator_ColumnPropNameInRow="codigo_Colaborador" msprop:Generator_ColumnPropNameInTable="codigo_ColaboradorColumn" msprop:Generator_ColumnVarNameInTable="columncodigo_Colaborador" msprop:Generator_UserColumnName="codigo_Colaborador" type="xs:int" />
-              <xs:element name="codigo_Cliente" msprop:Generator_ColumnPropNameInRow="codigo_Cliente" msprop:Generator_ColumnPropNameInTable="codigo_ClienteColumn" msprop:Generator_ColumnVarNameInTable="columncodigo_Cliente" msprop:Generator_UserColumnName="codigo_Cliente" type="xs:int" />
-              <xs:element name="corCamiseta_Pedido" msprop:Generator_ColumnPropNameInRow="corCamiseta_Pedido" msprop:Generator_ColumnPropNameInTable="corCamiseta_PedidoColumn" msprop:Generator_ColumnVarNameInTable="columncorCamiseta_Pedido" msprop:Generator_UserColumnName="corCamiseta_Pedido">
+              <xs:element name="codigo_Pedido" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="codigo_PedidoColumn" msprop:Generator_ColumnPropNameInRow="codigo_Pedido" msprop:Generator_UserColumnName="codigo_Pedido" msprop:Generator_ColumnVarNameInTable="columncodigo_Pedido" type="xs:int" />
+              <xs:element name="codigo_Colaborador" msprop:Generator_ColumnPropNameInTable="codigo_ColaboradorColumn" msprop:Generator_ColumnPropNameInRow="codigo_Colaborador" msprop:Generator_UserColumnName="codigo_Colaborador" msprop:Generator_ColumnVarNameInTable="columncodigo_Colaborador" type="xs:int" />
+              <xs:element name="codigo_Cliente" msprop:Generator_ColumnPropNameInTable="codigo_ClienteColumn" msprop:Generator_ColumnPropNameInRow="codigo_Cliente" msprop:Generator_UserColumnName="codigo_Cliente" msprop:Generator_ColumnVarNameInTable="columncodigo_Cliente" type="xs:int" />
+              <xs:element name="corCamiseta_Pedido" msprop:Generator_ColumnPropNameInTable="corCamiseta_PedidoColumn" msprop:Generator_ColumnPropNameInRow="corCamiseta_Pedido" msprop:Generator_UserColumnName="corCamiseta_Pedido" msprop:Generator_ColumnVarNameInTable="columncorCamiseta_Pedido">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="tecidoCamiseta_Pedido" msprop:Generator_ColumnPropNameInRow="tecidoCamiseta_Pedido" msprop:Generator_ColumnPropNameInTable="tecidoCamiseta_PedidoColumn" msprop:Generator_ColumnVarNameInTable="columntecidoCamiseta_Pedido" msprop:Generator_UserColumnName="tecidoCamiseta_Pedido">
+              <xs:element name="tecidoCamiseta_Pedido" msprop:Generator_ColumnPropNameInTable="tecidoCamiseta_PedidoColumn" msprop:Generator_ColumnPropNameInRow="tecidoCamiseta_Pedido" msprop:Generator_UserColumnName="tecidoCamiseta_Pedido" msprop:Generator_ColumnVarNameInTable="columntecidoCamiseta_Pedido">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="formatoCamiseta_Pedido" msprop:Generator_ColumnPropNameInRow="formatoCamiseta_Pedido" msprop:Generator_ColumnPropNameInTable="formatoCamiseta_PedidoColumn" msprop:Generator_ColumnVarNameInTable="columnformatoCamiseta_Pedido" msprop:Generator_UserColumnName="formatoCamiseta_Pedido">
+              <xs:element name="formatoCamiseta_Pedido" msprop:Generator_ColumnPropNameInTable="formatoCamiseta_PedidoColumn" msprop:Generator_ColumnPropNameInRow="formatoCamiseta_Pedido" msprop:Generator_UserColumnName="formatoCamiseta_Pedido" msprop:Generator_ColumnVarNameInTable="columnformatoCamiseta_Pedido">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="tipoGola_Pedido" msprop:Generator_ColumnPropNameInRow="tipoGola_Pedido" msprop:Generator_ColumnPropNameInTable="tipoGola_PedidoColumn" msprop:Generator_ColumnVarNameInTable="columntipoGola_Pedido" msprop:Generator_UserColumnName="tipoGola_Pedido">
+              <xs:element name="tipoGola_Pedido" msprop:Generator_ColumnPropNameInTable="tipoGola_PedidoColumn" msprop:Generator_ColumnPropNameInRow="tipoGola_Pedido" msprop:Generator_UserColumnName="tipoGola_Pedido" msprop:Generator_ColumnVarNameInTable="columntipoGola_Pedido">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="tecnicas_Pedido" msprop:Generator_ColumnPropNameInRow="tecnicas_Pedido" msprop:Generator_ColumnPropNameInTable="tecnicas_PedidoColumn" msprop:Generator_ColumnVarNameInTable="columntecnicas_Pedido" msprop:Generator_UserColumnName="tecnicas_Pedido">
+              <xs:element name="tecnicas_Pedido" msprop:Generator_ColumnPropNameInTable="tecnicas_PedidoColumn" msprop:Generator_ColumnPropNameInRow="tecnicas_Pedido" msprop:Generator_UserColumnName="tecnicas_Pedido" msprop:Generator_ColumnVarNameInTable="columntecnicas_Pedido">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="estampa_Pedido" msprop:Generator_ColumnPropNameInRow="estampa_Pedido" msprop:Generator_ColumnPropNameInTable="estampa_PedidoColumn" msprop:Generator_ColumnVarNameInTable="columnestampa_Pedido" msprop:Generator_UserColumnName="estampa_Pedido" type="xs:base64Binary" minOccurs="0" />
-              <xs:element name="tamP_quant_Pedido" msprop:Generator_ColumnPropNameInRow="tamP_quant_Pedido" msprop:Generator_ColumnPropNameInTable="tamP_quant_PedidoColumn" msprop:Generator_ColumnVarNameInTable="columntamP_quant_Pedido" msprop:Generator_UserColumnName="tamP_quant_Pedido" type="xs:int" minOccurs="0" />
-              <xs:element name="tamM_quant_Pedido" msprop:Generator_ColumnPropNameInRow="tamM_quant_Pedido" msprop:Generator_ColumnPropNameInTable="tamM_quant_PedidoColumn" msprop:Generator_ColumnVarNameInTable="columntamM_quant_Pedido" msprop:Generator_UserColumnName="tamM_quant_Pedido" type="xs:int" minOccurs="0" />
-              <xs:element name="tamG_quant_Pedido" msprop:Generator_ColumnPropNameInRow="tamG_quant_Pedido" msprop:Generator_ColumnPropNameInTable="tamG_quant_PedidoColumn" msprop:Generator_ColumnVarNameInTable="columntamG_quant_Pedido" msprop:Generator_UserColumnName="tamG_quant_Pedido" type="xs:int" minOccurs="0" />
-              <xs:element name="diponibilizadoCliente" msprop:Generator_ColumnPropNameInRow="diponibilizadoCliente" msprop:Generator_ColumnPropNameInTable="diponibilizadoClienteColumn" msprop:Generator_ColumnVarNameInTable="columndiponibilizadoCliente" msprop:Generator_UserColumnName="diponibilizadoCliente" type="xs:int" minOccurs="0" />
-              <xs:element name="quantdisponibilizadoCliente" msprop:Generator_ColumnPropNameInRow="quantdisponibilizadoCliente" msprop:Generator_ColumnPropNameInTable="quantdisponibilizadoClienteColumn" msprop:Generator_ColumnVarNameInTable="columnquantdisponibilizadoCliente" msprop:Generator_UserColumnName="quantdisponibilizadoCliente" type="xs:int" minOccurs="0" />
-              <xs:element name="totalCamisetas_Pedido" msprop:Generator_ColumnPropNameInRow="totalCamisetas_Pedido" msprop:Generator_ColumnPropNameInTable="totalCamisetas_PedidoColumn" msprop:Generator_ColumnVarNameInTable="columntotalCamisetas_Pedido" msprop:Generator_UserColumnName="totalCamisetas_Pedido" type="xs:int" minOccurs="0" />
-              <xs:element name="data_inicial" msprop:Generator_ColumnPropNameInRow="data_inicial" msprop:Generator_ColumnPropNameInTable="data_inicialColumn" msprop:Generator_ColumnVarNameInTable="columndata_inicial" msprop:Generator_UserColumnName="data_inicial" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="data_entrega" msprop:Generator_ColumnPropNameInRow="data_entrega" msprop:Generator_ColumnPropNameInTable="data_entregaColumn" msprop:Generator_ColumnVarNameInTable="columndata_entrega" msprop:Generator_UserColumnName="data_entrega" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="valorUnit_Pedido" msprop:Generator_ColumnPropNameInRow="valorUnit_Pedido" msprop:Generator_ColumnPropNameInTable="valorUnit_PedidoColumn" msprop:Generator_ColumnVarNameInTable="columnvalorUnit_Pedido" msprop:Generator_UserColumnName="valorUnit_Pedido" type="xs:decimal" minOccurs="0" />
-              <xs:element name="valorTotal_Pedido" msprop:Generator_ColumnPropNameInRow="valorTotal_Pedido" msprop:Generator_ColumnPropNameInTable="valorTotal_PedidoColumn" msprop:Generator_ColumnVarNameInTable="columnvalorTotal_Pedido" msprop:Generator_UserColumnName="valorTotal_Pedido" type="xs:decimal" minOccurs="0" />
-              <xs:element name="valorEntrada_Pedido" msprop:Generator_ColumnPropNameInRow="valorEntrada_Pedido" msprop:Generator_ColumnPropNameInTable="valorEntrada_PedidoColumn" msprop:Generator_ColumnVarNameInTable="columnvalorEntrada_Pedido" msprop:Generator_UserColumnName="valorEntrada_Pedido" type="xs:decimal" minOccurs="0" />
-              <xs:element name="valorAberto_Pedido" msprop:Generator_ColumnPropNameInRow="valorAberto_Pedido" msprop:Generator_ColumnPropNameInTable="valorAberto_PedidoColumn" msprop:Generator_ColumnVarNameInTable="columnvalorAberto_Pedido" msprop:Generator_UserColumnName="valorAberto_Pedido" type="xs:decimal" minOccurs="0" />
-              <xs:element name="formaPagamentoEntrada_Pedido" msprop:Generator_ColumnPropNameInRow="formaPagamentoEntrada_Pedido" msprop:Generator_ColumnPropNameInTable="formaPagamentoEntrada_PedidoColumn" msprop:Generator_ColumnVarNameInTable="columnformaPagamentoEntrada_Pedido" msprop:Generator_UserColumnName="formaPagamentoEntrada_Pedido" minOccurs="0">
+              <xs:element name="estampa_Pedido" msprop:Generator_ColumnPropNameInTable="estampa_PedidoColumn" msprop:Generator_ColumnPropNameInRow="estampa_Pedido" msprop:Generator_UserColumnName="estampa_Pedido" msprop:Generator_ColumnVarNameInTable="columnestampa_Pedido" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="tamP_quant_Pedido" msprop:Generator_ColumnPropNameInTable="tamP_quant_PedidoColumn" msprop:Generator_ColumnPropNameInRow="tamP_quant_Pedido" msprop:Generator_UserColumnName="tamP_quant_Pedido" msprop:Generator_ColumnVarNameInTable="columntamP_quant_Pedido" type="xs:int" minOccurs="0" />
+              <xs:element name="tamM_quant_Pedido" msprop:Generator_ColumnPropNameInTable="tamM_quant_PedidoColumn" msprop:Generator_ColumnPropNameInRow="tamM_quant_Pedido" msprop:Generator_UserColumnName="tamM_quant_Pedido" msprop:Generator_ColumnVarNameInTable="columntamM_quant_Pedido" type="xs:int" minOccurs="0" />
+              <xs:element name="tamG_quant_Pedido" msprop:Generator_ColumnPropNameInTable="tamG_quant_PedidoColumn" msprop:Generator_ColumnPropNameInRow="tamG_quant_Pedido" msprop:Generator_UserColumnName="tamG_quant_Pedido" msprop:Generator_ColumnVarNameInTable="columntamG_quant_Pedido" type="xs:int" minOccurs="0" />
+              <xs:element name="diponibilizadoCliente" msprop:Generator_ColumnPropNameInTable="diponibilizadoClienteColumn" msprop:Generator_ColumnPropNameInRow="diponibilizadoCliente" msprop:Generator_UserColumnName="diponibilizadoCliente" msprop:Generator_ColumnVarNameInTable="columndiponibilizadoCliente" type="xs:int" minOccurs="0" />
+              <xs:element name="quantdisponibilizadoCliente" msprop:Generator_ColumnPropNameInTable="quantdisponibilizadoClienteColumn" msprop:Generator_ColumnPropNameInRow="quantdisponibilizadoCliente" msprop:Generator_UserColumnName="quantdisponibilizadoCliente" msprop:Generator_ColumnVarNameInTable="columnquantdisponibilizadoCliente" type="xs:int" minOccurs="0" />
+              <xs:element name="totalCamisetas_Pedido" msprop:Generator_ColumnPropNameInTable="totalCamisetas_PedidoColumn" msprop:Generator_ColumnPropNameInRow="totalCamisetas_Pedido" msprop:Generator_UserColumnName="totalCamisetas_Pedido" msprop:Generator_ColumnVarNameInTable="columntotalCamisetas_Pedido" type="xs:int" minOccurs="0" />
+              <xs:element name="data_inicial" msprop:Generator_ColumnPropNameInTable="data_inicialColumn" msprop:Generator_ColumnPropNameInRow="data_inicial" msprop:Generator_UserColumnName="data_inicial" msprop:Generator_ColumnVarNameInTable="columndata_inicial" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="data_entrega" msprop:Generator_ColumnPropNameInTable="data_entregaColumn" msprop:Generator_ColumnPropNameInRow="data_entrega" msprop:Generator_UserColumnName="data_entrega" msprop:Generator_ColumnVarNameInTable="columndata_entrega" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="valorUnit_Pedido" msprop:Generator_ColumnPropNameInTable="valorUnit_PedidoColumn" msprop:Generator_ColumnPropNameInRow="valorUnit_Pedido" msprop:Generator_UserColumnName="valorUnit_Pedido" msprop:Generator_ColumnVarNameInTable="columnvalorUnit_Pedido" type="xs:decimal" minOccurs="0" />
+              <xs:element name="valorTotal_Pedido" msprop:Generator_ColumnPropNameInTable="valorTotal_PedidoColumn" msprop:Generator_ColumnPropNameInRow="valorTotal_Pedido" msprop:Generator_UserColumnName="valorTotal_Pedido" msprop:Generator_ColumnVarNameInTable="columnvalorTotal_Pedido" type="xs:decimal" minOccurs="0" />
+              <xs:element name="valorEntrada_Pedido" msprop:Generator_ColumnPropNameInTable="valorEntrada_PedidoColumn" msprop:Generator_ColumnPropNameInRow="valorEntrada_Pedido" msprop:Generator_UserColumnName="valorEntrada_Pedido" msprop:Generator_ColumnVarNameInTable="columnvalorEntrada_Pedido" type="xs:decimal" minOccurs="0" />
+              <xs:element name="valorAberto_Pedido" msprop:Generator_ColumnPropNameInTable="valorAberto_PedidoColumn" msprop:Generator_ColumnPropNameInRow="valorAberto_Pedido" msprop:Generator_UserColumnName="valorAberto_Pedido" msprop:Generator_ColumnVarNameInTable="columnvalorAberto_Pedido" type="xs:decimal" minOccurs="0" />
+              <xs:element name="formaPagamentoEntrada_Pedido" msprop:Generator_ColumnPropNameInTable="formaPagamentoEntrada_PedidoColumn" msprop:Generator_ColumnPropNameInRow="formaPagamentoEntrada_Pedido" msprop:Generator_UserColumnName="formaPagamentoEntrada_Pedido" msprop:Generator_ColumnVarNameInTable="columnformaPagamentoEntrada_Pedido" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="formaPagamentoFinal_Pedido" msprop:Generator_ColumnPropNameInRow="formaPagamentoFinal_Pedido" msprop:Generator_ColumnPropNameInTable="formaPagamentoFinal_PedidoColumn" msprop:Generator_ColumnVarNameInTable="columnformaPagamentoFinal_Pedido" msprop:Generator_UserColumnName="formaPagamentoFinal_Pedido" minOccurs="0">
+              <xs:element name="formaPagamentoFinal_Pedido" msprop:Generator_ColumnPropNameInTable="formaPagamentoFinal_PedidoColumn" msprop:Generator_ColumnPropNameInRow="formaPagamentoFinal_Pedido" msprop:Generator_UserColumnName="formaPagamentoFinal_Pedido" msprop:Generator_ColumnVarNameInTable="columnformaPagamentoFinal_Pedido" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="status_Pedido" msprop:Generator_ColumnPropNameInRow="status_Pedido" msprop:Generator_ColumnPropNameInTable="status_PedidoColumn" msprop:Generator_ColumnVarNameInTable="columnstatus_Pedido" msprop:Generator_UserColumnName="status_Pedido">
+              <xs:element name="status_Pedido" msprop:Generator_ColumnPropNameInTable="status_PedidoColumn" msprop:Generator_ColumnPropNameInRow="status_Pedido" msprop:Generator_UserColumnName="status_Pedido" msprop:Generator_ColumnVarNameInTable="columnstatus_Pedido">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />

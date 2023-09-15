@@ -28,114 +28,160 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pctb_movimentacoes = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_movimentacoes));
             this.pnl_movimentacoes = new System.Windows.Forms.Panel();
-            this.menu_movimentacoes = new System.Windows.Forms.MenuStrip();
-            this.colaboradores = new System.Windows.Forms.ToolStripMenuItem();
-            this.fornecedores = new System.Windows.Forms.ToolStripMenuItem();
-            this.materiais = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientes = new System.Windows.Forms.ToolStripMenuItem();
-            this.pedidos = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.pctb_movimentacoes)).BeginInit();
-            this.menu_movimentacoes.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_Materiais = new System.Windows.Forms.Button();
+            this.btn_Fornecedores = new System.Windows.Forms.Button();
+            this.btn_Pedidos = new System.Windows.Forms.Button();
+            this.btn_Clientes = new System.Windows.Forms.Button();
+            this.btn_colabores = new System.Windows.Forms.Button();
+            this.pctb_cadastros = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pnl_movimentacoes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctb_cadastros)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pctb_movimentacoes
-            // 
-            this.pctb_movimentacoes.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pctb_movimentacoes.Image = global::projeto2023.Properties.Resources.logo;
-            this.pctb_movimentacoes.Location = new System.Drawing.Point(1001, 177);
-            this.pctb_movimentacoes.Name = "pctb_movimentacoes";
-            this.pctb_movimentacoes.Size = new System.Drawing.Size(292, 309);
-            this.pctb_movimentacoes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctb_movimentacoes.TabIndex = 5;
-            this.pctb_movimentacoes.TabStop = false;
             // 
             // pnl_movimentacoes
             // 
+            this.pnl_movimentacoes.Controls.Add(this.label2);
             this.pnl_movimentacoes.Location = new System.Drawing.Point(30, 71);
             this.pnl_movimentacoes.Name = "pnl_movimentacoes";
-            this.pnl_movimentacoes.Size = new System.Drawing.Size(955, 491);
+            this.pnl_movimentacoes.Size = new System.Drawing.Size(955, 623);
             this.pnl_movimentacoes.TabIndex = 4;
             // 
-            // menu_movimentacoes
+            // label1
             // 
-            this.menu_movimentacoes.BackColor = System.Drawing.SystemColors.Control;
-            this.menu_movimentacoes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.colaboradores,
-            this.fornecedores,
-            this.materiais,
-            this.clientes,
-            this.pedidos});
-            this.menu_movimentacoes.Location = new System.Drawing.Point(0, 0);
-            this.menu_movimentacoes.Name = "menu_movimentacoes";
-            this.menu_movimentacoes.Size = new System.Drawing.Size(1333, 24);
-            this.menu_movimentacoes.TabIndex = 3;
-            this.menu_movimentacoes.Text = "menuStrip1";
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label1.Font = new System.Drawing.Font("Lucida Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(327, 105);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(515, 68);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Movimentações";
             // 
-            // colaboradores
+            // btn_Materiais
             // 
-            this.colaboradores.Name = "colaboradores";
-            this.colaboradores.Size = new System.Drawing.Size(96, 20);
-            this.colaboradores.Text = "Colaboradores";
+            this.btn_Materiais.Image = global::projeto2023.Properties.Resources.menu_btnEstoque;
+            this.btn_Materiais.Location = new System.Drawing.Point(684, 229);
+            this.btn_Materiais.Name = "btn_Materiais";
+            this.btn_Materiais.Size = new System.Drawing.Size(210, 136);
+            this.btn_Materiais.TabIndex = 18;
+            this.btn_Materiais.Text = "MATERIAIS";
+            this.btn_Materiais.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Materiais.UseVisualStyleBackColor = true;
+            this.btn_Materiais.Click += new System.EventHandler(this.btn_Materiais_Click);
             // 
-            // fornecedores
+            // btn_Fornecedores
             // 
-            this.fornecedores.Name = "fornecedores";
-            this.fornecedores.Size = new System.Drawing.Size(90, 20);
-            this.fornecedores.Text = "Fornecedores";
+            this.btn_Fornecedores.Image = global::projeto2023.Properties.Resources.menu_btnFornecedor;
+            this.btn_Fornecedores.Location = new System.Drawing.Point(374, 229);
+            this.btn_Fornecedores.Name = "btn_Fornecedores";
+            this.btn_Fornecedores.Size = new System.Drawing.Size(211, 136);
+            this.btn_Fornecedores.TabIndex = 17;
+            this.btn_Fornecedores.Text = "FORNECEDORES";
+            this.btn_Fornecedores.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Fornecedores.UseVisualStyleBackColor = true;
+            this.btn_Fornecedores.Click += new System.EventHandler(this.btn_Fornecedores_Click);
             // 
-            // materiais
+            // btn_Pedidos
             // 
-            this.materiais.Name = "materiais";
-            this.materiais.Size = new System.Drawing.Size(67, 20);
-            this.materiais.Text = "Materiais";
+            this.btn_Pedidos.Image = global::projeto2023.Properties.Resources.menu_btnListaProntos;
+            this.btn_Pedidos.Location = new System.Drawing.Point(374, 431);
+            this.btn_Pedidos.Name = "btn_Pedidos";
+            this.btn_Pedidos.Size = new System.Drawing.Size(211, 136);
+            this.btn_Pedidos.TabIndex = 16;
+            this.btn_Pedidos.Text = "PEDIDOS";
+            this.btn_Pedidos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Pedidos.UseVisualStyleBackColor = true;
+            this.btn_Pedidos.Click += new System.EventHandler(this.btn_Pedidos_Click);
             // 
-            // clientes
+            // btn_Clientes
             // 
-            this.clientes.Name = "clientes";
-            this.clientes.Size = new System.Drawing.Size(61, 20);
-            this.clientes.Text = "Clientes";
+            this.btn_Clientes.Image = global::projeto2023.Properties.Resources.menu_btnCliente;
+            this.btn_Clientes.Location = new System.Drawing.Point(35, 431);
+            this.btn_Clientes.Name = "btn_Clientes";
+            this.btn_Clientes.Size = new System.Drawing.Size(210, 136);
+            this.btn_Clientes.TabIndex = 15;
+            this.btn_Clientes.Text = "CLIENTES";
+            this.btn_Clientes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Clientes.UseVisualStyleBackColor = true;
+            this.btn_Clientes.Click += new System.EventHandler(this.btn_Clientes_Click);
             // 
-            // pedidos
+            // btn_colabores
             // 
-            this.pedidos.Name = "pedidos";
-            this.pedidos.Size = new System.Drawing.Size(61, 20);
-            this.pedidos.Text = "Pedidos";
+            this.btn_colabores.Image = global::projeto2023.Properties.Resources.menu_btnCliente;
+            this.btn_colabores.Location = new System.Drawing.Point(35, 229);
+            this.btn_colabores.Name = "btn_colabores";
+            this.btn_colabores.Size = new System.Drawing.Size(210, 136);
+            this.btn_colabores.TabIndex = 14;
+            this.btn_colabores.Text = "COLABORADORES";
+            this.btn_colabores.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_colabores.UseVisualStyleBackColor = true;
+            this.btn_colabores.Click += new System.EventHandler(this.btn_colabores_Click);
+            // 
+            // pctb_cadastros
+            // 
+            this.pctb_cadastros.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pctb_cadastros.Image = global::projeto2023.Properties.Resources.logo;
+            this.pctb_cadastros.Location = new System.Drawing.Point(1005, 279);
+            this.pctb_cadastros.Name = "pctb_cadastros";
+            this.pctb_cadastros.Size = new System.Drawing.Size(292, 309);
+            this.pctb_cadastros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctb_cadastros.TabIndex = 13;
+            this.pctb_cadastros.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 596);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(116, 27);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "VOLTAR";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // frm_movimentacoes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
             this.ClientSize = new System.Drawing.Size(1333, 692);
-            this.Controls.Add(this.pctb_movimentacoes);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btn_Materiais);
+            this.Controls.Add(this.btn_Fornecedores);
+            this.Controls.Add(this.btn_Pedidos);
+            this.Controls.Add(this.btn_Clientes);
+            this.Controls.Add(this.btn_colabores);
+            this.Controls.Add(this.pctb_cadastros);
             this.Controls.Add(this.pnl_movimentacoes);
-            this.Controls.Add(this.menu_movimentacoes);
             this.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(111)))));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "frm_movimentacoes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_movimentacoes";
+            this.Text = "Movimentações Gerasi";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.pctb_movimentacoes)).EndInit();
-            this.menu_movimentacoes.ResumeLayout(false);
-            this.menu_movimentacoes.PerformLayout();
+            this.pnl_movimentacoes.ResumeLayout(false);
+            this.pnl_movimentacoes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctb_cadastros)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pctb_movimentacoes;
         private System.Windows.Forms.Panel pnl_movimentacoes;
-        private System.Windows.Forms.MenuStrip menu_movimentacoes;
-        private System.Windows.Forms.ToolStripMenuItem colaboradores;
-        private System.Windows.Forms.ToolStripMenuItem fornecedores;
-        private System.Windows.Forms.ToolStripMenuItem materiais;
-        private System.Windows.Forms.ToolStripMenuItem clientes;
-        private System.Windows.Forms.ToolStripMenuItem pedidos;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_Materiais;
+        private System.Windows.Forms.Button btn_Fornecedores;
+        private System.Windows.Forms.Button btn_Pedidos;
+        private System.Windows.Forms.Button btn_Clientes;
+        private System.Windows.Forms.Button btn_colabores;
+        private System.Windows.Forms.PictureBox pctb_cadastros;
+        private System.Windows.Forms.Label label2;
     }
 }

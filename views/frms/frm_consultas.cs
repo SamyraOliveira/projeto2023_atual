@@ -28,70 +28,45 @@ namespace projeto2023.views.frms
         }
 
 
-
-
-
-
         #region click panel
-        private void colaboradores_Click(object sender, EventArgs e)
-        {
-           // ltv_pedidos.Visible = false;
-           // dtv_colaboradores.Visible = true;
-            consulta_colaboradores frm = new consulta_colaboradores();
-            frm.ShowDialog();
-            /*ltv_fornecedores.Visible = false;
-            ltv_materiais.Visible = false;
-            ltv_clientes.Visible = false;
-            ltv_colaboradores.Visible = true;*/
-        }
 
-        private void fornecedores_Click(object sender, EventArgs e)
-        {
-            consulta_fornecedores frm = new consulta_fornecedores();
-            frm.ShowDialog();
-            // ltv_pedidos.Visible = false;
-            /*ltv_fornecedores.Visible = true;
-            ltv_materiais.Visible = false;
-            ltv_clientes.Visible = false;
-            ltv_colaboradores.Visible = false;*/
-        }
-
-        private void materiais_Click(object sender, EventArgs e)
-        {
-            // ltv_pedidos.Visible = false;
-            /* ltv_fornecedores.Visible = false;
-             ltv_materiais.Visible = true;
-             ltv_clientes.Visible = false;
-             ltv_colaboradores.Visible = false;*/
-            consulta_materiais frm = new consulta_materiais();
-            frm.ShowDialog();
-        }
-
-        private void clientes_Click(object sender, EventArgs e)
-        {
-
-            consulta_clientes frm = new consulta_clientes();
-            frm.ShowDialog();
-            // ltv_pedidos.Visible = false;
-            /* ltv_fornecedores.Visible = false;
-             ltv_materiais.Visible = false;
-             ltv_clientes.Visible = true;
-             ltv_colaboradores.Visible = false;*/
-        }
-
-        private void pedidos_Click(object sender, EventArgs e)
-        {
-            consulta_pedidos frm = new consulta_pedidos();
-            frm.ShowDialog();
-            //  ltv_pedidos.Visible = true;
-            /* ltv_fornecedores.Visible = false;
-             ltv_materiais.Visible = false;
-             ltv_clientes.Visible = false;
-             ltv_colaboradores.Visible = false;*/
-        }
 
 
         #endregion
 
+        private void btn_Fornecedores_Click(object sender, EventArgs e)
+        {
+            consulta_fornecedores frm = new consulta_fornecedores();
+            frm.ShowDialog();
+        }
+
+        private void btn_Materiais_Click(object sender, EventArgs e)
+        {
+            consulta_materiais frm = new consulta_materiais();
+            frm.ShowDialog();
+        }
+
+        private void btn_Clientes_Click(object sender, EventArgs e)
+        {
+            consulta_clientes  frm = new consulta_clientes();
+            frm.ShowDialog();
+        }
+
+        private void btn_Pedidos_Click(object sender, EventArgs e)
+        {
+            consulta_pedidos frm = new consulta_pedidos();
+            frm.ShowDialog();
+        }
+
+        private void btn_colabores_Click(object sender, EventArgs e)
+        {
+            consulta_colaboradores frm = new consulta_colaboradores();
+            frm.ShowDialog();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

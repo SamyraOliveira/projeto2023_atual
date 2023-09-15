@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(consulta_materiais));
             this.dtv_materiais = new System.Windows.Forms.DataGridView();
             this.codigoMaterialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigoFornecedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,94 +76,120 @@
             this.statusmaterialDataGridViewTextBoxColumn});
             this.dtv_materiais.DataSource = this.materiaisBindingSource;
             this.dtv_materiais.Location = new System.Drawing.Point(0, 0);
+            this.dtv_materiais.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtv_materiais.Name = "dtv_materiais";
             this.dtv_materiais.ReadOnly = true;
-            this.dtv_materiais.Size = new System.Drawing.Size(1324, 129);
+            this.dtv_materiais.RowHeadersWidth = 51;
+            this.dtv_materiais.Size = new System.Drawing.Size(1765, 159);
             this.dtv_materiais.TabIndex = 0;
             // 
             // codigoMaterialDataGridViewTextBoxColumn
             // 
             this.codigoMaterialDataGridViewTextBoxColumn.DataPropertyName = "codigo_Material";
             this.codigoMaterialDataGridViewTextBoxColumn.HeaderText = "codigo_Material";
+            this.codigoMaterialDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.codigoMaterialDataGridViewTextBoxColumn.Name = "codigoMaterialDataGridViewTextBoxColumn";
             this.codigoMaterialDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codigoMaterialDataGridViewTextBoxColumn.Width = 125;
             // 
             // codigoFornecedorDataGridViewTextBoxColumn
             // 
             this.codigoFornecedorDataGridViewTextBoxColumn.DataPropertyName = "codigo_Fornecedor";
             this.codigoFornecedorDataGridViewTextBoxColumn.HeaderText = "codigo_Fornecedor";
+            this.codigoFornecedorDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.codigoFornecedorDataGridViewTextBoxColumn.Name = "codigoFornecedorDataGridViewTextBoxColumn";
             this.codigoFornecedorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codigoFornecedorDataGridViewTextBoxColumn.Width = 125;
             // 
             // nomeMaterialDataGridViewTextBoxColumn
             // 
             this.nomeMaterialDataGridViewTextBoxColumn.DataPropertyName = "nome_Material";
             this.nomeMaterialDataGridViewTextBoxColumn.HeaderText = "nome_Material";
+            this.nomeMaterialDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nomeMaterialDataGridViewTextBoxColumn.Name = "nomeMaterialDataGridViewTextBoxColumn";
             this.nomeMaterialDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomeMaterialDataGridViewTextBoxColumn.Width = 125;
             // 
             // descricaoDataGridViewTextBoxColumn
             // 
             this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "descricao";
             this.descricaoDataGridViewTextBoxColumn.HeaderText = "descricao";
+            this.descricaoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
             this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descricaoDataGridViewTextBoxColumn.Width = 125;
             // 
             // unidadeMedidaDataGridViewTextBoxColumn
             // 
             this.unidadeMedidaDataGridViewTextBoxColumn.DataPropertyName = "unidadeMedida";
             this.unidadeMedidaDataGridViewTextBoxColumn.HeaderText = "unidadeMedida";
+            this.unidadeMedidaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.unidadeMedidaDataGridViewTextBoxColumn.Name = "unidadeMedidaDataGridViewTextBoxColumn";
             this.unidadeMedidaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.unidadeMedidaDataGridViewTextBoxColumn.Width = 125;
             // 
             // precoUnitarioDataGridViewTextBoxColumn
             // 
             this.precoUnitarioDataGridViewTextBoxColumn.DataPropertyName = "precoUnitario";
             this.precoUnitarioDataGridViewTextBoxColumn.HeaderText = "precoUnitario";
+            this.precoUnitarioDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.precoUnitarioDataGridViewTextBoxColumn.Name = "precoUnitarioDataGridViewTextBoxColumn";
             this.precoUnitarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.precoUnitarioDataGridViewTextBoxColumn.Width = 125;
             // 
             // dataEntradaDataGridViewTextBoxColumn
             // 
             this.dataEntradaDataGridViewTextBoxColumn.DataPropertyName = "dataEntrada";
             this.dataEntradaDataGridViewTextBoxColumn.HeaderText = "dataEntrada";
+            this.dataEntradaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dataEntradaDataGridViewTextBoxColumn.Name = "dataEntradaDataGridViewTextBoxColumn";
             this.dataEntradaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataEntradaDataGridViewTextBoxColumn.Width = 125;
             // 
             // numeroLoteDataGridViewTextBoxColumn
             // 
             this.numeroLoteDataGridViewTextBoxColumn.DataPropertyName = "numeroLote";
             this.numeroLoteDataGridViewTextBoxColumn.HeaderText = "numeroLote";
+            this.numeroLoteDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.numeroLoteDataGridViewTextBoxColumn.Name = "numeroLoteDataGridViewTextBoxColumn";
             this.numeroLoteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.numeroLoteDataGridViewTextBoxColumn.Width = 125;
             // 
             // localArmazenamentoDataGridViewTextBoxColumn
             // 
             this.localArmazenamentoDataGridViewTextBoxColumn.DataPropertyName = "localArmazenamento";
             this.localArmazenamentoDataGridViewTextBoxColumn.HeaderText = "localArmazenamento";
+            this.localArmazenamentoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.localArmazenamentoDataGridViewTextBoxColumn.Name = "localArmazenamentoDataGridViewTextBoxColumn";
             this.localArmazenamentoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.localArmazenamentoDataGridViewTextBoxColumn.Width = 125;
             // 
             // quantidadeMaterialDataGridViewTextBoxColumn
             // 
             this.quantidadeMaterialDataGridViewTextBoxColumn.DataPropertyName = "quantidade_Material";
             this.quantidadeMaterialDataGridViewTextBoxColumn.HeaderText = "quantidade_Material";
+            this.quantidadeMaterialDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.quantidadeMaterialDataGridViewTextBoxColumn.Name = "quantidadeMaterialDataGridViewTextBoxColumn";
             this.quantidadeMaterialDataGridViewTextBoxColumn.ReadOnly = true;
+            this.quantidadeMaterialDataGridViewTextBoxColumn.Width = 125;
             // 
             // ultimaAtualizacaoDataGridViewTextBoxColumn
             // 
             this.ultimaAtualizacaoDataGridViewTextBoxColumn.DataPropertyName = "UltimaAtualizacao";
             this.ultimaAtualizacaoDataGridViewTextBoxColumn.HeaderText = "UltimaAtualizacao";
+            this.ultimaAtualizacaoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.ultimaAtualizacaoDataGridViewTextBoxColumn.Name = "ultimaAtualizacaoDataGridViewTextBoxColumn";
             this.ultimaAtualizacaoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ultimaAtualizacaoDataGridViewTextBoxColumn.Width = 125;
             // 
             // statusmaterialDataGridViewTextBoxColumn
             // 
             this.statusmaterialDataGridViewTextBoxColumn.DataPropertyName = "status_material";
             this.statusmaterialDataGridViewTextBoxColumn.HeaderText = "status_material";
+            this.statusmaterialDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.statusmaterialDataGridViewTextBoxColumn.Name = "statusmaterialDataGridViewTextBoxColumn";
             this.statusmaterialDataGridViewTextBoxColumn.ReadOnly = true;
+            this.statusmaterialDataGridViewTextBoxColumn.Width = 125;
             // 
             // materiaisBindingSource
             // 
@@ -180,9 +207,10 @@
             // 
             // btn_fechar
             // 
-            this.btn_fechar.Location = new System.Drawing.Point(1155, 411);
+            this.btn_fechar.Location = new System.Drawing.Point(1540, 506);
+            this.btn_fechar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_fechar.Name = "btn_fechar";
-            this.btn_fechar.Size = new System.Drawing.Size(185, 63);
+            this.btn_fechar.Size = new System.Drawing.Size(247, 78);
             this.btn_fechar.TabIndex = 1;
             this.btn_fechar.Text = "FECHAR";
             this.btn_fechar.UseVisualStyleBackColor = true;
@@ -190,9 +218,10 @@
             // 
             // btn_imprimir
             // 
-            this.btn_imprimir.Location = new System.Drawing.Point(951, 411);
+            this.btn_imprimir.Location = new System.Drawing.Point(1268, 506);
+            this.btn_imprimir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_imprimir.Name = "btn_imprimir";
-            this.btn_imprimir.Size = new System.Drawing.Size(185, 63);
+            this.btn_imprimir.Size = new System.Drawing.Size(247, 78);
             this.btn_imprimir.TabIndex = 3;
             this.btn_imprimir.Text = "IMPRIMIR";
             this.btn_imprimir.UseVisualStyleBackColor = true;
@@ -205,20 +234,23 @@
             this.panel1.Controls.Add(this.btn_fechar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1352, 486);
+            this.panel1.Size = new System.Drawing.Size(1803, 598);
             this.panel1.TabIndex = 4;
             // 
             // consulta_materiais
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
-            this.ClientSize = new System.Drawing.Size(1352, 486);
+            this.ClientSize = new System.Drawing.Size(1803, 598);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "consulta_materiais";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "consulta_materiais";
+            this.Text = "Consulta Materiais";
             this.Load += new System.EventHandler(this.consulta_materiais_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtv_materiais)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.materiaisBindingSource)).EndInit();

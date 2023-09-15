@@ -12,9 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.WebSockets;
-
-
-
+using Connection = projeto2023.controllers.Connection;
 
 namespace projeto2023.views.pedidos
 {
@@ -106,6 +104,10 @@ namespace projeto2023.views.pedidos
             txbEntrada.Text = ltv_showPedidos.Items[indice].SubItems[10].Text;
 
             btn_excluir.Visible = true; */
+        }
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void pctb_estampa_MouseClick(object sender, MouseEventArgs e)

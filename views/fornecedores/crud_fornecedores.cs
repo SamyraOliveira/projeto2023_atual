@@ -20,9 +20,20 @@ namespace projeto2023.views.fornecedores
             InitializeComponent();
         }
 
-        private void btn_salvar_Click(object sender, EventArgs e)
+        private void crud_fornecedores_Load(object sender, EventArgs e)
         {
+            string[] estados = {
+                "Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal",
+                "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul",
+                "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí",
+                "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia",
+                "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins"
+            };
+            cmb_estado.Items.AddRange(estados);
+        }
 
+        private void btn_salvar_n_Click(object sender, EventArgs e)
+        {
 
             string fornc_nomeFantasia = txb_nomefantasia.Text;
             string fornc_razaoSocial = txb_razaosocial.Text;
@@ -30,8 +41,8 @@ namespace projeto2023.views.fornecedores
             string fornc_inscricaoEstadual = txb_inscricaoEstadual.Text;
             string fornc_inscricaoMunicipal = txb_inscricaoMunicipal.Text;
             string fornc_cep = txb_cep.Text;
-            string fornc_endereco =txb_endereco.Text;
-            string fornc_numero =txb_numero.Text;
+            string fornc_endereco = txb_endereco.Text;
+            string fornc_numero = txb_numero.Text;
             string fornc_cidade = txb_cidade.Text;
             string fornc_estado = cmb_estado.Text;
             string fornc_representante = txb_representante.Text;
@@ -63,42 +74,42 @@ namespace projeto2023.views.fornecedores
             {
                 MessageBox.Show(erro.Message, "AVISO DE ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    txb_nomefantasia.Focus();
+                txb_nomefantasia.Focus();
                 if (erro.Message.ToUpper().Contains(" "))
-                
+
                     txb_razaosocial.Focus();
                 if (erro.Message.ToUpper().Contains(""))
-                
+
                     txb_cnpj.Focus();
                 if (erro.Message.ToUpper().Contains(""))
-                
+
                     txb_inscricaoEstadual.Focus();
                 if (erro.Message.ToUpper().Contains(""))
-                
+
                     txb_inscricaoMunicipal.Focus();
                 if (erro.Message.ToUpper().Contains(" "))
-                
+
                     txb_cep.Focus();
                 if (erro.Message.ToUpper().Contains(""))
-               
+
                     txb_endereco.Focus();
                 if (erro.Message.ToUpper().Contains(""))
-                
+
                     txb_numero.Focus();
                 if (erro.Message.ToUpper().Contains(""))
-                
+
                     txb_cidade.Focus();
                 if (erro.Message.ToUpper().Contains(""))
-                
+
                     cmb_estado.Focus();
                 if (erro.Message.ToUpper().Contains(" "))
-                
+
                     txb_representante.Focus();
                 if (erro.Message.ToUpper().Contains(""))
-                
+
                     txb_email.Focus();
                 if (erro.Message.ToUpper().Contains(""))
-                
+
                     txb_contato.Focus();
                 if (erro.Message.ToUpper().Contains(""))
                     mnth_contrato.Focus();
@@ -106,10 +117,28 @@ namespace projeto2023.views.fornecedores
                 return;
             }
             //listaFornecedores();
-            btn_limpar_Click(null, null);
+            btn_limpar_n_Click(null, null);
+
         }
 
-        private void btn_limpar_Click(object sender, EventArgs e)
+        private void btn_excluir_n_Click(object sender, EventArgs e)
+        {
+            AddBanco fornecedoresDAO = new AddBanco();
+
+            try
+            {
+                fornecedoresDAO.DeleteFornecedor(codigo_Fornecedor);
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message, "AVISO DE ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            Update();
+
+            btn_limpar_n_Click(null, null);
+        }
+
+        private void btn_limpar_n_Click(object sender, EventArgs e)
         {
             txb_nomefantasia.Clear();
             txb_razaosocial.Clear();
@@ -124,43 +153,20 @@ namespace projeto2023.views.fornecedores
             txb_representante.Clear();
             txb_email.Clear();
             txb_contato.Clear();
-            btn_excluir.Visible = false;
+            btn_excluir_n.Visible = false;
             codigo_Fornecedor = -1;
-           // listaFornecedores();
+            // listaFornecedores();
+
         }
 
-        private void btn_excluir_Click(object sender, EventArgs e)
-        {
-            AddBanco fornecedoresDAO = new AddBanco();
-
-            try
-            {
-                fornecedoresDAO.DeleteFornecedor(codigo_Fornecedor);
-            }
-            catch (Exception erro)
-            {
-                MessageBox.Show(erro.Message, "AVISO DE ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            Update();
-
-             btn_limpar_Click(null, null);
-        }
-
-        private void btn_cancelar_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void crud_fornecedores_Load(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-            string[] estados = {
-                "Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal",
-                "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul",
-                "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí",
-                "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia",
-                "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins"
-            };
-            cmb_estado.Items.AddRange(estados);
+            this.Close();
         }
     }
 }

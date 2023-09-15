@@ -16,5 +16,35 @@ namespace projeto2023.views.frms
         {
             InitializeComponent();
         }
+
+        private void btn_colabores_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Fornecedores_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Materiais_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Clientes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Pedidos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

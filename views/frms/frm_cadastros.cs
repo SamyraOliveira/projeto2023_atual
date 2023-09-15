@@ -23,34 +23,39 @@ namespace projeto2023.views.frms
             InitializeComponent();
         }
 
-        private void colaboradores_Click(object sender, EventArgs e)
+        private void btn_colabores_Click(object sender, EventArgs e)
         {
             crud_colaboradores frm = new crud_colaboradores();
             frm.ShowDialog();
         }
 
-        private void fornecedores_Click(object sender, EventArgs e)
+        private void btn_Fornecedores_Click(object sender, EventArgs e)
         {
             crud_fornecedores frm = new crud_fornecedores();
             frm.ShowDialog();
         }
 
-        private void materiais_Click(object sender, EventArgs e)
+        private void btn_Materiais_Click(object sender, EventArgs e)
         {
             crud_materiais frm = new crud_materiais();
             frm.ShowDialog();
         }
 
-        private void clientes_Click(object sender, EventArgs e)
+        private void btn_Clientes_Click(object sender, EventArgs e)
         {
             crud_clientes frm = new crud_clientes();
             frm.ShowDialog();
         }
 
-        private void pedidos_Click(object sender, EventArgs e)
+        private void btn_Pedidos_Click(object sender, EventArgs e)
         {
             crud_pedidos frm = new crud_pedidos();
             frm.ShowDialog();
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using projeto2023.models;
+using projeto2023.views.clientes;
+using projeto2023.views.colaboradores;
+using projeto2023.views.fornecedores;
 using projeto2023.views.frms;
+using projeto2023.views.producao;
 
 namespace projeto2023
 {
-    internal static class Program
+    public class Program
     {
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.

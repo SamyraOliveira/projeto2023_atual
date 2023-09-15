@@ -22,9 +22,21 @@ namespace projeto2023.views.clientes
             InitializeComponent();
         }
 
-        private void btn_salvar_Click(object sender, EventArgs e)
+        private void crud_clientes_Load(object sender, EventArgs e)
         {
-            string cli_nome = txb_nome.Text;
+            string[] estados = {
+                "Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal",
+                "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul",
+                "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí",
+                "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia",
+                "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins"
+            };
+            cmb_estado.Items.AddRange(estados);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           string cli_nome = txb_nome.Text;
             string cli_CPF = txb_cpf.Text;
             string cli_telefone = txb_telefone.Text;
             string cli_email = txb_email.Text;
@@ -83,10 +95,9 @@ namespace projeto2023.views.clientes
             //listaClientes();
 
 
-            btn_limpar_Click(null, null);
+            button2_Click(null, null);
         }
-
-        private void btn_excluir_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
             AddBanco clientesDAO = new AddBanco();
 
@@ -103,11 +114,11 @@ namespace projeto2023.views.clientes
             //btn_limpar(null, null);
 
             // TODO: esta linha de código carrega dados na tabela 'estampariadbDataSet8.Clientes'. Você pode movê-la ou removê-la conforme necessário.
-           // this.clientesTableAdapter1.Fill(this.estampariadbDataSet12Clientes.Clientes);
+            // this.clientesTableAdapter1.Fill(this.estampariadbDataSet12Clientes.Clientes);
 
         }
 
-        private void btn_limpar_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             txb_nome.Clear();
             txb_cpf.Clear();
@@ -117,26 +128,14 @@ namespace projeto2023.views.clientes
             txb_cidade.Clear();
             txb_endereco.Clear();
             txb_cep.Clear();
-            btn_excluir.Visible = false;
+            //btn_excluir.Visible = false;
             codigo_Cliente = -1;
             //listaClientes();
         }
 
-        private void btn_cancelar_Click(object sender, EventArgs e)
+        private void label10_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void crud_clientes_Load(object sender, EventArgs e)
-        {
-            string[] estados = {
-                "Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal",
-                "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul",
-                "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí",
-                "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia",
-                "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins"
-            };
-            cmb_estado.Items.AddRange(estados);
         }
     }
 }

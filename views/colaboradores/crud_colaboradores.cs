@@ -24,6 +24,7 @@ namespace projeto2023.views.colaboradores
 
         private void btn_salvar_Click(object sender, EventArgs e)
         {
+            int colab_codigo = 1;
             string fun_CPF = txb_cpf.Text;
          //   MessageBox.Show(fun_CPF, "AVISO DE ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             string fun_cargo = cmb_cargo.Text;
@@ -54,7 +55,7 @@ namespace projeto2023.views.colaboradores
                 }
                 else
                 {
-                    Colaboradores colaborador = new Colaboradores(codigo_Funcionario, fun_CPF, fun_cargo, fun_telefone, fun_email, fun_estado, fun_cidade, fun_endereco, fun_bairro, fun_CEP, fun_nome, fun_dataNasc, fun_usuario, Security.Hash_login(fun_senha), fun_status);
+                    Colaboradores colaborador = new Colaboradores(colab_codigo,fun_CPF, fun_cargo, fun_telefone, fun_email, fun_estado, fun_cidade, fun_endereco, fun_bairro, fun_CEP, fun_nome, fun_dataNasc, fun_usuario, Security.Hash_login(fun_senha), fun_status);
                     colaboradorDAO.UpdateColaborador(colaborador);
                 }
             }
@@ -158,6 +159,11 @@ namespace projeto2023.views.colaboradores
             };
             cmb_cargo.Items.AddRange(cargos);
 
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
