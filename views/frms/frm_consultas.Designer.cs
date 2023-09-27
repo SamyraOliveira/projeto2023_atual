@@ -45,6 +45,7 @@
             this.btn_colabores = new System.Windows.Forms.Button();
             this.pctb_consultas = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_consultar_producao = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pedidosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estampariadbDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estampariadbDataSet)).BeginInit();
@@ -180,12 +181,26 @@
             this.label2.Text = "VOLTAR";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // btn_consultar_producao
+            // 
+            this.btn_consultar_producao.Image = global::projeto2023.Properties.Resources.menu_btnEstoque;
+            this.btn_consultar_producao.Location = new System.Drawing.Point(784, 384);
+            this.btn_consultar_producao.Name = "btn_consultar_producao";
+            this.btn_consultar_producao.Size = new System.Drawing.Size(201, 136);
+            this.btn_consultar_producao.TabIndex = 21;
+            this.btn_consultar_producao.Text = "PRODUÇÃO";
+            this.btn_consultar_producao.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_consultar_producao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_consultar_producao.UseVisualStyleBackColor = true;
+            this.btn_consultar_producao.Click += new System.EventHandler(this.btn_consultar_producao_Click);
+            // 
             // frm_consultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
             this.ClientSize = new System.Drawing.Size(1755, 853);
+            this.Controls.Add(this.btn_consultar_producao);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Materiais);
@@ -232,5 +247,6 @@
         private System.Windows.Forms.Button btn_colabores;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_consultar_producao;
     }
 }

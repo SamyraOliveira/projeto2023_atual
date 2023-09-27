@@ -53,7 +53,7 @@ namespace projeto2023.views.fornecedores
             int fornc_status = 1;
 
 
-            MessageBox.Show("FINALIZAR CADASTRO");
+            //MessageBox.Show("FINALIZAR CADASTRO");
             try
             {
                 //ligacao no banco de dados
@@ -153,7 +153,6 @@ namespace projeto2023.views.fornecedores
             txb_representante.Clear();
             txb_email.Clear();
             txb_contato.Clear();
-            btn_excluir_n.Visible = false;
             codigo_Fornecedor = -1;
             // listaFornecedores();
 

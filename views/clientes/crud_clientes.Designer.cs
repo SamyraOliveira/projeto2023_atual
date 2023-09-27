@@ -51,12 +51,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pctb_cadastros = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.pctb_cadastros = new System.Windows.Forms.PictureBox();
             this.pnl_crud_clientes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctb_cadastros)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctb_cadastros)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_crud_clientes
@@ -92,9 +92,9 @@
             this.btn_salvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btn_salvar.Enabled = false;
             this.btn_salvar.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
-            this.btn_salvar.Location = new System.Drawing.Point(563, 461);
+            this.btn_salvar.Location = new System.Drawing.Point(539, 461);
             this.btn_salvar.Name = "btn_salvar";
-            this.btn_salvar.Size = new System.Drawing.Size(121, 73);
+            this.btn_salvar.Size = new System.Drawing.Size(121, 55);
             this.btn_salvar.TabIndex = 32;
             this.btn_salvar.Text = "SALVAR";
             this.btn_salvar.UseVisualStyleBackColor = false;
@@ -118,7 +118,7 @@
             this.btn_limpar.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.btn_limpar.Location = new System.Drawing.Point(694, 461);
             this.btn_limpar.Name = "btn_limpar";
-            this.btn_limpar.Size = new System.Drawing.Size(121, 73);
+            this.btn_limpar.Size = new System.Drawing.Size(121, 55);
             this.btn_limpar.TabIndex = 31;
             this.btn_limpar.Text = "LIMPAR";
             this.btn_limpar.UseVisualStyleBackColor = false;
@@ -285,16 +285,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome";
             // 
-            // pctb_cadastros
-            // 
-            this.pctb_cadastros.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pctb_cadastros.Location = new System.Drawing.Point(1255, 229);
-            this.pctb_cadastros.Name = "pctb_cadastros";
-            this.pctb_cadastros.Size = new System.Drawing.Size(292, 309);
-            this.pctb_cadastros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctb_cadastros.TabIndex = 34;
-            this.pctb_cadastros.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label10);
@@ -313,6 +303,16 @@
             this.label10.TabIndex = 21;
             this.label10.Text = "VOLTAR";
             this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // pctb_cadastros
+            // 
+            this.pctb_cadastros.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pctb_cadastros.Location = new System.Drawing.Point(1255, 229);
+            this.pctb_cadastros.Name = "pctb_cadastros";
+            this.pctb_cadastros.Size = new System.Drawing.Size(292, 309);
+            this.pctb_cadastros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctb_cadastros.TabIndex = 34;
+            this.pctb_cadastros.TabStop = false;
             // 
             // crud_clientes
             // 
@@ -334,9 +334,9 @@
             this.Load += new System.EventHandler(this.crud_clientes_Load);
             this.pnl_crud_clientes.ResumeLayout(false);
             this.pnl_crud_clientes.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctb_cadastros)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctb_cadastros)).EndInit();
             this.ResumeLayout(false);
 
         }

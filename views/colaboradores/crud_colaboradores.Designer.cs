@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(crud_colaboradores));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
             this.pctb_cadastros = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txb_cep = new System.Windows.Forms.TextBox();
@@ -39,8 +40,6 @@
             this.mnth_dataNasc = new System.Windows.Forms.MonthCalendar();
             this.btn_salvar = new System.Windows.Forms.Button();
             this.btn_limpar = new System.Windows.Forms.Button();
-            this.btn_cancelar = new System.Windows.Forms.Button();
-            this.btn_excluir = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -62,7 +61,6 @@
             this.txb_usuario = new System.Windows.Forms.TextBox();
             this.cmb_estado = new System.Windows.Forms.ComboBox();
             this.cmb_cargo = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctb_cadastros)).BeginInit();
             this.SuspendLayout();
@@ -79,8 +77,6 @@
             this.panel1.Controls.Add(this.mnth_dataNasc);
             this.panel1.Controls.Add(this.btn_salvar);
             this.panel1.Controls.Add(this.btn_limpar);
-            this.panel1.Controls.Add(this.btn_cancelar);
-            this.panel1.Controls.Add(this.btn_excluir);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
@@ -108,11 +104,22 @@
             this.panel1.Size = new System.Drawing.Size(1646, 804);
             this.panel1.TabIndex = 0;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(25, 747);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(116, 27);
+            this.label14.TabIndex = 21;
+            this.label14.Text = "VOLTAR";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
+            // 
             // pctb_cadastros
             // 
             this.pctb_cadastros.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pctb_cadastros.Image = global::projeto2023.Properties.Resources.logo;
-            this.pctb_cadastros.Location = new System.Drawing.Point(1220, 317);
+            this.pctb_cadastros.Location = new System.Drawing.Point(1151, 317);
             this.pctb_cadastros.Name = "pctb_cadastros";
             this.pctb_cadastros.Size = new System.Drawing.Size(292, 309);
             this.pctb_cadastros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -171,9 +178,9 @@
             // 
             this.btn_salvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btn_salvar.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
-            this.btn_salvar.Location = new System.Drawing.Point(110, 584);
+            this.btn_salvar.Location = new System.Drawing.Point(556, 565);
             this.btn_salvar.Name = "btn_salvar";
-            this.btn_salvar.Size = new System.Drawing.Size(121, 73);
+            this.btn_salvar.Size = new System.Drawing.Size(121, 61);
             this.btn_salvar.TabIndex = 28;
             this.btn_salvar.Text = "SALVAR";
             this.btn_salvar.UseVisualStyleBackColor = false;
@@ -183,37 +190,13 @@
             // 
             this.btn_limpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_limpar.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
-            this.btn_limpar.Location = new System.Drawing.Point(505, 584);
+            this.btn_limpar.Location = new System.Drawing.Point(727, 565);
             this.btn_limpar.Name = "btn_limpar";
-            this.btn_limpar.Size = new System.Drawing.Size(121, 73);
+            this.btn_limpar.Size = new System.Drawing.Size(121, 61);
             this.btn_limpar.TabIndex = 27;
             this.btn_limpar.Text = "LIMPAR";
             this.btn_limpar.UseVisualStyleBackColor = false;
             this.btn_limpar.Click += new System.EventHandler(this.btn_limpar_Click);
-            // 
-            // btn_cancelar
-            // 
-            this.btn_cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btn_cancelar.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
-            this.btn_cancelar.Location = new System.Drawing.Point(706, 584);
-            this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(121, 73);
-            this.btn_cancelar.TabIndex = 26;
-            this.btn_cancelar.Text = "CANCELAR";
-            this.btn_cancelar.UseVisualStyleBackColor = false;
-            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
-            // 
-            // btn_excluir
-            // 
-            this.btn_excluir.BackColor = System.Drawing.Color.Red;
-            this.btn_excluir.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
-            this.btn_excluir.Location = new System.Drawing.Point(305, 584);
-            this.btn_excluir.Name = "btn_excluir";
-            this.btn_excluir.Size = new System.Drawing.Size(121, 73);
-            this.btn_excluir.TabIndex = 25;
-            this.btn_excluir.Text = "EXCLUIR";
-            this.btn_excluir.UseVisualStyleBackColor = false;
-            this.btn_excluir.Click += new System.EventHandler(this.btn_excluir_Click);
             // 
             // label12
             // 
@@ -403,17 +386,6 @@
             this.cmb_cargo.Size = new System.Drawing.Size(121, 24);
             this.cmb_cargo.TabIndex = 1;
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(25, 747);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(116, 27);
-            this.label14.TabIndex = 21;
-            this.label14.Text = "VOLTAR";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
-            // 
             // crud_colaboradores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -442,8 +414,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_salvar;
         private System.Windows.Forms.Button btn_limpar;
-        private System.Windows.Forms.Button btn_cancelar;
-        private System.Windows.Forms.Button btn_excluir;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;

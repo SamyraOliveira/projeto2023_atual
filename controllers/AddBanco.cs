@@ -9,6 +9,8 @@ using System.Data.SqlTypes;
 using projeto2023.models;
 using System.Windows.Forms;
 using System.Globalization;
+using projeto2023.views.colaboradores;
+using projeto2023.views.producao;
 
 namespace projeto2023.controllers
 {
@@ -653,7 +655,7 @@ namespace projeto2023.controllers
         public void InsertPedidos(Pedidos pedido)
         {
             Cmd.Connection = Con.RetornarConexao();
-            Cmd.CommandText = @"INSERT INTO  Pedidos VALUES (@codigo_Colaborador, @codigo_Cliente, @corCamiseta_Pedido, @tecidoCamiseta_Pedido, @formatoCamiseta_Pedido, @tipoGola_Pedido, @tecnicas_Pedido, @estampa_Pedido, @tamP_quant_Pedido, @tamM_quant_Pedido, @tamG_quant_Pedido, @diponibilizadoCliente, @quantdisponibilizadoCliente, @totalCamisetas_Pedido, @data_inicial, @data_entrega, @valorUnit_Pedido, @valorTotal_Pedido, @valorEntrada_Pedido, @valorAberto_Pedido, @formaPagamentoEntrada_Pedido, @formaPagamentoFinal_Pedido, @status_Pedido )";
+            Cmd.CommandText = @"INSERT INTO  Pedidos VALUES (@codigo_Colaborador, @codigo_Cliente, @corCamiseta_Pedido, @tecidoCamiseta_Pedido, @formatoCamiseta_Pedido, @tipoGola_Pedido, @tecnicas_Pedido, @tamP_quant_Pedido, @tamM_quant_Pedido, @tamG_quant_Pedido, @diponibilizadoCliente, @quantdisponibilizadoCliente, @totalCamisetas_Pedido, @data_inicial, @data_entrega, @valorUnit_Pedido, @valorTotal_Pedido, @valorEntrada_Pedido, @valorAberto_Pedido, @formaPagamentoEntrada_Pedido, @formaPagamentoFinal_Pedido, @status_Pedido, @estampa_Pedido)";
 
 
             Cmd.Parameters.AddWithValue("@codigo_Colaborador", pedido.colab_codigo);
@@ -663,7 +665,6 @@ namespace projeto2023.controllers
             Cmd.Parameters.AddWithValue("@formatoCamiseta_Pedido", pedido.ped_formato);
             Cmd.Parameters.AddWithValue("@tipoGola_Pedido", pedido.ped_gola);
             Cmd.Parameters.AddWithValue("@tecnicas_Pedido", pedido.ped_tecnica);
-            Cmd.Parameters.AddWithValue("@estampa_Pedido", pedido.ped_estampa);
             Cmd.Parameters.AddWithValue("@tamP_quant_Pedido", pedido.ped_tamP);
             Cmd.Parameters.AddWithValue("@tamM_quant_Pedido", pedido.ped_tamM);
             Cmd.Parameters.AddWithValue("@tamG_quant_Pedido", pedido.ped_tamG);
@@ -679,6 +680,7 @@ namespace projeto2023.controllers
             Cmd.Parameters.AddWithValue("@formaPagamentoEntrada_Pedido", pedido.ped_formaPagamentoEntrada);
             Cmd.Parameters.AddWithValue("@formaPagamentoFinal_Pedido", pedido.ped_formaPagamentoFinal);
             Cmd.Parameters.AddWithValue("@status_Pedido", pedido.ped_status);
+            Cmd.Parameters.AddWithValue("@estampa_Pedido", pedido.ped_estampa);
 
 
             try
@@ -708,7 +710,7 @@ namespace projeto2023.controllers
                 while (rd.Read())
                 {
 
-                    Pedidos pedido = new Pedidos((int)rd["codigo_Pedido"], (int)rd["codigo_Colaborador"], (int)rd["codigo_Cliente"], (string)rd["corCamiseta_Pedido"], (string)rd["tecidoCamiseta_Pedido"], (string)rd["formatoCamiseta_Pedido"], (string)rd["tipoGola_Pedido"], (string)rd["tecnicas_Pedido"], (byte[])rd["estampa_Pedido"], (int)rd["tamP_quant_Pedido"], (int)rd["tamM_quant_Pedido"], (int)rd["tamG_quant_Pedido"], (int)rd["diponibilizadoCliente"], (int)rd["quantdisponibilizadoCliente"], (int)rd["totalCamisetas_Pedido"], (DateTime)rd["data_inicial"], (DateTime)rd["data_entrega"], (decimal)rd["valorUnit_Pedido"], (decimal)rd["valorTotal_Pedido"], (decimal)rd["valorEntrada_Pedido"], (decimal)rd["valorAberto_Pedido"], (string)rd["formaPagamentoEntrada_Pedido"], (string)rd["formaPagamentoFinal_Pedido"], (string)rd["status_Pedido"]);
+                    Pedidos pedido = new Pedidos((int)rd["codigo_Pedido"], (int)rd["codigo_Colaborador"], (int)rd["codigo_Cliente"], (string)rd["corCamiseta_Pedido"], (string)rd["tecidoCamiseta_Pedido"], (string)rd["formatoCamiseta_Pedido"], (string)rd["tipoGola_Pedido"], (string)rd["tecnicas_Pedido"], (string)rd["estampa_Pedido"], (int)rd["tamP_quant_Pedido"], (int)rd["tamM_quant_Pedido"], (int)rd["tamG_quant_Pedido"], (int)rd["diponibilizadoCliente"], (int)rd["quantdisponibilizadoCliente"], (int)rd["totalCamisetas_Pedido"], (DateTime)rd["data_inicial"], (DateTime)rd["data_entrega"], (decimal)rd["valorUnit_Pedido"], (decimal)rd["valorTotal_Pedido"], (decimal)rd["valorEntrada_Pedido"], (decimal)rd["valorAberto_Pedido"], (string)rd["formaPagamentoEntrada_Pedido"], (string)rd["formaPagamentoFinal_Pedido"], (string)rd["status_Pedido"]);
 
 
                     listaPedidos.Add(pedido);
@@ -830,8 +832,33 @@ namespace projeto2023.controllers
         #region PRODUÇÃO
 
         #endregion
+        //INSERIR DADOS COLABORADOR
+        public void InsertProducao(Producao producao)
+        {
+            Cmd.Connection = Con.RetornarConexao();
+            Cmd.CommandText = @"INSERT INTO PRODUCOES (ID_produto, Quantidade_P, Quantidade_M, Quantidade_G, COR, Tecido, Formato, Tipo_Gola, Tecnicas, Data_Entrega, Status) VALUES (@codigo_produto, @quantidade_P, @quantidade_M, @quantidade_G, @cor, @tecido, @formato, @gola, @tecnicas, @Data_Entrega, @status)";
+            Cmd.Parameters.AddWithValue("@codigo_produto", producao.codigo_produto);
+            Cmd.Parameters.AddWithValue("@quantidade_P", producao.quantidade_P);
+            Cmd.Parameters.AddWithValue("@quantidade_M", producao.quantidade_M);
+            Cmd.Parameters.AddWithValue("@quantidade_G", producao.quantidade_G );
+            Cmd.Parameters.AddWithValue("@cor", producao.cor);
+            Cmd.Parameters.AddWithValue("@tecido", producao.tecido);
+            Cmd.Parameters.AddWithValue("@formato", producao.formato);
+            Cmd.Parameters.AddWithValue("@gola", producao.gola);
+            Cmd.Parameters.AddWithValue("@tecnicas", producao.tecnicas);
+            Cmd.Parameters.AddWithValue("@Data_Entrega", producao.Data_Entrega);
+            Cmd.Parameters.AddWithValue("@status", producao.status);
 
+            try
+            {
+                Cmd.ExecuteNonQuery();
+                Con.FecharConexao();
 
-
+            }
+            catch (Exception erro)
+            {
+                throw new Exception("Erro problemas ao inserir o colaborador ao banco de dados. \n" + erro.Message);
+            }
+        }
     }
 }

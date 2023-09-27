@@ -28,6 +28,7 @@ namespace projeto2023.views.pedidos
 
         List<Colaboradores_dados> colaboradores = new List<Colaboradores_dados>();
         List<Clientes_dados> clientes = new List<Clientes_dados>();
+        private string caminhoDoArquivoSelecionado;
 
 
 
@@ -110,45 +111,43 @@ namespace projeto2023.views.pedidos
             this.Close();
         }
 
-        private void pctb_estampa_MouseClick(object sender, MouseEventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            try
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Arquivos JPEG|*.jpeg;*.jpg|Todos os arquivos|*.*";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                if (OFD_estamparia.ShowDialog() == DialogResult.OK)
-                {
-                    ped_estampa = OFD_estamparia.FileName;
-                    if (pctb_estampa.Image != null)
-                        pctb_estampa.Image.Dispose();
-                    pctb_estampa.Image = Image.FromFile(ped_estampa);
-                }
-            }
-            catch (Exception erro)
-            {
-                MessageBox.Show(erro.Message, "AVISO DE ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                caminhoDoArquivoSelecionado = openFileDialog.FileName;
+
+                // Agora você pode usar o caminhoDoArquivoSelecionado para trabalhar com a imagem selecionada.
+                // Por exemplo, você pode exibir a imagem em um PictureBox:
+                pctb_estampa.ImageLocation = caminhoDoArquivoSelecionado;
+                txb_caminhoImagem.Text = caminhoDoArquivoSelecionado;
+
             }
         }
+
 
         #region CRUD
 
         private void btnregistrar_pedido_Click(object sender, EventArgs e)
         {
-            
-            int cod_colab = cmb_idColaborador.SelectedIndex;
-            //string nome_colab = txb_nomeColaborador.Text;
-            int cod_cli = cmb_idCliente.SelectedIndex;
-            //string nome_cli = txb_nomeCliente.Text;
+            int cod_colab = cmb_idColaborador.Items.Count;
+            string ped_estampa = txb_caminhoImagem.Text;
+            int cod_cli = cmb_idCliente.Items.Count;           
             string ped_cor = cmb_cores.Text;
             string ped_tecido = cmb_tecido.Text;
             string ped_formato = cmb_formato.Text;
             string ped_gola = cmb_gola.Text;
             string ped_tecnica = cmb_tecnica.Text;
+
             //armazenar a imagem
-            FileStream estampa = new FileStream(ped_estampa, FileMode.Open, FileAccess.Read);
-            BinaryReader reader = new BinaryReader(estampa);
-            byte[] estampa_pedido = reader.ReadBytes((int)estampa.Length);
-            estampa.Close();
-            reader.Close();
+            //FileStream estampa = new FileStream(ped_estampa, FileMode.Open, FileAccess.Read);
+           // BinaryReader reader = new BinaryReader(estampa);
+            //byte[] estampa_pedido = reader.ReadBytes((int)estampa.Length);
+            //estampa.Close();
+            //reader.Close();
             int ped_tamanhoP = Convert.ToInt32(txb_tamP.Text);
             int ped_tamanhoM = Convert.ToInt32(txb_tamM.Text);
             int ped_tamanhoG = Convert.ToInt32(txb_tamG.Text);
@@ -195,7 +194,7 @@ namespace projeto2023.views.pedidos
 
                     else
                     {
-                        Pedidos pedido = new Pedidos(cod_colab, cod_cli, ped_cor, ped_tecido, ped_formato, ped_gola, ped_tecnica, estampa_pedido, ped_tamanhoP, ped_tamanhoM, ped_tamanhoG, ped_disponibilizadocliente, ped_quantdisponibilizadocliente, ped_totalCamisetas, peddatainicio, peddataentrega, ped_valorUnit, ped_totalValor, ped_totalEntrada, ped_totalAberto, ped_pagamentoEntrada, ped_pagamentoFinal, ped_status);
+                        Pedidos pedido = new Pedidos(cod_colab, cod_cli, ped_cor, ped_tecido, ped_formato, ped_gola, ped_tecnica, ped_estampa, ped_tamanhoP, ped_tamanhoM, ped_tamanhoG, ped_disponibilizadocliente, ped_quantdisponibilizadocliente, ped_totalCamisetas, peddatainicio, peddataentrega, ped_valorUnit, ped_totalValor, ped_totalEntrada, ped_totalAberto, ped_pagamentoEntrada, ped_pagamentoFinal, ped_status);
                         pedidoDAO.InsertPedidos(pedido);
                     }
 
@@ -203,7 +202,7 @@ namespace projeto2023.views.pedidos
 
                 else
                 {
-                    Pedidos pedido = new Pedidos(codigo_Pedido, cod_colab, cod_cli, ped_cor, ped_tecido, ped_formato, ped_gola, ped_tecnica, estampa_pedido, ped_tamanhoP, ped_tamanhoM, ped_tamanhoG, ped_disponibilizadocliente, ped_quantdisponibilizadocliente, ped_totalCamisetas, peddatainicio, peddataentrega, ped_valorUnit, ped_totalValor, ped_totalEntrada, ped_totalAberto, ped_pagamentoEntrada, ped_pagamentoFinal, ped_status);
+                    Pedidos pedido = new Pedidos(codigo_Pedido, cod_colab, cod_cli, ped_cor, ped_tecido, ped_formato, ped_gola, ped_tecnica, ped_estampa, ped_tamanhoP, ped_tamanhoM, ped_tamanhoG, ped_disponibilizadocliente, ped_quantdisponibilizadocliente, ped_totalCamisetas, peddatainicio, peddataentrega, ped_valorUnit, ped_totalValor, ped_totalEntrada, ped_totalAberto, ped_pagamentoEntrada, ped_pagamentoFinal, ped_status);
                     pedidoDAO.UpdatePedidos(pedido);
                 }
 

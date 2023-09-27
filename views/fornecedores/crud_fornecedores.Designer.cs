@@ -54,17 +54,15 @@
             this.lbl_endereco = new System.Windows.Forms.Label();
             this.cmb_estado = new System.Windows.Forms.ComboBox();
             this.lbl_razaosocial = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.btn_salvar_n = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.btn_limpar_n = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btn_excluir_n = new System.Windows.Forms.Button();
             this.txb_cep = new System.Windows.Forms.TextBox();
             this.txb_cnpj = new System.Windows.Forms.TextBox();
             this.lbl_contratacao = new System.Windows.Forms.Label();
             this.mnth_contrato = new System.Windows.Forms.MonthCalendar();
             this.pctb_cadastros = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.lbl_razaosocial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctb_cadastros)).BeginInit();
             this.SuspendLayout();
@@ -283,8 +281,6 @@
             this.lbl_razaosocial.Controls.Add(this.btn_salvar_n);
             this.lbl_razaosocial.Controls.Add(this.label13);
             this.lbl_razaosocial.Controls.Add(this.btn_limpar_n);
-            this.lbl_razaosocial.Controls.Add(this.button3);
-            this.lbl_razaosocial.Controls.Add(this.btn_excluir_n);
             this.lbl_razaosocial.Controls.Add(this.txb_cep);
             this.lbl_razaosocial.Controls.Add(this.txb_cnpj);
             this.lbl_razaosocial.Controls.Add(this.lbl_contratacao);
@@ -318,14 +314,24 @@
             this.lbl_razaosocial.Size = new System.Drawing.Size(1176, 688);
             this.lbl_razaosocial.TabIndex = 37;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 632);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(116, 27);
+            this.label2.TabIndex = 45;
+            this.label2.Text = "VOLTAR";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // btn_salvar_n
             // 
             this.btn_salvar_n.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btn_salvar_n.Enabled = false;
             this.btn_salvar_n.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
-            this.btn_salvar_n.Location = new System.Drawing.Point(41, 455);
+            this.btn_salvar_n.Location = new System.Drawing.Point(506, 445);
             this.btn_salvar_n.Name = "btn_salvar_n";
-            this.btn_salvar_n.Size = new System.Drawing.Size(121, 73);
+            this.btn_salvar_n.Size = new System.Drawing.Size(121, 58);
             this.btn_salvar_n.TabIndex = 44;
             this.btn_salvar_n.Text = "SALVAR";
             this.btn_salvar_n.UseVisualStyleBackColor = false;
@@ -338,48 +344,22 @@
             this.label13.Font = new System.Drawing.Font("Lucida Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(213, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(714, 68);
+            this.label13.Size = new System.Drawing.Size(746, 68);
             this.label13.TabIndex = 38;
-            this.label13.Text = "Cadastro Colaborador";
+            this.label13.Text = "Cadastro Fornecedores";
             // 
             // btn_limpar_n
             // 
             this.btn_limpar_n.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_limpar_n.Enabled = false;
             this.btn_limpar_n.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
-            this.btn_limpar_n.Location = new System.Drawing.Point(411, 455);
+            this.btn_limpar_n.Location = new System.Drawing.Point(664, 445);
             this.btn_limpar_n.Name = "btn_limpar_n";
-            this.btn_limpar_n.Size = new System.Drawing.Size(121, 73);
+            this.btn_limpar_n.Size = new System.Drawing.Size(121, 58);
             this.btn_limpar_n.TabIndex = 42;
             this.btn_limpar_n.Text = "LIMPAR";
             this.btn_limpar_n.UseVisualStyleBackColor = false;
             this.btn_limpar_n.Click += new System.EventHandler(this.btn_limpar_n_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button3.Enabled = false;
-            this.button3.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
-            this.button3.Location = new System.Drawing.Point(612, 455);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(121, 73);
-            this.button3.TabIndex = 41;
-            this.button3.Text = "CANCELAR";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // btn_excluir_n
-            // 
-            this.btn_excluir_n.BackColor = System.Drawing.Color.Red;
-            this.btn_excluir_n.Enabled = false;
-            this.btn_excluir_n.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
-            this.btn_excluir_n.Location = new System.Drawing.Point(211, 455);
-            this.btn_excluir_n.Name = "btn_excluir_n";
-            this.btn_excluir_n.Size = new System.Drawing.Size(121, 73);
-            this.btn_excluir_n.TabIndex = 40;
-            this.btn_excluir_n.Text = "EXCLUIR";
-            this.btn_excluir_n.UseVisualStyleBackColor = false;
-            this.btn_excluir_n.Click += new System.EventHandler(this.btn_excluir_n_Click);
             // 
             // txb_cep
             // 
@@ -421,17 +401,6 @@
             this.pctb_cadastros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctb_cadastros.TabIndex = 39;
             this.pctb_cadastros.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 632);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 27);
-            this.label2.TabIndex = 45;
-            this.label2.Text = "VOLTAR";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // crud_fornecedores
             // 
@@ -490,8 +459,6 @@
         private System.Windows.Forms.PictureBox pctb_cadastros;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btn_limpar_n;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button btn_excluir_n;
         private System.Windows.Forms.Button btn_salvar_n;
         private System.Windows.Forms.Label label2;
     }

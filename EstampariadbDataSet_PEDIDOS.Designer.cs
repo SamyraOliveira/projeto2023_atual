@@ -597,7 +597,7 @@ namespace projeto2023 {
                         string formatoCamiseta_Pedido, 
                         string tipoGola_Pedido, 
                         string tecnicas_Pedido, 
-                        byte[] estampa_Pedido, 
+                        string estampa_Pedido, 
                         int tamP_quant_Pedido, 
                         int tamM_quant_Pedido, 
                         int tamG_quant_Pedido, 
@@ -713,7 +713,7 @@ namespace projeto2023 {
                 base.Columns.Add(this.columntipoGola_Pedido);
                 this.columntecnicas_Pedido = new global::System.Data.DataColumn("tecnicas_Pedido", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntecnicas_Pedido);
-                this.columnestampa_Pedido = new global::System.Data.DataColumn("estampa_Pedido", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                this.columnestampa_Pedido = new global::System.Data.DataColumn("estampa_Pedido", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnestampa_Pedido);
                 this.columntamP_quant_Pedido = new global::System.Data.DataColumn("tamP_quant_Pedido", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntamP_quant_Pedido);
@@ -999,10 +999,10 @@ namespace projeto2023 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public byte[] estampa_Pedido {
+            public string estampa_Pedido {
                 get {
                     try {
-                        return ((byte[])(this[this.tablePedidos.estampa_PedidoColumn]));
+                        return ((string)(this[this.tablePedidos.estampa_PedidoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("O valor da coluna \'estampa_Pedido\' na tabela \'Pedidos\' é DBNull.", e);
@@ -2173,7 +2173,7 @@ namespace projeto2023.EstampariadbDataSetTableAdapters {
                     string formatoCamiseta_Pedido, 
                     string tipoGola_Pedido, 
                     string tecnicas_Pedido, 
-                    byte[] estampa_Pedido, 
+                    string estampa_Pedido, 
                     global::System.Nullable<int> tamP_quant_Pedido, 
                     global::System.Nullable<int> tamM_quant_Pedido, 
                     global::System.Nullable<int> tamG_quant_Pedido, 
@@ -2225,7 +2225,7 @@ namespace projeto2023.EstampariadbDataSetTableAdapters {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((byte[])(estampa_Pedido));
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(estampa_Pedido));
             }
             if ((tamP_quant_Pedido.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[8].Value = ((int)(tamP_quant_Pedido.Value));
@@ -2345,7 +2345,7 @@ namespace projeto2023.EstampariadbDataSetTableAdapters {
                     string formatoCamiseta_Pedido, 
                     string tipoGola_Pedido, 
                     string tecnicas_Pedido, 
-                    byte[] estampa_Pedido, 
+                    string estampa_Pedido, 
                     global::System.Nullable<int> tamP_quant_Pedido, 
                     global::System.Nullable<int> tamM_quant_Pedido, 
                     global::System.Nullable<int> tamG_quant_Pedido, 
@@ -2418,10 +2418,11 @@ namespace projeto2023.EstampariadbDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(tecnicas_Pedido));
             }
             if ((estampa_Pedido == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("estampa_Pedido");
+                //this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((byte[])(estampa_Pedido));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(estampa_Pedido));
             }
             if ((tamP_quant_Pedido.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(tamP_quant_Pedido.Value));
@@ -2693,7 +2694,7 @@ namespace projeto2023.EstampariadbDataSetTableAdapters {
                     string formatoCamiseta_Pedido, 
                     string tipoGola_Pedido, 
                     string tecnicas_Pedido, 
-                    byte[] estampa_Pedido, 
+                    string estampa_Pedido, 
                     global::System.Nullable<int> tamP_quant_Pedido, 
                     global::System.Nullable<int> tamM_quant_Pedido, 
                     global::System.Nullable<int> tamG_quant_Pedido, 

@@ -247,3 +247,5 @@ C:\Users\ACER\Source\Repos\projeto2023_atual_samyra\obj\Debug\projeto2023.exe
 C:\Users\ACER\Source\Repos\projeto2023_atual_samyra\obj\Debug\projeto2023.pdb
 C:\Users\ACER\source\repos\projeto2023_atual_samyra\obj\Debug\projeto2023.views.frms.Frm_logout.resources
 C:\Users\ACER\source\repos\projeto2023_atual_samyra\obj\Debug\projeto2023.views.fornecedores.consulta_fornecedores.resources
+C:\Users\ACER\source\repos\projeto2023_atual_samyra\obj\Debug\projeto2023.views.producao.ListarProducoes.resources
+C:\Users\ACER\source\repos\projeto2023_atual_samyra\obj\Debug\projeto2023.views.producao.Producao_Andamento.resources

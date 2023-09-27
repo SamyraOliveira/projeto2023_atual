@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menu));
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.pctb_cadastros = new System.Windows.Forms.PictureBox();
             this.btn_consultas = new System.Windows.Forms.Button();
             this.btn_relatorios = new System.Windows.Forms.Button();
             this.btn_movimentacoes = new System.Windows.Forms.Button();
             this.btn_cadastros = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pctb_cadastros)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,12 +43,25 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Sans", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(48, 658);
+            this.label1.Location = new System.Drawing.Point(36, 751);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(138, 32);
             this.label1.TabIndex = 5;
             this.label1.Text = "LOGOUT";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // button1
+            // 
+            this.button1.Image = global::projeto2023.Properties.Resources.menu_btnEstoque;
+            this.button1.Location = new System.Drawing.Point(262, 554);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(201, 136);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "PRODUÇÃO";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pctb_cadastros
             // 
@@ -112,19 +125,6 @@
             this.btn_cadastros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_cadastros.UseVisualStyleBackColor = true;
             this.btn_cadastros.Click += new System.EventHandler(this.btn_cadastros_Click);
-            // 
-            // button1
-            // 
-            this.button1.Image = global::projeto2023.Properties.Resources.menu_btnEstoque;
-            this.button1.Location = new System.Drawing.Point(262, 554);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 136);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "PRODUÇÃO";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // menu
             // 

@@ -32,6 +32,7 @@ namespace projeto2023.views.pedidos
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(crud_pedidos));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_excluir = new System.Windows.Forms.Button();
             this.btn_limpar = new System.Windows.Forms.Button();
@@ -55,6 +56,9 @@ namespace projeto2023.views.pedidos
             this.cmb_formapagamentoEntrada = new System.Windows.Forms.ComboBox();
             this.lbl_formapagamentoEntrada = new System.Windows.Forms.Label();
             this.pnl_detalhespedido = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txb_caminhoImagem = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.lbl_dataentrega = new System.Windows.Forms.Label();
             this.lbl_datainicial = new System.Windows.Forms.Label();
             this.mnth_dataentrega = new System.Windows.Forms.MonthCalendar();
@@ -116,7 +120,7 @@ namespace projeto2023.views.pedidos
             this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             this.pnl_valores.SuspendLayout();
             this.pnl_formapagamento.SuspendLayout();
@@ -142,6 +146,17 @@ namespace projeto2023.views.pedidos
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(952, 816);
             this.panel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 662);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(116, 27);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "VOLTAR";
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // btn_cancelar
             // 
@@ -350,6 +365,9 @@ namespace projeto2023.views.pedidos
             // 
             // pnl_detalhespedido
             // 
+            this.pnl_detalhespedido.Controls.Add(this.button1);
+            this.pnl_detalhespedido.Controls.Add(this.txb_caminhoImagem);
+            this.pnl_detalhespedido.Controls.Add(this.label3);
             this.pnl_detalhespedido.Controls.Add(this.lbl_dataentrega);
             this.pnl_detalhespedido.Controls.Add(this.lbl_datainicial);
             this.pnl_detalhespedido.Controls.Add(this.mnth_dataentrega);
@@ -371,6 +389,32 @@ namespace projeto2023.views.pedidos
             this.pnl_detalhespedido.Name = "pnl_detalhespedido";
             this.pnl_detalhespedido.Size = new System.Drawing.Size(620, 576);
             this.pnl_detalhespedido.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(293, 121);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(38, 24);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "...";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // txb_caminhoImagem
+            // 
+            this.txb_caminhoImagem.Location = new System.Drawing.Point(162, 121);
+            this.txb_caminhoImagem.Name = "txb_caminhoImagem";
+            this.txb_caminhoImagem.Size = new System.Drawing.Size(121, 24);
+            this.txb_caminhoImagem.TabIndex = 25;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(159, 101);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 16);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Estampa";
             // 
             // lbl_dataentrega
             // 
@@ -415,13 +459,12 @@ namespace projeto2023.views.pedidos
             // 
             // pctb_estampa
             // 
-            this.pctb_estampa.Location = new System.Drawing.Point(162, 106);
+            this.pctb_estampa.Location = new System.Drawing.Point(162, 151);
             this.pctb_estampa.Name = "pctb_estampa";
-            this.pctb_estampa.Size = new System.Drawing.Size(152, 152);
+            this.pctb_estampa.Size = new System.Drawing.Size(152, 107);
             this.pctb_estampa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctb_estampa.TabIndex = 18;
             this.pctb_estampa.TabStop = false;
-            this.pctb_estampa.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pctb_estampa_MouseClick);
             // 
             // cmb_tecnica
             // 
@@ -747,16 +790,9 @@ namespace projeto2023.views.pedidos
             this.label1.TabIndex = 35;
             this.label1.Text = "Novo Pedido";
             // 
-            // label2
+            // openFileDialog1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 662);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 27);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "VOLTAR";
-            this.label2.Click += new System.EventHandler(this.label2_Click_1);
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // crud_pedidos
             // 
@@ -882,5 +918,9 @@ namespace projeto2023.views.pedidos
         private System.Windows.Forms.ComboBox cmb_status;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txb_caminhoImagem;
+        private System.Windows.Forms.Label label3;
     }
 }

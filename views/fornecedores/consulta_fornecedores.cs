@@ -1,4 +1,5 @@
-﻿using projeto2023.models;
+﻿using projeto2023.controllers;
+using projeto2023.models;
 using projeto2023.views.clientes;
 using projeto2023.views.pedidos;
 using System;
@@ -101,7 +102,7 @@ namespace projeto2023.views.fornecedores
 
             if (!string.IsNullOrEmpty(nomePesquisa))
             {
-                fornecedoresBindingSource.Filter = $"nome_Cliente LIKE '%{nomePesquisa}%'";
+                fornecedoresBindingSource.Filter = $"nomefantasia_Fornecedor LIKE '%{nomePesquisa}%'";
             }
             else
             {
@@ -180,10 +181,12 @@ namespace projeto2023.views.fornecedores
             // Implemente a lógica para atualizar o registro na base de dados com os valores atualizados
             // Isso dependerá da sua estrutura de banco de dados e da forma como você interage com ela
             // Você precisará executar uma consulta SQL ou chamar um método apropriado aqui
-           // Fornecedores fornecedor = new Fornecedores(id, fornc_nomeFantasia, fornc_razaoSocial, fornc_cnpj, fornc_inscricaoEstadual, fornc_inscricaoMunicipal, fornc_cep, fornc_endereco, fornc_numero, fornc_cidade, fornc_estado, fornc_representante, fornc_email, fornc_telefone, fornc_iniciocontrato, fornc_status);
-           // fornecedorDAO.UpdateFornecedor(fornecedor);
+            // Fornecedores fornecedor = new Fornecedores(id, fornc_nomeFantasia, fornc_razaoSocial, fornc_cnpj, fornc_inscricaoEstadual, fornc_inscricaoMunicipal, fornc_cep, fornc_endereco, fornc_numero, fornc_cidade, fornc_estado, fornc_representante, fornc_email, fornc_telefone, fornc_iniciocontrato, fornc_status);
+            // fornecedorDAO.UpdateFornecedor(fornecedor);
 
             string connectionString = @"Data Source=SUP-04;Initial Catalog=Estampariadb;Integrated Security=True;"; // Substitua pela sua string de conexão com o SQL Server
+            //Connection conn = new Connection(); 
+            
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {

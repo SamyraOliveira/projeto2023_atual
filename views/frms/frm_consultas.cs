@@ -16,7 +16,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using projeto2023.views.producao;
 
 namespace projeto2023.views.frms
 {
@@ -67,6 +67,17 @@ namespace projeto2023.views.frms
         private void label2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_consultar_producao_Click(object sender, EventArgs e)
+        {
+            ListarProducoes Frm = new ListarProducoes();
+            Frm.ShowDialog();
         }
     }
 }

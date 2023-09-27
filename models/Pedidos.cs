@@ -20,7 +20,7 @@ namespace projeto2023.models
         public string ped_formato;
         public string ped_gola;
         public string ped_tecnica;
-        public byte [] ped_estampa;
+        public string ped_estampa;
         public int ped_tamP;
         public int ped_tamM;
         public int ped_tamG;
@@ -39,7 +39,7 @@ namespace projeto2023.models
 
 
 
-        public Pedidos(int codigoColaborador, int codigoCliente, string cor, string tecido, string formato, string gola, string tecnica, byte [] estampa, int tamP, int tamM, int tamG, int disponibilizadoCliente,int quantdisponibilizado, int totalCamisetas, DateTime dataInicial, DateTime dataEntrega, decimal valor_unitario, decimal valor_total, decimal valor_entrada, decimal valor_aberto, string formaPagamentoEntrada, string formaPagamentoFinal, string status)
+        public Pedidos(int codigoColaborador, int codigoCliente, string cor, string tecido, string formato, string gola, string tecnica, string estampa, int tamP, int tamM, int tamG, int disponibilizadoCliente,int quantdisponibilizado, int totalCamisetas, DateTime dataInicial, DateTime dataEntrega, decimal valor_unitario, decimal valor_total, decimal valor_entrada, decimal valor_aberto, string formaPagamentoEntrada, string formaPagamentoFinal, string status)
         {
 
 
@@ -67,7 +67,7 @@ namespace projeto2023.models
           ped_formaPagamentoFinal = formaPagamentoFinal;
           ped_status = status;
     }
-        public Pedidos(int codigo, int codigoColaborador, int codigoCliente, string cor, string tecido, string formato, string gola, string tecnica, byte [] estampa, int tamP, int tamM, int tamG, int disponibilizadoCliente, int quantdisponibilizado, int totalCamisetas, DateTime dataInicial, DateTime dataEntrega, decimal valor_unitario, decimal valor_total, decimal valor_entrada, decimal valor_aberto, string formaPagamentoEntrada, string formaPagamentoFinal, string status)
+        public Pedidos(int codigo, int codigoColaborador, int codigoCliente, string cor, string tecido, string formato, string gola, string tecnica, string estampa, int tamP, int tamM, int tamG, int disponibilizadoCliente, int quantdisponibilizado, int totalCamisetas, DateTime dataInicial, DateTime dataEntrega, decimal valor_unitario, decimal valor_total, decimal valor_entrada, decimal valor_aberto, string formaPagamentoEntrada, string formaPagamentoFinal, string status)
         {
             ped_codigo = codigo;
             colab_codigo = codigoColaborador;

@@ -114,7 +114,7 @@ namespace projeto2023.views.colaboradores
             txb_nome.Clear();
             txb_usuario.Clear();
             txb_senha.Clear();
-            btn_excluir.Visible = false;
+            //btn_excluir.Visible = false;
             codigo_Funcionario = -1;
             //ListarColaboradores();
         }
