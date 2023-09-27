@@ -84,9 +84,9 @@
             this.btn_login.Font = new System.Drawing.Font("Lucida Sans", 12F);
             this.btn_login.Location = new System.Drawing.Point(57, 245);
             this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(75, 44);
+            this.btn_login.Size = new System.Drawing.Size(82, 44);
             this.btn_login.TabIndex = 5;
-            this.btn_login.Text = "LOGIN";
+            this.btn_login.Text = "ENTRAR";
             this.btn_login.UseVisualStyleBackColor = true;
             this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
