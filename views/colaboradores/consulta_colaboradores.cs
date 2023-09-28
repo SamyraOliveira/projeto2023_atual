@@ -194,7 +194,7 @@ namespace projeto2023.views.colaboradores
             // Isso dependerá da sua estrutura de banco de dados e da forma como você interage com ela
             // Você precisará executar uma consulta SQL ou chamar um método apropriado aqui
 
-            string connectionString = @"Data Source=SUP-04;Initial Catalog=Estampariadb;Integrated Security=True;"; // Substitua pela sua string de conexão com o SQL Server
+            string connectionString = @"Data Source=" + Environment.MachineName + ";Initial Catalog=Estampariadb;Integrated Security=True;"; // Substitua pela sua string de conexão com o SQL Server
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -240,7 +240,7 @@ namespace projeto2023.views.colaboradores
 
         private void excluir_colaborador(int id_colaborador)
         {
-            string connectionString = @"Data Source=SUP-04;Initial Catalog=Estampariadb;Integrated Security=True;"; // Substitua pela sua string de conexão com o SQL Server
+            string connectionString = @"Data Source=" + Environment.MachineName + ";Initial Catalog=Estampariadb;Integrated Security=True;"; // Substitua pela sua string de conexão com o SQL Server
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -336,7 +336,7 @@ namespace projeto2023.views.colaboradores
         }
         private void ativar_colaborador(int id_colaborador)
         {
-            string connectionString = @"Data Source=SUP-04;Initial Catalog=Estampariadb;Integrated Security=True;"; // Substitua pela sua string de conexão com o SQL Server
+            string connectionString = @"Data Source=" + Environment.MachineName + ";Initial Catalog=Estampariadb;Integrated Security=True;"; // Substitua pela sua string de conexão com o SQL Server
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {

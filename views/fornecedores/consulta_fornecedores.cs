@@ -184,9 +184,9 @@ namespace projeto2023.views.fornecedores
             // Fornecedores fornecedor = new Fornecedores(id, fornc_nomeFantasia, fornc_razaoSocial, fornc_cnpj, fornc_inscricaoEstadual, fornc_inscricaoMunicipal, fornc_cep, fornc_endereco, fornc_numero, fornc_cidade, fornc_estado, fornc_representante, fornc_email, fornc_telefone, fornc_iniciocontrato, fornc_status);
             // fornecedorDAO.UpdateFornecedor(fornecedor);
 
-            string connectionString = @"Data Source=SUP-04;Initial Catalog=Estampariadb;Integrated Security=True;"; // Substitua pela sua string de conexão com o SQL Server
-            //Connection conn = new Connection(); 
-            
+            string connectionString = @"Data Source=" + Environment.MachineName + ";Initial Catalog=Estampariadb;Integrated Security=True;"; // Substitua pela sua string de conexão com o SQL Server
+                                                                                                                                             //Connection conn = new Connection(); 
+
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -288,7 +288,7 @@ namespace projeto2023.views.fornecedores
         }
         private void excluir_cliente(int id_fornecedor)
         {
-            string connectionString = @"Data Source=SUP-04;Initial Catalog=Estampariadb;Integrated Security=True;"; // Substitua pela sua string de conexão com o SQL Server
+            string connectionString = @"Data Source=" + Environment.MachineName + ";Initial Catalog=Estampariadb;Integrated Security=True;"; // Substitua pela sua string de conexão com o SQL Server
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -335,7 +335,7 @@ namespace projeto2023.views.fornecedores
         }
         private void ativar_colaborador(int id_fornecedor)
         {
-            string connectionString = @"Data Source=SUP-04;Initial Catalog=Estampariadb;Integrated Security=True;"; // Substitua pela sua string de conexão com o SQL Server
+            string connectionString = @"Data Source=" + Environment.MachineName + ";Initial Catalog=Estampariadb;Integrated Security=True;"; // Substitua pela sua string de conexão com o SQL Server
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {

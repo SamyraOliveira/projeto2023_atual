@@ -123,7 +123,7 @@ namespace projeto2023.views.producao
 
 
             }
-            string connectionString = @"Data Source=SUP-04;Initial Catalog=Estampariadb;Integrated Security=True;"; // Substitua pela sua string de conexão com o SQL Server
+            string connectionString = @"Data Source=" + Environment.MachineName + ";Initial Catalog=Estampariadb;Integrated Security=True;"; // Substitua pela sua string de conexão com o SQL Server
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -236,7 +236,8 @@ namespace projeto2023.views.producao
                     }
 
                 }
-                string connectionString = @"Data Source=SUP-04;Initial Catalog=Estampariadb;Integrated Security=True;";
+                
+                string connectionString = @"Data Source="+Environment.MachineName+";Initial Catalog=Estampariadb;Integrated Security=True;";
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
