@@ -54,16 +54,16 @@
             this.pnl_cadastros.Controls.Add(this.btn_colabores);
             this.pnl_cadastros.Location = new System.Drawing.Point(37, 66);
             this.pnl_cadastros.Name = "pnl_cadastros";
-            this.pnl_cadastros.Size = new System.Drawing.Size(948, 625);
+            this.pnl_cadastros.Size = new System.Drawing.Size(948, 749);
             this.pnl_cadastros.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(0, 601);
+            this.label2.Location = new System.Drawing.Point(3, 679);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 22);
+            this.label2.Size = new System.Drawing.Size(116, 27);
             this.label2.TabIndex = 13;
             this.label2.Text = "VOLTAR";
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
@@ -75,7 +75,7 @@
             this.label1.Font = new System.Drawing.Font("Lucida Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(323, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(272, 55);
+            this.label1.Size = new System.Drawing.Size(343, 68);
             this.label1.TabIndex = 12;
             this.label1.Text = "Cadastros";
             // 
@@ -143,7 +143,7 @@
             // 
             this.pctb_cadastros.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pctb_cadastros.Image = global::projeto2023.Properties.Resources.logo;
-            this.pctb_cadastros.Location = new System.Drawing.Point(1001, 177);
+            this.pctb_cadastros.Location = new System.Drawing.Point(1001, 263);
             this.pctb_cadastros.Name = "pctb_cadastros";
             this.pctb_cadastros.Size = new System.Drawing.Size(292, 309);
             this.pctb_cadastros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -163,10 +163,10 @@
             // 
             // frm_cadastros
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
-            this.ClientSize = new System.Drawing.Size(1333, 692);
+            this.ClientSize = new System.Drawing.Size(1333, 927);
             this.Controls.Add(this.pctb_cadastros);
             this.Controls.Add(this.pnl_cadastros);
             this.Controls.Add(this.button4);

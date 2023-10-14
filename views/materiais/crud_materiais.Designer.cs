@@ -265,14 +265,14 @@
             this.pln_crud.Controls.Add(this.cmb_localArmazenamento);
             this.pln_crud.Location = new System.Drawing.Point(22, 12);
             this.pln_crud.Name = "pln_crud";
-            this.pln_crud.Size = new System.Drawing.Size(1257, 849);
+            this.pln_crud.Size = new System.Drawing.Size(1257, 938);
             this.pln_crud.TabIndex = 21;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 807);
+            this.label2.Location = new System.Drawing.Point(12, 753);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 27);
             this.label2.TabIndex = 35;
@@ -324,7 +324,7 @@
             // 
             this.btn_salvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btn_salvar.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
-            this.btn_salvar.Location = new System.Drawing.Point(720, 605);
+            this.btn_salvar.Location = new System.Drawing.Point(705, 605);
             this.btn_salvar.Name = "btn_salvar";
             this.btn_salvar.Size = new System.Drawing.Size(129, 58);
             this.btn_salvar.TabIndex = 21;
@@ -336,7 +336,7 @@
             // 
             this.pctb_cadastros.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pctb_cadastros.Image = global::projeto2023.Properties.Resources.logo;
-            this.pctb_cadastros.Location = new System.Drawing.Point(1304, 318);
+            this.pctb_cadastros.Location = new System.Drawing.Point(1304, 357);
             this.pctb_cadastros.Name = "pctb_cadastros";
             this.pctb_cadastros.Size = new System.Drawing.Size(292, 309);
             this.pctb_cadastros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -348,7 +348,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
-            this.ClientSize = new System.Drawing.Size(1646, 873);
+            this.ClientSize = new System.Drawing.Size(1646, 950);
             this.Controls.Add(this.pctb_cadastros);
             this.Controls.Add(this.pln_crud);
             this.Font = new System.Drawing.Font("Lucida Sans", 8.25F);
