@@ -33,6 +33,7 @@
             this.cmb_conta = new System.Windows.Forms.ComboBox();
             this.cmb_categoria = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.lbl_cadastroMov = new System.Windows.Forms.Label();
             this.lbl_dataNasc = new System.Windows.Forms.Label();
             this.mnth_dataMov = new System.Windows.Forms.MonthCalendar();
@@ -47,13 +48,16 @@
             this.txb_descricao = new System.Windows.Forms.TextBox();
             this.txb_valor = new System.Windows.Forms.TextBox();
             this.cmb_centroCusto = new System.Windows.Forms.ComboBox();
-            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.cmb_status = new System.Windows.Forms.ComboBox();
+            this.lbl_status = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cmb_status);
+            this.panel1.Controls.Add(this.lbl_status);
             this.panel1.Controls.Add(this.checked_receita);
             this.panel1.Controls.Add(this.cmb_conta);
             this.panel1.Controls.Add(this.cmb_categoria);
@@ -119,6 +123,18 @@
             this.label14.Size = new System.Drawing.Size(89, 22);
             this.label14.TabIndex = 21;
             this.label14.Text = "VOLTAR";
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox.Image = global::projeto2023.Properties.Resources.logo;
+            this.pictureBox.Location = new System.Drawing.Point(1182, 301);
+            this.pictureBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(292, 309);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 32;
+            this.pictureBox.TabStop = false;
             // 
             // lbl_cadastroMov
             // 
@@ -268,17 +284,25 @@
             this.cmb_centroCusto.Size = new System.Drawing.Size(176, 21);
             this.cmb_centroCusto.TabIndex = 1;
             // 
-            // pictureBox
+            // cmb_status
             // 
-            this.pictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox.Image = global::projeto2023.Properties.Resources.logo;
-            this.pictureBox.Location = new System.Drawing.Point(1182, 301);
-            this.pictureBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(292, 309);
-            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox.TabIndex = 32;
-            this.pictureBox.TabStop = false;
+            this.cmb_status.FormattingEnabled = true;
+            this.cmb_status.Location = new System.Drawing.Point(530, 297);
+            this.cmb_status.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmb_status.Name = "cmb_status";
+            this.cmb_status.Size = new System.Drawing.Size(176, 21);
+            this.cmb_status.TabIndex = 37;
+            // 
+            // lbl_status
+            // 
+            this.lbl_status.AutoSize = true;
+            this.lbl_status.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
+            this.lbl_status.Location = new System.Drawing.Point(449, 301);
+            this.lbl_status.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_status.Name = "lbl_status";
+            this.lbl_status.Size = new System.Drawing.Size(58, 17);
+            this.lbl_status.TabIndex = 36;
+            this.lbl_status.Text = "Status";
             // 
             // crud_transacoes
             // 
@@ -321,5 +345,7 @@
         private System.Windows.Forms.TextBox txb_descricao;
         private System.Windows.Forms.TextBox txb_valor;
         private System.Windows.Forms.ComboBox cmb_centroCusto;
+        private System.Windows.Forms.ComboBox cmb_status;
+        private System.Windows.Forms.Label lbl_status;
     }
 }

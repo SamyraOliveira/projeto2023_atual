@@ -389,6 +389,9 @@
     <EmbeddedResource Include="views\materiais\relatorio_materiais.resx">
       <DependentUpon>relatorio_materiais.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\movimentacoes\consulta_transacoes.resx">
+      <DependentUpon>consulta_transacoes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\movimentacoes\crud_transacoes.resx">
       <DependentUpon>crud_transacoes.cs</DependentUpon>
     </EmbeddedResource>
