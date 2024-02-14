@@ -230,7 +230,7 @@
             // 
             // btn_ativar
             // 
-            this.btn_ativar.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btn_ativar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(160)))), ((int)(((byte)(180)))));
             this.btn_ativar.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.btn_ativar.Location = new System.Drawing.Point(1390, 562);
             this.btn_ativar.Margin = new System.Windows.Forms.Padding(2);
@@ -266,7 +266,7 @@
             // 
             // button_excluir
             // 
-            this.button_excluir.BackColor = System.Drawing.Color.Red;
+            this.button_excluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(112)))), ((int)(((byte)(114)))));
             this.button_excluir.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.button_excluir.Location = new System.Drawing.Point(1390, 636);
             this.button_excluir.Margin = new System.Windows.Forms.Padding(2);
@@ -314,7 +314,7 @@
             // 
             // btn_salvar
             // 
-            this.btn_salvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_salvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(189)))), ((int)(((byte)(164)))));
             this.btn_salvar.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.btn_salvar.Location = new System.Drawing.Point(1390, 490);
             this.btn_salvar.Margin = new System.Windows.Forms.Padding(2);
@@ -327,7 +327,7 @@
             // 
             // btn_limpar
             // 
-            this.btn_limpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_limpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(234)))), ((int)(((byte)(216)))));
             this.btn_limpar.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.btn_limpar.Location = new System.Drawing.Point(1106, 729);
             this.btn_limpar.Margin = new System.Windows.Forms.Padding(2);
@@ -359,7 +359,7 @@
             // btn_imprimir
             // 
             this.btn_imprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_imprimir.Location = new System.Drawing.Point(1447, 414);
+            this.btn_imprimir.Location = new System.Drawing.Point(1447, 418);
             this.btn_imprimir.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btn_imprimir.Name = "btn_imprimir";
             this.btn_imprimir.Size = new System.Drawing.Size(216, 42);
@@ -398,12 +398,12 @@
             this.dtv_transacoes.AllowUserToDeleteRows = false;
             this.dtv_transacoes.AllowUserToResizeColumns = false;
             this.dtv_transacoes.AllowUserToResizeRows = false;
-            this.dtv_transacoes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dtv_transacoes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
             this.dtv_transacoes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dtv_transacoes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dtv_transacoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtv_transacoes.GridColor = System.Drawing.Color.Khaki;
-            this.dtv_transacoes.Location = new System.Drawing.Point(54, 74);
+            this.dtv_transacoes.Location = new System.Drawing.Point(50, 81);
             this.dtv_transacoes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dtv_transacoes.Name = "dtv_transacoes";
             this.dtv_transacoes.ReadOnly = true;

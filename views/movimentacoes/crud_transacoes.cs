@@ -58,7 +58,7 @@ namespace projeto2023.views.movimentacoes
                     CategoriaId_despesa = categoriaId,
                     ContaBancariaId_despesa = contaBancariaId,
                     CentroDeCustoId_despesa = centroDeCustoId,
-                    Descricao_despesa = descricao
+                    Descricao_despesa = descricao,
                     status = status_transac
                 };
                 // Salve a nova despesa no banco de dados ou em uma lista, dependendo da sua implementação

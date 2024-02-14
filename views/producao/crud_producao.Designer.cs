@@ -101,7 +101,7 @@
             this.dvPedidosProdução.AllowUserToResizeColumns = false;
             this.dvPedidosProdução.AllowUserToResizeRows = false;
             this.dvPedidosProdução.AutoGenerateColumns = false;
-            this.dvPedidosProdução.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dvPedidosProdução.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
             this.dvPedidosProdução.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dvPedidosProdução.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dvPedidosProdução.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -293,7 +293,7 @@
             this.label1.Font = new System.Drawing.Font("Lucida Sans", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(271, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(331, 38);
+            this.label1.Size = new System.Drawing.Size(281, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Pedidos Pendentes";
             // 
@@ -303,7 +303,7 @@
             this.label2.Font = new System.Drawing.Font("Lucida Sans", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(978, 63);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(345, 38);
+            this.label2.Size = new System.Drawing.Size(292, 31);
             this.label2.TabIndex = 2;
             this.label2.Text = "Linhas de Produção";
             // 
@@ -318,7 +318,7 @@
             this.label3.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(14, 740);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 27);
+            this.label3.Size = new System.Drawing.Size(89, 22);
             this.label3.TabIndex = 27;
             this.label3.Text = "VOLTAR";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -329,7 +329,7 @@
             this.txb_idpedido.Location = new System.Drawing.Point(906, 182);
             this.txb_idpedido.Name = "txb_idpedido";
             this.txb_idpedido.ReadOnly = true;
-            this.txb_idpedido.Size = new System.Drawing.Size(109, 31);
+            this.txb_idpedido.Size = new System.Drawing.Size(109, 26);
             this.txb_idpedido.TabIndex = 138;
             // 
             // label5
@@ -339,7 +339,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(111)))));
             this.label5.Location = new System.Drawing.Point(775, 180);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(156, 32);
+            this.label5.Size = new System.Drawing.Size(124, 26);
             this.label5.TabIndex = 137;
             this.label5.Text = "ID Pedido:";
             // 
@@ -349,7 +349,7 @@
             this.txb_responsavel.Location = new System.Drawing.Point(1243, 184);
             this.txb_responsavel.Name = "txb_responsavel";
             this.txb_responsavel.ReadOnly = true;
-            this.txb_responsavel.Size = new System.Drawing.Size(220, 31);
+            this.txb_responsavel.Size = new System.Drawing.Size(220, 26);
             this.txb_responsavel.TabIndex = 140;
             // 
             // label6
@@ -359,7 +359,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(111)))));
             this.label6.Location = new System.Drawing.Point(1077, 181);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(199, 32);
+            this.label6.Size = new System.Drawing.Size(156, 26);
             this.label6.TabIndex = 139;
             this.label6.Text = "Responsavel:";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -370,7 +370,7 @@
             this.txb_qp.Location = new System.Drawing.Point(1332, 291);
             this.txb_qp.Name = "txb_qp";
             this.txb_qp.ReadOnly = true;
-            this.txb_qp.Size = new System.Drawing.Size(109, 31);
+            this.txb_qp.Size = new System.Drawing.Size(109, 26);
             this.txb_qp.TabIndex = 144;
             // 
             // label8
@@ -380,7 +380,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(111)))));
             this.label8.Location = new System.Drawing.Point(1154, 288);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(210, 32);
+            this.label8.Size = new System.Drawing.Size(164, 26);
             this.label8.TabIndex = 143;
             this.label8.Text = "Quantidade P:";
             // 
@@ -390,7 +390,7 @@
             this.txb_qm.Location = new System.Drawing.Point(1334, 330);
             this.txb_qm.Name = "txb_qm";
             this.txb_qm.ReadOnly = true;
-            this.txb_qm.Size = new System.Drawing.Size(109, 31);
+            this.txb_qm.Size = new System.Drawing.Size(109, 26);
             this.txb_qm.TabIndex = 146;
             // 
             // label9
@@ -400,7 +400,7 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(111)))));
             this.label9.Location = new System.Drawing.Point(1154, 327);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(214, 32);
+            this.label9.Size = new System.Drawing.Size(167, 26);
             this.label9.TabIndex = 145;
             this.label9.Text = "Quantidade M:";
             // 
@@ -410,7 +410,7 @@
             this.txb_qg.Location = new System.Drawing.Point(1332, 372);
             this.txb_qg.Name = "txb_qg";
             this.txb_qg.ReadOnly = true;
-            this.txb_qg.Size = new System.Drawing.Size(109, 31);
+            this.txb_qg.Size = new System.Drawing.Size(109, 26);
             this.txb_qg.TabIndex = 148;
             // 
             // label10
@@ -420,7 +420,7 @@
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(111)))));
             this.label10.Location = new System.Drawing.Point(1154, 368);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(213, 32);
+            this.label10.Size = new System.Drawing.Size(166, 26);
             this.label10.TabIndex = 147;
             this.label10.Text = "Quantidade G:";
             // 
@@ -430,7 +430,7 @@
             this.txb_cor.Location = new System.Drawing.Point(823, 299);
             this.txb_cor.Name = "txb_cor";
             this.txb_cor.ReadOnly = true;
-            this.txb_cor.Size = new System.Drawing.Size(160, 31);
+            this.txb_cor.Size = new System.Drawing.Size(160, 26);
             this.txb_cor.TabIndex = 150;
             // 
             // label11
@@ -440,7 +440,7 @@
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(111)))));
             this.label11.Location = new System.Drawing.Point(765, 297);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(71, 32);
+            this.label11.Size = new System.Drawing.Size(57, 26);
             this.label11.TabIndex = 149;
             this.label11.Text = "Cor:";
             // 
@@ -450,7 +450,7 @@
             this.txb_tecido.Location = new System.Drawing.Point(863, 348);
             this.txb_tecido.Name = "txb_tecido";
             this.txb_tecido.ReadOnly = true;
-            this.txb_tecido.Size = new System.Drawing.Size(160, 31);
+            this.txb_tecido.Size = new System.Drawing.Size(160, 26);
             this.txb_tecido.TabIndex = 152;
             // 
             // label12
@@ -460,7 +460,7 @@
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(111)))));
             this.label12.Location = new System.Drawing.Point(765, 345);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(115, 32);
+            this.label12.Size = new System.Drawing.Size(89, 26);
             this.label12.TabIndex = 151;
             this.label12.Text = "Tecido:";
             // 
@@ -470,7 +470,7 @@
             this.txb_formato.Location = new System.Drawing.Point(878, 397);
             this.txb_formato.Name = "txb_formato";
             this.txb_formato.ReadOnly = true;
-            this.txb_formato.Size = new System.Drawing.Size(160, 31);
+            this.txb_formato.Size = new System.Drawing.Size(160, 26);
             this.txb_formato.TabIndex = 154;
             // 
             // label13
@@ -480,7 +480,7 @@
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(111)))));
             this.label13.Location = new System.Drawing.Point(765, 394);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(135, 32);
+            this.label13.Size = new System.Drawing.Size(107, 26);
             this.label13.TabIndex = 153;
             this.label13.Text = "Formato:";
             // 
@@ -490,7 +490,7 @@
             this.txb_gola.Location = new System.Drawing.Point(898, 443);
             this.txb_gola.Name = "txb_gola";
             this.txb_gola.ReadOnly = true;
-            this.txb_gola.Size = new System.Drawing.Size(160, 31);
+            this.txb_gola.Size = new System.Drawing.Size(160, 26);
             this.txb_gola.TabIndex = 156;
             // 
             // label14
@@ -500,7 +500,7 @@
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(111)))));
             this.label14.Location = new System.Drawing.Point(765, 440);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(156, 32);
+            this.label14.Size = new System.Drawing.Size(121, 26);
             this.label14.TabIndex = 155;
             this.label14.Text = "Tipo Gola:";
             // 
@@ -510,7 +510,7 @@
             this.txb_tecnica.Location = new System.Drawing.Point(874, 488);
             this.txb_tecnica.Name = "txb_tecnica";
             this.txb_tecnica.ReadOnly = true;
-            this.txb_tecnica.Size = new System.Drawing.Size(160, 31);
+            this.txb_tecnica.Size = new System.Drawing.Size(160, 26);
             this.txb_tecnica.TabIndex = 158;
             // 
             // label15
@@ -520,7 +520,7 @@
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(111)))));
             this.label15.Location = new System.Drawing.Point(765, 485);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(130, 32);
+            this.label15.Size = new System.Drawing.Size(101, 26);
             this.label15.TabIndex = 157;
             this.label15.Text = "Tecnica:";
             // 
@@ -530,7 +530,7 @@
             this.txb_estrega.Location = new System.Drawing.Point(1294, 444);
             this.txb_estrega.Name = "txb_estrega";
             this.txb_estrega.ReadOnly = true;
-            this.txb_estrega.Size = new System.Drawing.Size(160, 31);
+            this.txb_estrega.Size = new System.Drawing.Size(160, 26);
             this.txb_estrega.TabIndex = 160;
             // 
             // label16
@@ -540,7 +540,7 @@
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(111)))));
             this.label16.Location = new System.Drawing.Point(1182, 442);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(130, 32);
+            this.label16.Size = new System.Drawing.Size(102, 26);
             this.label16.TabIndex = 159;
             this.label16.Text = "Entrega:";
             // 
@@ -551,13 +551,13 @@
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(111)))));
             this.label18.Location = new System.Drawing.Point(1134, 507);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(142, 32);
+            this.label18.Size = new System.Drawing.Size(113, 26);
             this.label18.TabIndex = 163;
             this.label18.Text = "Estampa:";
             // 
             // btn_iniciar
             // 
-            this.btn_iniciar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_iniciar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(189)))), ((int)(((byte)(164)))));
             this.btn_iniciar.Font = new System.Drawing.Font("Lucida Sans", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_iniciar.Location = new System.Drawing.Point(932, 719);
             this.btn_iniciar.Name = "btn_iniciar";
@@ -570,7 +570,7 @@
             // 
             // btn_limpar
             // 
-            this.btn_limpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_limpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(234)))), ((int)(((byte)(216)))));
             this.btn_limpar.Font = new System.Drawing.Font("Lucida Sans", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_limpar.Location = new System.Drawing.Point(1213, 718);
             this.btn_limpar.Name = "btn_limpar";
@@ -605,7 +605,7 @@
             this.txb_caminho.Location = new System.Drawing.Point(1282, 511);
             this.txb_caminho.Name = "txb_caminho";
             this.txb_caminho.ReadOnly = true;
-            this.txb_caminho.Size = new System.Drawing.Size(160, 31);
+            this.txb_caminho.Size = new System.Drawing.Size(160, 26);
             this.txb_caminho.TabIndex = 168;
             // 
             // label4
@@ -614,14 +614,14 @@
             this.label4.Font = new System.Drawing.Font("Lucida Sans", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(479, 728);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(262, 26);
+            this.label4.Size = new System.Drawing.Size(224, 22);
             this.label4.TabIndex = 169;
             this.label4.Text = "Verificar Produções >";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // crud_producao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
             this.ClientSize = new System.Drawing.Size(1771, 845);

@@ -33,8 +33,6 @@ namespace projeto2023.views.pedidos
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(crud_pedidos));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_cancelar = new System.Windows.Forms.Button();
-            this.btn_excluir = new System.Windows.Forms.Button();
             this.btn_limpar = new System.Windows.Forms.Button();
             this.btn_orcamento = new System.Windows.Forms.Button();
             this.btnregistrar_pedido = new System.Windows.Forms.Button();
@@ -133,8 +131,6 @@ namespace projeto2023.views.pedidos
             // panel1
             // 
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.btn_cancelar);
-            this.panel1.Controls.Add(this.btn_excluir);
             this.panel1.Controls.Add(this.btn_limpar);
             this.panel1.Controls.Add(this.btn_orcamento);
             this.panel1.Controls.Add(this.btnregistrar_pedido);
@@ -153,58 +149,42 @@ namespace projeto2023.views.pedidos
             this.label2.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(6, 662);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 27);
+            this.label2.Size = new System.Drawing.Size(89, 22);
             this.label2.TabIndex = 26;
             this.label2.Text = "VOLTAR";
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
-            // btn_cancelar
-            // 
-            this.btn_cancelar.Location = new System.Drawing.Point(800, 372);
-            this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(126, 58);
-            this.btn_cancelar.TabIndex = 25;
-            this.btn_cancelar.Text = "Cancelar";
-            this.btn_cancelar.UseVisualStyleBackColor = true;
-            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
-            // 
-            // btn_excluir
-            // 
-            this.btn_excluir.Location = new System.Drawing.Point(660, 372);
-            this.btn_excluir.Name = "btn_excluir";
-            this.btn_excluir.Size = new System.Drawing.Size(126, 58);
-            this.btn_excluir.TabIndex = 24;
-            this.btn_excluir.Text = "Excluir";
-            this.btn_excluir.UseVisualStyleBackColor = true;
-            this.btn_excluir.Click += new System.EventHandler(this.btn_excluir_Click);
-            // 
             // btn_limpar
             // 
+            this.btn_limpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(234)))), ((int)(((byte)(216)))));
             this.btn_limpar.Location = new System.Drawing.Point(800, 302);
             this.btn_limpar.Name = "btn_limpar";
             this.btn_limpar.Size = new System.Drawing.Size(126, 58);
             this.btn_limpar.TabIndex = 23;
             this.btn_limpar.Text = "Limpar";
-            this.btn_limpar.UseVisualStyleBackColor = true;
+            this.btn_limpar.UseVisualStyleBackColor = false;
             this.btn_limpar.Click += new System.EventHandler(this.btn_limpar_Click);
             // 
             // btn_orcamento
             // 
-            this.btn_orcamento.Location = new System.Drawing.Point(660, 434);
+            this.btn_orcamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(84)))), ((int)(((byte)(92)))));
+            this.btn_orcamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(226)))), ((int)(((byte)(184)))));
+            this.btn_orcamento.Location = new System.Drawing.Point(660, 380);
             this.btn_orcamento.Name = "btn_orcamento";
             this.btn_orcamento.Size = new System.Drawing.Size(266, 58);
             this.btn_orcamento.TabIndex = 22;
             this.btn_orcamento.Text = "Orçamento";
-            this.btn_orcamento.UseVisualStyleBackColor = true;
+            this.btn_orcamento.UseVisualStyleBackColor = false;
             // 
             // btnregistrar_pedido
             // 
+            this.btnregistrar_pedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(189)))), ((int)(((byte)(164)))));
             this.btnregistrar_pedido.Location = new System.Drawing.Point(660, 301);
             this.btnregistrar_pedido.Name = "btnregistrar_pedido";
             this.btnregistrar_pedido.Size = new System.Drawing.Size(126, 58);
             this.btnregistrar_pedido.TabIndex = 17;
             this.btnregistrar_pedido.Text = "Registrar";
-            this.btnregistrar_pedido.UseVisualStyleBackColor = true;
+            this.btnregistrar_pedido.UseVisualStyleBackColor = false;
             this.btnregistrar_pedido.Click += new System.EventHandler(this.btnregistrar_pedido_Click);
             // 
             // pnl_valores
@@ -227,7 +207,7 @@ namespace projeto2023.views.pedidos
             // 
             this.txb_valorAberto.Location = new System.Drawing.Point(11, 184);
             this.txb_valorAberto.Name = "txb_valorAberto";
-            this.txb_valorAberto.Size = new System.Drawing.Size(70, 24);
+            this.txb_valorAberto.Size = new System.Drawing.Size(70, 20);
             this.txb_valorAberto.TabIndex = 16;
             // 
             // lbl_valorAberto
@@ -235,7 +215,7 @@ namespace projeto2023.views.pedidos
             this.lbl_valorAberto.AutoSize = true;
             this.lbl_valorAberto.Location = new System.Drawing.Point(8, 165);
             this.lbl_valorAberto.Name = "lbl_valorAberto";
-            this.lbl_valorAberto.Size = new System.Drawing.Size(113, 16);
+            this.lbl_valorAberto.Size = new System.Drawing.Size(92, 14);
             this.lbl_valorAberto.TabIndex = 15;
             this.lbl_valorAberto.Text = "Valor em Aberto";
             // 
@@ -243,21 +223,21 @@ namespace projeto2023.views.pedidos
             // 
             this.txb_valorEntrada.Location = new System.Drawing.Point(12, 139);
             this.txb_valorEntrada.Name = "txb_valorEntrada";
-            this.txb_valorEntrada.Size = new System.Drawing.Size(70, 24);
+            this.txb_valorEntrada.Size = new System.Drawing.Size(70, 20);
             this.txb_valorEntrada.TabIndex = 14;
             // 
             // txb_valorTotal
             // 
             this.txb_valorTotal.Location = new System.Drawing.Point(12, 97);
             this.txb_valorTotal.Name = "txb_valorTotal";
-            this.txb_valorTotal.Size = new System.Drawing.Size(70, 24);
+            this.txb_valorTotal.Size = new System.Drawing.Size(70, 20);
             this.txb_valorTotal.TabIndex = 13;
             // 
             // txb_valorUnit
             // 
             this.txb_valorUnit.Location = new System.Drawing.Point(12, 55);
             this.txb_valorUnit.Name = "txb_valorUnit";
-            this.txb_valorUnit.Size = new System.Drawing.Size(70, 24);
+            this.txb_valorUnit.Size = new System.Drawing.Size(70, 20);
             this.txb_valorUnit.TabIndex = 6;
             // 
             // lbl_valorEntrada
@@ -265,7 +245,7 @@ namespace projeto2023.views.pedidos
             this.lbl_valorEntrada.AutoSize = true;
             this.lbl_valorEntrada.Location = new System.Drawing.Point(9, 120);
             this.lbl_valorEntrada.Name = "lbl_valorEntrada";
-            this.lbl_valorEntrada.Size = new System.Drawing.Size(95, 16);
+            this.lbl_valorEntrada.Size = new System.Drawing.Size(77, 14);
             this.lbl_valorEntrada.TabIndex = 12;
             this.lbl_valorEntrada.Text = "Valor Entrada";
             // 
@@ -274,7 +254,7 @@ namespace projeto2023.views.pedidos
             this.lbl_valorTotal.AutoSize = true;
             this.lbl_valorTotal.Location = new System.Drawing.Point(9, 78);
             this.lbl_valorTotal.Name = "lbl_valorTotal";
-            this.lbl_valorTotal.Size = new System.Drawing.Size(79, 16);
+            this.lbl_valorTotal.Size = new System.Drawing.Size(64, 14);
             this.lbl_valorTotal.TabIndex = 11;
             this.lbl_valorTotal.Text = "Valor Total";
             // 
@@ -283,7 +263,7 @@ namespace projeto2023.views.pedidos
             this.lbl_valorUnit.AutoSize = true;
             this.lbl_valorUnit.Location = new System.Drawing.Point(9, 37);
             this.lbl_valorUnit.Name = "lbl_valorUnit";
-            this.lbl_valorUnit.Size = new System.Drawing.Size(95, 16);
+            this.lbl_valorUnit.Size = new System.Drawing.Size(79, 14);
             this.lbl_valorUnit.TabIndex = 10;
             this.lbl_valorUnit.Text = "Valor Unitário";
             // 
@@ -292,7 +272,7 @@ namespace projeto2023.views.pedidos
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(44, 15);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(52, 16);
+            this.label13.Size = new System.Drawing.Size(44, 14);
             this.label13.TabIndex = 9;
             this.label13.Text = "Pedido";
             // 
@@ -314,7 +294,7 @@ namespace projeto2023.views.pedidos
             this.lbl_status.AutoSize = true;
             this.lbl_status.Location = new System.Drawing.Point(65, 132);
             this.lbl_status.Name = "lbl_status";
-            this.lbl_status.Size = new System.Drawing.Size(48, 16);
+            this.lbl_status.Size = new System.Drawing.Size(41, 14);
             this.lbl_status.TabIndex = 21;
             this.lbl_status.Text = "Status";
             // 
@@ -324,7 +304,7 @@ namespace projeto2023.views.pedidos
             this.cmb_status.FormattingEnabled = true;
             this.cmb_status.Location = new System.Drawing.Point(19, 159);
             this.cmb_status.Name = "cmb_status";
-            this.cmb_status.Size = new System.Drawing.Size(121, 24);
+            this.cmb_status.Size = new System.Drawing.Size(121, 22);
             this.cmb_status.TabIndex = 20;
             // 
             // cmb_formapagamentoFinal
@@ -333,7 +313,7 @@ namespace projeto2023.views.pedidos
             this.cmb_formapagamentoFinal.FormattingEnabled = true;
             this.cmb_formapagamentoFinal.Location = new System.Drawing.Point(18, 106);
             this.cmb_formapagamentoFinal.Name = "cmb_formapagamentoFinal";
-            this.cmb_formapagamentoFinal.Size = new System.Drawing.Size(121, 24);
+            this.cmb_formapagamentoFinal.Size = new System.Drawing.Size(121, 22);
             this.cmb_formapagamentoFinal.TabIndex = 19;
             // 
             // lbl_formapagamentoFinal
@@ -341,7 +321,7 @@ namespace projeto2023.views.pedidos
             this.lbl_formapagamentoFinal.AutoSize = true;
             this.lbl_formapagamentoFinal.Location = new System.Drawing.Point(16, 73);
             this.lbl_formapagamentoFinal.Name = "lbl_formapagamentoFinal";
-            this.lbl_formapagamentoFinal.Size = new System.Drawing.Size(153, 32);
+            this.lbl_formapagamentoFinal.Size = new System.Drawing.Size(124, 28);
             this.lbl_formapagamentoFinal.TabIndex = 18;
             this.lbl_formapagamentoFinal.Text = "Formas de Pagamento\r\n               Final";
             // 
@@ -351,7 +331,7 @@ namespace projeto2023.views.pedidos
             this.cmb_formapagamentoEntrada.FormattingEnabled = true;
             this.cmb_formapagamentoEntrada.Location = new System.Drawing.Point(18, 42);
             this.cmb_formapagamentoEntrada.Name = "cmb_formapagamentoEntrada";
-            this.cmb_formapagamentoEntrada.Size = new System.Drawing.Size(121, 24);
+            this.cmb_formapagamentoEntrada.Size = new System.Drawing.Size(121, 22);
             this.cmb_formapagamentoEntrada.TabIndex = 17;
             // 
             // lbl_formapagamentoEntrada
@@ -359,7 +339,7 @@ namespace projeto2023.views.pedidos
             this.lbl_formapagamentoEntrada.AutoSize = true;
             this.lbl_formapagamentoEntrada.Location = new System.Drawing.Point(16, 15);
             this.lbl_formapagamentoEntrada.Name = "lbl_formapagamentoEntrada";
-            this.lbl_formapagamentoEntrada.Size = new System.Drawing.Size(153, 32);
+            this.lbl_formapagamentoEntrada.Size = new System.Drawing.Size(124, 28);
             this.lbl_formapagamentoEntrada.TabIndex = 0;
             this.lbl_formapagamentoEntrada.Text = "Formas de Pagamento\r\n             Entrada";
             // 
@@ -404,7 +384,7 @@ namespace projeto2023.views.pedidos
             // 
             this.txb_caminhoImagem.Location = new System.Drawing.Point(162, 121);
             this.txb_caminhoImagem.Name = "txb_caminhoImagem";
-            this.txb_caminhoImagem.Size = new System.Drawing.Size(121, 24);
+            this.txb_caminhoImagem.Size = new System.Drawing.Size(121, 20);
             this.txb_caminhoImagem.TabIndex = 25;
             // 
             // label3
@@ -412,7 +392,7 @@ namespace projeto2023.views.pedidos
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(159, 101);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 16);
+            this.label3.Size = new System.Drawing.Size(51, 14);
             this.label3.TabIndex = 24;
             this.label3.Text = "Estampa";
             // 
@@ -422,7 +402,7 @@ namespace projeto2023.views.pedidos
             this.lbl_dataentrega.Location = new System.Drawing.Point(450, 308);
             this.lbl_dataentrega.Name = "lbl_dataentrega";
             this.lbl_dataentrega.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl_dataentrega.Size = new System.Drawing.Size(92, 16);
+            this.lbl_dataentrega.Size = new System.Drawing.Size(75, 14);
             this.lbl_dataentrega.TabIndex = 23;
             this.lbl_dataentrega.Text = "Data Entrega";
             // 
@@ -432,7 +412,7 @@ namespace projeto2023.views.pedidos
             this.lbl_datainicial.Location = new System.Drawing.Point(449, 19);
             this.lbl_datainicial.Name = "lbl_datainicial";
             this.lbl_datainicial.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl_datainicial.Size = new System.Drawing.Size(78, 16);
+            this.lbl_datainicial.Size = new System.Drawing.Size(66, 14);
             this.lbl_datainicial.TabIndex = 22;
             this.lbl_datainicial.Text = "Data Inicial";
             // 
@@ -453,7 +433,7 @@ namespace projeto2023.views.pedidos
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(99, 19);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(135, 16);
+            this.label11.Size = new System.Drawing.Size(112, 14);
             this.label11.TabIndex = 19;
             this.label11.Text = "Detalhes do Pedido";
             // 
@@ -472,7 +452,7 @@ namespace projeto2023.views.pedidos
             this.cmb_tecnica.FormattingEnabled = true;
             this.cmb_tecnica.Location = new System.Drawing.Point(162, 74);
             this.cmb_tecnica.Name = "cmb_tecnica";
-            this.cmb_tecnica.Size = new System.Drawing.Size(121, 24);
+            this.cmb_tecnica.Size = new System.Drawing.Size(121, 22);
             this.cmb_tecnica.TabIndex = 15;
             // 
             // grpb_quantidades
@@ -499,7 +479,7 @@ namespace projeto2023.views.pedidos
             this.lbl_tamG.AutoSize = true;
             this.lbl_tamG.Location = new System.Drawing.Point(21, 127);
             this.lbl_tamG.Name = "lbl_tamG";
-            this.lbl_tamG.Size = new System.Drawing.Size(17, 16);
+            this.lbl_tamG.Size = new System.Drawing.Size(15, 14);
             this.lbl_tamG.TabIndex = 18;
             this.lbl_tamG.Text = "G";
             // 
@@ -508,7 +488,7 @@ namespace projeto2023.views.pedidos
             this.lbl_tamM.AutoSize = true;
             this.lbl_tamM.Location = new System.Drawing.Point(20, 89);
             this.lbl_tamM.Name = "lbl_tamM";
-            this.lbl_tamM.Size = new System.Drawing.Size(18, 16);
+            this.lbl_tamM.Size = new System.Drawing.Size(16, 14);
             this.lbl_tamM.TabIndex = 17;
             this.lbl_tamM.Text = "M";
             // 
@@ -517,7 +497,7 @@ namespace projeto2023.views.pedidos
             this.lbl_tamP.AutoSize = true;
             this.lbl_tamP.Location = new System.Drawing.Point(23, 55);
             this.lbl_tamP.Name = "lbl_tamP";
-            this.lbl_tamP.Size = new System.Drawing.Size(14, 16);
+            this.lbl_tamP.Size = new System.Drawing.Size(13, 14);
             this.lbl_tamP.TabIndex = 16;
             this.lbl_tamP.Text = "P";
             // 
@@ -526,7 +506,7 @@ namespace projeto2023.views.pedidos
             this.lbl_totalCamisetas.AutoSize = true;
             this.lbl_totalCamisetas.Location = new System.Drawing.Point(97, 188);
             this.lbl_totalCamisetas.Name = "lbl_totalCamisetas";
-            this.lbl_totalCamisetas.Size = new System.Drawing.Size(45, 16);
+            this.lbl_totalCamisetas.Size = new System.Drawing.Size(37, 14);
             this.lbl_totalCamisetas.TabIndex = 15;
             this.lbl_totalCamisetas.Text = "Total:";
             // 
@@ -534,14 +514,14 @@ namespace projeto2023.views.pedidos
             // 
             this.txb_totalCamisetas.Location = new System.Drawing.Point(150, 185);
             this.txb_totalCamisetas.Name = "txb_totalCamisetas";
-            this.txb_totalCamisetas.Size = new System.Drawing.Size(76, 24);
+            this.txb_totalCamisetas.Size = new System.Drawing.Size(76, 20);
             this.txb_totalCamisetas.TabIndex = 14;
             // 
             // txb_disponibilizadocliente
             // 
             this.txb_disponibilizadocliente.Location = new System.Drawing.Point(212, 143);
             this.txb_disponibilizadocliente.Name = "txb_disponibilizadocliente";
-            this.txb_disponibilizadocliente.Size = new System.Drawing.Size(30, 24);
+            this.txb_disponibilizadocliente.Size = new System.Drawing.Size(30, 20);
             this.txb_disponibilizadocliente.TabIndex = 13;
             this.txb_disponibilizadocliente.TextChanged += new System.EventHandler(this.txb_disponibilizadocliente_TextChanged);
             // 
@@ -550,7 +530,7 @@ namespace projeto2023.views.pedidos
             this.check_disponibilizadocliente.AutoSize = true;
             this.check_disponibilizadocliente.Location = new System.Drawing.Point(25, 145);
             this.check_disponibilizadocliente.Name = "check_disponibilizadocliente";
-            this.check_disponibilizadocliente.Size = new System.Drawing.Size(214, 20);
+            this.check_disponibilizadocliente.Size = new System.Drawing.Size(181, 18);
             this.check_disponibilizadocliente.TabIndex = 12;
             this.check_disponibilizadocliente.Text = "disponibilizado pelo cliente?";
             this.check_disponibilizadocliente.UseVisualStyleBackColor = true;
@@ -559,7 +539,7 @@ namespace projeto2023.views.pedidos
             // 
             this.txb_tamG.Location = new System.Drawing.Point(53, 119);
             this.txb_tamG.Name = "txb_tamG";
-            this.txb_tamG.Size = new System.Drawing.Size(30, 24);
+            this.txb_tamG.Size = new System.Drawing.Size(30, 20);
             this.txb_tamG.TabIndex = 11;
             this.txb_tamG.TextChanged += new System.EventHandler(this.txb_tamG_TextChanged);
             // 
@@ -567,7 +547,7 @@ namespace projeto2023.views.pedidos
             // 
             this.txb_tamM.Location = new System.Drawing.Point(53, 83);
             this.txb_tamM.Name = "txb_tamM";
-            this.txb_tamM.Size = new System.Drawing.Size(30, 24);
+            this.txb_tamM.Size = new System.Drawing.Size(30, 20);
             this.txb_tamM.TabIndex = 10;
             this.txb_tamM.TextChanged += new System.EventHandler(this.txb_tamM_TextChanged);
             // 
@@ -575,7 +555,7 @@ namespace projeto2023.views.pedidos
             // 
             this.txb_tamP.Location = new System.Drawing.Point(53, 52);
             this.txb_tamP.Name = "txb_tamP";
-            this.txb_tamP.Size = new System.Drawing.Size(30, 24);
+            this.txb_tamP.Size = new System.Drawing.Size(30, 20);
             this.txb_tamP.TabIndex = 8;
             this.txb_tamP.TextChanged += new System.EventHandler(this.txb_tamP_TextChanged);
             // 
@@ -584,7 +564,7 @@ namespace projeto2023.views.pedidos
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(97, 23);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 16);
+            this.label5.Size = new System.Drawing.Size(70, 14);
             this.label5.TabIndex = 6;
             this.label5.Text = "Quantidade";
             // 
@@ -594,7 +574,7 @@ namespace projeto2023.views.pedidos
             this.cmb_formato.FormattingEnabled = true;
             this.cmb_formato.Location = new System.Drawing.Point(26, 186);
             this.cmb_formato.Name = "cmb_formato";
-            this.cmb_formato.Size = new System.Drawing.Size(121, 24);
+            this.cmb_formato.Size = new System.Drawing.Size(121, 22);
             this.cmb_formato.TabIndex = 17;
             // 
             // label7
@@ -602,7 +582,7 @@ namespace projeto2023.views.pedidos
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(23, 108);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(124, 16);
+            this.label7.Size = new System.Drawing.Size(103, 14);
             this.label7.TabIndex = 10;
             this.label7.Text = "Tecido Camisetas";
             // 
@@ -611,7 +591,7 @@ namespace projeto2023.views.pedidos
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(23, 166);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(126, 16);
+            this.label10.Size = new System.Drawing.Size(102, 14);
             this.label10.TabIndex = 16;
             this.label10.Text = "Formato Camiseta";
             // 
@@ -621,7 +601,7 @@ namespace projeto2023.views.pedidos
             this.cmb_tecido.FormattingEnabled = true;
             this.cmb_tecido.Location = new System.Drawing.Point(26, 128);
             this.cmb_tecido.Name = "cmb_tecido";
-            this.cmb_tecido.Size = new System.Drawing.Size(121, 24);
+            this.cmb_tecido.Size = new System.Drawing.Size(121, 22);
             this.cmb_tecido.TabIndex = 11;
             // 
             // cmb_cores
@@ -630,7 +610,7 @@ namespace projeto2023.views.pedidos
             this.cmb_cores.FormattingEnabled = true;
             this.cmb_cores.Location = new System.Drawing.Point(26, 74);
             this.cmb_cores.Name = "cmb_cores";
-            this.cmb_cores.Size = new System.Drawing.Size(121, 24);
+            this.cmb_cores.Size = new System.Drawing.Size(121, 22);
             this.cmb_cores.TabIndex = 13;
             // 
             // label8
@@ -638,7 +618,7 @@ namespace projeto2023.views.pedidos
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(23, 54);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(117, 16);
+            this.label8.Size = new System.Drawing.Size(97, 14);
             this.label8.TabIndex = 12;
             this.label8.Text = "Cores Camisetas";
             // 
@@ -647,7 +627,7 @@ namespace projeto2023.views.pedidos
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(159, 54);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 16);
+            this.label9.Size = new System.Drawing.Size(57, 14);
             this.label9.TabIndex = 14;
             this.label9.Text = "Técnicas";
             // 
@@ -657,7 +637,7 @@ namespace projeto2023.views.pedidos
             this.cmb_gola.FormattingEnabled = true;
             this.cmb_gola.Location = new System.Drawing.Point(26, 236);
             this.cmb_gola.Name = "cmb_gola";
-            this.cmb_gola.Size = new System.Drawing.Size(121, 24);
+            this.cmb_gola.Size = new System.Drawing.Size(121, 22);
             this.cmb_gola.TabIndex = 9;
             // 
             // label6
@@ -665,7 +645,7 @@ namespace projeto2023.views.pedidos
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(23, 216);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 16);
+            this.label6.Size = new System.Drawing.Size(58, 14);
             this.label6.TabIndex = 8;
             this.label6.Text = "Tipo Gola";
             // 
@@ -688,7 +668,7 @@ namespace projeto2023.views.pedidos
             this.cmb_idCliente.FormattingEnabled = true;
             this.cmb_idCliente.Location = new System.Drawing.Point(415, 28);
             this.cmb_idCliente.Name = "cmb_idCliente";
-            this.cmb_idCliente.Size = new System.Drawing.Size(281, 24);
+            this.cmb_idCliente.Size = new System.Drawing.Size(281, 22);
             this.cmb_idCliente.TabIndex = 7;
             this.cmb_idCliente.SelectedIndexChanged += new System.EventHandler(this.cmb_idCliente_SelectedIndexChanged);
             // 
@@ -699,7 +679,7 @@ namespace projeto2023.views.pedidos
             this.cmb_idColaborador.Location = new System.Drawing.Point(11, 26);
             this.cmb_idColaborador.MaxDropDownItems = 5;
             this.cmb_idColaborador.Name = "cmb_idColaborador";
-            this.cmb_idColaborador.Size = new System.Drawing.Size(283, 24);
+            this.cmb_idColaborador.Size = new System.Drawing.Size(283, 22);
             this.cmb_idColaborador.TabIndex = 6;
             this.cmb_idColaborador.SelectedIndexChanged += new System.EventHandler(this.cmb_idColaborador_SelectedIndexChanged);
             // 
@@ -708,7 +688,7 @@ namespace projeto2023.views.pedidos
             this.lbl_nomeCliente.AutoSize = true;
             this.lbl_nomeCliente.Location = new System.Drawing.Point(412, 11);
             this.lbl_nomeCliente.Name = "lbl_nomeCliente";
-            this.lbl_nomeCliente.Size = new System.Drawing.Size(52, 16);
+            this.lbl_nomeCliente.Size = new System.Drawing.Size(46, 14);
             this.lbl_nomeCliente.TabIndex = 3;
             this.lbl_nomeCliente.Text = "Cliente";
             // 
@@ -717,7 +697,7 @@ namespace projeto2023.views.pedidos
             this.txb_nomeColaborador.Location = new System.Drawing.Point(101, 28);
             this.txb_nomeColaborador.Name = "txb_nomeColaborador";
             this.txb_nomeColaborador.ReadOnly = true;
-            this.txb_nomeColaborador.Size = new System.Drawing.Size(289, 24);
+            this.txb_nomeColaborador.Size = new System.Drawing.Size(289, 20);
             this.txb_nomeColaborador.TabIndex = 3;
             this.txb_nomeColaborador.Visible = false;
             // 
@@ -726,7 +706,7 @@ namespace projeto2023.views.pedidos
             this.txb_nomeCliente.Location = new System.Drawing.Point(503, 28);
             this.txb_nomeCliente.Name = "txb_nomeCliente";
             this.txb_nomeCliente.ReadOnly = true;
-            this.txb_nomeCliente.Size = new System.Drawing.Size(289, 24);
+            this.txb_nomeCliente.Size = new System.Drawing.Size(289, 20);
             this.txb_nomeCliente.TabIndex = 5;
             this.txb_nomeCliente.Visible = false;
             // 
@@ -735,7 +715,7 @@ namespace projeto2023.views.pedidos
             this.lbl_idColaborador.AutoSize = true;
             this.lbl_idColaborador.Location = new System.Drawing.Point(9, 11);
             this.lbl_idColaborador.Name = "lbl_idColaborador";
-            this.lbl_idColaborador.Size = new System.Drawing.Size(91, 16);
+            this.lbl_idColaborador.Size = new System.Drawing.Size(73, 14);
             this.lbl_idColaborador.TabIndex = 0;
             this.lbl_idColaborador.Text = "Colaborador";
             // 
@@ -786,7 +766,7 @@ namespace projeto2023.views.pedidos
             this.label1.Font = new System.Drawing.Font("Lucida Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(1104, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(419, 68);
+            this.label1.Size = new System.Drawing.Size(334, 55);
             this.label1.TabIndex = 35;
             this.label1.Text = "Novo Pedido";
             // 
@@ -796,7 +776,7 @@ namespace projeto2023.views.pedidos
             // 
             // crud_pedidos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
             this.ClientSize = new System.Drawing.Size(1646, 840);
@@ -857,8 +837,6 @@ namespace projeto2023.views.pedidos
         private System.Windows.Forms.Label lbl_idColaborador;
         private System.Windows.Forms.Label lbl_nomeCliente;
         private System.Windows.Forms.PictureBox pctb_estampa;
-        private System.Windows.Forms.Button btn_cancelar;
-        private System.Windows.Forms.Button btn_excluir;
         private System.Windows.Forms.Button btn_orcamento;
         private System.Windows.Forms.Button btnregistrar_pedido;
         private System.Windows.Forms.Panel pnl_valores;

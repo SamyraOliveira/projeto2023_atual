@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmb_status = new System.Windows.Forms.ComboBox();
+            this.lbl_status = new System.Windows.Forms.Label();
             this.checked_receita = new System.Windows.Forms.CheckBox();
             this.cmb_conta = new System.Windows.Forms.ComboBox();
             this.cmb_categoria = new System.Windows.Forms.ComboBox();
@@ -48,8 +50,6 @@
             this.txb_descricao = new System.Windows.Forms.TextBox();
             this.txb_valor = new System.Windows.Forms.TextBox();
             this.cmb_centroCusto = new System.Windows.Forms.ComboBox();
-            this.cmb_status = new System.Windows.Forms.ComboBox();
-            this.lbl_status = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
@@ -83,6 +83,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1646, 804);
             this.panel1.TabIndex = 2;
+            // 
+            // cmb_status
+            // 
+            this.cmb_status.FormattingEnabled = true;
+            this.cmb_status.Location = new System.Drawing.Point(530, 297);
+            this.cmb_status.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmb_status.Name = "cmb_status";
+            this.cmb_status.Size = new System.Drawing.Size(176, 21);
+            this.cmb_status.TabIndex = 37;
+            // 
+            // lbl_status
+            // 
+            this.lbl_status.AutoSize = true;
+            this.lbl_status.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
+            this.lbl_status.Location = new System.Drawing.Point(449, 301);
+            this.lbl_status.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_status.Name = "lbl_status";
+            this.lbl_status.Size = new System.Drawing.Size(58, 17);
+            this.lbl_status.TabIndex = 36;
+            this.lbl_status.Text = "Status";
             // 
             // checked_receita
             // 
@@ -168,7 +188,7 @@
             // 
             // btn_salvar
             // 
-            this.btn_salvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_salvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(189)))), ((int)(((byte)(164)))));
             this.btn_salvar.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.btn_salvar.Location = new System.Drawing.Point(415, 666);
             this.btn_salvar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -181,7 +201,7 @@
             // 
             // btn_limpar
             // 
-            this.btn_limpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_limpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(234)))), ((int)(((byte)(216)))));
             this.btn_limpar.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.btn_limpar.Location = new System.Drawing.Point(643, 666);
             this.btn_limpar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -193,7 +213,7 @@
             // 
             // btn_cancelar
             // 
-            this.btn_cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btn_cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(112)))), ((int)(((byte)(114)))));
             this.btn_cancelar.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.btn_cancelar.Location = new System.Drawing.Point(844, 666);
             this.btn_cancelar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -283,26 +303,6 @@
             this.cmb_centroCusto.Name = "cmb_centroCusto";
             this.cmb_centroCusto.Size = new System.Drawing.Size(176, 21);
             this.cmb_centroCusto.TabIndex = 1;
-            // 
-            // cmb_status
-            // 
-            this.cmb_status.FormattingEnabled = true;
-            this.cmb_status.Location = new System.Drawing.Point(530, 297);
-            this.cmb_status.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.cmb_status.Name = "cmb_status";
-            this.cmb_status.Size = new System.Drawing.Size(176, 21);
-            this.cmb_status.TabIndex = 37;
-            // 
-            // lbl_status
-            // 
-            this.lbl_status.AutoSize = true;
-            this.lbl_status.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
-            this.lbl_status.Location = new System.Drawing.Point(449, 301);
-            this.lbl_status.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_status.Name = "lbl_status";
-            this.lbl_status.Size = new System.Drawing.Size(58, 17);
-            this.lbl_status.TabIndex = 36;
-            this.lbl_status.Text = "Status";
             // 
             // crud_transacoes
             // 

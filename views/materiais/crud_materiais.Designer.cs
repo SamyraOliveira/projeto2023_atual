@@ -67,7 +67,7 @@
             this.lbl_idFornecedor.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.lbl_idFornecedor.Location = new System.Drawing.Point(352, 183);
             this.lbl_idFornecedor.Name = "lbl_idFornecedor";
-            this.lbl_idFornecedor.Size = new System.Drawing.Size(115, 21);
+            this.lbl_idFornecedor.Size = new System.Drawing.Size(94, 17);
             this.lbl_idFornecedor.TabIndex = 0;
             this.lbl_idFornecedor.Text = "Fornecedor";
             // 
@@ -77,7 +77,7 @@
             this.lbl_nomeMaterial.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.lbl_nomeMaterial.Location = new System.Drawing.Point(659, 183);
             this.lbl_nomeMaterial.Name = "lbl_nomeMaterial";
-            this.lbl_nomeMaterial.Size = new System.Drawing.Size(148, 21);
+            this.lbl_nomeMaterial.Size = new System.Drawing.Size(120, 17);
             this.lbl_nomeMaterial.TabIndex = 1;
             this.lbl_nomeMaterial.Text = "Nome Material";
             // 
@@ -87,7 +87,7 @@
             this.lbl_unidadeMedida.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.lbl_unidadeMedida.Location = new System.Drawing.Point(358, 253);
             this.lbl_unidadeMedida.Name = "lbl_unidadeMedida";
-            this.lbl_unidadeMedida.Size = new System.Drawing.Size(190, 21);
+            this.lbl_unidadeMedida.Size = new System.Drawing.Size(156, 17);
             this.lbl_unidadeMedida.TabIndex = 2;
             this.lbl_unidadeMedida.Text = "Unidade de Medida";
             // 
@@ -97,7 +97,7 @@
             this.lbl_dataEntrada.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.lbl_dataEntrada.Location = new System.Drawing.Point(37, 194);
             this.lbl_dataEntrada.Name = "lbl_dataEntrada";
-            this.lbl_dataEntrada.Size = new System.Drawing.Size(162, 21);
+            this.lbl_dataEntrada.Size = new System.Drawing.Size(137, 17);
             this.lbl_dataEntrada.TabIndex = 3;
             this.lbl_dataEntrada.Text = "Data de Entrada";
             // 
@@ -107,7 +107,7 @@
             this.lbl_quantEntrada.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.lbl_quantEntrada.Location = new System.Drawing.Point(674, 481);
             this.lbl_quantEntrada.Name = "lbl_quantEntrada";
-            this.lbl_quantEntrada.Size = new System.Drawing.Size(175, 21);
+            this.lbl_quantEntrada.Size = new System.Drawing.Size(147, 17);
             this.lbl_quantEntrada.TabIndex = 4;
             this.lbl_quantEntrada.Text = "Quantidade inicial";
             // 
@@ -117,7 +117,7 @@
             this.lbl_descricao.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.lbl_descricao.Location = new System.Drawing.Point(846, 260);
             this.lbl_descricao.Name = "lbl_descricao";
-            this.lbl_descricao.Size = new System.Drawing.Size(101, 21);
+            this.lbl_descricao.Size = new System.Drawing.Size(85, 17);
             this.lbl_descricao.TabIndex = 6;
             this.lbl_descricao.Text = "Descrição";
             // 
@@ -127,7 +127,7 @@
             this.lbl_precoUnit.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.lbl_precoUnit.Location = new System.Drawing.Point(357, 341);
             this.lbl_precoUnit.Name = "lbl_precoUnit";
-            this.lbl_precoUnit.Size = new System.Drawing.Size(142, 21);
+            this.lbl_precoUnit.Size = new System.Drawing.Size(116, 17);
             this.lbl_precoUnit.TabIndex = 7;
             this.lbl_precoUnit.Text = "Preço Unitario";
             // 
@@ -137,7 +137,7 @@
             this.label9.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.label9.Location = new System.Drawing.Point(358, 452);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(245, 21);
+            this.label9.Size = new System.Drawing.Size(205, 17);
             this.label9.TabIndex = 8;
             this.label9.Text = "Local de Armazenamento";
             // 
@@ -147,7 +147,7 @@
             this.label10.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.label10.Location = new System.Drawing.Point(582, 253);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(132, 21);
+            this.label10.Size = new System.Drawing.Size(106, 17);
             this.label10.TabIndex = 9;
             this.label10.Text = "Numero Lote";
             // 
@@ -157,7 +157,7 @@
             this.lbl_status.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.lbl_status.Location = new System.Drawing.Point(914, 481);
             this.lbl_status.Name = "lbl_status";
-            this.lbl_status.Size = new System.Drawing.Size(69, 21);
+            this.lbl_status.Size = new System.Drawing.Size(58, 17);
             this.lbl_status.TabIndex = 10;
             this.lbl_status.Text = "Status";
             // 
@@ -166,7 +166,7 @@
             this.cmb_idFornecedor.FormattingEnabled = true;
             this.cmb_idFornecedor.Location = new System.Drawing.Point(355, 206);
             this.cmb_idFornecedor.Name = "cmb_idFornecedor";
-            this.cmb_idFornecedor.Size = new System.Drawing.Size(259, 24);
+            this.cmb_idFornecedor.Size = new System.Drawing.Size(259, 22);
             this.cmb_idFornecedor.TabIndex = 11;
             // 
             // cmb_unidadeMedida
@@ -174,7 +174,7 @@
             this.cmb_unidadeMedida.FormattingEnabled = true;
             this.cmb_unidadeMedida.Location = new System.Drawing.Point(361, 276);
             this.cmb_unidadeMedida.Name = "cmb_unidadeMedida";
-            this.cmb_unidadeMedida.Size = new System.Drawing.Size(121, 24);
+            this.cmb_unidadeMedida.Size = new System.Drawing.Size(121, 22);
             this.cmb_unidadeMedida.TabIndex = 12;
             // 
             // cmb_localArmazenamento
@@ -182,7 +182,7 @@
             this.cmb_localArmazenamento.FormattingEnabled = true;
             this.cmb_localArmazenamento.Location = new System.Drawing.Point(361, 475);
             this.cmb_localArmazenamento.Name = "cmb_localArmazenamento";
-            this.cmb_localArmazenamento.Size = new System.Drawing.Size(166, 24);
+            this.cmb_localArmazenamento.Size = new System.Drawing.Size(166, 22);
             this.cmb_localArmazenamento.TabIndex = 13;
             // 
             // cmb_status
@@ -190,21 +190,21 @@
             this.cmb_status.FormattingEnabled = true;
             this.cmb_status.Location = new System.Drawing.Point(916, 504);
             this.cmb_status.Name = "cmb_status";
-            this.cmb_status.Size = new System.Drawing.Size(134, 24);
+            this.cmb_status.Size = new System.Drawing.Size(134, 22);
             this.cmb_status.TabIndex = 14;
             // 
             // txb_precoUnit
             // 
             this.txb_precoUnit.Location = new System.Drawing.Point(361, 364);
             this.txb_precoUnit.Name = "txb_precoUnit";
-            this.txb_precoUnit.Size = new System.Drawing.Size(100, 24);
+            this.txb_precoUnit.Size = new System.Drawing.Size(100, 20);
             this.txb_precoUnit.TabIndex = 15;
             // 
             // txb_nomeMaterial
             // 
             this.txb_nomeMaterial.Location = new System.Drawing.Point(662, 206);
             this.txb_nomeMaterial.Name = "txb_nomeMaterial";
-            this.txb_nomeMaterial.Size = new System.Drawing.Size(307, 24);
+            this.txb_nomeMaterial.Size = new System.Drawing.Size(307, 20);
             this.txb_nomeMaterial.TabIndex = 16;
             // 
             // txb_descricao
@@ -219,14 +219,14 @@
             // 
             this.txb_numeroLote.Location = new System.Drawing.Point(586, 276);
             this.txb_numeroLote.Name = "txb_numeroLote";
-            this.txb_numeroLote.Size = new System.Drawing.Size(100, 24);
+            this.txb_numeroLote.Size = new System.Drawing.Size(100, 20);
             this.txb_numeroLote.TabIndex = 18;
             // 
             // txb_quantEntrada
             // 
             this.txb_quantEntrada.Location = new System.Drawing.Point(677, 504);
             this.txb_quantEntrada.Name = "txb_quantEntrada";
-            this.txb_quantEntrada.Size = new System.Drawing.Size(130, 24);
+            this.txb_quantEntrada.Size = new System.Drawing.Size(130, 20);
             this.txb_quantEntrada.TabIndex = 19;
             // 
             // mnth_dataEntrada
@@ -274,7 +274,7 @@
             this.label2.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 753);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 27);
+            this.label2.Size = new System.Drawing.Size(89, 22);
             this.label2.TabIndex = 35;
             this.label2.Text = "VOLTAR";
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
@@ -286,7 +286,7 @@
             this.label13.Font = new System.Drawing.Font("Lucida Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(559, 25);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(617, 68);
+            this.label13.Size = new System.Drawing.Size(491, 55);
             this.label13.TabIndex = 34;
             this.label13.Text = "Cadastro Materiais";
             // 
@@ -303,14 +303,14 @@
             this.label1.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(37, 450);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(197, 21);
+            this.label1.Size = new System.Drawing.Size(165, 17);
             this.label1.TabIndex = 26;
             this.label1.Text = "---ultima atualizacao";
             this.label1.Visible = false;
             // 
             // btn_limpar
             // 
-            this.btn_limpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_limpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(234)))), ((int)(((byte)(216)))));
             this.btn_limpar.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.btn_limpar.Location = new System.Drawing.Point(921, 605);
             this.btn_limpar.Name = "btn_limpar";
@@ -322,7 +322,7 @@
             // 
             // btn_salvar
             // 
-            this.btn_salvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_salvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(189)))), ((int)(((byte)(164)))));
             this.btn_salvar.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.btn_salvar.Location = new System.Drawing.Point(705, 605);
             this.btn_salvar.Name = "btn_salvar";
@@ -345,7 +345,7 @@
             // 
             // crud_materiais
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
             this.ClientSize = new System.Drawing.Size(1646, 950);

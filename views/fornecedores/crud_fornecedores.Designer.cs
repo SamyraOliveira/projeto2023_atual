@@ -71,70 +71,70 @@
             // 
             this.txb_nomefantasia.Location = new System.Drawing.Point(40, 164);
             this.txb_nomefantasia.Name = "txb_nomefantasia";
-            this.txb_nomefantasia.Size = new System.Drawing.Size(228, 24);
+            this.txb_nomefantasia.Size = new System.Drawing.Size(228, 20);
             this.txb_nomefantasia.TabIndex = 4;
             // 
             // txb_numero
             // 
             this.txb_numero.Location = new System.Drawing.Point(386, 258);
             this.txb_numero.Name = "txb_numero";
-            this.txb_numero.Size = new System.Drawing.Size(50, 24);
+            this.txb_numero.Size = new System.Drawing.Size(50, 20);
             this.txb_numero.TabIndex = 5;
             // 
             // txb_razaosocial
             // 
             this.txb_razaosocial.Location = new System.Drawing.Point(283, 164);
             this.txb_razaosocial.Name = "txb_razaosocial";
-            this.txb_razaosocial.Size = new System.Drawing.Size(228, 24);
+            this.txb_razaosocial.Size = new System.Drawing.Size(228, 20);
             this.txb_razaosocial.TabIndex = 6;
             // 
             // txb_email
             // 
             this.txb_email.Location = new System.Drawing.Point(283, 347);
             this.txb_email.Name = "txb_email";
-            this.txb_email.Size = new System.Drawing.Size(228, 24);
+            this.txb_email.Size = new System.Drawing.Size(228, 20);
             this.txb_email.TabIndex = 7;
             // 
             // txb_inscricaoEstadual
             // 
             this.txb_inscricaoEstadual.Location = new System.Drawing.Point(700, 164);
             this.txb_inscricaoEstadual.Name = "txb_inscricaoEstadual";
-            this.txb_inscricaoEstadual.Size = new System.Drawing.Size(100, 24);
+            this.txb_inscricaoEstadual.Size = new System.Drawing.Size(100, 20);
             this.txb_inscricaoEstadual.TabIndex = 8;
             // 
             // txb_contato
             // 
             this.txb_contato.Location = new System.Drawing.Point(527, 347);
             this.txb_contato.Name = "txb_contato";
-            this.txb_contato.Size = new System.Drawing.Size(100, 24);
+            this.txb_contato.Size = new System.Drawing.Size(100, 20);
             this.txb_contato.TabIndex = 9;
             // 
             // txb_inscricaoMunicipal
             // 
             this.txb_inscricaoMunicipal.Location = new System.Drawing.Point(40, 258);
             this.txb_inscricaoMunicipal.Name = "txb_inscricaoMunicipal";
-            this.txb_inscricaoMunicipal.Size = new System.Drawing.Size(100, 24);
+            this.txb_inscricaoMunicipal.Size = new System.Drawing.Size(100, 20);
             this.txb_inscricaoMunicipal.TabIndex = 10;
             // 
             // txb_endereco
             // 
             this.txb_endereco.Location = new System.Drawing.Point(271, 258);
             this.txb_endereco.Name = "txb_endereco";
-            this.txb_endereco.Size = new System.Drawing.Size(100, 24);
+            this.txb_endereco.Size = new System.Drawing.Size(100, 20);
             this.txb_endereco.TabIndex = 11;
             // 
             // txb_representante
             // 
             this.txb_representante.Location = new System.Drawing.Point(40, 347);
             this.txb_representante.Name = "txb_representante";
-            this.txb_representante.Size = new System.Drawing.Size(216, 24);
+            this.txb_representante.Size = new System.Drawing.Size(216, 20);
             this.txb_representante.TabIndex = 12;
             // 
             // txb_cidade
             // 
             this.txb_cidade.Location = new System.Drawing.Point(452, 258);
             this.txb_cidade.Name = "txb_cidade";
-            this.txb_cidade.Size = new System.Drawing.Size(99, 24);
+            this.txb_cidade.Size = new System.Drawing.Size(99, 20);
             this.txb_cidade.TabIndex = 19;
             // 
             // lbl_nomefantasia
@@ -143,7 +143,7 @@
             this.lbl_nomefantasia.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.lbl_nomefantasia.Location = new System.Drawing.Point(38, 140);
             this.lbl_nomefantasia.Name = "lbl_nomefantasia";
-            this.lbl_nomefantasia.Size = new System.Drawing.Size(148, 21);
+            this.lbl_nomefantasia.Size = new System.Drawing.Size(123, 17);
             this.lbl_nomefantasia.TabIndex = 20;
             this.lbl_nomefantasia.Text = "Nome Fantasia";
             // 
@@ -153,7 +153,7 @@
             this.lbl_numero.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.lbl_numero.Location = new System.Drawing.Point(384, 231);
             this.lbl_numero.Name = "lbl_numero";
-            this.lbl_numero.Size = new System.Drawing.Size(34, 21);
+            this.lbl_numero.Size = new System.Drawing.Size(26, 17);
             this.lbl_numero.TabIndex = 21;
             this.lbl_numero.Text = "Nº";
             // 
@@ -163,7 +163,7 @@
             this.label3.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(280, 141);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 21);
+            this.label3.Size = new System.Drawing.Size(108, 17);
             this.label3.TabIndex = 22;
             this.label3.Text = "Razão Social";
             // 
@@ -173,7 +173,7 @@
             this.lbl_cidade.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.lbl_cidade.Location = new System.Drawing.Point(450, 231);
             this.lbl_cidade.Name = "lbl_cidade";
-            this.lbl_cidade.Size = new System.Drawing.Size(74, 21);
+            this.lbl_cidade.Size = new System.Drawing.Size(62, 17);
             this.lbl_cidade.TabIndex = 23;
             this.lbl_cidade.Text = "Cidade";
             // 
@@ -183,7 +183,7 @@
             this.lbl_CNPJ.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.lbl_CNPJ.Location = new System.Drawing.Point(525, 141);
             this.lbl_CNPJ.Name = "lbl_CNPJ";
-            this.lbl_CNPJ.Size = new System.Drawing.Size(57, 21);
+            this.lbl_CNPJ.Size = new System.Drawing.Size(44, 17);
             this.lbl_CNPJ.TabIndex = 24;
             this.lbl_CNPJ.Text = "CNPJ";
             // 
@@ -193,7 +193,7 @@
             this.lbl_estado.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.lbl_estado.Location = new System.Drawing.Point(561, 231);
             this.lbl_estado.Name = "lbl_estado";
-            this.lbl_estado.Size = new System.Drawing.Size(75, 21);
+            this.lbl_estado.Size = new System.Drawing.Size(62, 17);
             this.lbl_estado.TabIndex = 25;
             this.lbl_estado.Text = "Estado";
             // 
@@ -203,7 +203,7 @@
             this.lbl_inscricaoEstadual.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.lbl_inscricaoEstadual.Location = new System.Drawing.Point(698, 140);
             this.lbl_inscricaoEstadual.Name = "lbl_inscricaoEstadual";
-            this.lbl_inscricaoEstadual.Size = new System.Drawing.Size(39, 21);
+            this.lbl_inscricaoEstadual.Size = new System.Drawing.Size(29, 17);
             this.lbl_inscricaoEstadual.TabIndex = 26;
             this.lbl_inscricaoEstadual.Text = "I.E.";
             // 
@@ -213,7 +213,7 @@
             this.lbl_contato.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.lbl_contato.Location = new System.Drawing.Point(525, 320);
             this.lbl_contato.Name = "lbl_contato";
-            this.lbl_contato.Size = new System.Drawing.Size(85, 21);
+            this.lbl_contato.Size = new System.Drawing.Size(72, 17);
             this.lbl_contato.TabIndex = 27;
             this.lbl_contato.Text = "Contato";
             // 
@@ -223,7 +223,7 @@
             this.lbl_inscricaoMunicipal.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.lbl_inscricaoMunicipal.Location = new System.Drawing.Point(38, 231);
             this.lbl_inscricaoMunicipal.Name = "lbl_inscricaoMunicipal";
-            this.lbl_inscricaoMunicipal.Size = new System.Drawing.Size(145, 21);
+            this.lbl_inscricaoMunicipal.Size = new System.Drawing.Size(117, 17);
             this.lbl_inscricaoMunicipal.TabIndex = 28;
             this.lbl_inscricaoMunicipal.Text = "Inscrição Mun.";
             // 
@@ -233,7 +233,7 @@
             this.lbl_cep.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.lbl_cep.Location = new System.Drawing.Point(152, 231);
             this.lbl_cep.Name = "lbl_cep";
-            this.lbl_cep.Size = new System.Drawing.Size(46, 21);
+            this.lbl_cep.Size = new System.Drawing.Size(36, 17);
             this.lbl_cep.TabIndex = 29;
             this.lbl_cep.Text = "CEP";
             // 
@@ -243,7 +243,7 @@
             this.lbl_representante.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.lbl_representante.Location = new System.Drawing.Point(38, 320);
             this.lbl_representante.Name = "lbl_representante";
-            this.lbl_representante.Size = new System.Drawing.Size(146, 21);
+            this.lbl_representante.Size = new System.Drawing.Size(120, 17);
             this.lbl_representante.TabIndex = 30;
             this.lbl_representante.Text = "Representante";
             // 
@@ -253,7 +253,7 @@
             this.lbl_email.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.lbl_email.Location = new System.Drawing.Point(280, 320);
             this.lbl_email.Name = "lbl_email";
-            this.lbl_email.Size = new System.Drawing.Size(60, 21);
+            this.lbl_email.Size = new System.Drawing.Size(49, 17);
             this.lbl_email.TabIndex = 31;
             this.lbl_email.Text = "Email";
             // 
@@ -263,7 +263,7 @@
             this.lbl_endereco.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.lbl_endereco.Location = new System.Drawing.Point(269, 231);
             this.lbl_endereco.Name = "lbl_endereco";
-            this.lbl_endereco.Size = new System.Drawing.Size(97, 21);
+            this.lbl_endereco.Size = new System.Drawing.Size(79, 17);
             this.lbl_endereco.TabIndex = 32;
             this.lbl_endereco.Text = "Endereço";
             // 
@@ -272,7 +272,7 @@
             this.cmb_estado.FormattingEnabled = true;
             this.cmb_estado.Location = new System.Drawing.Point(563, 258);
             this.cmb_estado.Name = "cmb_estado";
-            this.cmb_estado.Size = new System.Drawing.Size(121, 24);
+            this.cmb_estado.Size = new System.Drawing.Size(121, 22);
             this.cmb_estado.TabIndex = 35;
             // 
             // lbl_razaosocial
@@ -320,14 +320,14 @@
             this.label2.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 632);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 27);
+            this.label2.Size = new System.Drawing.Size(89, 22);
             this.label2.TabIndex = 45;
             this.label2.Text = "VOLTAR";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btn_salvar_n
             // 
-            this.btn_salvar_n.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_salvar_n.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(189)))), ((int)(((byte)(164)))));
             this.btn_salvar_n.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.btn_salvar_n.Location = new System.Drawing.Point(506, 445);
             this.btn_salvar_n.Name = "btn_salvar_n";
@@ -342,15 +342,15 @@
             this.label13.AutoSize = true;
             this.label13.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label13.Font = new System.Drawing.Font("Lucida Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(213, 0);
+            this.label13.Location = new System.Drawing.Point(213, 14);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(746, 68);
+            this.label13.Size = new System.Drawing.Size(592, 55);
             this.label13.TabIndex = 38;
             this.label13.Text = "Cadastro Fornecedores";
             // 
             // btn_limpar_n
             // 
-            this.btn_limpar_n.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_limpar_n.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(234)))), ((int)(((byte)(216)))));
             this.btn_limpar_n.Enabled = false;
             this.btn_limpar_n.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.btn_limpar_n.Location = new System.Drawing.Point(664, 445);
@@ -365,14 +365,14 @@
             // 
             this.txb_cep.Location = new System.Drawing.Point(154, 258);
             this.txb_cep.Name = "txb_cep";
-            this.txb_cep.Size = new System.Drawing.Size(100, 24);
+            this.txb_cep.Size = new System.Drawing.Size(100, 20);
             this.txb_cep.TabIndex = 39;
             // 
             // txb_cnpj
             // 
             this.txb_cnpj.Location = new System.Drawing.Point(528, 164);
             this.txb_cnpj.Name = "txb_cnpj";
-            this.txb_cnpj.Size = new System.Drawing.Size(100, 24);
+            this.txb_cnpj.Size = new System.Drawing.Size(100, 20);
             this.txb_cnpj.TabIndex = 38;
             // 
             // lbl_contratacao
@@ -381,7 +381,7 @@
             this.lbl_contratacao.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Bold);
             this.lbl_contratacao.Location = new System.Drawing.Point(919, 180);
             this.lbl_contratacao.Name = "lbl_contratacao";
-            this.lbl_contratacao.Size = new System.Drawing.Size(125, 21);
+            this.lbl_contratacao.Size = new System.Drawing.Size(107, 17);
             this.lbl_contratacao.TabIndex = 37;
             this.lbl_contratacao.Text = "Contratação";
             // 
@@ -404,7 +404,7 @@
             // 
             // crud_fornecedores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(212)))));
             this.ClientSize = new System.Drawing.Size(1646, 699);
